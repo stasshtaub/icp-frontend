@@ -8,6 +8,7 @@ const rename = require("gulp-rename");
 const uglify = require("gulp-uglify-es").default;
 const browserSync = require("browser-sync").create();
 const flatten = require("gulp-flatten");
+const ghPages = require("gulp-gh-pages");
 
 const settings = {
 	dist: "dist",
@@ -105,3 +106,5 @@ gulp.task(
 );
 
 gulp.task("default", gulp.series("build", gulp.parallel("watch", "serve")));
+
+gulp.task("deploy", () => gulp.src(`${settings.dist}/**/*`).pipe(ghPages()));
