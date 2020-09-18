@@ -9,6 +9,7 @@ const uglify = require("gulp-uglify-es").default;
 const browserSync = require("browser-sync").create();
 const flatten = require("gulp-flatten");
 const ghPages = require("gulp-gh-pages");
+const sass = require('gulp-sass');
 
 const settings = {
 	dist: "dist",
@@ -48,7 +49,8 @@ gulp.task("scss", () => {
 	const plugins = [autoprefixer(), cssnano()];
 
 	return gulp
-		.src("./src/*.css")
+		.src("./src/scss/*.scss")
+		.pipe(sass().on('error', sass.logError))
 		.pipe(postcss(plugins))
 		.pipe(gulp.dest(`${settings.dist}/css`));
 });
