@@ -277,11 +277,9 @@ html(class=html.classList)&attributes(html.attrs)
 			link(rel="stylesheet" href!=`${baseDir}css/main.css?v=${Date.now()}`)
 		block head-end
 	body(class=body.classList)&attributes(body.attrs)
-		include ../modules/header
 		block body-start
-		block content
+		block layout
 		block scripts
 			script(src!=`${baseDir}js/vendor.js?v=${Date.now()}`)
 			script(src!=`${baseDir}js/main.js?v=${Date.now()}`)
 		block body-end
-		include ../modules/footer

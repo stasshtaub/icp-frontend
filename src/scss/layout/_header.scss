@@ -1,0 +1,37 @@
+.header {
+	position: fixed;
+	width: 100%;
+	padding: 21px 45px;
+	display: flex;
+	justify-content: space-between;
+	color: $color-white;
+
+	&::after {
+		content: "";
+		position: absolute;
+		left: 0;
+		bottom: 0;
+		width: 100vw;
+		height: 1px;
+		background-color: $color-white-opacity10;
+	}
+
+	&__wrapper {
+		display: flex;
+		align-items: center;
+	}
+
+	&__link {
+		color: $color-white;
+		text-decoration: none;
+	}
+
+	&__title {
+		max-width: 430px;
+	}
+
+	&__title,
+	&__link--phone {
+		margin-left: 56px;
+	}
+}
