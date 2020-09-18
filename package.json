@@ -2,7 +2,9 @@
 	"name": "icp-frontend",
 	"version": "0.0.1",
 	"description": "ICP Center frontend",
-	"scripts": {},
+	"scripts": {
+		"build": "webpack -p"
+	},
 	"author": "Stas Shtaub <shtaubstas@gmail.com>",
 	"license": "ISC",
 	"devDependencies": {
@@ -16,7 +18,7 @@
 		"autoprefixer": "9.8.4",
 		"babel-eslint": "10.1.0",
 		"babel-loader": "8.1.0",
-		"browser-sync": "2.26.7",
+		"browser-sync": "2.26.12",
 		"connect-history-api-fallback": "1.6.0",
 		"cssnano": "4.1.10",
 		"del": "5.1.0",
@@ -59,8 +61,9 @@
 		"stylelint-order": "4.1.0",
 		"stylelint-scss": "3.18.0",
 		"vinyl-buffer": "1.0.1",
-		"webpack": "4.43.0",
-		"webpack-stream": "5.2.1",
+		"webpack": "4.44.2",
+		"webpack-cli": "3.3.12",
+		"webpack-stream": "6.1.0",
 		"yargs": "15.3.1"
 	},
 	"dependencies": {

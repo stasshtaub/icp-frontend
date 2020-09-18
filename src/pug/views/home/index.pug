@@ -4,3 +4,5 @@ block content
     .home
         .container
             include particles/start-screen
+block scripts
+    script(src!=`${baseDir}js/home.js?v=${Date.now()}`)

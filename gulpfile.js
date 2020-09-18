@@ -10,6 +10,8 @@ const browserSync = require("browser-sync").create();
 const flatten = require("gulp-flatten");
 const ghpages = require("gh-pages");
 const sass = require("gulp-sass");
+const webpack = require("webpack-stream");
+const webpackConfig = require('./webpack.config');
 
 const settings = {
 	dist: "dist",
@@ -55,16 +57,27 @@ gulp.task("scss", () => {
 		.pipe(gulp.dest(`${settings.dist}/css`));
 });
 
+gulp.task("js", () => {
+	return gulp
+		.src(webpackConfig.entry)
+		.pipe(
+			$.plumber({
+				errorHandler,
+			})
+		)
+		.pipe($.webpackStream(webpackConfig))
+		.pipe(gulp.dest(webpackConfig.output.path));
+});
+
 gulp.task("js", () =>
-	gulp
-		.src("src/js/*.js")
+	webpack(webpackConfig)
 		.pipe(
 			babel({
 				presets: ["@babel/env"],
 			})
 		)
 		.pipe(uglify())
-		.pipe(gulp.dest(`${settings.dist}/js`))
+		.pipe(gulp.dest(webpackConfig.output.path))
 );
 
 gulp.task("watch", () => {
