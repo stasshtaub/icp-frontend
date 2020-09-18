@@ -2,14 +2,14 @@
 @import "utils/breakpoints";
 @import "utils/helpers";
 
-
-@import "vendors/normalize";
-
 @import "base/typography";
 @import "base/reset";
 
 @import "layout/container";
 @import "layout/header";
 @import "layout/footer";
+
+@import "components/title";
+@import "components/subtitle";
 
 @import "pages/home";

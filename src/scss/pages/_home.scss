@@ -1,11 +1,17 @@
 .home {
 	padding: 300px 0 160px 0;
 	background: $color-black url("../images/png/start-screen-background.png");
+	background-attachment: fixed;
+	background-size: cover;
 	color: $color-white;
+
+	&__title{
+		margin-top: 105px;
+	}
 
 	&__start-line {
 		position: relative;
-		margin: 0 -45px;
+		margin: 48px -45px 0;
 		padding: 85px 45px 40px 45px;
 		background: linear-gradient(
 			0deg,
@@ -36,11 +42,17 @@
 	&__start-list {
 		display: flex;
 		justify-content: space-between;
-		margin: 0 -15px;
+		flex-wrap: wrap;
+		margin: -15px;
 	}
 
 	&__start-list-item {
 		width: 315px;
-		padding: 0 15px;
+		padding: 15px;
+	}
+	&__start-list-text {
+		font-weight: 500;
+		font-size: 20px;
+		line-height: 24px;
 	}
 }
