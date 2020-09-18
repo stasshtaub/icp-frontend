@@ -57,26 +57,9 @@ gulp.task("scss", () => {
 		.pipe(gulp.dest(`${settings.dist}/css`));
 });
 
-gulp.task("js", () => {
-	return gulp
-		.src(webpackConfig.entry)
-		.pipe(
-			$.plumber({
-				errorHandler,
-			})
-		)
-		.pipe($.webpackStream(webpackConfig))
-		.pipe(gulp.dest(webpackConfig.output.path));
-});
-
 gulp.task("js", () =>
 	webpack(webpackConfig)
-		.pipe(
-			babel({
-				presets: ["@babel/env"],
-			})
-		)
-		.pipe(uglify())
+		// .pipe(uglify())
 		.pipe(gulp.dest(webpackConfig.output.path))
 );
 

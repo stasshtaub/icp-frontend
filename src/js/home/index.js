@@ -1,2 +1,2 @@
 // home page script
-alert('home');
+console.log('Home page');
