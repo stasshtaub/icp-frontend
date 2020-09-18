@@ -8,8 +8,8 @@ const rename = require("gulp-rename");
 const uglify = require("gulp-uglify-es").default;
 const browserSync = require("browser-sync").create();
 const flatten = require("gulp-flatten");
-const ghPages = require("gulp-gh-pages");
-const sass = require('gulp-sass');
+const ghpages = require("gh-pages");
+const sass = require("gulp-sass");
 
 const settings = {
 	dist: "dist",
@@ -50,7 +50,7 @@ gulp.task("scss", () => {
 
 	return gulp
 		.src("./src/scss/*.scss")
-		.pipe(sass().on('error', sass.logError))
+		.pipe(sass().on("error", sass.logError))
 		.pipe(postcss(plugins))
 		.pipe(gulp.dest(`${settings.dist}/css`));
 });
@@ -109,4 +109,8 @@ gulp.task(
 
 gulp.task("default", gulp.series("build", gulp.parallel("watch", "serve")));
 
-gulp.task("deploy", () => gulp.src(`${settings.dist}/**/*`).pipe(ghPages()));
+gulp.task("deploy", () =>
+	ghpages.publish("dist", (err) => {
+		console.log(err);
+	})
+);
