@@ -70,11 +70,6 @@
 		"normalize.css": "8.0.1",
 		"svg4everybody": "2.1.9"
 	},
-	"husky": {
-		"hooks": {
-			"pre-commit": "lint-staged"
-		}
-	},
 	"lint-staged": {
 		"*.js": "eslint --color --fix",
 		"*.{css,scss}": "stylelint --color",
