@@ -2,7 +2,13 @@ extends ../../layouts/default
 
 block content
     .home
-        .container
-            include particles/start-screen
+        .home__group.home__group--first
+            .container
+                include particles/start-screen
+        .home__group.home__group--blur-overlay
+        .home__group.home__group--video
+            .container
+                include particles/video-block
+                //- content
 block scripts
     script(src!=`${baseDir}js/home.js?v=${Date.now()}`)
