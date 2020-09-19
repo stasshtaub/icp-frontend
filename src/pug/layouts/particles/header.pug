@@ -1,7 +1,26 @@
 header.header
-    .header__wrapper
-        img(src="images/svg/logo.svg").header__logo
-        p.header__title Один из крупнейших в Европе международных центров обуения с сертификацией ICF
-    .header__wrapper
-        a(href="mailto:info@icpcentre.org").header__link info@icpcentre.org
-        a(href="tel:+78005513531").header__link.header__link--phone 8&nbsp;800&nbsp;551&#8209;35&#8209;31
+    .header__row.header__row--panel
+        .header__wrapper
+            img(src="images/svg/logo.svg").header__logo
+            p.header__title Один из крупнейших в Европе международных центров обуения с сертификацией ICF
+        .header__wrapper
+            a(href="mailto:info@icpcentre.org").header__link info@icpcentre.org
+            a(href="tel:+78005513531").header__link.header__link--phone 8&nbsp;800&nbsp;551&#8209;35&#8209;31
+    .header__row.header__row--navbar
+        nav.header__navbar
+            ul.header__navbar-list
+                li.header__navbar-item
+                    a(href="#").header__link О центре
+                        span.header__dropdown-icon
+                li.header__navbar-item
+                    a(href="#").header__link Направления
+                        span.header__dropdown-icon
+                li.header__navbar-item
+                    a(href="#").header__link Процесс обучения
+                        span.header__dropdown-icon
+                li.header__navbar-item
+                    a(href="#").header__link База знаний
+                        span.header__dropdown-icon
+                li.header__navbar-item
+                    a(href="#").header__link Контакты
+                        span.header__dropdown-icon

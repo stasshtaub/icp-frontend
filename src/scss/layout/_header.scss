@@ -1,19 +1,49 @@
 .header {
 	position: absolute;
 	width: 100%;
-	padding: 21px 45px;
 	display: flex;
-	justify-content: space-between;
+	flex-direction: column;
 	color: $color-white;
 
-	&::after {
-		content: "";
-		position: absolute;
-		left: 0;
-		bottom: 0;
-		width: 100vw;
-		height: 1px;
-		background-color: $color-white-opacity10;
+	&__row {
+		position: relative;
+
+		&--panel {
+			display: flex;
+			justify-content: space-between;
+			padding: 21px 45px;
+		}
+
+		&--navbar {
+			padding: 20px 45px 25px 45px;
+		}
+
+		&::after {
+			content: "";
+			position: absolute;
+			left: 0;
+			bottom: 0;
+			width: 100vw;
+			height: 1px;
+			background-color: $color-white-opacity10;
+		}
+	}
+
+	&__navbar-list {
+		display: flex;
+		justify-content: space-between;
+	}
+
+	&__link {
+		display: flex;
+	}
+
+	&__dropdown-icon {
+		width: 14px;
+		height: 7px;
+		margin-left: 10px;
+		background: url("../images/svg/icon-arrow-down-white.svg") no-repeat
+			center;
 	}
 
 	&__wrapper {
