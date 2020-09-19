@@ -1,0 +1,30 @@
+.programs {
+    padding: 75px 0 100px 0;
+
+	&__list {
+		display: grid;
+		grid-template-columns: repeat(auto-fit, 315px);
+		grid-row-gap: 60px;
+		grid-column-gap: 30px;
+	}
+
+	&__point {
+		width: 27px;
+		height: 27px;
+		border-radius: 50%;
+
+		&--even {
+			background-color: #1488cc;
+		}
+
+		&--odd {
+			background-color: #283cb5;
+		}
+	}
+
+	&__text {
+		margin-top: 14px;
+		font-size: 20px;
+		line-height: 25px;
+	}
+}

@@ -1,0 +1,15 @@
+.double-block {
+    display: flex;
+    
+	&__content {
+		flex-grow: 1;
+        margin-left: 130px;
+    }
+    
+	&__title {
+		font-size: 20px;
+		line-height: 25px;
+        font-weight: 500;
+        writing-mode: tb-rl;
+	}
+}

@@ -9,6 +9,8 @@ block content
         .home__group.home__group--video
             .container
                 include particles/video-block
-                //- content
+        .home__group
+            .container
+                include particles/programs
 block scripts
     script(src!=`${baseDir}js/home.js?v=${Date.now()}`)
