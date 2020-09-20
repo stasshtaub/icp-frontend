@@ -1,0 +1,75 @@
+.strengths {
+	&__slider {
+		width: 890px;
+		margin-top: -20px;
+	}
+
+	&__slider-controls {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		padding-bottom: 25px;
+		border-bottom: 6px solid $color-gray-light;
+	}
+
+	&__counter {
+		font-weight: 500;
+		font-size: 70px;
+		line-height: 86px;
+		letter-spacing: 10px;
+	}
+
+	&__counter-curr {
+		color: $color-blue;
+	}
+
+	&__counter-devider,
+	&__counter-total {
+		color: $color-gray-light2;
+	}
+
+	&__btn {
+		width: 12px;
+		height: 24px;
+		background: url("../images/svg/icon-prev-arrow.svg") no-repeat center;
+		border: none;
+
+		&--next {
+			transform: rotate(180deg);
+			margin-left: 43px;
+		}
+	}
+
+	&__slides {
+		margin-top: 24px;
+	}
+
+	&__slide {
+		font-weight: 500;
+		font-size: 40px;
+		line-height: 49px;
+		background: -webkit-linear-gradient($color-blue, $color-blue2);
+		background-clip: text;
+		-webkit-text-fill-color: transparent;
+	}
+
+	&__dots {
+		display: flex;
+		margin-top: 57px;
+	}
+
+	&__dot {
+		$dot-size: 8px;
+
+		cursor: pointer;
+		width: $dot-size;
+		height: $dot-size;
+		border-radius: 50%;
+		border: 2px solid $color-blue;
+		margin: 0 19px;
+
+		&.tns-nav-active {
+			background-color: $color-blue;
+		}
+	}
+}

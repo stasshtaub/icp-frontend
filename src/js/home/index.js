@@ -1,2 +1,3 @@
-// home page script
-console.log('Home page');
+import initStrenghts from "./particles/slider-strengths";
+
+initStrenghts();
