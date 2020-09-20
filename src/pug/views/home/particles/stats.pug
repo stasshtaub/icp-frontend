@@ -1,0 +1,7 @@
+- var statsItems = [{title: '4', subtitle: 'года<br>на рынке', size: 's'}, {title: '37', subtitle: 'наши студенты живут<br>в 37 странах мира', size: 'm'}, {title: '1959', subtitle: 'мы выдали 1952 международных<br>сертификатов', size: 'l'}, {title: '17725+', subtitle: 'провели более 17725 часов<br>обучения', size: 'xl'}]
+ul.stats
+    each statItem, i in statsItems
+        li(class=`stats__item--${(i+1)%2==0?'even':'odd'} stats__item--${statItem.size}`).stats__item
+            p.stats__title= statItem.title
+            .stats__devider
+            p.stats__subtitle !{statItem.subtitle}

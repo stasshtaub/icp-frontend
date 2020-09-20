@@ -1,0 +1,72 @@
+.stats {
+	$p: &;
+
+    display: flex;
+    margin-top: 115px;
+
+	&__title {
+		font-weight: 500;
+		font-size: 120px;
+		line-height: 147px;
+		text-align: center;
+	}
+
+	&__subtitle {
+        padding: 0 6px;
+        margin-top: 35px;
+		font-size: 18px;
+		line-height: 22px;
+		text-align: center;
+		background: linear-gradient($color-blue, $color-blue2);
+		background-clip: text;
+		-webkit-text-fill-color: transparent;
+	}
+
+	&__devider {
+        height: 8px;
+        margin-top: 7px;
+
+		#{$p}--s {
+			min-width: 100px;
+		}
+
+		#{$p}--m {
+			min-width: 230px;
+		}
+
+		#{$p}--l {
+			min-width: 460px;
+		}
+
+		#{$p}--xl {
+			min-width: 560px;
+		}
+	}
+
+	&__item {
+		&--l,
+		&--xl {
+			flex-grow: 1;
+		}
+
+		&--odd {
+			#{$p}__title {
+				color: $color-blue2;
+			}
+
+			#{$p}__devider {
+				background-color: $color-blue2;
+			}
+		}
+
+		&--even {
+			#{$p}__title {
+				color: $color-blue;
+			}
+
+			#{$p}__devider {
+				background-color: $color-blue;
+			}
+		}
+	}
+}
