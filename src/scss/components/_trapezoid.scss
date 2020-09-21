@@ -1,0 +1,66 @@
+.trapezoid {
+	$offset: 76px;
+	$skew: 3.826deg;
+
+	position: relative;
+	height: 556px;
+	margin-top: 100px;
+	color: $color-white;
+
+	&__distortion {
+		content: "";
+		top: 0;
+		left: 0;
+		bottom: 0;
+		right: 0;
+		position: absolute;
+		background-color: $color-blue;
+		transform: skewY(-$skew);
+		transform-origin: right top;
+		margin-bottom: $offset;
+		z-index: -1;
+		overflow: hidden;
+	}
+
+	&__circle-text {
+		position: absolute;
+		right: -100%;
+		top: -130%;
+		transform: skewY($skew) rotate(14deg);
+
+		text {
+			fill: $color-blue2;
+		}
+	}
+
+	&__content {
+		max-width: 430px;
+		margin-left: 160px;
+		padding-top: 143px;
+	}
+
+	&__title {
+		font-weight: 300;
+		font-size: 60px;
+		line-height: 70px;
+	}
+
+	&__description {
+		margin-top: 35px;
+		font-weight: 500;
+		font-size: 22px;
+		line-height: 27px;
+	}
+
+	&__btn {
+		margin-top: 35px;
+		padding: 7px 20px;
+		border: none;
+		border-radius: 4px;
+		background-color: $color-white;
+		font-weight: 500;
+		font-size: 15px;
+		line-height: 30px;
+		color: $color-blue;
+	}
+}

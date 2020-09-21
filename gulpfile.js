@@ -11,7 +11,8 @@ const flatten = require("gulp-flatten");
 const ghpages = require("gh-pages");
 const sass = require("gulp-sass");
 const webpack = require("webpack-stream");
-const webpackConfig = require('./webpack.config');
+const webpackConfig = require("./webpack.config");
+const svgstore = require("gulp-svgstore");
 
 const settings = {
 	dist: "dist",
@@ -47,6 +48,18 @@ gulp.task("images", () =>
 	gulp.src("src/images/**/*.*").pipe(gulp.dest(`${settings.dist}/images`))
 );
 
+gulp.task("svg-sprite", () =>
+	gulp
+		.src("src/images/svg/*.svg")
+		.pipe(
+			svgstore({
+				inlineSvg: true,
+			})
+		)
+		.pipe(rename("sprite.svg"))
+		.pipe(gulp.dest(`${settings.dist}/images`))
+);
+
 gulp.task("scss", () => {
 	const plugins = [autoprefixer(), cssnano()];
 
@@ -64,6 +77,8 @@ gulp.task("js", () =>
 );
 
 gulp.task("watch", () => {
+	gulp.watch("src/images/svg/*.svg", gulp.series('svg-sprite'));
+
 	gulp.watch(
 		["src/resources/**/*.*", "src/resources/**/.*"],
 		gulp.series("copy")
