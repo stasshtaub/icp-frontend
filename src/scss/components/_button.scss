@@ -1,0 +1,35 @@
+.button {
+	display: flex;
+	align-items: center;
+	min-width: 160px;
+	text-align: center;
+	border: none;
+	border-radius: 4px;
+	font-weight: 500;
+	font-size: 15px;
+	line-height: 30px;
+
+	&--color-primary {
+		background-color: $color-blue;
+		color: $color-white;
+	}
+
+	&--color-white {
+		background-color: $color-white;
+		color: $color-blue;
+	}
+
+	&--size-normal {
+		padding: 7px 18px;
+	}
+
+	&--size-large {
+		padding: 12px 18px;
+	}
+
+	&__icon {
+		height: 32px;
+		width: 32px;
+		margin-left: 34px;
+	}
+}

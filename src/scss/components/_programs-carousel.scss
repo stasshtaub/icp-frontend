@@ -1,0 +1,66 @@
+.programs-carousel {
+	margin-top: 100px;
+
+	&__slide {
+        width: 690px;
+        padding: 30px 55px;
+        border-radius: 6px;
+		background-color: $color-white;
+
+		&--active {
+			box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+		}
+    }
+    
+    &__content{
+        max-width: 315px;
+    }
+
+	&__tag {
+		display: inline-block;
+		padding: 7px 12px;
+		border: 1px solid $color-gray-light2;
+		border-radius: 2px;
+		font-weight: 500;
+		font-size: 15px;
+		line-height: 15px;
+		text-align: center;
+		color: $color-blue;
+	}
+
+	&__title,
+	&__start,
+	&__speakers {
+		color: $color-gray;
+	}
+
+	&__title {
+		margin-top: 22px;
+		font-weight: 500;
+		font-size: 26px;
+		line-height: 30px;
+	}
+
+	&__start {
+		margin-top: 18px;
+	}
+
+	&__speakers {
+		margin-top: 21px;
+	}
+
+	&__start,
+	&__speakers {
+		font-size: 14px;
+		line-height: 20px;
+	}
+
+	&__start-date,
+	&__speaker {
+		font-weight: 500;
+	}
+
+	&__btn {
+		margin-top: 28px;
+	}
+}

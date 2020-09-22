@@ -1,0 +1,4 @@
+mixin button(text, classes=[], size = 'size-normal', color = 'color-primary', icon = null)
+	button(class=`button button--${color} button--${size} ${classes.join(' ')}`)= text
+		if icon
+			+svg(icon, ['button__icon'])
