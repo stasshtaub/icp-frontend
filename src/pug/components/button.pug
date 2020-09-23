@@ -1,4 +1,10 @@
-mixin button(text, classes=[], size = 'size-normal', color = 'color-primary', icon = null)
-	button(class=`button button--${color} button--${size} ${classes.join(' ')}`)= text
-		if icon
-			+svg(icon, ['button__icon'])
+mixin button(text, classes=[], size = 'size-normal', color = 'color-primary', icon = null, tag = "button", href = "#")
+	case tag
+		when "a"
+			a(class=`button button--link button--${color} button--${size} ${classes.join(' ')}` href=href)= text
+				if icon
+					+svg(icon, ['button__icon'])
+		default
+			button(class=`button button--${color} button--${size} ${classes.join(' ')}`)= text
+				if icon
+					+svg(icon, ['button__icon'])

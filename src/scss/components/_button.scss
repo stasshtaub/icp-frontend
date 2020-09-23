@@ -9,6 +9,10 @@
 	font-size: 15px;
 	line-height: 30px;
 
+	&--link {
+		display: inline-block;
+	}
+
 	&--color-primary {
 		background-color: $color-blue;
 		color: $color-white;

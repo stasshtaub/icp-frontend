@@ -1,0 +1,22 @@
+.programs-test.double-block
+    aside.double-block__aside
+        h3.double-block__title.programs-test__aside-title Тест
+    .double-block__content.programs-test__content
+        h4.programs-test__title Какая программа
+            br
+            | обучения мне 
+            br
+            | подходит?
+        +button('Пройти блиц-тест', ['programs-test__btn'], 'size-normal', 'color-primary', null, "a", "#")
+        .programs-test__img
+            include ../../../../images/svg/programs-test-img.svg
+            .programs-test__captions
+                .programs-test__caption.programs-test__caption--one
+                    p.programs-test__caption-title Вопрос 1
+                    p.programs-test__caption-text Чем вы занимаетесь?
+                .programs-test__caption.programs-test__caption--two
+                    p.programs-test__caption-title Вопрос 2
+                    p.programs-test__caption-text Где вы сейчас работаете?
+                .programs-test__caption.programs-test__caption--three
+                    p.programs-test__caption-title Вопрос 3
+                    p.programs-test__caption-text Кем вы хотите?

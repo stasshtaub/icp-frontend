@@ -1,0 +1,51 @@
+.programs-test {
+	min-height: 425px;
+
+	&__aside-title {
+		color: $color-blue;
+	}
+
+	&__content {
+		position: relative;
+	}
+
+	&__title {
+		font-weight: bold;
+		font-size: 60px;
+		line-height: 73px;
+		color: $color-gray;
+	}
+	
+	&__btn {
+		margin-top: 100px;
+		text-decoration: none;
+	}
+
+	&__img {
+		position: absolute;
+		bottom: 0;
+		right: 0;
+		z-index: -1;
+	}
+
+	&__caption {
+		display: inline-block;
+		font-size: 22px;
+		font-weight: 500;
+		line-height: 27px;
+		letter-spacing: 0;
+		color: $color-gray;
+
+		&--two {
+			transform: translateX(118px);
+		}
+
+		&--three {
+			transform: translateX(188px);
+			background: linear-gradient(to left, transparent, $color-gray);
+			-webkit-background-clip: text;
+			background-clip: text;
+			-webkit-text-fill-color: transparent;
+		}
+	}
+}
