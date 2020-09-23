@@ -115,7 +115,7 @@ gulp.task("serve", () => {
 
 gulp.task(
 	"build",
-	gulp.series("copy", "pug", gulp.parallel("images", "scss", "js"))
+	gulp.series("copy", "pug", gulp.parallel("images", "scss", "js", "svg-sprite"))
 );
 
 gulp.task("default", gulp.series("build", gulp.parallel("watch", "serve")));

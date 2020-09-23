@@ -1,14 +1,20 @@
-ul.programs-carousel
-    li.programs-carousel__slide.programs-carousel__slide--active
-        .programs-carousel__distortion
-            img.programs-carousel__img
-        .programs-carousel__content
-            .programs-carousel__tag Специализация
-            p.programs-carousel__title Как открыть новые грани коучинга и работать с командами?
-            p.programs-carousel__start Старт курса с&nbsp;
-                span.programs-carousel__start-date 19 октября 2020
-            .programs-carousel__speakers 
-                p.programs-carousel__text Ведущий программы:
-                - var speakers = ['Марина Балашова', 'Галина Вдовиченко']
-                p.programs-carousel__speaker= speakers.join(', ')
-            +button('Записаться', ['programs-carousel__btn'], 'size-large', 'color-primary', 'icon-ok')
+.programs-carousel
+    .programs-carousel__slider.swiper-container
+        ul.programs-carousel__slides.swiper-wrapper
+            each val in [1, 2, 3, 4, 5]
+                li.programs-carousel__slide-wrp.swiper-slide
+                    .programs-carousel__slide
+                        .programs-carousel__content
+                            .programs-carousel__tag Специализация
+                            p.programs-carousel__title Как открыть новые грани коучинга и работать с командами?
+                            p.programs-carousel__start Старт курса с&nbsp;
+                                span.programs-carousel__start-date 19 октября 2020
+                            .programs-carousel__speakers 
+                                p.programs-carousel__text Ведущий программы:
+                                - var speakers = ['Марина Балашова', 'Галина Вдовиченко']
+                                p.programs-carousel__speaker= speakers.join(', ')
+                            +button('Записаться', ['programs-carousel__slide-btn'], 'size-large', 'color-primary', 'icon-ok')
+                        img(src="images/png/Combined Shape.png").programs-carousel__img
+    ul.programs-carousel__dots
+        //- each i in [0, 1, 2, 3, 4]
+        //-     li.programs-carousel__dot
