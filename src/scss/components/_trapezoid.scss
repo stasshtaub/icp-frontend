@@ -5,6 +5,7 @@
 	position: relative;
 	height: 556px;
 	margin-top: 100px;
+	margin-bottom: 100px;
 	color: $color-white;
 
 	&__distortion {
@@ -23,10 +24,8 @@
 	}
 
 	&__circle-text {
-		position: absolute;
-		right: -100%;
-		top: -130%;
-		transform: skewY($skew) rotate(14deg);
+		transform: translate(68%, -36%) skewY(3.826deg) rotate(-3deg);
+		transform-origin: left;
 
 		text {
 			fill: $color-blue2;

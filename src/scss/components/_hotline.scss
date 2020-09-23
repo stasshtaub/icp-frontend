@@ -1,0 +1,25 @@
+.hotline {
+	padding: 23px 160px;
+	display: flex;
+	align-items: center;
+	color: $color-white;
+	background: $color-blue;
+
+	&__title {
+		font-weight: bold;
+		font-size: 40px;
+		line-height: 49px;
+	}
+
+	&__description {
+		font-weight: 500;
+		font-size: 14px;
+		line-height: 17px;
+        margin-left: 72px;
+        max-width: 460px;
+	}
+
+	&__link {
+		margin-left: auto;
+	}
+}
