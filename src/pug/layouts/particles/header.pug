@@ -1,26 +1,37 @@
+- var menuItems = [{title: 'О центре', level2: ['Миссия+ценности', 'История компании', 'Команда', 'Коучинговые компетенции', 'Членство в ICF', 'Ведущие', 'Партнеры', 'Представительства', 'Лаборатория научных исследований коучинга']}, {title: 'Направления', level2: ['Программы развития коучинговых компетенций', 'Развитие профессиональных коучей GV: Коучинг для организаций', 'Agile-коучинг', 'Современные подходы в образовании и воспитании', 'Индивидуальный коучинг']}, {title: 'Процесс обучения', level2: ['Расписание', 'Очное обучение', 'Онлайн-обучение', 'Песочница', 'Практика+стажировки', 'Программа лояльности', 'Институт обратной связи', 'Фестиваль коучинга', 'Коуч-туры', 'Бесплатные мастер-классы, вебинары и лекции', 'Горячая линия']}, {title: 'База знаний', level2: ['Коучинг в HR: инструкция по применению', 'Спецпроект. История коучинга в России: 1990 − 2020. Команды, люди, события.', 'О коучинге понятным языком: 15 статей', 'Онлайн-библиотека', 'Подкаст: «Хроники одного коуча»']}]
+
+input(type="checkbox" id="header__hamburger-checkbox").header__hamburger-checkbox
 header.header
+    label(for="header__hamburger-checkbox").header__backdrop
+    .header__hamburger-menu.header__hamburger-menu--general       
+        ul.header__hamburger-list
+            each menuItem in menuItems
+                li.header__hamburger-item.header__hamburger-item--general
+                    .header__hamburger-link
+                        span.header__hamburger-link-text= menuItem.title
+                        .header__hamburger-link-arrow
+                    //- В РАЗРАБОТКЕ
+                    //- .header__hamburger-menu.header__hamburger-menu--level2
+                    //-     ul.header__hamburger-list
+                    //-         each lemel2Item in menuItem.level2
+                    //-             li.header__hamburger-item.header__hamburger-item--level2
+                    //-                 a(href="#").header__hamburger-link.header__hamburger-link--level2
+                    //-                     span.header__hamburger-link-text= lemel2Item
     .header__row.header__row--panel
-        .header__wrapper
+        .header__wrapper.header__wrapper--hamburger
+            .header__hamburger
+                label(for="header__hamburger-checkbox").header__hamburger-icon
+        .header__wrapper.header__wrapper--general
             img(src="images/svg/logo.svg").header__logo
             p.header__title Один из крупнейших в Европе международных центров обуения с сертификацией ICF
-        .header__wrapper
-            a(href="mailto:info@icpcentre.org").header__link info@icpcentre.org
+        .header__wrapper.header__wrapper--contacts
+            a(href="mailto:info@icpcentre.org").header__link.header__link--mail
+                .header__mail-icon
             a(href="tel:+78005513531").header__link.header__link--phone 8&nbsp;800&nbsp;551&#8209;35&#8209;31
     .header__row.header__row--navbar
         nav.header__navbar
             ul.header__navbar-list
-                li.header__navbar-item
-                    a(href="#").header__link О центре
-                        span.header__dropdown-icon
-                li.header__navbar-item
-                    a(href="#").header__link Направления
-                        span.header__dropdown-icon
-                li.header__navbar-item
-                    a(href="#").header__link Процесс обучения
-                        span.header__dropdown-icon
-                li.header__navbar-item
-                    a(href="#").header__link База знаний
-                        span.header__dropdown-icon
-                li.header__navbar-item
-                    a(href="#").header__link Контакты
-                        span.header__dropdown-icon
+                each menuItem in menuItems 
+                    li.header__navbar-item
+                        a(href="#").header__link= menuItem.title
+                            span.header__dropdown-icon
