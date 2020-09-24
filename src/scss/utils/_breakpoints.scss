@@ -1,17 +1,24 @@
-@mixin laptop {
-	@media (max-width: 1024px) {
+@mixin desktop($dimension: 'max') {
+	@media (#{$dimension}-width: 1440px) {
 		@content;
 	}
 }
 
-@mixin tablet {
-	@media (max-width: 768px) {
+@mixin laptop($dimension: 'max') {
+	@media (#{$dimension}-width: 1024px) {
 		@content;
 	}
 }
 
-@mixin mobile-l {
-	@media (max-width: 425px) {
+@mixin tablet($dimension: 'max') {
+	@media (#{$dimension}-width: 768px) {
 		@content;
 	}
 }
+
+@mixin mobile-l($dimension: 'max') {
+	@media (#{$dimension}-width: 425px) {
+		@content;
+	}
+}
+

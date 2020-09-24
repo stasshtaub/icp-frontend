@@ -23,6 +23,14 @@
 			padding: 21px 45px;
 			z-index: 2;
 
+			@include laptop {
+				padding: 24px 30px;
+			}
+
+			@include tablet {
+				padding: 20px 33px;
+			}
+
 			@include mobile-l {
 				box-shadow: 0 -5px 10px $color-black-opacity05;
 			}
@@ -104,9 +112,12 @@
 		margin-right: 52px;
 		filter: grayscale(100%) invert(100%) contrast(15);
 
-		@include mobile-l {
+		@include tablet {
 			margin-right: unset;
 			height: 32px;
+		}
+
+		@include mobile-l {
 			filter: unset;
 		}
 	}
