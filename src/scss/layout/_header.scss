@@ -1,9 +1,18 @@
 .header {
+	$p: &;
+
 	position: absolute;
 	width: 100%;
 	display: flex;
 	flex-direction: column;
 	color: $color-white;
+	z-index: 1;
+
+	@include mobile-l {
+		position: fixed;
+		bottom: 0;
+		background-color: $color-white;
+	}
 
 	&__row {
 		position: relative;
@@ -12,10 +21,19 @@
 			display: flex;
 			justify-content: space-between;
 			padding: 21px 45px;
+			z-index: 2;
+
+			@include mobile-l {
+				box-shadow: 0 -5px 10px $color-black-opacity05;
+			}
 		}
 
 		&--navbar {
 			padding: 20px 45px 25px 45px;
+
+			@include laptop {
+				display: none;
+			}
 		}
 
 		&::after {
@@ -50,6 +68,41 @@
 	&__wrapper {
 		display: flex;
 		align-items: center;
+
+		&--contacts {
+			@include laptop {
+				display: none;
+			}
+		}
+
+		&--general {
+			@include laptop {
+				flex-grow: 1;
+			}
+		}
+
+		&--hamburger {
+			display: none;
+
+			@include laptop {
+				display: flex;
+			}
+
+			@include mobile-l {
+				order: 1;
+			}
+		}
+	}
+
+	&__logo {
+		margin-right: 52px;
+		filter: grayscale(100%) invert(100%) contrast(15);
+
+		@include mobile-l {
+			margin-right: unset;
+			height: 32px;
+			filter: unset;
+		}
 	}
 
 	&__link {
@@ -58,14 +111,176 @@
 	}
 
 	&__title {
-		max-width: 430px;
+		max-width: 400px;
 		font-weight: 400;
 		font-size: 14px;
 		line-height: 20px;
+
+		@include laptop {
+			margin-left: auto;
+		}
+
+		@include tablet {
+			display: none;
+		}
 	}
 
-	&__title,
 	&__link--phone {
 		margin-left: 56px;
+	}
+
+	&__backdrop {
+		display: none;
+		position: absolute;
+		left: 0;
+		top: 0;
+		width: 100vw;
+		height: 100vh;
+		opacity: 0;
+	}
+
+	&__hamburger-checkbox {
+		display: none;
+
+		&:checked {
+			& ~ #{$p} {
+				background-color: $color-white;
+
+				#{$p}__hamburger-menu--general {
+					transform: none;
+				}
+				#{$p}__hamburger-icon {
+					background: url("../images/svg/icon-close.svg") no-repeat
+						center;
+				}
+				#{$p}__backdrop {
+					display: block;
+
+					@include mobile-l {
+						display: none;
+					}
+				}
+				#{$p}__link,
+				#{$p}__title {
+					color: $color-gray;
+				}
+
+				#{$p}__logo {
+					filter: unset;
+				}
+
+				html {
+					height: 100vh;
+					width: 100vw;
+					overflow: hidden;
+				}
+			}
+		}
+	}
+
+	&__hamburger-icon {
+		z-index: 3;
+		display: block;
+		width: 30px;
+		height: 30px;
+		margin-right: 90px;
+		background: url("../images/svg/icon-hamburger.svg") no-repeat center;
+
+		@include mobile-l {
+			background: url("../images/svg/icon-hamburger-gray.svg") no-repeat
+				center;
+			margin-right: unset;
+		}
+	}
+
+	&__hamburger-menu {
+		position: absolute;
+		width: 360px;
+		max-width: 100%;
+		-webkit-font-smoothing: antialiased;
+		background-color: $color-white;
+		z-index: 2;
+
+		&--general {
+			height: calc(100vh - 100%);
+			top: 100%;
+			left: 0;
+			transform: translateX(-100%);
+			transition: transform 0.3s ease;
+
+			@include mobile-l {
+				width: 100%;
+			}
+		}
+
+		&--level2 {
+			height: 100%;
+			display: none;
+			top: 0;
+			left: 100%;
+			overflow-y: auto;
+
+			@include mobile-l {
+				left: unset;
+				right: 0;
+				transform: translateX(100%);
+				transition: transform 0.3s ease;
+			}
+		}
+		
+		@include mobile-l {
+			position: fixed;
+			top: 0;
+			height: calc(100vh - 72px);
+		}
+	}
+
+	&__hamburger-close-icon {
+		width: 18px;
+		height: 18px;
+	}
+
+	&__hamburger-item {
+		border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+		padding: 0 27px 0 22px;
+		display: flex;
+
+		&--general:hover {
+			background: #283cb5;
+
+			> #{$p}__hamburger-link {
+				color: $color-white;
+			}
+
+			#{$p}__hamburger-link-arrow {
+				background: url("../images/svg/icon-hamburger-item-arrow-white.svg")
+					no-repeat center;
+			}
+
+			& > #{$p}__hamburger-menu--level2 {
+				display: block;
+				
+				@include mobile-l {
+					transform: none;
+				}
+			}
+		}
+	}
+
+	&__hamburger-link {
+		color: $color-gray;
+		text-decoration: none;
+		height: 59px;
+		display: flex;
+		align-items: center;
+		width: 100%;
+	}
+
+	&__hamburger-link-arrow {
+		width: 8px;
+		height: 15px;
+		margin-left: auto;
+		background: url("../images/svg/icon-hamburger-item-arrow-black.svg")
+			no-repeat center;
 	}
 }
