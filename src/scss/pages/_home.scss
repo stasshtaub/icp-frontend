@@ -11,6 +11,16 @@
 				url("../images/png/start-screen-background.png") no-repeat;
 			background-attachment: fixed;
 			background-size: 100%;
+
+			@include laptop {
+				background-size: cover;
+				padding-top: 240px;
+				background-position-x: center;
+			}
+
+			@include tablet {
+				padding-top: 122px;
+			}
 		}
 
 		&--video {
@@ -25,19 +35,43 @@
 
 	&__title {
 		margin-top: 105px;
+
+		@include laptop {
+			margin-top: 84px;
+		}
+		
+		@include tablet {
+			margin-top: 210px;
+		}
+	}
+
+	&__subtitle {
+		br {
+			@include laptop {
+				display: none;
+			}
+		}
+
+		@include tablet {
+			font-size: 25px;
+			line-height: 31px;
+		}
 	}
 
 	&__start-line {
 		position: relative;
 		width: 100vw;
 		margin: 48px 0 0 calc(-50vw + 50%);
-		padding: 85px 0 40px 0;
 		background: linear-gradient(
 			0deg,
 			#000000 0%,
 			rgba(0, 0, 0, 0.0001) 100%
 		);
 		backdrop-filter: blur(20px);
+
+		@include laptop {
+			margin-top: 160px;
+		}
 
 		&::before,
 		&::after {
@@ -61,12 +95,25 @@
 	&__start-list {
 		display: flex;
 		justify-content: space-between;
-		flex-wrap: wrap;
+		padding: 85px 0 40px 0;
+
+		@include laptop {
+			margin: -15px;
+			padding: 24px 0 68px 0;
+		}
+
+		@include tablet {
+			flex-wrap: wrap;
+		}
 	}
 
 	&__start-list-item {
 		width: 315px;
 		padding: 15px;
+
+		@include laptop {
+			padding: 0 15px;
+		}
 	}
 
 	&__start-list-text {

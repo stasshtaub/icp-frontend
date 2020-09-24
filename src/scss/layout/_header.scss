@@ -31,7 +31,7 @@
 		&--navbar {
 			padding: 20px 45px 25px 45px;
 
-			@include laptop {
+			@include tablet {
 				display: none;
 			}
 		}
@@ -57,6 +57,12 @@
 		align-items: center;
 	}
 
+	&__mail-icon {
+		height: 20px;
+		width: 20px;
+		background: url("../images/svg/icon-email.svg") no-repeat center;
+	}
+
 	&__dropdown-icon {
 		width: 14px;
 		height: 7px;
@@ -70,7 +76,7 @@
 		align-items: center;
 
 		&--contacts {
-			@include laptop {
+			@include tablet {
 				display: none;
 			}
 		}
@@ -84,7 +90,7 @@
 		&--hamburger {
 			display: none;
 
-			@include laptop {
+			@include tablet {
 				display: flex;
 			}
 
@@ -116,11 +122,11 @@
 		font-size: 14px;
 		line-height: 20px;
 
-		@include laptop {
+		@include tablet {
 			margin-left: auto;
 		}
 
-		@include tablet {
+		@include mobile-l {
 			display: none;
 		}
 	}
@@ -227,7 +233,7 @@
 				transition: transform 0.3s ease;
 			}
 		}
-		
+
 		@include mobile-l {
 			position: fixed;
 			top: 0;
@@ -259,7 +265,7 @@
 
 			& > #{$p}__hamburger-menu--level2 {
 				display: block;
-				
+
 				@include mobile-l {
 					transform: none;
 				}
