@@ -21,6 +21,10 @@
 		margin-bottom: $offset;
 		z-index: -1;
 		overflow: hidden;
+
+		@include mobile-l {
+			height: 600px;
+		}
 	}
 
 	&__circle-text {
@@ -30,12 +34,32 @@
 		text {
 			fill: $color-blue2;
 		}
+
+		@include mobile-l {
+			transform: translate(58%, -28%) skewY(3.826deg) rotate(90deg)
+				scale(0.9);
+		}
 	}
 
 	&__content {
 		max-width: 430px;
 		margin-left: 160px;
 		padding-top: 143px;
+
+		@include desktop {
+			margin-left: 112px;
+			padding-top: 121px;
+		}
+
+		@include laptop {
+			margin-left: 92px;
+			padding-top: 107px;
+		}
+
+		@include tablet-s {
+			margin-left: 20px;
+			padding-top: 50px;
+		}
 	}
 
 	&__title {
