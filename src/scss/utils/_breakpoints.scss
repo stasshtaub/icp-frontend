@@ -4,6 +4,12 @@
 	}
 }
 
+@mixin laptop-m($dimension: "max") {
+	@media (#{$dimension}-width: 1200px) {
+		@content;
+	}
+}
+
 @mixin laptop($dimension: "max") {
 	@media (#{$dimension}-width: 1024px) {
 		@content;

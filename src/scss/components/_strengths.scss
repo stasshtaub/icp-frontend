@@ -1,7 +1,15 @@
 .strengths {
 	&__slider {
-		width: 890px;
+		max-width: 890px;
 		margin-top: -20px;
+
+		@include laptop-m {
+			max-width: 75vw;
+		}
+
+		@include tablet {
+			max-width: unset;
+		}
 	}
 
 	&__slider-controls {
@@ -10,6 +18,17 @@
 		justify-content: space-between;
 		padding-bottom: 25px;
 		border-bottom: 6px solid $color-gray-light;
+
+		@include mobile-l {
+			padding-bottom: 10px;
+		}
+	}
+
+	&__counter,
+	&__buttons {
+		@include mobile-l {
+			display: none;
+		}
 	}
 
 	&__counter {
@@ -44,13 +63,23 @@
 		margin-top: 24px;
 	}
 
-	&__slide {
+	&__slide-text {
 		font-weight: 500;
 		font-size: 40px;
 		line-height: 49px;
 		background: -webkit-linear-gradient($color-blue, $color-blue2);
 		background-clip: text;
 		-webkit-text-fill-color: transparent;
+
+		@include tablet {
+			font-size: 30px;
+			line-height: 37px;
+		}
+
+		@include mobile-l {
+			font-size: 20px;
+			line-height: 24px;
+		}
 	}
 
 	&__dots {
