@@ -1,51 +1,150 @@
 .programs-test {
 	min-height: 425px;
 
+	@include desktop {
+		min-height: 590px;
+	}
+
+	@include laptop {
+		min-height: 650px;
+	}
+
+	@include mobile-l {
+		min-height: 500px;
+	}
+
 	&__aside-title {
 		color: $color-blue;
 	}
 
 	&__content {
 		position: relative;
+		margin-left: 83px;
+
+		@include desktop {
+			margin-left: 59px;
+		}
+
+		@include tablet {
+			margin-left: unset;
+		}
+	}
+
+	&__mask {
+		position: absolute;
+		width: 200px;
+		height: 100%;
+		top: 0;
+		right: 0;
+		z-index: 18;
+		background: linear-gradient(270deg, $color-white, transparent);
+	}
+
+	&__bottom {
+		position: absolute;
+		bottom: 0;
+		display: flex;
+		width: 100%;
+		flex-wrap: wrap;
+
+		@include desktop {
+			flex-direction: column;
+		}
 	}
 
 	&__title {
-		font-weight: bold;
+		margin-top: -14px;
+		font-weight: 700;
 		font-size: 60px;
 		line-height: 73px;
 		color: $color-gray;
+
+		br {
+			@include laptop {
+				display: none;
+			}
+		}
+
+		@include laptop {
+			font-size: 45px;
+			line-height: 55px;
+		}
+
+		@include mobile-l {
+			font-size: 30px;
+			line-height: 37px;
+		}
 	}
-	
+
 	&__btn {
-		margin-top: 100px;
 		text-decoration: none;
+		white-space: nowrap;
+		align-self: flex-end;
+		margin-right: 115px;
+		margin-bottom: 65px;
+
+		@include desktop {
+			align-self: flex-start;
+			order: 1;
+		}
 	}
 
 	&__img {
-		position: absolute;
-		bottom: 0;
-		right: 0;
+		position: relative;
 		z-index: -1;
-	}
+		flex-shrink: 0;
+		overflow: hidden;
 
-	&__caption {
-		display: inline-block;
-		font-size: 22px;
-		font-weight: 500;
-		line-height: 27px;
-		letter-spacing: 0;
-		color: $color-gray;
-
-		&--two {
-			transform: translateX(118px);
+		@include laptop {
+			width: 100%;
 		}
 
-		&--three {
-			transform: translateX(188px);
-			background: linear-gradient(to left, transparent, $color-gray);
-			-webkit-background-clip: text;
-			background-clip: text;
-			-webkit-text-fill-color: transparent;
+		svg {
+			max-width: 100%;
+
+			@include tablet {
+				max-width: 120%;
+			}
+
+			@include mobile-l {
+				max-width: unset;
+			}
 		}
 	}
+
+	// &__captions {
+	// 	position: relative;
+	// 	display: flex;
+	// 	margin-top: 12px;
+	// 	overflow: hidden;
+
+	// 	@include laptop {
+	// 		width: 100%;
+	// 	}
+	// }
+
+	// &__caption {
+	// 	position: absolute;
+	// 	font-size: 22px;
+	// 	font-weight: 500;
+	// 	line-height: 27px;
+	// 	letter-spacing: 0;
+	// 	color: $color-gray;
+
+	// 	&--two {
+	// 		left: 50%;
+	// 	}
+
+	// 	&--three {
+	// 		right: 0;
+	// 		background: linear-gradient(to left, transparent, $color-gray);
+	// 		-webkit-background-clip: text;
+	// 		background-clip: text;
+	// 		-webkit-text-fill-color: transparent;
+	// 	}
+	// }
+
+	// &__caption-text {
+	// 	white-space: nowrap;
+	// }
 }
