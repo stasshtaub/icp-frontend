@@ -34,6 +34,12 @@
 	}
 }
 
+@mixin tablet-xs($dimension: "max") {
+	@media (#{$dimension}-width: 520px) {
+		@content;
+	}
+}
+
 @mixin mobile-l($dimension: "max") {
 	@media (#{$dimension}-width: 425px) {
 		@content;

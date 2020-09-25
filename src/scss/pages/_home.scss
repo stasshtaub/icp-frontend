@@ -25,6 +25,10 @@
 			@include tablet {
 				padding-top: 122px;
 			}
+
+			@include mobile-l {
+				padding-top: 289px;
+			}
 		}
 
 		&--video {
@@ -44,6 +48,10 @@
 		&--blur-overlay {
 			background-color: $color-black;
 			height: 160px;
+
+			@include mobile-l {
+				display: none;
+			}
 		}
 	}
 
@@ -56,6 +64,12 @@
 
 		@include tablet {
 			margin-top: 210px;
+			display: flex;
+			flex-wrap: wrap;
+		}
+
+		@include mobile-l {
+			margin-top: 27px;
 		}
 	}
 
@@ -85,6 +99,10 @@
 
 		@include laptop {
 			margin-top: 160px;
+		}
+
+		@include mobile-l {
+			margin-top: 40px;
 		}
 
 		&::before,

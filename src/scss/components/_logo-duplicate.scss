@@ -1,0 +1,11 @@
+.logo-duplicate {
+	position: absolute;
+    display: none;
+    height: 32px;
+    margin-top: 23px;
+    filter: grayscale(100%) invert(100%) contrast(15);
+
+	@include mobile-l {
+		display: block;
+	}
+}

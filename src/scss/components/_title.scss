@@ -4,7 +4,12 @@
 	font-size: 40px;
 	line-height: 35px;
 
-	@include tablet('min') {
+	@include tablet() {
+		font-size: 70px;
+		line-height: 65px;
+	}
+
+	@include tablet("min") {
 		font-size: 70px;
 		line-height: 65px;
 	}
@@ -12,6 +17,11 @@
 	@include laptop("min") {
 		font-size: 80px;
 		line-height: 65px;
+	}
+
+	@include tablet-xs() {
+		font-size: 40px;
+		line-height: 35px;
 	}
 
 	&__partial {
@@ -29,7 +39,7 @@
 		}
 
 		@include tablet() {
-			display: block;
+			display: unset;
 		}
 	}
 
