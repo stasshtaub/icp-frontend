@@ -1,11 +1,26 @@
 .programs {
-    padding: 75px 0 100px 0;
+	padding: 75px 0 100px 0;
 
 	&__list {
 		display: grid;
 		grid-template-columns: repeat(auto-fit, 315px);
 		grid-row-gap: 60px;
 		grid-column-gap: 30px;
+
+		@include laptop {
+			grid-column-gap: 20px;
+			grid-template-columns: repeat(auto-fit, 30%);
+		}
+
+		@include tablet {
+			grid-column-gap: 20px;
+			grid-template-columns: 1fr 1fr;
+		}
+
+		@include tablet {
+			grid-row-gap: 30px;
+			grid-template-columns: unset;
+		}
 	}
 
 	&__point {

@@ -1,15 +1,38 @@
 .double-block {
-    display: flex;
-    
+	display: flex;
+
+	@include tablet {
+		flex-direction: column;
+	}
+
 	&__content {
 		flex-grow: 1;
-        margin-left: 130px;
-    }
-    
+		margin-left: 130px;
+
+		@include laptop {
+			margin-left: 113px;
+		}
+
+		@include tablet {
+			margin-left: unset;
+			margin-top: 30px;
+		}
+	}
+
 	&__title {
 		font-size: 20px;
 		line-height: 25px;
-        font-weight: 500;
-        writing-mode: tb-rl;
+		font-weight: 500;
+		writing-mode: tb-rl;
+
+		@include tablet {
+			writing-mode: unset;
+		}
+
+		br {
+			@include tablet {
+				display: none;
+			}
+		}
 	}
 }
