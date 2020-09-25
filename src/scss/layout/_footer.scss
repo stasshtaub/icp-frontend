@@ -1,4 +1,12 @@
 .footer {
+	@include mobile-l() {
+		padding-bottom: 72px;
+	}
+
+	&__bottom-info-item {
+		padding: 10px 20px;
+	}
+
 	&__row {
 		padding: 35px 0;
 		border-bottom: 1px solid $color-black-opacity05;
@@ -6,12 +14,12 @@
 
 	&__row-container {
 		display: grid;
-		grid-template-columns: repeat(auto-fill, minmax(315px, 1fr));
+		grid-template-columns: repeat(auto-fit, minmax(315px, 1fr));
 		grid-gap: 30px;
-	}
 
-	&__row-flex-container {
-		display: flex;
+		@include mobile-l() {
+			grid-template-columns: unset;
+		}
 	}
 
 	&__col {
@@ -20,12 +28,9 @@
 			align-items: center;
 		}
 
-		&--flex {
-			flex-grow: 1;
-
-			&:not(:first-child) {
-				margin-left: 60px;
-			}
+		&--bottom-info {
+			margin: -10px -20px;
+			flex-wrap: wrap;
 		}
 	}
 
@@ -79,29 +84,26 @@
 		text-decoration-line: none;
 	}
 
-	&__bottom-info {
-		margin: 0 -40px;
-	}
-
 	&__bottom-text {
-		margin: 0 40px;
 		font-weight: 400;
 		font-size: 15px;
 		line-height: 20px;
 		color: $color-gray;
 
 		&--link {
+			white-space: nowrap;
 			text-decoration-line: underline;
 		}
 	}
 
 	&__chat-icon {
+		display: block;
 		width: 60px;
 		height: 60px;
-		margin-left: auto;
 		border-radius: 50%;
 		background: $color-blue url("/images/svg/icon-chat.svg") no-repeat
 			center;
+		flex-shrink: 0;
 	}
 
 	&__social-item {
