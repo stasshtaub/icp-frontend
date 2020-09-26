@@ -1,24 +1,26 @@
-const checkbox = document.getElementById("header__hamburger-checkbox");
+const checkbox = document.getElementById("header__checkbox-dropdown");
 
 const dropdownList = document.querySelector(".header__dropdown-list");
 const itemsWithDropdown = document.querySelectorAll(
 	".header__navbar-item--has-dropdown"
 );
 
-const deativateAllNavEl = () => {
+const deactivateAllNavEl = () => {
 	itemsWithDropdown.forEach((item) => {
 		item.classList.remove("header__navbar-item--active");
 	});
 };
 
 const activateNavEl = (el) => {
-	deativateAllNavEl();
-	el.classList.add("header__navbar-item--active");
+	deactivateAllNavEl();
+	el.classList.add("header__navbar-item--active");	
 };
 
 const initDropdown = ({ target }) => {
-	if (!checkbox.checked) {
-		checkbox.checked = true;
+	if (!target.classList.contains("header__navbar-item--active")) {
+		setTimeout(() => {
+			checkbox.checked = true;
+		}, 0);
 	}
 
 	activateNavEl(target);
@@ -37,10 +39,12 @@ const initDropdown = ({ target }) => {
 	});
 };
 
+checkbox.addEventListener("change", () => {
+	// if (checkbox.checked) {}
+	deactivateAllNavEl();
+});
+
 itemsWithDropdown.forEach((item) => {
 	item.addEventListener("mouseenter", initDropdown);
 });
 
-checkbox.addEventListener("change", () => {
-	deativateAllNavEl();
-});

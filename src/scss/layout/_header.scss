@@ -97,6 +97,16 @@
 				transition: transform 0.3s ease;
 				-webkit-font-smoothing: antialiased;
 			}
+
+			@include tablet-xs {
+				overflow: hidden;
+			}
+
+			@include mobile-l {
+				position: fixed;
+				top: 0;
+				height: calc(100vh - 76px);
+			}
 		}
 
 		&--dropdown {
@@ -255,37 +265,18 @@
 		opacity: 0;
 	}
 
-	&__hamburger-checkbox {
-		display: none;
-
+	&__checkbox-dropdown {
 		&:checked {
 			& ~ #{$p} {
-				background-color: $color-white;
-				color: $color-gray;
-
-				#{$p}__row--navbar {
-					transform: none;
+				@include tablet("min") {
+					background-color: $color-white;
+					color: $color-gray;
 				}
 
-				#{$p}__hamburger-icon {
-					background: url("../images/svg/icon-close.svg") no-repeat
-						center;
-				}
-
-				#{$p}__backdrop--hamburger {
-					display: block;
-
-					@include mobile-l {
-						display: none;
+				#{$p}__dropdown-backdrop {
+					@include tablet-xs {
+						display: block;
 					}
-				}
-
-				#{$p}__logo {
-					filter: unset;
-				}
-
-				#{$p}__row::after {
-					background-color: $color-black-opacity05;
 				}
 
 				#{$p}__row--dropdown {
@@ -303,11 +294,54 @@
 						border-top: 1px solid $color-black-opacity10;
 					}
 				}
+			}
+		}
+	}
 
-				#{$p}__dropdown-backdrop {
-					@include tablet-xs {
-						display: block;
+	&__checkbox-hamburger {
+		&:checked {
+			& ~ #{$p} {
+				@include tablet {
+					background-color: $color-white;
+					color: $color-gray;
+				}
+
+				#{$p}__row--navbar {
+					@include tablet() {
+						transform: none;
 					}
+				}
+
+				#{$p}__hamburger-icon {
+					@include tablet() {
+						background: url("../images/svg/icon-close.svg")
+							no-repeat center;
+					}
+				}
+			}
+		}
+	}
+
+	&__checkbox-dropdown,
+	&__checkbox-hamburger {
+		display: none;
+
+		&:checked {
+			& ~ #{$p} {
+				#{$p}__backdrop--hamburger {
+					display: block;
+
+					@include mobile-l {
+						display: none;
+					}
+				}
+
+				#{$p}__logo {
+					filter: unset;
+				}
+
+				#{$p}__row::after {
+					background-color: $color-black-opacity05;
 				}
 
 				#{$p}__link,
@@ -318,6 +352,7 @@
 				#{$p}__navbar-item {
 					color: $color-gray;
 				}
+
 				#{$p}__dropdown-icon {
 					background: url("../images/svg/icon-arrow-down-gray.svg")
 						no-repeat center;

@@ -1,14 +1,15 @@
 - var menuItems = [{title: 'О центре', level2: [{text: 'Миссия+ценности', href: '#'}, {text: 'История компании', href: '#'}, {text: 'Команда', href: '#'}, {text: 'Коучинговые компетенции', href: '#'}, {text: 'Членство в ICF', href: '#'}, {text: 'Ведущие', href: '#'}, {text: 'Партнеры', href: '#'}, {text: 'Представительства', href: '#'}, {text: 'Лаборатория научных исследований коучинга', href: '#'}, {text: 'Новости', href: '#'}, {text: 'Отзывы слушателей', href: '#'}]}, {title: 'Направления', level2: [{text: 'Программы развития коучинговых компетенций',href: '#'}, {text: 'Развитие профессиональных коучей GV: Коучинг для организаций',href: '#'}, {text: 'Agile-коучинг',href: '#'}, {text: 'Современные подходы в образовании и воспитании',href: '#'}, {text: 'Индивидуальный коучинг',href: '#'}]}, {title: 'Процесс обучения', level2: [{text: 'Расписание',href: '#'}, {text: 'Очное обучение',href: '#'}, {text: 'Онлайн-обучение',href: '#'}, {text: 'Песочница',href: '#'}, {text: 'Практика+стажировки',href: '#'}, {text: 'Программа лояльности',href: '#'}, {text: 'Институт обратной связи',href: '#'}, {text: 'Фестиваль коучинга',href: '#'}, {text: 'Коуч-туры',href: '#'}, {text: 'Бесплатные мастер-классы, вебинары и лекции',href: '#'}, {text: 'Горячая линия',href: '#'}]}, {title: 'База знаний', level2: [{text: 'Коучинг в HR: инструкция по применению',href: '#'}, {text: 'Спецпроект. История коучинга в России: 1990 − 2020. Команды, люди, события.',href: '#'}, {text: 'О коучинге понятным языком: 15 статей',href: '#'}, {text: 'Онлайн-библиотека',href: '#'}, {text: 'Подкаст: «Хроники одного коуча»',href: '#'}]}]
 
-input(type="checkbox" id="header__hamburger-checkbox").header__hamburger-checkbox
+input(type="checkbox" id="header__checkbox-dropdown").header__checkbox-dropdown
+input(type="checkbox" id="header__checkbox-hamburger").header__checkbox-hamburger
 
 header.header
     .header__content
-        label(for="header__hamburger-checkbox").header__backdrop.header__backdrop--hamburger
+        label(for="header__checkbox-hamburger").header__backdrop.header__backdrop--hamburger
         .header__row.header__row--panel
             .header__wrapper.header__wrapper--hamburger
                 .header__hamburger
-                    label(for="header__hamburger-checkbox").header__hamburger-icon
+                    label(for="header__checkbox-hamburger").header__hamburger-icon
             .header__wrapper.header__wrapper--general
                 a(href="/")
                     img(src="images/svg/logo.svg").header__logo
@@ -23,8 +24,8 @@ header.header
                 ul.header__navbar-list
                     each menuItem in menuItems 
                         li(data-elements=menuItem.level2).header__navbar-item.header__navbar-item--has-dropdown= menuItem.title
-                                span.header__dropdown-icon
-                .header__row.header__dropdown-backdrop
+                            span.header__dropdown-icon
+                label(for="header__checkbox-dropdown").header__dropdown-backdrop
                 .header__row.header__row--dropdown
                     ul.header__dropdown-list
                     .header__dropdown-search-container
