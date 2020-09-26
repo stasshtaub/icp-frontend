@@ -35,7 +35,7 @@
 }
 
 @mixin tablet-xs($dimension: "max") {
-	@media (#{$dimension}-width: 520px) {
+	@media (#{$dimension}-width: 530px) {
 		@content;
 	}
 }

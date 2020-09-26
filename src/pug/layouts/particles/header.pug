@@ -1,40 +1,31 @@
-- var menuItems = [{title: 'О центре', level2: ['Миссия+ценности', 'История компании', 'Команда', 'Коучинговые компетенции', 'Членство в ICF', 'Ведущие', 'Партнеры', 'Представительства', 'Лаборатория научных исследований коучинга']}, {title: 'Направления', level2: ['Программы развития коучинговых компетенций', 'Развитие профессиональных коучей GV: Коучинг для организаций', 'Agile-коучинг', 'Современные подходы в образовании и воспитании', 'Индивидуальный коучинг']}, {title: 'Процесс обучения', level2: ['Расписание', 'Очное обучение', 'Онлайн-обучение', 'Песочница', 'Практика+стажировки', 'Программа лояльности', 'Институт обратной связи', 'Фестиваль коучинга', 'Коуч-туры', 'Бесплатные мастер-классы, вебинары и лекции', 'Горячая линия']}, {title: 'База знаний', level2: ['Коучинг в HR: инструкция по применению', 'Спецпроект. История коучинга в России: 1990 − 2020. Команды, люди, события.', 'О коучинге понятным языком: 15 статей', 'Онлайн-библиотека', 'Подкаст: «Хроники одного коуча»']}]
+- var menuItems = [{title: 'О центре', level2: [{text: 'Миссия+ценности', href: '#'}, {text: 'История компании', href: '#'}, {text: 'Команда', href: '#'}, {text: 'Коучинговые компетенции', href: '#'}, {text: 'Членство в ICF', href: '#'}, {text: 'Ведущие', href: '#'}, {text: 'Партнеры', href: '#'}, {text: 'Представительства', href: '#'}, {text: 'Лаборатория научных исследований коучинга', href: '#'}, {text: 'Новости', href: '#'}, {text: 'Отзывы слушателей', href: '#'}]}, {title: 'Направления', level2: [{text: 'Программы развития коучинговых компетенций',href: '#'}, {text: 'Развитие профессиональных коучей GV: Коучинг для организаций',href: '#'}, {text: 'Agile-коучинг',href: '#'}, {text: 'Современные подходы в образовании и воспитании',href: '#'}, {text: 'Индивидуальный коучинг',href: '#'}]}, {title: 'Процесс обучения', level2: [{text: 'Расписание',href: '#'}, {text: 'Очное обучение',href: '#'}, {text: 'Онлайн-обучение',href: '#'}, {text: 'Песочница',href: '#'}, {text: 'Практика+стажировки',href: '#'}, {text: 'Программа лояльности',href: '#'}, {text: 'Институт обратной связи',href: '#'}, {text: 'Фестиваль коучинга',href: '#'}, {text: 'Коуч-туры',href: '#'}, {text: 'Бесплатные мастер-классы, вебинары и лекции',href: '#'}, {text: 'Горячая линия',href: '#'}]}, {title: 'База знаний', level2: [{text: 'Коучинг в HR: инструкция по применению',href: '#'}, {text: 'Спецпроект. История коучинга в России: 1990 − 2020. Команды, люди, события.',href: '#'}, {text: 'О коучинге понятным языком: 15 статей',href: '#'}, {text: 'Онлайн-библиотека',href: '#'}, {text: 'Подкаст: «Хроники одного коуча»',href: '#'}]}]
 
 input(type="checkbox" id="header__hamburger-checkbox").header__hamburger-checkbox
+
 header.header
-    label(for="header__hamburger-checkbox").header__backdrop
-    .header__hamburger-menu.header__hamburger-menu--general       
-        ul.header__hamburger-list
-            each menuItem in menuItems
-                li.header__hamburger-item.header__hamburger-item--general
-                    .header__hamburger-link
-                        span.header__hamburger-link-text= menuItem.title
-                        .header__hamburger-link-arrow
-                    //- В РАЗРАБОТКЕ
-                    //- .header__hamburger-menu.header__hamburger-menu--level2
-                    //-     ul.header__hamburger-list
-                    //-         each lemel2Item in menuItem.level2
-                    //-             li.header__hamburger-item.header__hamburger-item--level2
-                    //-                 a(href="#").header__hamburger-link.header__hamburger-link--level2
-                    //-                     span.header__hamburger-link-text= lemel2Item
-    .header__row.header__row--panel
-        .header__wrapper.header__wrapper--hamburger
-            .header__hamburger
-                label(for="header__hamburger-checkbox").header__hamburger-icon
-        .header__wrapper.header__wrapper--general
-            a(href="/")
-                img(src="images/svg/logo.svg").header__logo
-            p.header__title Один из крупнейших в Европе международных
-                br
-                |  центров обуения с сертификацией ICF
-        .header__wrapper.header__wrapper--contacts
-            a(href="mailto:info@icpcentre.org").header__link.header__link--mail
-                .header__mail-icon
-            a(href="tel:+78005513531").header__link.header__link--phone 8&nbsp;800&nbsp;551&#8209;35&#8209;31
-    .header__row.header__row--navbar
-        nav.header__navbar
-            ul.header__navbar-list
-                each menuItem in menuItems 
-                    li.header__navbar-item
-                        a(href="#").header__link= menuItem.title
-                            span.header__dropdown-icon
+    .header__content
+        label(for="header__hamburger-checkbox").header__backdrop.header__backdrop--hamburger
+        .header__row.header__row--panel
+            .header__wrapper.header__wrapper--hamburger
+                .header__hamburger
+                    label(for="header__hamburger-checkbox").header__hamburger-icon
+            .header__wrapper.header__wrapper--general
+                a(href="/")
+                    img(src="images/svg/logo.svg").header__logo
+                p.header__title Один из крупнейших в Европе международных
+                    br
+                    |  центров обуения с сертификацией ICF
+            .header__wrapper.header__wrapper--contacts
+                a(href="mailto:info@icpcentre.org").header__link.header__link--mail
+                    .header__mail-icon
+                a(href="tel:+78005513531").header__link.header__link--phone 8&nbsp;800&nbsp;551&#8209;35&#8209;31
+        nav.header__row.header__row--navbar
+                ul.header__navbar-list
+                    each menuItem in menuItems 
+                        li(data-elements=menuItem.level2).header__navbar-item.header__navbar-item--has-dropdown= menuItem.title
+                                span.header__dropdown-icon
+                .header__row.header__dropdown-backdrop
+                .header__row.header__row--dropdown
+                    ul.header__dropdown-list
+                    .header__dropdown-search-container
+                        input(type="search" placeholder="Поиск").header__dropdown-search-input

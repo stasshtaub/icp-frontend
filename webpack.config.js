@@ -3,6 +3,7 @@ var path = require("path");
 module.exports = {
 	entry: {
 		home: "./src/js/home",
+		common: "./src/js/common",
 	},
 	module: {
 		rules: [
