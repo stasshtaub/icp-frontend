@@ -1,29 +1,21 @@
 const init = () => {
-	// const container = document.querySelector(".programs-carousel__slides");
-
-	// const slider = tns({
-	// 	container,
-	// 	prevButton: ".programs-carousel__btn--prev",
-	// 	nextButton: ".programs-carousel__btn--next",
-	// 	navContainer: ".programs-carousel__dots",
-	// 	items: 3,
-	// 	center: true,
-	// 	fixedWidth: 690,
-	// });
-
-	const swiper = new Swiper(".programs-carousel__slider", {
+	const swiper = new Swiper(".swiper-container", {
+		slidesPerView: "auto",
+		spaceBetween: -210,
 		loop: true,
 		loopedSlides: 2,
-		slidesPerView: 'auto',
 		centeredSlides: true,
-		spaceBetween: 30,
-		pagination: {
-			el: ".programs-carousel__dots",
-			clickable: true,
-		},
 		navigation: {
 			nextEl: ".programs-carousel__btn--next",
 			prevEl: ".programs-carousel__btn--prev",
+		},
+		breakpoints: {
+			1090: {
+				spaceBetween: -90,
+			},
+			1300: {
+				spaceBetween: 0,
+			},
 		},
 	});
 };
