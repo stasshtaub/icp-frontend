@@ -15,6 +15,7 @@
 		@include tablet-s {
 			height: unset !important;
 			margin-top: unset;
+			margin-bottom: unset;
 		}
 	}
 
@@ -234,9 +235,10 @@
 		@include tablet-s {
 			justify-content: unset;
 			padding: 0 10px;
+			margin-top: 10px;
 		}
 	}
-
+	
 	&__dot {
 		$dot-size: 8px;
 
