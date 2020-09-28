@@ -8,6 +8,14 @@
 	margin-bottom: 100px;
 	color: $color-white;
 
+	@include tablet-s {
+		margin-bottom: unset;
+	}
+
+	@include mobile-l {
+		margin-bottom: 100px;
+	}
+
 	&__distortion {
 		content: "";
 		top: 0;
