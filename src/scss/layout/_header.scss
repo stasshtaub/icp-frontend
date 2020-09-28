@@ -279,6 +279,10 @@
 					}
 				}
 
+				#{$p}__backdrop--dropdown {
+					display: block;
+				}
+
 				#{$p}__row--dropdown {
 					display: flex;
 
