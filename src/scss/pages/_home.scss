@@ -193,4 +193,29 @@
 		display: flex;
 		align-items: center;
 	}
+
+	&__start-list-dots {
+		display: none;
+		padding-bottom: 47px;
+
+		@include tablet-s {
+			display: flex;
+		}
+	}
+
+	&__start-list-dot {
+		$dot-size: 8px;
+		outline: none;
+
+		cursor: pointer;
+		width: $dot-size;
+		height: $dot-size;
+		border-radius: 50%;
+		border: 2px solid $color-white;
+		margin: 0 19px;
+
+		&.tns-nav-active {
+			background-color: $color-white;
+		}
+	}
 }

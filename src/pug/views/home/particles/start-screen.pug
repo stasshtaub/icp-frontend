@@ -11,14 +11,13 @@ section.home__start-screen
         span.title__partial.title__partial--italic ЭВОЛЮЦИЯ.
     .home__start-line
         .container
+            - var startList = ['Развиваем специалистов в сфере образования', 'Содействуем персональной эволюции', 'Проводим подготовку профессиональных коучей', 'Помогаем создавать современный бизнес']
             ul.home__start-list
-                li.home__start-list-item
-                    span.home__start-list-text Развиваем специалистов в сфере образования
-                li.home__start-list-item
-                    span.home__start-list-text Содействуем персональной эволюции
-                li.home__start-list-item
-                    span.home__start-list-text Проводим подготовку профессиональных коучей
-                li.home__start-list-item
-                    span.home__start-list-text Помогаем создавать современный бизнес
+                each item in startList
+                    li.home__start-list-item
+                        span.home__start-list-text= item
+            ul.home__start-list-dots
+                each val in startList
+                    li.home__start-list-dot
 
 
