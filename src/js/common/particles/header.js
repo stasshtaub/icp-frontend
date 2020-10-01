@@ -40,7 +40,6 @@ const initDropdown = ({ target }) => {
 };
 
 checkbox.addEventListener("change", () => {
-	// if (checkbox.checked) {}
 	deactivateAllNavEl();
 });
 
