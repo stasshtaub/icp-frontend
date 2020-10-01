@@ -1,4 +1,5 @@
 const checkbox = document.getElementById("header__checkbox-dropdown");
+const backdropDropdown = document.querySelector(".header__backdrop--dropdown");
 
 const dropdownList = document.querySelector(".header__dropdown-list");
 const itemsWithDropdown = document.querySelectorAll(
@@ -13,7 +14,7 @@ const deactivateAllNavEl = () => {
 
 const activateNavEl = (el) => {
 	deactivateAllNavEl();
-	el.classList.add("header__navbar-item--active");	
+	el.classList.add("header__navbar-item--active");
 };
 
 const initDropdown = ({ target }) => {
@@ -43,7 +44,11 @@ checkbox.addEventListener("change", () => {
 	deactivateAllNavEl();
 });
 
+backdropDropdown.addEventListener("mouseenter", () => {
+	checkbox.checked = false;
+	deactivateAllNavEl();
+});
+
 itemsWithDropdown.forEach((item) => {
 	item.addEventListener("mouseenter", initDropdown);
 });
-
