@@ -16,7 +16,7 @@
 			background-attachment: fixed;
 			background-size: 100%;
 
-			@include laptop {
+			@include laptop-l {
 				background-size: cover;
 				padding-top: 240px;
 				background-position-x: center;
@@ -129,7 +129,7 @@
 		justify-content: space-between;
 		padding: 85px 0 40px 0;
 
-		@include laptop {
+		@include laptop-l {
 			margin: -15px;
 			padding: 24px 0 68px 0;
 		}
@@ -144,9 +144,9 @@
 		width: 315px;
 		padding: 15px;
 
-		@include laptop {
-			padding: 0 15px;
-		}
+		// @include laptop-l {
+		// 	padding: 0 15px;
+		// }
 
 		@include tablet {
 			padding: 12px 15px;
