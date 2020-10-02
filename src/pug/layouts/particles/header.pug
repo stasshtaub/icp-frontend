@@ -4,30 +4,31 @@ input(type="checkbox" id="header__checkbox-dropdown").header__checkbox-dropdown
 input(type="checkbox" id="header__checkbox-hamburger").header__checkbox-hamburger
 
 header.header
-    .header__content
-        label(for="header__checkbox-hamburger").header__backdrop.header__backdrop--hamburger
-        label(for="header__checkbox-dropdown").header__backdrop.header__backdrop--dropdown
-        .header__row.header__row--panel
-            .header__wrapper.header__wrapper--hamburger
-                .header__hamburger
-                    label(for="header__checkbox-hamburger").header__hamburger-icon
-            .header__wrapper.header__wrapper--general
-                a(href="/")
-                    img(src="images/svg/logo.svg").header__logo
-                p.header__title Один из крупнейших в Европе международных
-                    br
-                    |  центров обуения с сертификацией ICF
-            .header__wrapper.header__wrapper--contacts
-                a(href="mailto:info@icpcentre.org").header__link.header__link--mail
-                    .header__mail-icon
-                a(href="tel:+78005513531").header__link.header__link--phone 8&nbsp;800&nbsp;551&#8209;35&#8209;31
-        nav.header__row.header__row--navbar
-                ul.header__navbar-list
-                    each menuItem in menuItems 
-                        li(data-elements=menuItem.level2).header__navbar-item.header__navbar-item--has-dropdown= menuItem.title
-                            span.header__dropdown-icon
-                label(for="header__checkbox-dropdown").header__dropdown-backdrop
-                .header__row.header__row--dropdown
-                    ul.header__dropdown-list
-                    .header__dropdown-search-container
-                        input(type="search" placeholder="Поиск").header__dropdown-search-input
+    .container.header__container
+        .header__content
+            label(for="header__checkbox-hamburger").header__backdrop.header__backdrop--hamburger
+            label(for="header__checkbox-dropdown").header__backdrop.header__backdrop--dropdown
+            .header__row.header__row--panel
+                .header__wrapper.header__wrapper--hamburger
+                    .header__hamburger
+                        label(for="header__checkbox-hamburger").header__hamburger-icon
+                .header__wrapper.header__wrapper--general
+                    a(href="/")
+                        img(src="images/svg/logo.svg").header__logo
+                    p.header__title Один из крупнейших в Европе международных
+                        br
+                        |  центров обуения с сертификацией ICF
+                .header__wrapper.header__wrapper--contacts
+                    a(href="mailto:info@icpcentre.org").header__link.header__link--mail
+                        .header__mail-icon
+                    a(href="tel:+78005513531").header__link.header__link--phone 8&nbsp;800&nbsp;551&#8209;35&#8209;31
+            nav.header__row.header__row--navbar
+                    ul.header__navbar-list
+                        each menuItem in menuItems 
+                            li(data-elements=menuItem.level2).header__navbar-item.header__navbar-item--has-dropdown= menuItem.title
+                                span.header__dropdown-icon
+                    label(for="header__checkbox-dropdown").header__dropdown-backdrop
+                    .header__row.header__row--dropdown
+                        ul.header__dropdown-list
+                        .header__dropdown-search-container
+                            input(type="search" placeholder="Поиск").header__dropdown-search-input

@@ -65,9 +65,13 @@
 
 		&--panel {
 			display: flex;
+			padding: 21px 0;
 			justify-content: space-between;
-			padding: 21px 45px;
 			z-index: 2;
+
+			@include desktop {
+				padding: 21px 45px;
+			}
 
 			@include laptop {
 				padding: 24px 30px;
@@ -140,18 +144,24 @@
 		&::after {
 			content: "";
 			position: absolute;
-			left: 0;
+    		left: 50%;
 			bottom: 0;
 			width: 100vw;
 			height: 1px;
 			background-color: $color-white-opacity10;
+			transform: translateX(-50%);
 		}
 	}
 
 	&__navbar-list {
-		padding: 20px 45px 25px 45px;
+		padding: 20px 0 25px 0;
 		display: flex;
 		justify-content: space-between;
+
+		
+		@include desktop {
+			padding: 20px 45px 25px 45px;
+		}
 
 		@include tablet {
 			border-right: 1px solid $color-black-opacity10;
