@@ -14,9 +14,16 @@
 
 	&__row-container {
 		display: grid;
-		grid-template-columns: repeat(auto-fit, minmax(315px, 1fr));
 		grid-gap: 30px;
 
+		&--fit {
+			grid-template-columns: repeat(auto-fit, minmax(315px, 1fr));
+		}
+
+		&--fill {
+			grid-template-columns: repeat(auto-fill, minmax(315px, 1fr));
+		}
+		
 		@include mobile-l() {
 			grid-template-columns: unset;
 		}
