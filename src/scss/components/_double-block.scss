@@ -7,7 +7,7 @@
 
 	&__content {
 		flex-grow: 1;
-		margin-left: 130px;
+		margin-left: 110px;
 
 		@include laptop {
 			margin-left: 113px;
@@ -20,6 +20,9 @@
 	}
 
 	&__title {
+		min-width: 2.5em;
+		display: flex;
+		align-items: flex-end;
 		font-size: 20px;
 		line-height: 25px;
 		font-weight: 500;
