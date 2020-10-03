@@ -124,6 +124,10 @@
 		}
 	}
 
+	&__start-slider {
+		margin-left: 0 !important;
+	}
+
 	&__start-list {
 		display: flex;
 		justify-content: space-between;
@@ -138,18 +142,25 @@
 			flex-wrap: wrap;
 			margin: -12px -15px;
 		}
+
+		@include mobile-l {
+			flex-wrap: unset;
+			margin: unset;
+		}
 	}
 
 	&__start-list-item {
 		width: 315px;
 		padding: 15px;
-
-		// @include laptop-l {
-		// 	padding: 0 15px;
-		// }
+		max-width: calc(50% - 30px);
 
 		@include tablet {
 			padding: 12px 15px;
+		}
+
+		@include mobile-l {
+			max-width: unset;
+			padding: 0;
 		}
 	}
 
@@ -198,7 +209,7 @@
 		display: none;
 		padding-bottom: 47px;
 
-		@include tablet-s {
+		@include mobile-l {
 			display: flex;
 		}
 	}
