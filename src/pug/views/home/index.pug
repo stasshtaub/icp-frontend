@@ -3,7 +3,6 @@ extends ../../layouts/default
 block styles
     link(rel="stylesheet" href!=`${baseDir}css/main.css?v=${Date.now()}`)
     link(rel="stylesheet" href!=`${baseDir}css/font-awesome.css?v=${Date.now()}`)
-    link(rel="stylesheet" href!="https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.9.3/tiny-slider.css")
     link(rel="stylesheet" href!="https://unpkg.com/swiper@6.3.2/swiper-bundle.min.css")
 block content
     .home
@@ -26,7 +25,6 @@ block content
             .container
                 include particles/programs-test
 block scripts
-    script(src!="https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.9.2/min/tiny-slider.js")
-    script(src!="https://unpkg.com/swiper/swiper-bundle.min.js")
     script(src!=`${baseDir}js/common.js?v=${Date.now()}`)
-    script(src!=`${baseDir}js/home.js?v=${Date.now()}`)
+    script(defer src!="https://unpkg.com/swiper/swiper-bundle.min.js")
+    script(defer src!=`${baseDir}js/home.js?v=${Date.now()}`)
