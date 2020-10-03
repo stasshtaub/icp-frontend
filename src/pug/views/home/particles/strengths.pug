@@ -2,7 +2,7 @@
     aside.double-block__aside
         h3.double-block__title Наши сильные стороны
     .double-block__content
-        .strengths__slider
+        .strengths__slider.swiper-container
             .strengths__slider-controls
                 .strengths__counter
                     span.strengths__counter-curr 1
@@ -11,10 +11,8 @@
                 .strengths__buttons
                     button.strengths__btn.strengths__btn--prev
                     button.strengths__btn.strengths__btn--next
-            ul.strengths__slides
+            ul.strengths__slides.swiper-wrapper
                 each val in [1, 2, 3, 4, 5]
-                    li.strengths__slide 
+                    li.strengths__slide.swiper-slide
                         p.strengths__slide-text Работаем строго по стандартам ICF (International Coaching Federation) — самое крупное профессиональное сообщество, действующее с 1995 года, задающее мировые стандарты профессии.
             ul.strengths__dots
-                each val in [1, 2, 3, 4, 5]
-                    li.strengths__dot

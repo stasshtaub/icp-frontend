@@ -2,6 +2,7 @@
 	&__slider {
 		max-width: 890px;
 		margin-top: -20px;
+		margin-left: 0 !important;
 
 		@include laptop-m {
 			max-width: 75vw;
@@ -52,6 +53,7 @@
 		height: 24px;
 		background: url("../images/svg/icon-prev-arrow.svg") no-repeat center;
 		border: none;
+		outline: none;
 
 		&--next {
 			transform: rotate(180deg);
@@ -61,6 +63,10 @@
 
 	&__slides {
 		margin-top: 24px;
+	}
+
+	&__slide {
+		cursor: default;
 	}
 
 	&__slide-text {

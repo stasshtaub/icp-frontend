@@ -1,28 +1,28 @@
-const totalSlidesView = document.querySelector(".strengths__counter-total");
-const curSlideView = document.querySelector(".strengths__counter-curr");
+{
+	const totalSlidesView = document.querySelector(".strengths__counter-total");
+	const curSlideView = document.querySelector(".strengths__counter-curr");
 
-const updateCounter = ({ index, slideCount }) => {
-	if (index > slideCount) {
-		curSlideView.textContent = 1;
-	} else if (index === 0) {
-		curSlideView.textContent = slideCount;
-	} else {
-		curSlideView.textContent = index;
-	}
-};
+	const updateCounter = ({ realIndex }) => {
+		curSlideView.textContent = realIndex + 1;
+	};
 
-const init = () => {
-	const container = document.querySelector(".strengths__slides");
-	const slider = tns({
-		container,
-		prevButton: ".strengths__btn--prev",
-        nextButton: ".strengths__btn--next",
-		navContainer: ".strengths__dots",
-		onInit: ({ slideCount }) => {
-			totalSlidesView.textContent = slideCount;
+	const swiper = new Swiper(".strengths__slider", {
+		slidesPerView: 1,
+		loop: true,
+		navigation: {
+			nextEl: ".strengths__btn--next",
+			prevEl: ".strengths__btn--prev",
+		},
+		pagination: {
+			el: ".strengths__dots",
+			bulletClass: "strengths__dot",
+			clickable: true,
+		},
+		on: {
+			init: (swiper) => {
+				totalSlidesView.textContent = swiper.slides.length - 2;
+			},
+			slideChange: updateCounter,
 		},
 	});
-	slider.events.on("indexChanged", updateCounter);
-};
-
-export default init;
+}
