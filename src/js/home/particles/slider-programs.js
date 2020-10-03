@@ -1,5 +1,5 @@
 const init = () => {
-	const swiper = new Swiper(".swiper-container", {
+	const swiper = new Swiper(".programs-carousel__slider", {
 		slidesPerView: 1,
 		loop: true,
 		navigation: {
