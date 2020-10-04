@@ -1,0 +1,9 @@
+.advantages
+    .container
+        .advantages__slider
+            - var list = ['Развиваем специалистов в сфере образования', 'Содействуем персональной эволюции', 'Проводим подготовку профессиональных коучей', 'Помогаем создавать современный бизнес']
+            ul.advantages__list
+                each item in list
+                    li.advantages__list-item
+                        span.advantages__text= item
+            ul.advantages__dots

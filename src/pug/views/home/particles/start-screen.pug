@@ -9,14 +9,6 @@ section.home__start-screen
         span.title__partial.title__partial--medium БИЗНЕС.&nbsp;
         br
         span.title__partial.title__partial--italic ЭВОЛЮЦИЯ.
-    .home__start-line
-        .container
-            .home__start-slider
-                - var startList = ['Развиваем специалистов в сфере образования', 'Содействуем персональной эволюции', 'Проводим подготовку профессиональных коучей', 'Помогаем создавать современный бизнес']
-                ul.home__start-list
-                    each item in startList
-                        li.home__start-list-item
-                            span.home__start-list-text= item
-                ul.home__start-list-dots
+    include advantages
 
 

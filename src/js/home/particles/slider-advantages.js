@@ -1,7 +1,7 @@
 {
-	const container = document.querySelector(".home__start-slider");
-	const wrapper = document.querySelector(".home__start-list");
-	const slides = document.querySelectorAll(".home__start-list-item");
+	const container = document.querySelector(".advantages__slider");
+	const wrapper = document.querySelector(".advantages__list");
+	const slides = document.querySelectorAll(".advantages__list-item");
 
 	const breakpointMobileL = window.matchMedia("(max-width: 425px)");
 
@@ -26,13 +26,14 @@
 			slide.classList.add('swiper-slide');
 		});
 		
-		swiper = new Swiper(".home__start-slider", {
+		swiper = new Swiper(".advantages__slider", {
 			spaceBetween: 50,
 			slidesPerView: 1,
 			loop: true,
 			pagination: {
-				el: ".home__start-list-dots",
-				bulletClass: "home__start-list-dot",
+				el: ".advantages__dots",
+				bulletClass: "slider__dot",
+				bulletActiveClass: "slider__dot--active",
 				clickable: true,
 			}
 		});

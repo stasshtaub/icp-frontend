@@ -1,0 +1,17 @@
+.slider {
+    &__dot {
+        $dot-size: 8px;
+		outline: none;
+
+		cursor: pointer;
+		width: $dot-size;
+		height: $dot-size;
+		border-radius: 50%;
+		border: 2px solid $color-blue;
+		margin: 0 19px;
+
+		&--active {
+			background-color: $color-blue;
+		}
+    }
+}

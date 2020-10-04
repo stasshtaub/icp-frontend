@@ -1,0 +1,95 @@
+.advantages {
+	position: relative;
+	width: 100vw;
+	margin: 48px 0 0 calc(-50vw + 50%);
+	background: linear-gradient(0deg, #000000 0%, rgba(0, 0, 0, 0.0001) 100%);
+	backdrop-filter: blur(20px);
+
+	@include laptop {
+		margin-top: 160px;
+	}
+
+	@include mobile-l {
+		margin-top: 40px;
+	}
+
+	&::before,
+	&::after {
+		content: "";
+		position: absolute;
+		left: 0;
+		width: 100vw;
+		height: 1px;
+		background-color: $color-white-opacity10;
+	}
+
+	&::before {
+		top: 0;
+	}
+
+	&::after {
+		bottom: 0;
+	}
+
+	&__slider {
+		margin-left: 0 !important;
+	}
+
+	&__list {
+		display: flex;
+		justify-content: space-between;
+		padding: 85px 0 40px 0;
+
+		@include laptop-l {
+			margin: -15px;
+			padding: 24px 0 68px 0;
+		}
+
+		@include tablet {
+			flex-wrap: wrap;
+			margin: -12px -15px;
+		}
+
+		@include mobile-l {
+			flex-wrap: unset;
+			margin: unset;
+		}
+	}
+
+	&__list-item {
+		width: 315px;
+		padding: 15px;
+		max-width: calc(50% - 30px);
+
+		@include tablet {
+			padding: 12px 15px;
+		}
+
+		@include mobile-l {
+			max-width: unset;
+			padding: 0;
+		}
+	}
+
+	&__text {
+		font-size: 20px;
+		line-height: 24px;
+	}
+
+	&__dots {
+		display: none;
+		padding-bottom: 47px;
+
+		@include mobile-l {
+			display: flex;
+		}
+	}
+
+	.slider__dot {
+		border-color: $color-white;
+
+		&--active {
+			background-color: $color-white;
+		}
+	}
+}
