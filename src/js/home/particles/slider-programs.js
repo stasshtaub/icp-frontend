@@ -8,7 +8,8 @@
 		},
 		pagination: {
 			el: ".programs-carousel__dots",
-			bulletClass: "programs-carousel__dot",
+			bulletClass: "slider__dot",
+			bulletActiveClass: "slider__dot--active",
 			clickable: true,
 		},
 		breakpoints: {

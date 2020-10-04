@@ -238,21 +238,4 @@
 			margin-top: 10px;
 		}
 	}
-	
-	&__dot {
-		$dot-size: 8px;
-
-		cursor: pointer;
-		width: $dot-size;
-		height: $dot-size;
-		border-radius: 50%;
-		border: 2px solid $color-blue;
-		margin: 0 19px;
-		background-color: unset;
-		opacity: unset;
-
-		&.swiper-pagination-bullet-active {
-			background-color: $color-blue;
-		}
-	}
 }

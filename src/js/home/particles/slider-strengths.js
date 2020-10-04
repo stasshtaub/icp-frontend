@@ -15,7 +15,8 @@
 		},
 		pagination: {
 			el: ".strengths__dots",
-			bulletClass: "strengths__dot",
+			bulletClass: "slider__dot",
+			bulletActiveClass: "slider__dot--active",
 			clickable: true,
 		},
 		on: {
