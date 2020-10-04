@@ -3,18 +3,24 @@
 
 	position: absolute;
 	width: 100%;
-	z-index: 1;
-
-	&__content {
-		display: flex;
-		flex-direction: column;
-		color: $color-white;
-	}
+	z-index: 2;
 
 	@include mobile-l {
 		position: fixed;
 		bottom: 0;
 		background-color: $color-white;
+	}
+
+	&__container {
+		@include mobile-l {
+			padding: 0;
+		}
+	}
+
+	&__content {
+		display: flex;
+		flex-direction: column;
+		color: $color-white;
 	}
 
 	&__navbar-item {
