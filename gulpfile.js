@@ -64,7 +64,7 @@ gulp.task("scss", () => {
 	const plugins = [autoprefixer(), cssnano()];
 
 	return gulp
-		.src("./src/scss/*.scss")
+		.src(["./src/scss/*.scss", "./src/scss/pages/*.scss"])
 		.pipe(sass().on("error", sass.logError))
 		.pipe(postcss(plugins))
 		.pipe(gulp.dest(`${settings.dist}/css`));

@@ -1,0 +1,80 @@
+@import "../utils/variables";
+@import "../utils/breakpoints";
+@import "../utils/helpers";
+
+@import "../components/home/start-screen";
+@import "../components/home/video-block";
+@import "../components/home/advantages";
+@import "../components/home/logo-duplicate";
+@import "../components/home/double-block";
+@import "../components/home/programs";
+@import "../components/home/strengths";
+@import "../components/home/stats";
+@import "../components/home/trapezoid";
+@import "../components/home/programs-carousel";
+@import "../components/home/programs-test";
+@import "../components/home/hotline";
+
+@import "../components/common/slider";
+@import "../components/common/button";
+@import "../components/common/title";
+@import "../components/common/subtitle";
+
+
+.home {
+	padding-bottom: 100px;
+
+	$video-offset: 104px;
+
+	&__group {
+		&--first,
+		&--video {
+			color: $color-white;
+		}
+
+		&--first {
+			padding-top: 300px;
+			background: $color-black
+				url("../images/png/start-screen-background.png") no-repeat;
+			background-attachment: fixed;
+			background-size: 100%;
+
+			@include laptop-l {
+				background-size: cover;
+				padding-top: 240px;
+				background-position-x: center;
+			}
+
+			@include tablet {
+				padding-top: 122px;
+			}
+
+			@include mobile-l {
+				padding-top: 289px;
+			}
+		}
+
+		&--video {
+			padding: $video-offset 114px 0 114px;
+			background-color: $color-blue;
+			box-sizing: content-box;
+
+			@include tablet {
+				padding: $video-offset 30px 0 30px;
+			}
+
+			@include mobile-l {
+				padding: 0;
+			}
+		}
+
+		&--blur-overlay {
+			background-color: $color-black;
+			height: 160px;
+
+			@include mobile-l {
+				display: none;
+			}
+		}
+	}
+}
