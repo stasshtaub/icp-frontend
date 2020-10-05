@@ -327,13 +327,13 @@
 				}
 
 				#{$p}__row--navbar {
-					@include tablet() {
+					@include tablet {
 						transform: none;
 					}
 				}
 
 				#{$p}__hamburger-icon {
-					@include tablet() {
+					@include tablet {
 						background: url("../images/svg/icon-close.svg")
 							no-repeat center;
 					}

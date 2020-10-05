@@ -1,5 +1,7 @@
 .footer {
-	@include mobile-l() {
+	$p: &;
+
+	@include mobile-l {
 		padding-bottom: 72px;
 	}
 
@@ -10,6 +12,12 @@
 	&__row {
 		padding: 35px 0;
 		border-bottom: 1px solid $color-black-opacity05;
+
+		&--categories {
+			@include tablet {
+				display: none;
+			}
+		}
 	}
 
 	&__row-container {
@@ -21,10 +29,17 @@
 		}
 
 		&--fill {
-			grid-template-columns: repeat(auto-fill, minmax(315px, 1fr));
+			grid-template-columns: repeat(
+				auto-fill,
+				minmax(calc(25% - 30px), 1fr)
+			);
+
+			@include laptop {
+				grid-template-columns: repeat(auto-fill, minmax(30%, 1fr));
+			}
 		}
-		
-		@include mobile-l() {
+
+		@include mobile-l {
 			grid-template-columns: unset;
 		}
 	}

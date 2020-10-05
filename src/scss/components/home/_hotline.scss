@@ -22,7 +22,7 @@
 			padding: 23px 160px;
 		}
 	
-		@include tablet() {
+		@include tablet {
 			padding: 25px 22px;
 			flex-direction: column;
 			align-items: unset;
@@ -53,13 +53,13 @@
 		line-height: 17px;
 		margin-left: 72px;
 
-		@include tablet() {
+		@include tablet {
 			margin-left: unset;
 			margin-top: 15px;
 		}
 
 		br {
-			@include tablet() {
+			@include tablet {
 				display: none;
 			}
 		}
@@ -72,7 +72,7 @@
 	&__link {
 		margin-left: auto;
 
-		@include tablet() {
+		@include tablet {
 			margin-left: unset;
 			margin-top: 15px;
 		}

@@ -1,6 +1,6 @@
 footer.footer
     include ../../components/hotline
-    .footer__row
+    .footer__row.footer__row--contacts
         .container.footer__row-container.footer__row-container--fill
             .footer__col.footer__col--align-center
                 a(href="mailto:info@icpcentre.org").footer__primary-link.footer__primary-link--email info@icpcentre.org
@@ -13,7 +13,7 @@ footer.footer
                         li.footer__social-item
                             a(href=socialItem.link)
                                 i(class=socialItem.icon).footer__social-icon
-    .footer__row
+    .footer__row.footer__row--categories
         .container.footer__row-container.footer__row-container--fill
             - var footerCols = [{title: 'О центре', items: ['Миссия+ценности', 'История компании', 'Команда', 'Коучинговые компетенции', 'Членство в ICF', 'Ведущие', 'Партнеры', 'Представительства', 'Лаборатория научных исследований коучинга', 'Новости', 'Отзывы']}, {title: 'Направления', items: ['Программы развития коучинговых компетенций', 'Развитие профессиональных коучей', 'GV: Коучинг для организаций', 'Agile-коучинг', 'Современные подходы в образовании и воспитании', 'Индивидуальный коучинг']}, {title: 'Процесс обучения', items: ['Расписание', 'Очное обучение', 'Онлайн-обучение', 'Песочница', 'Практика+стажировки', 'Программа лояльности', 'Институт обратной связи', 'Фестиваль коучинга', 'Коуч-туры', 'Бесплатные мастер-классы, вебинары и лекции', 'Горячая линия']}, {title: 'База знаний', items: ['Коучинг в HR: инструкция по применению', 'Спецпроект. История коучинга в России: 1990 − 2020. Команды, люди, события.', 'О коучинге понятным языком: 15 статей', 'Онлайн-библиотека', 'Подкаст: «Хроники одного коуча»']}]
             each footerCol in footerCols

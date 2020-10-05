@@ -4,7 +4,7 @@
 	font-size: 40px;
 	line-height: 35px;
 
-	@include tablet() {
+	@include tablet {
 		font-size: 70px;
 		line-height: 65px;
 	}
@@ -19,7 +19,7 @@
 		line-height: 65px;
 	}
 
-	@include tablet-xs() {
+	@include tablet-xs {
 		font-size: 40px;
 		line-height: 35px;
 	}
@@ -38,13 +38,13 @@
 			font-style: italic;
 		}
 
-		@include tablet() {
+		@include tablet {
 			display: unset;
 		}
 	}
 
 	br {
-		@include tablet() {
+		@include tablet {
 			display: none;
 		}
 	}
