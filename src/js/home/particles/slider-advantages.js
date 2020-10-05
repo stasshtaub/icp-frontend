@@ -3,7 +3,9 @@
 	const wrapper = document.querySelector(".advantages__list");
 	const slides = document.querySelectorAll(".advantages__list-item");
 
-	const breakpointMobileL = window.matchMedia("(max-width: 425px)");
+	const breakpointMobileL = window.matchMedia(
+		"screen and (max-width: 425px)"
+	);
 
 	let swiper;
 
@@ -49,6 +51,15 @@
 		swiper.destroy(true, true);
 	}
 
-	breakpointMobileL.addEventListener("change", breakpointChecker);
+	try {
+		breakpointMobileL.addEventListener("change", breakpointChecker);
+	} catch (e1) {
+		try {
+			breakpointMobileL.addListener(breakpointChecker);
+		} catch (e2) {
+			console.error(e2);
+		}
+	}
+	
 	breakpointChecker();
 }
