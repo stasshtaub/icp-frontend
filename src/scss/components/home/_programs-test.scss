@@ -38,7 +38,7 @@
 		top: 0;
 		right: 0;
 		z-index: 18;
-		background: linear-gradient(270deg, $color-white, transparent);
+		background: linear-gradient(270deg, $color-white, rgba($color-white, 0));
 	}
 
 	&__bottom {
