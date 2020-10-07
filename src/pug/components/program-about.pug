@@ -1,0 +1,7 @@
+mixin programAbout(text, secondaryText, customClass = null)
+    section(class=customClass).programs-about.double-block
+        aside.double-block__aside
+            h3.double-block__title О программе
+        .double-block__content.programs-about__content
+            p.programs-about__text= text
+            p.programs-about__secondary-text= secondaryText
