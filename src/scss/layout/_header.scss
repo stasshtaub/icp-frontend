@@ -75,16 +75,16 @@
 			justify-content: space-between;
 			z-index: 2;
 
-			@include desktop {
-				padding: 21px 45px;
-			}
+			// @include desktop {
+			// 	padding: 21px 45px;
+			// }
 
 			@include laptop {
-				padding: 24px 30px;
+				padding: 24px 0;
 			}
 
 			@include tablet {
-				padding: 20px 33px;
+				padding: 20px 0;
 			}
 
 			@include mobile-l {
@@ -163,11 +163,6 @@
 		padding: 20px 0 25px 0;
 		display: flex;
 		justify-content: space-between;
-
-		
-		@include desktop {
-			padding: 20px 45px 25px 45px;
-		}
 
 		@include tablet {
 			border-right: 1px solid $color-black-opacity10;

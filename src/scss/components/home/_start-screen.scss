@@ -18,12 +18,6 @@
 	}
 
 	&__subtitle {
-		br {
-			@include laptop {
-				display: none;
-			}
-		}
-
 		@include tablet {
 			font-size: 25px;
 			line-height: 31px;

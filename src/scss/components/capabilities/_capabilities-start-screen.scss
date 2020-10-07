@@ -1,0 +1,81 @@
+.capabilities-start-screen {
+    position: relative;
+	display: flex;
+	height: 795px;
+	z-index: 1;
+
+	@include laptop {
+		height: 651px;
+	}
+
+	@include tablet {
+		height: 605px;
+	}
+
+	@include mobile-l {
+		height: 560px;
+	}
+
+	&__content {
+		display: flex;
+		flex-direction: column;
+		height: 100%;
+		padding-top: 205px;
+		padding-bottom: 47px;
+		margin-top: auto;
+
+		@include laptop {
+			padding-top: 185px;
+			padding-bottom: 14px;
+		}
+
+		@include tablet {
+			padding-top: 101px;
+			padding-bottom: 17px;
+		}
+
+		@include mobile-l {
+			padding-top: 97px;
+			padding-bottom: 20px;
+		}
+	}
+
+	&__title {
+		font-size: 80px;
+		line-height: 75px;
+        margin-top: auto;
+        max-width: 15em;
+
+		@include laptop {
+			font-size: 70px;
+        }
+        
+		@include tablet-s {
+			font-size: 10vw;
+            line-height: 10.7142857vw;
+		}
+
+		@include mobile-l {
+            max-width: 10em;
+			font-size: 30px;
+			line-height: 35px;
+		}
+	}
+
+	&__subtitle {
+		@include laptop {
+			font-size: 30px;
+			line-height: 37px;
+		}
+
+		@include tablet {
+			font-size: 25px;
+			line-height: 31px;
+		}
+
+		@include mobile-l {
+			font-size: 16px;
+			line-height: 20px;
+		}
+	}
+}

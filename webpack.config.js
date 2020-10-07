@@ -2,8 +2,9 @@ var path = require("path");
 
 module.exports = {
 	entry: {
-		home: "./src/js/home",
 		common: "./src/js/common",
+		home: "./src/js/home",
+		capabilities: "./src/js/capabilities"
 	},
 	module: {
 		rules: [

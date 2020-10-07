@@ -22,6 +22,12 @@
 	}
 }
 
+@mixin laptop-s($dimension: "max") {
+	@media (#{$dimension}-width: 980px) {
+		@content;
+	}
+}
+
 @mixin tablet($dimension: "max") {
 	@media (#{$dimension}-width: 768px) {
 		@content;

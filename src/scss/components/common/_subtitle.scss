@@ -2,4 +2,10 @@
 	font-weight: 500;
 	font-size: 35px;
 	line-height: 43px;
+
+	br {
+		@include laptop {
+			display: none;
+		}
+	}
 }

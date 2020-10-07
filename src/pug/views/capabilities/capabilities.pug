@@ -1,0 +1,18 @@
+extends ../../layouts/default
+
+block styles
+    link(rel="stylesheet" href!=`${baseDir}css/main.css?v=${Date.now()}`)
+    link(rel="stylesheet" href!=`${baseDir}css/capabilities.css?v=${Date.now()}`)
+    link(rel="stylesheet" href!=`${baseDir}css/font-awesome.css?v=${Date.now()}`)
+    link(rel="stylesheet" href!="https://unpkg.com/swiper@6.3.2/swiper-bundle.min.css")
+block content
+    .capabilities
+        .capabilities__group.capabilities__group--first
+            .capabilities__background-wrp
+                img(src="images/jpg/capabilities-start-screen-background.jpg", alt="capabilities-background").capabilities__background
+            .container
+                include particles/capabilities-start-screen
+block scripts
+    script(src!=`${baseDir}js/common.js?v=${Date.now()}`)
+    script(defer src!="https://unpkg.com/swiper/swiper-bundle.min.js")
+    script(defer src!=`${baseDir}js/capabilities.js?v=${Date.now()}`)
