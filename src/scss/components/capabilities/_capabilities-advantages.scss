@@ -4,20 +4,24 @@
 	border-bottom: 4px solid $color-blue;
 	align-items: center;
 
+	@include laptop-l {
+		flex-direction: column;
+		align-items: flex-start;
+	}
+
 	&__events {
 		display: flex;
 		flex-grow: 1;
-		justify-content: space-between;
-		margin-right: 170px;
-	}
-
-	&__events-group {
-		display: flex;
-        margin-left: -75px;
+		flex-wrap: wrap;
+		margin: -15px -35px;
 	}
 
 	&__event {
-        margin-left: 75px;
+		padding: 15px 35px;
+
+		&--offset-large {
+			min-width: 18em;
+		}
 	}
 
 	&__place {
@@ -35,13 +39,13 @@
 				margin-right: 7px;
 			}
 		}
-    }
-    
+	}
+
 	&__text {
 		font-size: 20px;
 		line-height: 24px;
-        color: $color-gray;
-        
+		color: $color-gray;
+
 		&--bold {
 			font-weight: 700;
 		}
@@ -50,16 +54,23 @@
 	&__date-text {
 		font-size: 16px;
 		line-height: 19px;
-        margin-top: 11px;
-        
-        &--undefined {
-            color: #9d9f9f;
-            font-style: italic;
-        }
-    }
-    
+		margin-top: 11px;
+
+		&--undefined {
+			color: #9d9f9f;
+			font-style: italic;
+		}
+	}
+
 	&__btn {
 		margin-left: auto;
 		text-decoration: none;
+		display: flex;
+		align-items: center;
+
+		@include laptop-l {
+			margin-left: unset;
+			margin-top: 50px;
+		}
 	}
 }
