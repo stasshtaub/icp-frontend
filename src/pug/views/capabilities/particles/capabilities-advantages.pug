@@ -1,0 +1,45 @@
+section.capabilities-advantages
+    .capabilities-advantages__events
+        - 
+            var eventGroups = [
+                [
+                    {
+                        place: {
+                            textBold: 'Онлайн'
+                        },
+                        date: 'Старт онлайн обучения 24 октября 2020',
+                        marker: true
+                    }
+                ],
+                [
+                    {
+                        place: {
+                            textRegular: 'Очное в ',
+                            textBold: 'Санкт-Петербурге'
+                        },
+                        date: null
+                    },
+                    {
+                        place: {
+                            textRegular: 'Очное в ',
+                            textBold: 'Москве'
+                        },
+                        date: null
+                    }
+                ]
+            ]
+        each eventGroup in eventGroups
+            .capabilities-advantages__events-group
+                each event in eventGroup
+                    .capabilities-advantages__event
+                        .capabilities-advantages__place(class=`${ event.marker ? 'capabilities-advantages__place--marked' : '' }`)
+                                if (event.place.textRegular)
+                                    span.capabilities-advantages__text.capabilities-advantages__text--regular= event.place.textRegular
+                                span.capabilities-advantages__text.capabilities-advantages__text--bold= event.place.textBold 
+                        if (event.date)
+                            p.capabilities-advantages__date-text.capabilities-advantages__date-text--defined= event.date
+                        else
+                            p.capabilities-advantages__date-text.capabilities-advantages__date-text--undefined Даты уточняются
+                       
+    +button("Записаться", ["capabilities-advantages__btn"], "size-normal", "color-primary", null, "a")
+    

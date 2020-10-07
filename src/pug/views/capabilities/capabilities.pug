@@ -12,6 +12,9 @@ block content
                 img(src="images/jpg/capabilities-start-screen-background.jpg", alt="capabilities-background").capabilities__background
             .container
                 include particles/capabilities-start-screen
+        .capabilities__group
+            .container
+                include particles/capabilities-advantages
 block scripts
     script(src!=`${baseDir}js/common.js?v=${Date.now()}`)
     script(defer src!="https://unpkg.com/swiper/swiper-bundle.min.js")

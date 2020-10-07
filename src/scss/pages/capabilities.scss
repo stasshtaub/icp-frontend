@@ -9,8 +9,11 @@
 @import "../components/common/description";
 
 @import "../components/capabilities/capabilities-start-screen";
+@import "../components/capabilities/capabilities-advantages";
 
 .capabilities {
+	padding-bottom: 100px;
+	
 	&__group {
 		&--first {
 			position: relative;
