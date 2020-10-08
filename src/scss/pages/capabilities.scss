@@ -14,6 +14,7 @@
 @import "../components/capabilities/capabilities-advantages";
 @import "../components/capabilities/capabilities-about";
 @import "../components/capabilities/capabilities-target";
+@import "../components/capabilities/capabilities-changes";
 
 .capabilities {
 	padding-bottom: 100px;
@@ -35,6 +36,12 @@
 				url(../images/png/capabilities-target-background.png) right
 					no-repeat,
 				$color-gray2;
+		}
+
+		&--gray {
+			padding-top: 48px;
+			padding-bottom: 57px;
+			background-color: $color-gray-light;
 		}
 	}
 

@@ -19,6 +19,8 @@ block content
         .capabilities__group.capabilities__group--target
             .container
                 include particles/capabilities-target
+        .capabilities__group.capabilities__group--gray
+            include particles/capabilities-changes
 
 block scripts
     script(src!=`${baseDir}js/common.js?v=${Date.now()}`)

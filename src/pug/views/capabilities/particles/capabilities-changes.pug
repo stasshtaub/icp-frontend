@@ -1,0 +1,101 @@
+section.capabilities-changes
+    .container
+        h3.capabilities-changes__title Что измениться после прохождения курса:
+    - 
+        const lines = [
+            [
+                {
+                    text: "Достиг потолка по карьерной лестнице;&nbsp;", 
+                    color: "white",
+                    bound: "right"
+                },
+                {
+                    text: "Бизнес", 
+                    color: "white",
+                    bound: "left"
+                }
+            ],
+            [
+                {
+                    text: "набрал определённые обороты и застрял;&nbsp;",
+                    color: "white",
+                    bound: "right"
+                },
+                {
+                    text: "Хочется",
+                    color: "white",
+                    bound: "left"
+                }
+            ],
+            [
+                {
+                    text: "кардинально изменить жизнь, но непонятно, с",
+                    color: "white",
+                    bound: "infinity"
+                }
+            ],
+            [
+                {
+                    text: "чего начать;&nbsp;",
+                    color: "white",
+                    bound: "right"
+                },
+                {
+                    text: "Общение по работе и в целом с",
+                    color: "orange",
+                    bound: "left"
+                }
+            ],
+            [
+                {
+                    text: "людьми вас выматывает, требует от вас слишком",
+                    color: "orange",
+                    bound: "infinity"
+                }
+            ],
+            [
+                {
+                    text: "много усилий;&nbsp;",
+                    color: "orange",
+                    bound: "right"
+                },
+                {
+                    text: "Посещают мысли о смене работы",
+                    color: "white",
+                    bound: "left"
+                }
+            ],
+            [
+                {
+                    text: "или даже профессии; Хочется больше",
+                    color: "white",
+                    bound: "infinity"
+                }
+            ],
+            [
+                {
+                    text: "зарабатывать.",
+                    color: "white",
+                    bound: "right"
+                }
+            ]
+        ]
+    .capabilities-changes__strikethrough
+        each line in lines
+            p.capabilities-changes__strikethrough-line
+                each lineItem in line
+                    span.capabilities-changes__strikethrough-item(class=`capabilities-changes__strikethrough-item--${lineItem.color} capabilities-changes__strikethrough-item--${lineItem.bound}`) !{lineItem.text}
+    
+    .container
+        -
+            const list = [
+                "Приобретете свободу от&nbsp;офисного графика и&nbsp;возможность работать в&nbsp;любой точке мира, в&nbsp;том числе — дистанционно",
+                "Освоите инструменты, подходящие для решения как профессиональных, так&nbsp;и&nbsp;любых других жизненных задач",
+                "Поймете, куда двигаться дальше в профессии",
+                "Сможете систематизировать тот опыт, который уже&nbsp;есть",
+                "Начнете больше зарабатывать\nи&nbsp;осознаете свою ценность как профессионала",
+                "Вы станете более спокойны\nи&nbsp;удовлетворены жизнью"
+            ]
+        ul.capabilities-changes__list
+            each item in list
+                li.capabilities-changes__list-item !{item}
