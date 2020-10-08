@@ -13,15 +13,28 @@
 @import "../components/capabilities/capabilities-start-screen";
 @import "../components/capabilities/capabilities-advantages";
 @import "../components/capabilities/capabilities-about";
+@import "../components/capabilities/capabilities-target";
 
 .capabilities {
 	padding-bottom: 100px;
-	
+
 	&__group {
 		&--first {
 			position: relative;
 			color: $color-white;
 			background-color: $color-black;
+		}
+
+		&--target {
+			min-height: 730px;
+			padding-top: 150px;
+			padding-bottom: 84px;
+			margin-top: 38px;
+			background: url(../images/svg/capabilities-target-background-2.svg)
+					top repeat-x,
+				url(../images/png/capabilities-target-background.png) right
+					no-repeat,
+				$color-gray2;
 		}
 	}
 

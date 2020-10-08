@@ -1,0 +1,19 @@
+section.capabilities-target.double-block
+    aside.double-block__aside
+        h3.capabilities-target__title.double-block__title Для кого этот курс:
+    .double-block__content.double-block__content--narrow.capabilities-target__content
+        p.capabilities-target__text HR-специалистов, бизнес-тренеров, психологов.
+            br
+            |  Тех, кто ищет новую поддерживающую профессию. Владельцев и директоров компаний, предпринимателей. Всех, кто заинтересован в личностном развитии.
+        .capabilities-target__acquirement
+            p.capabilities-target__acquirement-title После окончания курса у вас появятся:
+            - 
+                var acquirementList = [
+                    "Современная и перспективная профессия",
+                    "Умение находить общий язык&nbsp;с любым человеком",
+                    "Навыки поддерживающего стиля управления",
+                    "Умение решать повседневные задачи в разы проще и быстрее "
+                ]
+            ul.capabilities-target__acquirement-list
+                each acquirementItem in acquirementList
+                    li.capabilities-target__acquirement-item !{acquirementItem}
