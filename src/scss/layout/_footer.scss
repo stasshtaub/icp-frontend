@@ -7,9 +7,35 @@
 
 	&__bottom-info-item {
 		padding: 10px 20px;
+
+		@include laptop {
+			padding: 10px 15px;
+		}
+
+		@include tablet {
+			padding: 0 20px;
+		}
+
+		&--chat {
+			padding: 0;
+			margin-left: auto;
+
+			@include tablet {
+				padding: 0 20px 0 0;
+				position: absolute;
+				right: 0;
+				top: 50%;
+				transform: translateY(-50%);
+			}
+
+			@include tablet-xs {
+				display: none;
+			}
+		}
 	}
 
 	&__row {
+		position: relative;
 		padding: 35px 0;
 		border-bottom: 1px solid $color-black-opacity05;
 
@@ -26,6 +52,16 @@
 
 		&--fit {
 			grid-template-columns: repeat(auto-fit, minmax(315px, 1fr));
+
+			@include tablet {
+				grid-gap: 20px;
+				grid-template-columns: unset;
+			}
+
+			@include mobile-l {
+				display: flex;
+				flex-direction: column;
+			}
 		}
 
 		&--fill {
@@ -35,7 +71,21 @@
 			);
 
 			@include laptop {
-				grid-template-columns: repeat(auto-fill, minmax(30%, 1fr));
+				grid-template-columns: repeat(
+					auto-fill,
+					minmax(calc((100% - 90px) / 4), 1fr)
+				);
+			}
+
+			@include tablet {
+				display: flex;
+				align-items: center;
+			}
+
+			@include mobile-l {
+				display: flex;
+				flex-direction: column;
+				align-items: unset;
 			}
 		}
 
@@ -48,11 +98,36 @@
 		&--align-center {
 			display: flex;
 			align-items: center;
+			flex-shrink: 0;
 		}
 
 		&--bottom-info {
 			margin: -10px -20px;
 			flex-wrap: wrap;
+
+			@include laptop {
+				margin: -10px -15px;
+			}
+		}
+
+		&--social {
+			margin-top: -8px;
+			flex-shrink: 1;
+
+			@include tablet {
+				margin-left: auto;
+			}
+
+			@include mobile-l {
+				margin-left: unset;
+			}
+		}
+
+		&--copyright {
+			@include mobile-l {
+				margin-top: 15px;
+				order: 2;
+			}
 		}
 	}
 
@@ -68,9 +143,35 @@
 		}
 	}
 
+	&__email-text {
+		@include tablet {
+			display: none;
+		}
+
+		@include mobile-l {
+			display: inline-block;
+		}
+	}
+
+	&__email-icon {
+		display: none;
+		height: 20px;
+		width: 20px;
+		background: url("../images/svg/icon-email-gray.svg") no-repeat center;
+
+		@include tablet {
+			display: block;
+		}
+
+		@include mobile-l {
+			display: none;
+		}
+	}
+
 	&__social-list {
 		display: flex;
 		margin: 0 -15px;
+		flex-wrap: wrap;
 	}
 
 	&__social-icon {
@@ -130,6 +231,10 @@
 
 	&__social-item {
 		margin-right: 10px;
+
+		@include tablet-xs {
+			margin-right: -4px;
+		}
 	}
 
 	&__social-icon {

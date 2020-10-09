@@ -3,10 +3,12 @@ footer.footer
     .footer__row.footer__row--contacts
         .container.footer__row-container.footer__row-container--fill
             .footer__col.footer__col--align-center
-                a(href="mailto:info@icpcentre.org").footer__primary-link.footer__primary-link--email info@icpcentre.org
+                a(href="mailto:info@icpcentre.org").footer__primary-link.footer__primary-link--email
+                    span.footer__email-text info@icpcentre.org
+                    .footer__email-icon
             .footer__col.footer__col--align-center
                 a(href="tel:88005513531").footer__primary-link 8 800 551-35-31
-            .footer__col.footer__col--align-center
+            .footer__col.footer__col--align-center.footer__col--social
                 - var socialList = [{icon: 'fa fa-facebook-f', link: '#'}, {icon: 'fa fa-vk', link: '#'}, {icon: 'fa fa-instagram', link: '#'}, {icon: 'fa fa-youtube-play', link: '#'}]
                 ul.footer__social-list
                     each socialItem in socialList
@@ -25,12 +27,12 @@ footer.footer
                                 a(href="#").footer__col-link= item
     .footer__row
         .container.footer__row-container.footer__row-container--fit
-            .footer__col.footer__col--flex.footer__col--align-center
+            .footer__col.footer__col--flex.footer__col--align-center.footer__col--copyright
                 p.footer__bottom-text.footer__copyright © 2019-2020 ICP Centre. Все права защищены.
             .footer__col.footer__col--flex.footer__col--align-center.footer__col--bottom-info
                 .footer__bottom-info-item
                     a(href="").footer__bottom-text.footer__bottom-text--link Договор-оферта
                 .footer__bottom-info-item
                     a(href="").footer__bottom-text.footer__bottom-text--link Политика конфиденциальности
-                .footer__bottom-info-item
+                .footer__bottom-info-item.footer__bottom-info-item--chat
                     a(href="").footer__chat-icon
