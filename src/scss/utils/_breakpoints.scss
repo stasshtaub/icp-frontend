@@ -40,6 +40,12 @@
 	}
 }
 
+@mixin tablet-s2($dimension: "max") {
+	@media (#{$dimension}-width: 600px) {
+		@content;
+	}
+}
+
 @mixin tablet-xs($dimension: "max") {
 	@media (#{$dimension}-width: 530px) {
 		@content;

@@ -267,7 +267,7 @@
 			margin-left: auto;
 		}
 
-		@include tablet-s {
+		@include tablet-s2 {
 			display: none;
 		}
 	}
@@ -393,6 +393,10 @@
 		height: 30px;
 		margin-right: 90px;
 		background: url("../images/svg/icon-hamburger.svg") no-repeat center;
+
+		@include tablet-s {
+			margin-right: 30px;
+		}
 
 		@include mobile-l {
 			background: url("../images/svg/icon-hamburger-gray.svg") no-repeat
