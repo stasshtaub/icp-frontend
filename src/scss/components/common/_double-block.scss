@@ -17,6 +17,23 @@
 			margin-left: unset;
 			margin-top: 30px;
 		}
+
+		&--narrow {
+			margin-left: 65px;
+
+			@include laptop {
+				margin-left: 28px;
+			}
+	
+			@include tablet {
+				margin-left: unset;
+				flex-direction: column;
+			}
+			
+			@include mobile-l {
+				margin-top: 20px;
+			}
+		}
 	}
 
 	&__title {
