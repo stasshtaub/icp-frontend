@@ -185,9 +185,19 @@
 	}
 
 	&__mail-icon {
+		display: none;
 		height: 20px;
 		width: 20px;
 		background: url("../images/svg/icon-email.svg") no-repeat center;
+		
+		@include laptop {
+			display: block;
+		}
+	}
+	&__mail-text {		
+		@include laptop {
+			display: none;
+		}
 	}
 
 	&__dropdown-icon {
