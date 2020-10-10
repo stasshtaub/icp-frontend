@@ -1,0 +1,38 @@
+section.capabilities-program
+    .capabilities-program__slider.swiper-container
+        - 
+            const slides = [
+                {
+                    title: "Создай \n будущее",
+                    inline: false
+                },
+                {
+                    title: "Мысли \n результатами",
+                    inline: true
+                },
+                {
+                    title: "Прямая \n коммуникация",
+                    inline: false
+                },
+                {
+                    title: "Эмоциональная \n компетентность",
+                    inline: true
+                },
+                {
+                    title: "Прямая \n коммуникация",
+                    inline: false
+                }
+            ]
+        ul.capabilities-program__slides.swiper-wrapper
+            each slide, i in slides
+                li(class=`capabilities-program__slide--${i+1}`).capabilities-program__slide.swiper-slide
+                    if (i === 0)
+                        .capabilities-program__path
+                            include ../../../../images/svg/capabilities-program-path.svg
+                    p.capabilities-program__number= i+1
+                    .capabilities-program__content
+                        .capabilities-program__module
+                            p.capabilities-program__module-text Модуль
+                            h4.capabilities-program__module-title= slide.title
+                        .capabilities-program__specifications(class=`${slide.inline ? '.capabilities-program__specifications--inline' : ''}`)
+
