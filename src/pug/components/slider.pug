@@ -1,0 +1,15 @@
+mixin slider(slides = [], containerClass = "", prevBtnClass = "", nextBtnClass = "", dotsClass="", counterCurrClass, counterTotalClass)
+    .slider.swiper-container(class=containerClass)
+        .slider__controls
+            .slider__counter
+                span(class=counterCurrClass).slider__counter-curr 1
+                span.slider__counter-devider /
+                span(class=counterTotalClass).slider__counter-total 1
+            .slider__buttons
+                button(class=prevBtnClass).slider__btn.slider__btn--prev
+                button(class=nextBtnClass).slider__btn.slider__btn--next
+        ul.slider__slides.swiper-wrapper
+            each slide in slides
+                li.slider__slide.swiper-slide
+                    p.slider__slide-text= slide
+        ul(class=dotsClass).slider__dots

@@ -1,0 +1,11 @@
+.capabilities-allows {
+    margin-top: 130px;
+
+    @include laptop {
+        margin-top: 70px;
+    }
+
+    @include tablet {
+        margin-top: 115px;
+    }
+}

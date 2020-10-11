@@ -1,0 +1,13 @@
+section.capabilities-allows.double-block
+    aside.double-block__aside
+        h3.double-block__title Это вам позволит
+    .double-block__content
+        - 
+            const slidesArray = [
+                "Решать профессиональные вопросы просто и без потери сил и энергии",
+                "Решать профессиональные вопросы просто и без потери сил и энергии",
+                "Решать профессиональные вопросы просто и без потери сил и энергии",
+                "Решать профессиональные вопросы просто и без потери сил и энергии",
+                "Решать профессиональные вопросы просто и без потери сил и энергии"
+            ]
+        +slider(slidesArray, "capabilities-allows__slider", "capabilities-allows__btn--prev", "capabilities-allows__btn--next", "capabilities-allows__dots", "capabilities-allows__counter-curr", "capabilities-allows__counter-total")
