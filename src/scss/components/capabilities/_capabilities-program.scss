@@ -36,6 +36,10 @@
 					clip-path: polygon(0 30px, 100% 0%, 100% 100%, 0% 100%);
 					transform: translate(-33px, -75px);
 				}
+            }
+            
+			#{$p}__description {
+                margin-top: 63px;
 			}
 		}
 
@@ -52,6 +56,10 @@
 					clip-path: polygon(0 0, 100% 0, 100% 100%, 60px 100%);
 					transform: translate(-165px, -29px);
 				}
+            }
+            
+			#{$p}__description {
+                margin-top: 77px;
 			}
 		}
 
@@ -68,6 +76,10 @@
 					clip-path: polygon(82px 0, 849px 30px, 100% 100%, 0 163px);
 					transform: translate(-165px, -29px);
 				}
+            }
+            
+			#{$p}__description {
+                margin-top: 38px;
 			}
 		}
 
@@ -84,6 +96,10 @@
 					clip-path: polygon(71px 0, 838px 30px, 100% 100%, 0 100%);
 					transform: translate(-185px, -29px);
 				}
+            }
+            
+			#{$p}__description {
+                margin-top: 117px;
 			}
 		}
 
@@ -100,6 +116,10 @@
 					clip-path: polygon(71px 0, 838px 30px, 100% 100%, 0 100%);
 					transform: translate(-185px, -29px);
 				}
+            }
+            
+			#{$p}__description {
+                margin-top: 68px;
 			}
 		}
 	}
