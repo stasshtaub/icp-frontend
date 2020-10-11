@@ -47,6 +47,22 @@
   </linearGradient>
  </defs><symbol id="capabilities-program-path" viewBox="0 0 4326 379">
 <path d="M6 0V373H900M897 373H1089V106H1999M1972 106H2164V373H2956L3074 255M4148 164L3165 164.001L3047 282.001M4122 164H4320V54" stroke="white" stroke-width="11" stroke-linejoin="bevel"/>
+</symbol><symbol id="capabilities-program-shape-1" viewBox="0 0 301 210">
+<g style="mix-blend-mode:screen">
+<path fill-rule="evenodd" clip-rule="evenodd" d="M0 0L244 3L301 210L57 207L0 0Z" fill="#70C28B"/>
+</g>
+</symbol><symbol id="capabilities-program-shape-2" viewBox="0 0 260 135">
+<g style="mix-blend-mode:screen">
+<path fill-rule="evenodd" clip-rule="evenodd" d="M0 0L203 1.29201L260 135L57 133.708L0 0Z" fill="#70C28B"/>
+</g>
+</symbol><symbol id="capabilities-program-shape-3" viewBox="0 0 225 244">
+<g style="mix-blend-mode:screen">
+<path fill-rule="evenodd" clip-rule="evenodd" d="M207.99 0.888974C211.91 -1.20803 216.67 1.53998 216.81 5.98498L224.33 237.378C224.48 242.081 219.41 245.122 215.33 242.769L3.66997 120.562C-0.410032 118.209 -0.309866 112.294 3.84013 110.075L207.99 0.888974Z" fill="#6FC18E"/>
+</g>
+</symbol><symbol id="capabilities-program-shape-4" viewBox="0 0 188 188">
+<g style="mix-blend-mode:lighten">
+<path d="M94 188C145.915 188 188 145.915 188 94C188 42.0852 145.915 0 94 0C42.0852 0 0 42.0852 0 94C0 145.915 42.0852 188 94 188Z" fill="#EDEE66"/>
+</g>
 </symbol><symbol id="capabilities-target-background-2" viewBox="0 0 1440 56">
 <rect x="140" width="56" height="56" fill="#1488CC"/>
 <rect x="335" width="28" height="56" fill="white"/>
@@ -167,6 +183,8 @@
 <path d="M15.1421 1L8.07107 8.07107L1 1" stroke="#3C3E3F" stroke-width="2"/>
 </symbol><symbol id="icon-arrow-down-white" viewBox="0 0 16 10">
 <path d="M15.1421 1L8.07107 8.07107L1 1" stroke="white" stroke-width="2"/>
+</symbol><symbol id="icon-arrow-right" viewBox="0 0 17 27">
+<path d="M2 1.17578L14 13.1758L2 25.1758" stroke="white" stroke-width="3"/>
 </symbol><symbol id="icon-arrow-top-blue" viewBox="0 0 16 10">
 <path d="M0.857864 9L7.92893 1.92893L15 9" stroke="#283CB5" stroke-width="2"/>
 </symbol><symbol id="icon-chat" viewBox="0 0 33 28">
