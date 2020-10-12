@@ -145,12 +145,23 @@
 					content: none !important;
 				}
 			}
+
+			&::before {
+				@include tablet("min") {
+					content: "";
+					position: absolute;
+					width: 100vw;
+					left: calc(-50vw + 50%);
+					height: 1px;
+					background-color: $color-black-opacity10;
+				}
+			}
 		}
 
 		&::after {
 			content: "";
 			position: absolute;
-    		left: 50%;
+			left: 50%;
 			bottom: 0;
 			width: 100vw;
 			height: 1px;
@@ -189,12 +200,12 @@
 		height: 20px;
 		width: 20px;
 		background: url("../images/svg/icon-email.svg") no-repeat center;
-		
+
 		@include laptop {
 			display: block;
 		}
 	}
-	&__mail-text {		
+	&__mail-text {
 		@include laptop {
 			display: none;
 		}
@@ -313,10 +324,6 @@
 
 					@include tablet-xs {
 						transform: none;
-					}
-
-					@include tablet("min") {
-						border-top: 1px solid $color-black-opacity10;
 					}
 				}
 			}
@@ -438,9 +445,12 @@
 		display: grid;
 		grid-auto-flow: column;
 		grid-template-rows: repeat(8, fit-content(1em));
+		margin-left: -45px;
+		border-left: 1px solid $color-black-opacity10;
 
 		@include tablet {
 			display: block;
+			margin-left: unset;
 		}
 	}
 
