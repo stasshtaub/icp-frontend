@@ -36,8 +36,11 @@
 		}
 	}
 
-	&__title {
+	&__aside {
 		min-width: 2.5em;
+	}
+
+	&__title {
 		display: flex;
 		align-items: flex-end;
 		font-size: 20px;

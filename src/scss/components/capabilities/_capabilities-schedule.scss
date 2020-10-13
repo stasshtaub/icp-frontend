@@ -1,0 +1,119 @@
+.capabilities-schedule {
+	margin-top: 95px;
+	padding: 25px 0 50px 0;
+	border-top: 4px solid $color-blue2;
+	border-bottom: 4px solid $color-blue2;
+
+	&__title {
+		font-weight: 500;
+		font-size: 60px;
+		line-height: 70px;
+		color: $color-blue2;
+	}
+
+	&__content {
+		margin-top: 40px;
+		display: flex;
+	}
+
+	&__modules {
+		flex-grow: 1;
+		margin: -25px 0;
+	}
+
+	&__module {
+		display: flex;
+		justify-content: space-between;
+		padding: 25px 0;
+	}
+
+	&__module-num {
+		margin-bottom: 10px;
+	}
+
+	&__module-name {
+		font-weight: bold;
+		font-size: 24px;
+		line-height: 29px;
+	}
+
+	&__months {
+		flex-basis: 425px;
+		margin: -15px 0;
+	}
+
+	&__month {
+		padding: 15px 0;
+	}
+
+	&__module-num,
+	&__month-name {
+		font-size: 14px;
+		line-height: 17px;
+	}
+
+	&__month-name {
+		font-size: 14px;
+		line-height: 18px;
+		color: $color-gray-light4;
+		opacity: 0.9;
+		margin-bottom: 24px;
+	}
+
+	&__date {
+		width: 80px;
+		display: inline-block;
+	}
+
+	&__days {
+		margin: -10px 0;
+	}
+
+	&__day {
+		padding: 10px 0;
+		font-size: 24px;
+		line-height: 29px;
+	}
+
+	&__day-text {
+		margin-left: 35px;
+	}
+
+	&__info {
+		margin-left: 30px;
+		flex-basis: 320px;
+	}
+
+	&__info-icon {
+		width: 20px;
+		height: 20px;
+		background: url("../images/svg/icon-info.svg") no-repeat center;
+		margin-bottom: 17px;
+	}
+
+	&__info-list {
+		margin: -10px 0;
+	}
+
+	&__info-item {
+		padding: 10px 0;
+	}
+
+	&__info-span {
+		font-size: 16px;
+		line-height: 22px;
+
+		&--italic {
+			font-style: italic;
+		}
+
+		&--bold-blue {
+			font-weight: 700;
+			color: $color-blue;
+		}
+
+		&--medium {
+			font-weight: 500;			
+		}
+	}
+}

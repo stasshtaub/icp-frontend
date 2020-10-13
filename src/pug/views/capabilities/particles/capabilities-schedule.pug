@@ -1,0 +1,125 @@
+section.capabilities-schedule
+    .container
+        h3.capabilities-schedule__title Расписание курса
+        .double-block
+            aside.double-block__aside
+            .double-block__content.double-block__content--narrow.capabilities-schedule__content
+                - 
+                    const capabilitiesModules = [
+                        {
+                            name: "Создай будущее",
+                            months: [
+                                {
+                                    name: "Октябрь",
+                                    date: 10, 
+                                    days: [
+                                        {
+                                            date: 24,
+                                            text: "Проектируй будущее"
+                                        },
+                                        {
+                                            date: 29,
+                                            text: "Практика",
+                                            italic: true
+                                        },
+                                        {
+                                            date: 31,
+                                            text: "Осознай реальность"
+                                        }
+                                    ]
+                                },
+                                {
+                                    name: "Ноябрь",
+                                    date: 11, 
+                                    days: [
+                                        {
+                                            date: "05",
+                                            text: "Практика",
+                                            italic: true
+                                        },
+                                        {
+                                            date: "07",
+                                            text: "Выбери действие"
+                                        },
+                                        {
+                                            date: 12,
+                                            text: "Практика",
+                                            italic: true
+                                        }
+                                    ]
+                                }
+                            ]
+                        }
+                    ] 
+                ul.capabilities-schedule__modules
+                    each capabilitiesModule, i in capabilitiesModules 
+                        li.capabilities-schedule__module
+                            .capabilities-schedule__module-title                        
+                                .capabilities-schedule__module-num #{i+1+' модуль'}                        
+                                .capabilities-schedule__module-name= capabilitiesModule.name                        
+                            ul.capabilities-schedule__months
+                                each month in capabilitiesModule.months
+                                    li.capabilities-schedule__month
+                                        .capabilities-schedule__month-name= month.name
+                                        ul.capabilities-schedule__days
+                                            each day in month.days
+                                                li.capabilities-schedule__day
+                                                    span.capabilities-schedule__date
+                                                        span.capabilities-schedule__date-day= day.date
+                                                        span.capabilities-schedule__date-divider &nbsp;/&nbsp;
+                                                        span.capabilities-schedule__date-month= month.date
+                                                    span.capabilities-schedule__day-text= day.text
+                .capabilities-schedule__info
+                    .capabilities-schedule__info-icon
+                    - 
+                        const infoList = [
+                            [
+                                {
+                                    text: "Вебинары проходят по субботам с 10:00 по 12:00"
+                                }
+                            ],
+                            [
+                                {
+                                    text: "Практика&nbsp;",
+                                    modifer: "italic"
+                                },
+                                {
+                                    text: "проходят по четвергам c 8:00 по 10:00 и с 20:00 по 22:00"
+                                }
+                            ],
+                            [
+                                {
+                                    text: "Демо-сессии&nbsp;",
+                                    modifer: "bold-blue"
+                                },
+                                {
+                                    text: "проходят по субботам с 8:00 по 9:00"
+                                }
+                            ],
+                            [
+                                {
+                                    text: "Групповой менторинг&nbsp;",
+                                    modifer: "medium"
+                                },
+                                {
+                                    text: "проходит по средам с 12:00 по 13:30 и с 20:00 по 21:30"
+                                }
+                            ],
+                            [
+                                {
+                                    text: "Групповая супервизия &nbsp;",
+                                    modifer: "bold-blue"
+                                },
+                                {
+                                    text: "проходит по вторниам с 11:00 по 12:30 и с 20:00 по 21:30"
+                                }
+                            ]
+                        ]
+                    ul.capabilities-schedule__info-list
+                        each infoItem in infoList
+                            li.capabilities-schedule__info-item
+                                each infoSpan in infoItem
+                                    span.capabilities-schedule__info-span(class=`${infoSpan.modifer ? 'capabilities-schedule__info-span--' + infoSpan.modifer : ''}`) !{infoSpan.text}
+
+        
+        
