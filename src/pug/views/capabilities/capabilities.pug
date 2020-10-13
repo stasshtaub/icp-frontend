@@ -26,6 +26,8 @@ block content
         .capabilities__group
             include particles/capabilities-program
             include particles/capabilities-more
+            .container
+                include particles/capabilities-stages
 
 block scripts
     script(src!=`${baseDir}js/common.js?v=${Date.now()}`)

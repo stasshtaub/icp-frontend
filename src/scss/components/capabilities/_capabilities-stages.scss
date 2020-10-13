@@ -1,0 +1,64 @@
+.capabilities-stages {
+	margin-top: 88px;
+
+    @include tablet {
+        margin-top: 67px;
+    }
+
+    @include mobile-l {
+        margin-top: 46px;
+    }
+
+	&__content {
+		max-width: 1140px;
+	}
+
+	&__list {
+		display: grid;
+		grid-template-columns: 315fr 315fr 425fr;
+		grid-gap: 90px 30px;
+
+		@include laptop {
+			grid-template-columns: 224fr 224fr 389fr;
+			grid-gap: 65px 20px;
+		}
+
+		@include tablet {
+			grid-template-columns: 1fr 1fr;
+			grid-gap: 40px 25px;
+		}
+
+		@include mobile-l {
+			grid-template-columns: unset;
+			grid-gap: 20px;
+		}
+	}
+
+	&__item-num {
+		font-weight: 500;
+		font-size: 25px;
+		line-height: 31px;
+	}
+
+	&__item-title {
+		margin-top: 10px;
+		font-weight: bold;
+		font-size: 10px;
+		line-height: 20px;
+		letter-spacing: 1px;
+		text-transform: uppercase;
+		color: $color-blue;
+		opacity: 0.9;
+	}
+
+	&__item-description {
+		margin-top: 10px;
+		font-size: 20px;
+		line-height: 24px;
+
+		@include mobile-l {
+			font-size: 16px;
+			line-height: 20px;
+		}
+	}
+}
