@@ -23,7 +23,11 @@ const settings = {
 gulp.task("pug", () =>
 	gulp
 		.src("src/pug/views/*/*.pug")
-		.pipe(pug())
+		.pipe(
+			pug({
+				pretty: true,
+			})
+		)
 		.pipe(flatten())
 		.pipe(gulp.dest(settings.dist))
 );
