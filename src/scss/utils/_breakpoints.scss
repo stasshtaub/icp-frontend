@@ -28,6 +28,12 @@
 	}
 }
 
+@mixin laptop-xs($dimension: "max") {
+	@media (#{$dimension}-width: 900px) {
+		@content;
+	}
+}
+
 @mixin tablet($dimension: "max") {
 	@media (#{$dimension}-width: 768px) {
 		@content;
@@ -54,6 +60,12 @@
 
 @mixin mobile-l($dimension: "max") {
 	@media (#{$dimension}-width: 425px) {
+		@content;
+	}
+}
+
+@mixin beetween-tablet-and-mobile() {
+	@media (max-width: 768px) and (min-width: 426px) {
 		@content;
 	}
 }

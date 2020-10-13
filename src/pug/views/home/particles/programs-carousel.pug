@@ -2,20 +2,53 @@
     .programs-carousel__line
         button.programs-carousel__btn.programs-carousel__btn--prev
         .programs-carousel__slider.swiper-container
+            -
+                const slides = [
+                    {
+                        title: "Agile-коучинг для мизантропов",
+                        tag: "Стать коучем",
+                        date: "2 ноября 2020",
+                        speakers: ['Галина Вдовиченко']
+                    },
+                    {
+                        title: "Как открыть новые грани коучинга и работать с командами?",
+                        tag: "Коучинг",
+                        date: "19 октября 2020",
+                        speakers: ['Марина Балашова', 'Галина Вдовиченко']
+                    },
+                    {
+                        title: "Создай будущее",
+                        tag: "Стать коучем",
+                        date: "6 августа 2020",
+                        speakers: ['Марина Балашова', 'Галина Вдовиченко']
+                    },
+                    {
+                        title: "Agile-коучинг для мизантропов",
+                        tag: "Стать коучем",
+                        date: "2 ноября 2020",
+                        speakers: ['Галина Вдовиченко']
+                    },
+                    {
+                        title: "Как открыть новые грани коучинга и работать с командами?",
+                        tag: "Коучинг",
+                        date: "19 октября 2020",
+                        speakers: ['Марина Балашова', 'Галина Вдовиченко']
+                    }
+                ]
             .swiper-wrapper
-                each val in [1, 2, 3, 4, 5]
+                each slide in slides
                     .swiper-slide
                         .programs-carousel__inner-slide
                             .programs-carousel__content
-                                .programs-carousel__tag Специализация
-                                p.programs-carousel__title Как открыть новые грани коучинга и работать с командами?
+                                .programs-carousel__tag= slide.tag
+                                p.programs-carousel__title= slide.title
                                 p.programs-carousel__start Старт курса с&nbsp;
-                                    span.programs-carousel__start-date 19 октября 2020
+                                    span.programs-carousel__start-date= slide.date
                                 .programs-carousel__speakers 
                                     p.programs-carousel__text Ведущий программы:
-                                    - var speakers = ['Марина Балашова', 'Галина Вдовиченко']
-                                    p.programs-carousel__speaker= speakers.join(', ')
+                                    p.programs-carousel__speaker= slide.speakers.join(', ')
                                 +button('Записаться', ['programs-carousel__slide-btn'], 'size-large', 'color-primary', 'icon-ok')
-                            img(src="images/png/Combined Shape.png").programs-carousel__img
+                            .programs-carousel__img-wrp
+                                img(src="images/png/Combined Shape.png").programs-carousel__img
         button.programs-carousel__btn.programs-carousel__btn--next
     ul.programs-carousel__dots

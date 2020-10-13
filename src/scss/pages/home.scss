@@ -2,6 +2,8 @@
 @import "../utils/breakpoints";
 @import "../utils/helpers";
 
+@import "../components/common/button";
+
 @import "../components/home/start-screen";
 @import "../components/home/video-block";
 @import "../components/home/advantages";
@@ -13,7 +15,6 @@
 @import "../components/home/programs-test";
 
 @import "../components/common/slider";
-@import "../components/common/button";
 @import "../components/common/title";
 @import "../components/common/subtitle";
 @import "../components/common/double-block";

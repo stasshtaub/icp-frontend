@@ -2,6 +2,10 @@
 	new Swiper(".programs-carousel__slider", {
 		slidesPerView: 1,
 		loop: true,
+		speed: 600,
+		centeredSlides: true,
+
+
 		navigation: {
 			nextEl: ".programs-carousel__btn--next",
 			prevEl: ".programs-carousel__btn--prev",
@@ -12,12 +16,17 @@
 			bulletActiveClass: "slider__dot--active",
 			clickable: true,
 		},
+
 		breakpoints: {
-			700: {
-				slidesPerView: "auto",
-				centeredSlides: true,
+			// when window width is >= 426px
+			426: {
+				slidesPerView: 2,
 				loopedSlides: 2,
 			},
-		},
+			// when window width is >= 769px
+			769: {
+				slidesPerView: 3,
+			}
+		}
 	});
 }

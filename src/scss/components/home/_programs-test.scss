@@ -1,5 +1,5 @@
 .programs-test {
-	margin-top: 50px;
+	margin-top: 120px;
 	min-height: 425px;
 
 	@include desktop {
@@ -11,6 +11,7 @@
 	}
 
 	@include mobile-l {
+		margin-top: 70px;
 		min-height: 500px;
 	}
 
