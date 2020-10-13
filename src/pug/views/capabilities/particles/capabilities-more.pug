@@ -1,33 +1,34 @@
 section.capabilities-more
-    h3.capabilities-more__title Что еще входит в программу:
-    - 
-        const moreItems = [
-            {
-                text: "Межмодульные практики"
-            },
-            {
-                text: "Демо-сессии"
-            },
-            {
-                text: "Групповая супервизия (по желанию участников обучения)"
-            },
-            {
-                text: "Наблюдаемые сессии (для пакета Проф. и VIP)",
-                isVip: true
-            },
-            {
-                text: "Дополнительные часы индивидуального и группового менторинга",
-                isVip: true
-            }
-        ];
-    ul.capabilities-more__list
-        each moreItem, i in moreItems
-            li.capabilities-more__item
-                .capabilities-more__shape-wrp
-                    .capabilities-more__shape(class=`capabilities-more__shape--${i+1} ${moreItem.isVip ? 'capabilities-more__shape--vip' : ''}`)
-                        case i
-                            when 0
-                                include ../../../../images/svg/capabilities-more-shape-1.svg
-                            when 4
-                                include ../../../../images/svg/capabilities-more-shape-5.svg
-                p.capabilities-more__item-name= moreItem.text
+    .capabilities-more__content
+        h3.capabilities-more__title Что еще входит в программу:
+        - 
+            const moreItems = [
+                {
+                    text: "Межмодульные практики"
+                },
+                {
+                    text: "Демо-сессии"
+                },
+                {
+                    text: "Групповая супервизия (по желанию участников обучения)"
+                },
+                {
+                    text: "Наблюдаемые сессии (для пакета Проф. и VIP)",
+                    isVip: true
+                },
+                {
+                    text: "Дополнительные часы индивидуального и группового менторинга",
+                    isVip: true
+                }
+            ];
+        ul.capabilities-more__list
+            each moreItem, i in moreItems
+                li.capabilities-more__item
+                    .capabilities-more__shape-wrp
+                        .capabilities-more__shape(class=`capabilities-more__shape--${i+1} ${moreItem.isVip ? 'capabilities-more__shape--vip' : ''}`)
+                            case i
+                                when 0
+                                    include ../../../../images/svg/capabilities-more-shape-1.svg
+                                when 4
+                                    include ../../../../images/svg/capabilities-more-shape-5.svg
+                    p.capabilities-more__item-name= moreItem.text
