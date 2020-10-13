@@ -45,7 +45,11 @@
    <stop offset="0" style="stop-opacity:0.0117647; stop-color:white"/>
    <stop offset="1" style="stop-opacity:1; stop-color:white"/>
   </linearGradient>
- </defs><symbol id="capabilities-program-path" viewBox="0 0 4326 379">
+ </defs><symbol id="capabilities-more-shape-1" viewBox="0 0 69 58">
+<path fill-rule="evenodd" clip-rule="evenodd" d="M29.4028 3.20848C31.7499 -0.571249 37.2501 -0.571246 39.5972 3.20849L67.3087 47.8348C69.7906 51.8317 66.9163 57 62.2115 57H6.7885C2.08371 57 -0.790641 51.8317 1.69129 47.8348L29.4028 3.20848Z" fill="#6FC18E"/>
+</symbol><symbol id="capabilities-more-shape-5" viewBox="0 0 56 55">
+<path fill-rule="evenodd" clip-rule="evenodd" d="M22.1221 2.27051C25.627 -0.275928 30.373 -0.27593 33.8779 2.27051L51.6049 15.15C55.1098 17.6964 56.5764 22.2101 55.2376 26.3303L48.4665 47.1697C47.1277 51.2899 43.2882 54.0795 38.9559 54.0795H17.0441C12.7118 54.0795 8.87226 51.2899 7.53352 47.1697L0.762389 26.3303C-0.576354 22.2101 0.890226 17.6964 4.3951 15.15L22.1221 2.27051Z" fill="#AEF0CB"/>
+</symbol><symbol id="capabilities-program-path" viewBox="0 0 4326 379">
 <path d="M6 0V373H900M897 373H1089V106H1999M1972 106H2164V373H2956L3074 255M4148 164L3165 164.001L3047 282.001M4122 164H4320V54" stroke="white" stroke-width="11" stroke-linejoin="bevel"/>
 </symbol><symbol id="capabilities-program-shape-1" viewBox="0 0 301 210">
 <g style="mix-blend-mode:screen">
