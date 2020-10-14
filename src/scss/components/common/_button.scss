@@ -1,7 +1,6 @@
 .button {
 	display: flex;
 	align-items: center;
-	// min-width: 136px;
 	text-align: center;
 	border: none;
 	border-radius: 4px;
@@ -11,6 +10,7 @@
 
 	&--link {
 		display: inline-block;
+		text-decoration: none;
 	}
 
 	&--color-primary {
