@@ -64,6 +64,13 @@
 	}
 }
 
+
+@mixin beetween-laptop-and-tablet() {
+	@media (max-width: 1024px) and (min-width: 769px) {
+		@content;
+	}
+}
+
 @mixin beetween-tablet-and-mobile() {
 	@media (max-width: 768px) and (min-width: 426px) {
 		@content;

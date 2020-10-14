@@ -1,14 +1,25 @@
+@function vw($px-vw, $base-vw: 1024px) {
+	@return ($px-vw * 100vw) / $base-vw;
+}
+
 .capabilities-schedule {
+	$p: &;
+
 	margin-top: 95px;
 	padding: 25px 0 50px 0;
 	border-top: 4px solid $color-blue2;
 	border-bottom: 4px solid $color-blue2;
 
 	&__title {
+		margin-left: 100px;
 		font-weight: 500;
 		font-size: 60px;
 		line-height: 70px;
 		color: $color-blue2;
+
+		@include laptop {
+			margin-left: 0;
+		}
 	}
 
 	&__content {
@@ -16,15 +27,89 @@
 		display: flex;
 	}
 
+	&__switch-input {
+		display: none;
+
+		&:checked {
+			& + #{$p}__switch-label {
+				background: url("../images/svg/icon-schedule-minus.svg");
+			}
+
+			& ~ #{$p}__timetable {
+				max-height: 1000px;
+
+				#{$p}__months {
+					&--short {
+						opacity: 0;
+					}
+
+					&--full {
+						opacity: 1;
+						max-height: 1000px;
+					}
+				}
+			}
+
+			& ~ #{$p}__module-title {
+				#{$p}__module-name {
+					color: $color-gray;
+
+					&::after {
+						opacity: 0;
+					}
+				}
+			}
+		}
+	}
+
+	&__switch-label {
+		position: absolute;
+		width: 30px;
+		height: 30px;
+		background: url("../images/svg/icon-schedule-plus.svg");
+		background-size: cover;
+		border-radius: 50%;
+		transform: translateX(-100%);
+		left: -32px;
+		top: 40px;
+		cursor: pointer;
+
+		@include beetween-laptop-and-tablet {
+			width: vw(30px);
+			height: vw(30px);
+			left: vw(-32px);
+			top: vw(40px);
+		}
+	}
+
 	&__modules {
 		flex-grow: 1;
+		flex-shrink: 1;
 		margin: -25px 0;
+
+		@include beetween-laptop-and-tablet {
+			margin: vw(25px) 0;
+		}
 	}
 
 	&__module {
+		position: relative;
 		display: flex;
 		justify-content: space-between;
 		padding: 25px 0;
+
+		@include beetween-laptop-and-tablet {
+			padding: vw(25px) 0;
+		}
+	}
+
+	&__module-title {
+		flex-basis: 300px;
+		flex-shrink: 0;
+
+		@include beetween-laptop-and-tablet {
+			flex-basis: vw(300px);
+		}
 	}
 
 	&__module-num {
@@ -32,24 +117,99 @@
 	}
 
 	&__module-name {
+		display: inline-block;
 		font-weight: bold;
 		font-size: 24px;
 		line-height: 29px;
+		color: $color-blue;
+		transition: color 0.3s linear;
+
+		@include beetween-laptop-and-tablet {
+			font-size: vw(24px);
+			line-height: vw(29px);
+		}
+
+		&::after {
+			content: "";
+			display: block;
+			width: 100%;
+			height: 1px;
+			margin-top: 1px;
+			background-size: 10px;
+			background-position-x: -2px;
+			background-image: linear-gradient(
+				90deg,
+				$color-blue,
+				$color-blue 7px,
+				rgba($color-blue, 0),
+				rgba($color-blue, 0) 3px
+			);
+			transition: opacity 0.3s linear;
+
+			@include beetween-laptop-and-tablet {
+				background-size: vw(10px);
+				background-position-x: vw(-2px);
+			}
+		}
+	}
+
+	&__timetable {
+		display: flex;
+		flex-direction: column;
+
+		@include beetween-laptop-and-tablet {
+			flex-basis: vw(425px);
+		}
 	}
 
 	&__months {
-		flex-basis: 425px;
-		margin: -15px 0;
+		flex-basis: 100%;
+
+		&--short {
+			position: absolute;
+			top: 2.1em;
+			margin-top: auto;
+			font-size: 24px;
+			line-height: 29px;
+			transition: opacity 0.3s linear;
+			white-space: nowrap;
+
+			@include beetween-laptop-and-tablet {
+				font-size: vw(24px);
+				line-height: vw(29px);
+			}
+		}
+
+		&--full {
+			overflow: hidden;
+			opacity: 0;
+			margin: -15px 0;
+			max-height: 0;
+			transition: all 0.3s linear;
+
+			@include beetween-laptop-and-tablet {
+				margin: vw(-15px) 0;
+			}
+		}
 	}
 
 	&__month {
 		padding: 15px 0;
+
+		@include beetween-laptop-and-tablet {
+			padding: vw(15px) 0;
+		}
 	}
 
 	&__module-num,
 	&__month-name {
 		font-size: 14px;
 		line-height: 17px;
+
+		@include beetween-laptop-and-tablet {
+			font-size: vw(14px);
+			line-height: vw(17px);
+		}
 	}
 
 	&__month-name {
@@ -58,50 +218,100 @@
 		color: $color-gray-light4;
 		opacity: 0.9;
 		margin-bottom: 24px;
+
+		@include beetween-laptop-and-tablet {
+			font-size: vw(14px);
+			line-height: vw(18px);
+			margin-bottom: vw(24px);
+		}
 	}
 
 	&__date {
 		width: 80px;
 		display: inline-block;
+
+		@include beetween-laptop-and-tablet {
+			width: vw(80px);
+		}
 	}
 
 	&__days {
 		margin: -10px 0;
+
+		@include beetween-laptop-and-tablet {
+			margin: vw(-10px) 0;
+		}
 	}
 
 	&__day {
 		padding: 10px 0;
 		font-size: 24px;
 		line-height: 29px;
+
+		@include beetween-laptop-and-tablet {
+			padding: vw(10px) 0;
+			font-size: vw(24px);
+			line-height: vw(29px);
+		}
 	}
 
 	&__day-text {
 		margin-left: 35px;
+
+		@include beetween-laptop-and-tablet {
+			margin-left: vw(35px);
+		}
 	}
 
 	&__info {
 		margin-left: 30px;
 		flex-basis: 320px;
+		flex-shrink: 3;
+
+		@include beetween-laptop-and-tablet {
+			margin-left: vw(30px);
+			flex-basis: vw(320px);
+		}
 	}
 
 	&__info-icon {
 		width: 20px;
 		height: 20px;
-		background: url("../images/svg/icon-info.svg") no-repeat center;
+		background: url("../images/svg/icon-info.svg");
+		background-size: cover;
 		margin-bottom: 17px;
+
+		@include beetween-laptop-and-tablet {
+			width: vw(20px);
+			height: vw(20px);
+			margin-bottom: vw(17px);
+		}
 	}
 
 	&__info-list {
 		margin: -10px 0;
+
+		@include beetween-laptop-and-tablet {
+			margin: vw(-10px) 0;
+		}
 	}
 
 	&__info-item {
 		padding: 10px 0;
+
+		@include beetween-laptop-and-tablet {
+			padding: vw(10px) 0;
+		}
 	}
 
 	&__info-span {
 		font-size: 16px;
 		line-height: 22px;
+
+		@include beetween-laptop-and-tablet {
+			font-size: vw(16px);
+			line-height: vw(22px);
+		}
 
 		&--italic {
 			font-style: italic;
@@ -113,7 +323,7 @@
 		}
 
 		&--medium {
-			font-weight: 500;			
+			font-weight: 500;
 		}
 	}
 }
