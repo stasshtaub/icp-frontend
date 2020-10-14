@@ -1,4 +1,6 @@
 .slider {
+	$p: &;
+
 	max-width: 890px;
 	margin-top: -20px;
 	margin-left: 0 !important;
@@ -91,10 +93,10 @@
 		margin-top: 57px;
 	}
 
-    &__dot {
-        $dot-size: 8px;
+	&__dot {
+		$dot-size: 8px;
 		outline: none;
-
+		box-sizing: content-box;
 		cursor: pointer;
 		width: $dot-size;
 		height: $dot-size;
@@ -105,5 +107,22 @@
 		&--active {
 			background-color: $color-blue;
 		}
-    }
+
+		&--white {
+			border: 2px solid $color-white;
+
+			&.--active {
+				background-color: $color-white;
+			}
+		}
+	}
+
+	&__dots-item {
+		padding: 15px;
+
+		// фикс 105 строки для новой разметки точек, потом надо будет обновить во всех слайдерах и убрать 105 строку
+		#{$p}__dot {
+			margin: 0;
+		}
+	}
 }

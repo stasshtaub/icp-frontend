@@ -1,4 +1,6 @@
 .capabilities-leading {
+	$p: &;
+
 	margin-top: 68px;
 
 	@include laptop {
@@ -14,8 +16,12 @@
 	&__aside {
 		@include laptop {
 			position: absolute;
-			z-index: 1;
-			padding: 24px 30px;
+			z-index: 2;
+			padding: 24px 40px;
+		}
+
+		@include beetween-laptop-and-tablet {
+			padding: vw(24px) vw(40px);
 		}
 	}
 
@@ -28,8 +34,11 @@
 	}
 
 	&__content {
+		width: 100%;
+
 		@include laptop {
 			margin-left: 0;
+			margin-top: 0;
 		}
 	}
 
@@ -38,23 +47,44 @@
 		margin-top: auto;
 		padding: 40px 30px;
 		color: $color-white;
+
+		@include beetween-laptop-and-tablet {
+			padding: vw(40px) vw(30px);
+		}
+
+		@include tablet {
+			padding: 50px 40px;
+		}
+
+		@include mobile-l {
+			padding: 80px 30px;
+		}
 	}
 
 	&__persons {
 		max-width: 1180px;
 		width: 100%;
-		display: flex;
-		flex-wrap: wrap;
+
+		@include tablet("min") {
+			display: flex;
+			flex-wrap: wrap;
+		}
 	}
 
 	&__person {
-		flex-basis: 50%;
-		flex-grow: 1;
+		@include tablet("min") {
+			flex-basis: 50%;
+			flex-grow: 1;
+		}
 	}
 
 	&__person-wrp {
 		position: relative;
 		padding-bottom: 93.7288136%;
+
+		@include mobile-l {
+			padding-bottom: 796px;
+		}
 	}
 
 	&__person-content {
@@ -86,6 +116,15 @@
 		height: 100%;
 		object-fit: cover;
 		mix-blend-mode: overlay;
+
+		@include mobile-l {
+			height: 550px;
+			mask-image: linear-gradient(
+				0deg,
+				rgba(0, 0, 0, 0),
+				rgba(0, 0, 0, 1) 30%
+			);
+		}
 	}
 
 	&__name {
@@ -93,6 +132,16 @@
 		font-size: 40px;
 		line-height: 40px;
 		white-space: pre;
+
+		@include beetween-laptop-and-tablet {
+			font-size: vw(40px);
+			line-height: vw(40px);
+		}
+
+		@include mobile-l {
+			font-size: 30px;
+			line-height: 40px;
+		}
 	}
 
 	&__description {
@@ -102,10 +151,104 @@
 
 		&--full {
 			display: none;
+			white-space: pre-line;
+
+			@include mobile-l {
+				display: block;
+			}
+		}
+
+		&--short {
+			@include mobile-l {
+				display: none;
+			}
+		}
+
+		@include beetween-laptop-and-tablet {
+			margin-top: vw(15px);
+			font-size: vw(22px);
+			line-height: vw(27px);
+		}
+
+		@include mobile-l {
+			font-size: 14px;
+			line-height: 17px;
 		}
 	}
 
 	&__btn {
 		margin-top: 15px;
+
+		@include beetween-laptop-and-tablet {
+			margin-top: vw(15px);
+		}
+
+		@include tablet {
+			margin-top: 28px;
+		}
+
+		@include mobile-l {
+			margin-top: 33px;
+		}
+	}
+
+	&__dots {
+		display: none;
+
+		@include tablet {
+			display: flex;
+			justify-content: center;
+			margin: 0 auto;
+			z-index: 2;
+		}
+
+		@include mobile-l {
+			position: absolute;
+			bottom: 18px;
+		}
+	}
+
+	&__dots-item {
+		&--active {
+			#{$p}__dot {
+				@include tablet {
+					background-color: $color-blue;
+				}
+
+				@include mobile-l {
+					background-color: $color-white;
+				}
+			}
+		}
+	}
+
+	&__dot {
+		@include tablet {
+			border-color: $color-blue;
+		}
+
+		@include mobile-l {
+			border-color: $color-white;
+		}
+	}
+
+	&__buttons {
+		position: absolute;
+		display: flex;
+		justify-content: space-between;
+		width: 100%;
+		top: calc(300px - (768px - 100vw) * 0.65);
+		transform: translateY(-50%);
+		filter: brightness(100);
+		z-index: 3;
+
+		@include mobile-l {
+			top: 300px;
+		}
+	}
+
+	&__slider-btn {
+		box-sizing: content-box;
+		padding: 40px;
 	}
 }

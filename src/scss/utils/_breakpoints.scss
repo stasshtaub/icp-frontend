@@ -35,8 +35,14 @@
 }
 
 @mixin tablet($dimension: "max") {
-	@media (#{$dimension}-width: 768px) {
-		@content;
+	@if $dimension == "max" {
+		@media (max-width: 768px) {
+			@content;
+		}
+	} @else {
+		@media (min-width: 769px) {
+			@content;
+		}
 	}
 }
 

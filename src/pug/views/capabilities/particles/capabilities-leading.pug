@@ -54,3 +54,7 @@ section.capabilities-leading
                                         p.capabilities-leading__description.capabilities-leading__description--short !{person.description.short}
                                         p.capabilities-leading__description.capabilities-leading__description--full !{person.description.full}
                                         +button("Подробнее", ["capabilities-leading__btn"], "size-normal", "color-white", icon = null, tag = "a")
+                .capabilities-leading__buttons.slider__buttons
+                    button(class=prevBtnClass).capabilities-leading__slider-btn.slider__btn.slider__btn--prev
+                    button(class=nextBtnClass).capabilities-leading__slider-btn.slider__btn.slider__btn--next
+                ul.capabilities-leading__dots
