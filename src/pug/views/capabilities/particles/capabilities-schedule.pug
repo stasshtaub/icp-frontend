@@ -8,7 +8,7 @@ section.capabilities-schedule
                     const capabilitiesModules = [
                         {
                             name: "Создай будущее",
-                            monthsShort: "24 октября — 11 ноября",
+                            monthsShort: "24&nbsp;октября&nbsp;— 11&nbsp;ноября",
                             months: [
                                 {
                                     name: "Октябрь",
@@ -21,7 +21,7 @@ section.capabilities-schedule
                                         {
                                             date: 29,
                                             text: "Практика",
-                                            italic: true
+                                            modifer: "italic"
                                         },
                                         {
                                             date: 31,
@@ -36,7 +36,7 @@ section.capabilities-schedule
                                         {
                                             date: "05",
                                             text: "Практика",
-                                            italic: true
+                                            modifer: "italic"
                                         },
                                         {
                                             date: "07",
@@ -45,7 +45,7 @@ section.capabilities-schedule
                                         {
                                             date: 12,
                                             text: "Практика",
-                                            italic: true
+                                            modifer: "italic"
                                         }
                                     ]
                                 }
@@ -53,7 +53,7 @@ section.capabilities-schedule
                         },
                         {
                             name: "Мысли результатами",
-                            monthsShort: "14 ноября — 17 декабря",
+                            monthsShort: "14&nbsp;ноября&nbsp;— 17&nbsp;декабря",
                             months: [
                                 {
                                     name: "Октябрь",
@@ -66,7 +66,7 @@ section.capabilities-schedule
                                         {
                                             date: 29,
                                             text: "Практика",
-                                            italic: true
+                                            modifer: "italic"
                                         },
                                         {
                                             date: 31,
@@ -81,7 +81,7 @@ section.capabilities-schedule
                                         {
                                             date: "05",
                                             text: "Практика",
-                                            italic: true
+                                            modifer: "italic"
                                         },
                                         {
                                             date: "07",
@@ -90,7 +90,7 @@ section.capabilities-schedule
                                         {
                                             date: 12,
                                             text: "Практика",
-                                            italic: true
+                                            modifer: "italic"
                                         }
                                     ]
                                 }
@@ -98,7 +98,7 @@ section.capabilities-schedule
                         },
                         {
                             name: "Действуй осознанно",
-                            monthsShort: "19 декабря — 4 февраля",
+                            monthsShort: "19&nbsp;декабря&nbsp;— 4&nbsp;февраля",
                             months: [
                                 {
                                     name: "Октябрь",
@@ -111,7 +111,7 @@ section.capabilities-schedule
                                         {
                                             date: 29,
                                             text: "Практика",
-                                            italic: true
+                                            modifer: "italic"
                                         },
                                         {
                                             date: 31,
@@ -126,7 +126,7 @@ section.capabilities-schedule
                                         {
                                             date: "05",
                                             text: "Практика",
-                                            italic: true
+                                            modifer: "italic"
                                         },
                                         {
                                             date: "07",
@@ -135,7 +135,97 @@ section.capabilities-schedule
                                         {
                                             date: 12,
                                             text: "Практика",
-                                            italic: true
+                                            modifer: "italic"
+                                        }
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            name: "Слушай сердцем",
+                            monthsShort: "13&nbsp;февраля&nbsp;— 18&nbsp;марта",
+                            months: [
+                                {
+                                    name: "Октябрь",
+                                    date: 10, 
+                                    days: [
+                                        {
+                                            date: 24,
+                                            text: "Проектируй будущее"
+                                        },
+                                        {
+                                            date: 29,
+                                            text: "Практика",
+                                            modifer: "italic"
+                                        },
+                                        {
+                                            date: 31,
+                                            text: "Осознай реальность"
+                                        }
+                                    ]
+                                },
+                                {
+                                    name: "Ноябрь",
+                                    date: 11, 
+                                    days: [
+                                        {
+                                            date: "05",
+                                            text: "Практика",
+                                            modifer: "italic"
+                                        },
+                                        {
+                                            date: "07",
+                                            text: "Выбери действие"
+                                        },
+                                        {
+                                            date: 12,
+                                            text: "Практика",
+                                            modifer: "italic"
+                                        }
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            name: "Реализуй возможности",
+                            monthsShort: "20&nbsp;марта&nbsp;— 2&nbsp;мая",
+                            months: [
+                                {
+                                    name: "Октябрь",
+                                    date: 10, 
+                                    days: [
+                                        {
+                                            date: 24,
+                                            text: "Проектируй будущее"
+                                        },
+                                        {
+                                            date: 29,
+                                            text: "Практика",
+                                            modifer: "italic"
+                                        },
+                                        {
+                                            date: 31,
+                                            text: "Осознай реальность"
+                                        }
+                                    ]
+                                },
+                                {
+                                    name: "Ноябрь",
+                                    date: 11, 
+                                    days: [
+                                        {
+                                            date: "05",
+                                            text: "Практика",
+                                            modifer: "italic"
+                                        },
+                                        {
+                                            date: "07",
+                                            text: "Выбери действие"
+                                        },
+                                        {
+                                            date: 12,
+                                            text: "Практика",
+                                            modifer: "italic"
                                         }
                                     ]
                                 }
@@ -146,13 +236,12 @@ section.capabilities-schedule
                     each capabilitiesModule, i in capabilitiesModules 
                         li.capabilities-schedule__module
                             input(type="checkbox" id=`capabilities-schedule__switch-input-${i+1}`).capabilities-schedule__switch-input
-                            label(for=`capabilities-schedule__switch-input-${i+1}`).capabilities-schedule__switch-label
-                            .capabilities-schedule__module-title                        
+                            label(for=`capabilities-schedule__switch-input-${i+1}`).capabilities-schedule__module-title                        
                                 p.capabilities-schedule__module-num #{i+1+' модуль'}                        
-                                p.capabilities-schedule__module-name= capabilitiesModule.name
+                                span.capabilities-schedule__module-name= capabilitiesModule.name
                             
                             .capabilities-schedule__timetable       
-                                .capabilities-schedule__months.capabilities-schedule__months--short= capabilitiesModule.monthsShort
+                                .capabilities-schedule__months.capabilities-schedule__months--short !{capabilitiesModule.monthsShort}
                                 ul.capabilities-schedule__months.capabilities-schedule__months--full
                                     each month in capabilitiesModule.months
                                         li.capabilities-schedule__month
@@ -164,7 +253,7 @@ section.capabilities-schedule
                                                             span.capabilities-schedule__date-day= day.date
                                                             span.capabilities-schedule__date-divider &nbsp;/&nbsp;
                                                             span.capabilities-schedule__date-month= month.date
-                                                        span.capabilities-schedule__day-text= day.text
+                                                        span.capabilities-schedule__day-text(class=`${day.modifer ? 'capabilities-schedule__day-text--' + day.modifer : ''}`)= day.text
                 .capabilities-schedule__info
                     .capabilities-schedule__info-icon
                     - 
