@@ -10,3 +10,7 @@
 		font-display: swap;
 	}
 }
+
+@function vw($px-vw, $base-vw: 1024px) {
+	@return ($px-vw * 100vw) / $base-vw;
+}
