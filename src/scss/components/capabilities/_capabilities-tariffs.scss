@@ -271,8 +271,7 @@
 	&__refund {
 		position: relative;
 		display: flex;
-		padding: 60px 0 60px 105px;
-		margin: 0 -20px -20px -20px;
+        padding: 60px 0 60px 115px;
 
 		@include laptop {
 			padding: 60px 0;
@@ -311,7 +310,6 @@
 		display: flex;
 		align-items: center;
 		flex-basis: 530px;
-		padding: 20px;
 		box-sizing: content-box;
 
 		@include laptop {
