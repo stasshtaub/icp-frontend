@@ -1,0 +1,64 @@
+section.capabilities-tariffs
+    .container
+        .double-block
+            aside.capabilities-tariffs__aside.double-block__aside
+                h3.capabilities-tariffs__title.double-block__title Стоимость курса
+            .double-block__content.double-block__content--narrow.capabilities-tariffs__content
+                - 
+                    const tariffs = [
+                        {
+                            name: "Профессиональный",
+                            description: "Для тех, кому важна международная сертификация, кто планирует построить карьеру коуча.",
+                            elements: [
+                                "125 часов обучения",
+                                "личный кабинет со всеми материалами курса",
+                                "доступ в закрытую группу в facebook",
+                                "2 устные + 3 письменные наблюдаемые сессии",
+                                "3 часа группового менторинга",
+                                "международный сертификат ACSTH ICF"
+                            ],
+                            price: "165 500 ₽",
+                            payFormat: "единовременный платеж",
+                            modularPay: true
+                        },
+                        {
+                            name: "VIP",
+                            isVip: true,
+                            description: "Для тех, кто после обучения хочет пройти ACC — сертификацию в Международной Федерации Коучинга (ICF). По итогам, ученик получает 10 часов менторинга (необходимые для сертификации) и рекомендации по выбору сессии для предоставления в ICF",
+                            elements: [
+                                "125 часов обучения",
+                                "личный кабинет со всеми материалами курса",
+                                "доступ в закрытую группу в facebook",
+                                "2 устные + 3 письменные наблюдаемые сессии",
+                                "3 часа группового менторинга + 7,5 дополнительных часов группового и индивидуального менторинга",
+                                "международный сертификат ACSTH ICF"
+                            ],
+                            price: "180 500 ₽",
+                            payFormat: "единовременный платеж",
+                            modularPay: true
+                        }
+                    ]
+                ul.capabilities-tariffs__list
+                    each tariff, i in tariffs
+                        li.capabilities-tariffs__tariff
+                            .capabilities-tariffs__col.capabilities-tariffs__col--num
+                                p.capabilities-tariffs__num(class=`${tariff.isVip ? "capabilities-tariffs__num--vip" : ""}`)= i+1
+                            .capabilities-tariffs__col.capabilities-tariffs__col--info
+                                p.capabilities-tariffs__name(class=`${tariff.isVip ? "capabilities-tariffs__name--vip" : ""}`)= tariff.name
+                                p.capabilities-tariffs__description= tariff.description
+                                ul.capabilities-tariffs__elements
+                                    each element in tariff.elements
+                                        li.capabilities-tariffs__element= element
+                            .capabilities-tariffs__col.capabilities-tariffs__col--pay
+                                .capabilities-tariffs__price= tariff.price
+                                .capabilities-tariffs__pay-format= tariff.payFormat
+                                if tariff.modularPay
+                                    .capabilities-tariffs__modular Возможна помодульная оплата
+                                +button("Оплатить", ["capabilities-tariffs__btn"], "size-xl", "color-primary", "icon-ok", "a")
+        .capabilities-tariffs__refund
+            .capabilities-tariffs__refund-col.capabilities-tariffs__refund-col--title
+                p.capabilities-tariffs__refund-title Мы настолько уверены в программе и спикерах, что гарантируем вам 100% возврат средств.
+            .capabilities-tariffs__refund-col.capabilities-tariffs__refund-col--description
+                p.capabilities-tariffs__refund-description Если после первого занятия вы решите, что данный курс не для вас, то мы просто вернём всю сумму без лишних вопросов.
+
+                
