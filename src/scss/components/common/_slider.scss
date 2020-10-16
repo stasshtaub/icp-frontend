@@ -124,5 +124,13 @@
 		#{$p}__dot {
 			margin: 0;
 		}
+
+		&--active {
+			#{$p}__dot {
+				&--blue {
+					background-color: $color-blue;
+				}
+			}
+		}
 	}
 }
