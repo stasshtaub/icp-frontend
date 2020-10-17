@@ -40,15 +40,19 @@ const initDropdown = ({ target }) => {
 	});
 };
 
+const closeDropdown = () => {
+	checkbox.checked = false;
+	deactivateAllNavEl();
+}
+
 checkbox.addEventListener("change", () => {
 	deactivateAllNavEl();
 });
 
-backdropDropdown.addEventListener("mouseenter", () => {
-	checkbox.checked = false;
-	deactivateAllNavEl();
-});
+backdropDropdown.addEventListener("mouseenter", closeDropdown);
+backdropDropdown.addEventListener("touchend", closeDropdown);
 
 itemsWithDropdown.forEach((item) => {
 	item.addEventListener("mouseenter", initDropdown);
+	item.addEventListener("touchend", initDropdown);
 });
