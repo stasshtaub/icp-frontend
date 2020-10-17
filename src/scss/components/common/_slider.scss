@@ -115,14 +115,25 @@
 				background-color: $color-white;
 			}
 		}
+
+		@include mobile-l {
+			border: 1px solid $color-blue;
+			width: 4px;
+			height: 4px;
+			margin: 0 12px;
+		}
 	}
 
 	&__dots-item {
 		padding: 15px;
 
+		@include mobile-l {
+			padding: 12px;
+		}
+
 		// фикс 105 строки для новой разметки точек, потом надо будет обновить во всех слайдерах и убрать 105 строку
 		#{$p}__dot {
-			margin: 0;
+			margin: 0 !important;
 		}
 
 		&--active {
