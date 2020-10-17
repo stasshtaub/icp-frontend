@@ -129,6 +129,10 @@
 				order: 2;
 			}
 		}
+
+		&--phone {
+			order: -1;
+		}
 	}
 
 	&__primary-link {
