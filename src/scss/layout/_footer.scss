@@ -172,6 +172,12 @@
 		&--email {
 			text-decoration-line: underline;
 		}
+
+		
+		@include beetween-laptop-and-tablet {
+			font-size: vw(20px);
+			line-height: vw(20px);
+		}
 	}
 
 	&__email-text {
@@ -261,8 +267,6 @@
 	}
 
 	&__social-item {
-		margin-right: 10px;
-
 		@include tablet-xs {
 			margin-right: -4px;
 		}
