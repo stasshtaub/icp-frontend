@@ -12,7 +12,8 @@
 	}
 
 	@include mobile-l {
-		margin-bottom: 100px;
+		margin-bottom: -50px;
+		margin-top: 50px;
 	}
 
 	&__distortion {
@@ -30,7 +31,8 @@
 		overflow: hidden;
 
 		@include mobile-l {
-			height: 600px;
+			height: 510px;
+			margin-bottom: 0;
 		}
 	}
 
@@ -43,8 +45,8 @@
 		}
 
 		@include mobile-l {
-			transform: translate(58%, -28%) skewY(3.826deg) rotate(90deg)
-				scale(0.9);
+			transform: translate(58%, -31%) skewY(3.826deg) rotate(90deg)
+				scale(0.7);
 		}
 	}
 
@@ -67,12 +69,21 @@
 			margin-left: 20px;
 			padding-top: 50px;
 		}
+
+		@include mobile-l {
+			margin-left: 0;
+		}
 	}
 
 	&__title {
 		font-weight: 300;
 		font-size: 60px;
 		line-height: 70px;
+
+		@include mobile-l {
+			font-size: 40px;
+			line-height: 50px;
+		}
 	}
 
 	&__description {
@@ -80,6 +91,12 @@
 		font-weight: 500;
 		font-size: 22px;
 		line-height: 27px;
+
+		@include mobile-l {
+			font-size: 16px;
+			line-height: 20px;
+			margin-top: 20px;
+		}
 	}
 
 	&__btn {
@@ -92,5 +109,9 @@
 		font-size: 15px;
 		line-height: 30px;
 		color: $color-blue;
+
+		@include mobile-l {
+			margin-top: 30px;
+		}
 	}
 }
