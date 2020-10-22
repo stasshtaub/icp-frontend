@@ -52,6 +52,12 @@
 	}
 }
 
+@mixin tablet-s1($dimension: "max") {
+	@media (#{$dimension}-width: 630px) {
+		@content;
+	}
+}
+
 @mixin tablet-s2($dimension: "max") {
 	@media (#{$dimension}-width: 600px) {
 		@content;
@@ -77,8 +83,26 @@
 	}
 }
 
+@mixin beetween-laptop-and-mobile() {
+	@media (max-width: 1024px) and (min-width: 426px) {
+		@content;
+	}
+}
+
 @mixin beetween-tablet-and-mobile() {
 	@media (max-width: 768px) and (min-width: 426px) {
+		@content;
+	}
+}
+
+@mixin beetween-tablet-s1-and-mobile() {
+	@media (max-width: 630px) and (min-width: 426px) {
+		@content;
+	}
+}
+
+@mixin beetween-tablet-s2-and-mobile() {
+	@media (max-width: 600px) and (min-width: 426px) {
 		@content;
 	}
 }

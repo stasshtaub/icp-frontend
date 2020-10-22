@@ -73,11 +73,6 @@
 			display: flex;
 			padding: 21px 0;
 			justify-content: space-between;
-			z-index: 2;
-
-			// @include desktop {
-			// 	padding: 21px 45px;
-			// }
 
 			@include laptop {
 				padding: 24px 0;
@@ -90,6 +85,13 @@
 			@include mobile-l {
 				box-shadow: 0 -5px 10px $color-black-opacity05;
 				padding: 20px 20px;
+			}
+
+			@include mobile-l {
+				box-shadow: 0 -5px 10px $color-black-opacity05;
+				padding: 20px 20px;
+				background-color: $color-white;
+				z-index: 100;
 			}
 		}
 

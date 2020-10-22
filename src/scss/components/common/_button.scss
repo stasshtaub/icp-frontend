@@ -1,5 +1,5 @@
 .button {
-	display: flex;
+	display: inline-flex;
 	align-items: center;
 	text-align: center;
 	border: none;
@@ -9,7 +9,6 @@
 	line-height: 30px;
 
 	&--link {
-		display: inline-block;
 		text-decoration: none;
 	}
 

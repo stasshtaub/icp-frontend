@@ -16,6 +16,10 @@
 			padding: 0 20px;
 		}
 
+		@include mobile-l {
+			padding: 8px;
+		}
+
 		&--chat {
 			padding: 0;
 			margin-left: auto;
@@ -39,9 +43,27 @@
 		padding: 35px 0;
 		border-bottom: 1px solid $color-black-opacity05;
 
+		@include mobile-l {
+			padding: 25px 0;
+		}
+
 		&--categories {
 			@include tablet {
 				display: none;
+			}
+		}
+
+		&--contacts {
+			#{$p}__row-container {
+				@include mobile-l {
+					margin: -12px;
+				}
+			}
+
+			#{$p}__col {
+				@include mobile-l {
+					padding: 12px;
+				}
 			}
 		}
 	}
@@ -91,6 +113,7 @@
 
 		@include mobile-l {
 			grid-template-columns: unset;
+			grid-gap: unset;
 		}
 	}
 
@@ -107,6 +130,10 @@
 
 			@include laptop {
 				margin: -10px -15px;
+			}
+
+			@include mobile-l {
+				margin: -8px;
 			}
 		}
 
@@ -129,6 +156,10 @@
 				order: 2;
 			}
 		}
+
+		&--phone {
+			order: -1;
+		}
 	}
 
 	&__primary-link {
@@ -140,6 +171,12 @@
 
 		&--email {
 			text-decoration-line: underline;
+		}
+
+		
+		@include beetween-laptop-and-tablet {
+			font-size: vw(20px);
+			line-height: vw(20px);
 		}
 	}
 
@@ -170,7 +207,7 @@
 
 	&__social-list {
 		display: flex;
-		margin: 0 -15px;
+		margin: -5px -15px;
 		flex-wrap: wrap;
 	}
 
@@ -230,8 +267,6 @@
 	}
 
 	&__social-item {
-		margin-right: 10px;
-
 		@include tablet-xs {
 			margin-right: -4px;
 		}
@@ -239,5 +274,21 @@
 
 	&__social-icon {
 		color: $color-gray;
+	}
+
+	&__copyright {
+		br {
+			display: none;
+
+			@include mobile-l {
+				display: block;
+			} 
+		}
+	}
+
+	&__copyright-item {
+		&--bold {
+			font-weight: 500;
+		}
 	}
 }

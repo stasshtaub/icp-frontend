@@ -21,6 +21,11 @@
 			margin-left: 0;
 		}
 
+		@include beetween-tablet-s1-and-mobile {
+			font-size: vw(60px, 630px);
+			line-height: vw(70px, 630px);
+		}
+
 		@include mobile-l {
 			font-size: 20px;
 			line-height: 70px;
@@ -173,6 +178,12 @@
 			line-height: vw(29px);
 			background-size: vw(10px) 1px;
 		}
+
+		@include beetween-tablet-s1-and-mobile {
+			font-size: vw(24px, 630px);
+			line-height: vw(29px, 630px);
+			background-size: vw(10px, 630px) 1px;
+		}
 	}
 
 	&__timetable {
@@ -213,6 +224,11 @@
 				margin-top: unset;
 				top: unset;
 				white-space: unset;
+			}
+
+			@include beetween-tablet-s1-and-mobile {
+				font-size: vw(24px, 630px);
+				line-height: vw(29px, 630px);
 			}
 		}
 
@@ -279,6 +295,10 @@
 		@include beetween-laptop-and-tablet {
 			margin: vw(-10px) 0;
 		}
+
+		@include beetween-tablet-s1-and-mobile {
+			margin: vw(-10px, 630px) 0;
+		}
 	}
 
 	&__day {
@@ -291,15 +311,24 @@
 			font-size: vw(24px);
 			line-height: vw(29px);
 		}
+
+		@include beetween-tablet-s1-and-mobile {
+			padding: vw(10px, 630px) 0;
+			font-size: vw(24px, 630px);
+			line-height: vw(29px, 630px);
+		}
 	}
 
 	&__day-text {
 		display: inline-block;
-		min-width: 300px;
 		white-space: nowrap;
 
 		&--italic {
 			font-style: italic;
+		}
+
+		@include beetween-tablet-s1-and-mobile {
+			min-width: vw(300px, 630px);
 		}
 	}
 

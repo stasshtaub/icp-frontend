@@ -298,6 +298,10 @@
 			line-height: 3.90625vw;
 		}
 
+		@include mobile-l {
+			margin-bottom: 0;
+		}
+
 		&:hover {
 			padding-right: 70px;
 
@@ -347,9 +351,18 @@
 		margin-top: 10px;
 
 		@include tablet-s {
-			justify-content: unset;
 			padding: 0 10px;
 			margin-top: 10px;
 		}
+
+		@include mobile-l {
+			justify-content: unset;
+		}
+	}
+
+	span.slider__dot {
+	}
+
+	button.button.button--color-primary.button--size-large.programs-carousel__slide-btn {
 	}
 }

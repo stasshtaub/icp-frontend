@@ -238,14 +238,18 @@
 	}
 
 	&__buttons {
+		display: none;
 		position: absolute;
-		display: flex;
 		justify-content: space-between;
 		width: 100%;
 		top: calc(300px - (768px - 100vw) * 0.65);
 		transform: translateY(-50%);
 		filter: brightness(100);
 		z-index: 3;
+
+		@include tablet {
+			display: flex;
+		}
 
 		@include mobile-l {
 			top: 300px;
