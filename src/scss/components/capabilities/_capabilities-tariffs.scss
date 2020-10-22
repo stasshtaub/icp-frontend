@@ -159,6 +159,36 @@
 		font-weight: 500;
 		font-size: 28px;
 		line-height: 30px;
+
+		&--vip {
+			display: flex;
+
+			&::after {
+				content: "vip";
+				height: 17px;
+				width: 30px;
+				margin-bottom: 5px;
+				margin-left: 7px;
+				border-radius: 3px;
+				color: rgba($color-white, 0.9);
+				background: $color-blue;
+				line-height: 17px;
+				font-size: 10px;
+				font-weight: 700;
+				text-align: center;
+				letter-spacing: 1px;
+				text-transform: uppercase;
+				align-self: flex-end;
+			}
+		}
+	}
+
+	&__num {
+		min-width: 65px;
+
+		&--vip {
+			padding-right: 10px;
+		}
 	}
 
 	&__name {
@@ -170,6 +200,14 @@
 		@include tablet {
 			font-size: vw(28px, 768px);
 			line-height: vw(30px, 768px);
+		}
+
+		&--vip {
+			&::after {
+				@include laptop("min") {
+					content: unset;
+				}
+			}
 		}
 	}
 
