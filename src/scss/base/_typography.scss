@@ -3,6 +3,7 @@
 @include font-face('../fonts/Formular-Medium', Formular, 500, normal);
 @include font-face('../fonts/Formular-Black', Formular, 900, normal);
 @include font-face('../fonts/Formular-LightItalic', Formular, 300, italic);
+@include font-face('../fonts/Formular-Italic', Formular, 400, italic);
 
 * {
 	font-family: $font-family-formular, sans-serif;
