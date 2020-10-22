@@ -96,6 +96,11 @@
 			justify-content: space-evenly;
 		}
 
+		@include tablet-xs {
+			margin: 16px -8px -8px -8px;
+		}
+
+
 		@include mobile-l {
 			margin-top: 24px;
 		}
@@ -114,11 +119,12 @@
 			box-sizing: content-box;
 		}
 
+		@include tablet-xs {
+			flex-basis: 153px;
+			padding: 20px 0;
+		}
+
 		@include mobile-l {
-			flex-basis: 100px;
-			flex-grow: 1;
-			font-size: 12px;
-			line-height: 18px;
 		}
 	}
 
@@ -130,6 +136,8 @@
 
 		@include mobile-l {
 			margin-top: 12px;
+			font-size: 12px;
+			line-height: 18px;
 		}
 	}
 }
