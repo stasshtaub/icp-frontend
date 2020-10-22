@@ -5,24 +5,24 @@
 	&__container {
 		display: flex;
 		align-items: center;
-		
+
 		@include mobile-l("min") {
 			padding: 25px 22px;
 		}
-	
+
 		@include tablet("min") {
 			padding: 25px 30px;
 		}
-	
+
 		@include laptop("min") {
 			padding: 26px 28px;
 		}
-	
+
 		@include desktop("min") {
 			padding: 23px 160px;
 		}
-	
-		@include tablet {
+
+		@include tablet-xs {
 			padding: 25px 22px;
 			flex-direction: column;
 			align-items: unset;
@@ -46,34 +46,61 @@
 			font-size: 40px;
 			line-height: 49px;
 		}
+
+		br {
+			@include tablet("min") {
+				display: none;
+			}
+
+			@include tablet-xs {
+				display: none;
+			}
+		}
+	}
+
+	&__group {
+		display: flex;
+		align-items: center;
+
+		@include tablet("min") {
+			justify-content: space-between;
+			flex-grow: 1;
+			margin-left: 70px;
+		}
+
+		@include tablet {
+			margin-left: auto;
+		}
+
+		@include tablet-xs {
+			display: block;
+		}
 	}
 
 	&__description {
 		font-size: 14px;
 		line-height: 17px;
-		margin-left: 72px;
 
 		@include tablet {
-			margin-left: unset;
+			padding: 0 28px;
+		}
+
+		@include tablet-xs {
+			padding: 0;
 			margin-top: 15px;
 		}
 
 		br {
-			@include tablet {
+			@include tablet-xs {
 				display: none;
 			}
-		}
-
-		@include laptop('min') {
-			margin-left: 60px;
 		}
 	}
 
 	&__link {
-		margin-left: auto;
+		display: inline-block;
 
-		@include tablet {
-			margin-left: unset;
+		@include tablet-xs {
 			margin-top: 15px;
 		}
 	}
