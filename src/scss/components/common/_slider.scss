@@ -4,6 +4,9 @@
 	max-width: 890px;
 	margin-top: -20px;
 	margin-left: 0 !important;
+	
+	-webkit-transform: translateZ(0);
+	-webkit-backface-visibility: hidden;
 
 	@include laptop-m {
 		max-width: 75vw;

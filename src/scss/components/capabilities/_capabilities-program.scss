@@ -6,6 +6,8 @@
 	&__slider {
 		position: relative;
 		height: 850px;
+		-webkit-transform: translateZ(0);
+		-webkit-backface-visibility: hidden;
 	}
 
 	&__slide {
@@ -97,7 +99,7 @@
 					);
 				}
 			}
-			
+
 			#{$p}__shape {
 				top: 182px;
 				right: -133px;
@@ -130,7 +132,7 @@
 			#{$p}__description-list {
 				max-height: 12em;
 			}
-			
+
 			#{$p}__shape {
 				top: 534px;
 				right: -61px;
@@ -175,7 +177,7 @@
 					);
 				}
 			}
-			
+
 			#{$p}__shape {
 				top: 581px;
 				right: 0;
