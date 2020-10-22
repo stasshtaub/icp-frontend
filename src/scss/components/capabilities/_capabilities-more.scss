@@ -84,14 +84,22 @@
 	&__list {
 		display: flex;
 		justify-content: space-evenly;
-		flex-wrap: wrap;
 		width: 100%;
 		margin: 9px 0 -15px 0;
+
+		@include laptop-s {
+			flex-wrap: wrap;
+		}
 
 		@include tablet {
 			margin: 9px -15px -15px -15px;
 			justify-content: space-evenly;
 		}
+
+		@include tablet-xs {
+			margin: 16px -8px -8px -8px;
+		}
+
 
 		@include mobile-l {
 			margin-top: 24px;
@@ -111,20 +119,25 @@
 			box-sizing: content-box;
 		}
 
+		@include tablet-xs {
+			flex-basis: 153px;
+			padding: 20px 0;
+		}
+
 		@include mobile-l {
-			flex-basis: 100px;
-			flex-grow: 1;
-			font-size: 12px;
-			line-height: 18px;
 		}
 	}
 
 	&__item-name {
-		text-align: center;
 		margin-top: 20px;
+		font-size: 14px;
+		line-height: 18px;
+		text-align: center;
 
 		@include mobile-l {
 			margin-top: 12px;
+			font-size: 12px;
+			line-height: 18px;
 		}
 	}
 }

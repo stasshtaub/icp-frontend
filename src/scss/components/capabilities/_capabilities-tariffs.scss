@@ -159,6 +159,36 @@
 		font-weight: 500;
 		font-size: 28px;
 		line-height: 30px;
+
+		&--vip {
+			display: flex;
+
+			&::after {
+				content: "vip";
+				height: 17px;
+				width: 30px;
+				margin-bottom: 5px;
+				margin-left: 7px;
+				border-radius: 3px;
+				color: rgba($color-white, 0.9);
+				background: $color-blue;
+				line-height: 17px;
+				font-size: 10px;
+				font-weight: 700;
+				text-align: center;
+				letter-spacing: 1px;
+				text-transform: uppercase;
+				align-self: flex-end;
+			}
+		}
+	}
+
+	&__num {
+		min-width: 65px;
+
+		&--vip {
+			padding-right: 10px;
+		}
 	}
 
 	&__name {
@@ -170,6 +200,14 @@
 		@include tablet {
 			font-size: vw(28px, 768px);
 			line-height: vw(30px, 768px);
+		}
+
+		&--vip {
+			&::after {
+				@include laptop("min") {
+					content: unset;
+				}
+			}
 		}
 	}
 
@@ -222,10 +260,34 @@
 		text-transform: lowercase;
 	}
 
-	&__modular {
+	&__modular-wrp {
+		position: relative;
+		padding-left: 25px;
 		margin-top: 20px;
+
+		&::before {
+			content: "";
+			position: absolute;
+			width: 17px;
+			height: 17px;
+			left: 0;
+			top: 50%;
+			transform: translateY(-50%);
+			background: url("../images/svg/icon-info.svg");
+			background-size: cover;
+		}
+	}
+
+	&__modular {
 		font-size: 14px;
 		line-height: 20px;
+		background-image: linear-gradient(
+			90deg,
+			$color-gray-light5,
+			$color-gray-light5 7px,
+			rgba($color-gray-light5, 0),
+			rgba($color-gray-light5, 0) 0
+		);
 	}
 
 	&__btn {
@@ -271,7 +333,7 @@
 	&__refund {
 		position: relative;
 		display: flex;
-        padding: 60px 0 60px 115px;
+		padding: 60px 0 60px 115px;
 
 		@include laptop {
 			padding: 60px 0;

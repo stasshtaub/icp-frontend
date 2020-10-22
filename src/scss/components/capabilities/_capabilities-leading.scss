@@ -40,6 +40,11 @@
 			margin-left: 0;
 			margin-top: 0;
 		}
+
+		@include tablet {
+			-webkit-transform: translateZ(0);
+			-webkit-backface-visibility: hidden;
+		}
 	}
 
 	&__info {

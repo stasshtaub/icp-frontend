@@ -53,7 +53,8 @@ section.capabilities-tariffs
                                 .capabilities-tariffs__price= tariff.price
                                 .capabilities-tariffs__pay-format= tariff.payFormat
                                 if tariff.modularPay
-                                    .capabilities-tariffs__modular Возможна помодульная оплата
+                                    .capabilities-tariffs__modular-wrp
+                                        span.capabilities-tariffs__modular.underlined Возможна помодульная оплата
                                 +button("Оплатить", ["capabilities-tariffs__btn"], "size-xl", "color-primary", "icon-ok", "a")
         .capabilities-tariffs__refund
             .capabilities-tariffs__refund-col.capabilities-tariffs__refund-col--title
