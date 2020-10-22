@@ -10,14 +10,14 @@ section.capabilities-more
                     text: "Демо-сессии"
                 },
                 {
-                    text: "Групповая супервизия (по желанию участников обучения)"
+                    text: "Групповая супервизия (по&nbsp;желанию&nbsp;участников обучения)"
                 },
                 {
                     text: "Наблюдаемые сессии (для пакета Проф. и VIP)",
                     isVip: true
                 },
                 {
-                    text: "Дополнительные часы индивидуального и группового менторинга",
+                    text: "Дополнительные часы индивидуального и&nbsp;группового менторинга",
                     isVip: true
                 }
             ];
@@ -31,4 +31,4 @@ section.capabilities-more
                                     include ../../../../images/svg/capabilities-more-shape-1.svg
                                 when 4
                                     include ../../../../images/svg/capabilities-more-shape-5.svg
-                    p.capabilities-more__item-name= moreItem.text
+                    p.capabilities-more__item-name !{moreItem.text}
