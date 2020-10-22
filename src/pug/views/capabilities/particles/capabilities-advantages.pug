@@ -4,15 +4,15 @@ section.capabilities-advantages
     .capabilities-advantages__events
         - 
             var events = [
-                {
+                [{
                     place: {
                         textBold: 'Онлайн'
                     },
                     date: 'Старт онлайн обучения 24 октября 2020',
                     marker: true,
                     offset: 'large'
-                },
-                {
+                }],
+                [{
                     place: {
                         textRegular: 'Очное в ',
                         textBold: 'Санкт-Петербурге'
@@ -27,18 +27,20 @@ section.capabilities-advantages
                     },
                     date: null,
                     offset: 'short'
-                }
+                }]
             ]
-        each event in events
-            .capabilities-advantages__event(class=`capabilities-advantages__event--offset-${ event.offset }`)
-                .capabilities-advantages__place(class=`${ event.marker ? 'capabilities-advantages__place--marked' : '' }`)
-                        if (event.place.textRegular)
-                            span.capabilities-advantages__text.capabilities-advantages__text--regular= event.place.textRegular
-                        span.capabilities-advantages__text.capabilities-advantages__text--bold= event.place.textBold 
-                if (event.date)
-                    p.capabilities-advantages__date-text.capabilities-advantages__date-text--defined= event.date
-                else
-                    p.capabilities-advantages__date-text.capabilities-advantages__date-text--undefined Даты уточняются
+        each eventGroup in events
+            .capabilities-advantages__event-group
+                each event in eventGroup
+                    .capabilities-advantages__event(class=`capabilities-advantages__event--offset-${ event.offset }`)
+                        .capabilities-advantages__place(class=`${ event.marker ? 'capabilities-advantages__place--marked' : '' }`)
+                                if (event.place.textRegular)
+                                    span.capabilities-advantages__text.capabilities-advantages__text--regular= event.place.textRegular
+                                span.capabilities-advantages__text.capabilities-advantages__text--bold= event.place.textBold 
+                        if (event.date)
+                            p.capabilities-advantages__date-text.capabilities-advantages__date-text--defined= event.date
+                        else
+                            p.capabilities-advantages__date-text.capabilities-advantages__date-text--undefined Даты уточняются
                        
     +button("Записаться", ["capabilities-advantages__btn"], "size-xl", "color-primary", "icon-ok", "a")
     
