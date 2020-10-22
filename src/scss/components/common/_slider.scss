@@ -4,7 +4,7 @@
 	max-width: 890px;
 	margin-top: -20px;
 	margin-left: 0 !important;
-	
+
 	-webkit-transform: translateZ(0);
 	-webkit-backface-visibility: hidden;
 
@@ -119,19 +119,23 @@
 			}
 		}
 
-		@include mobile-l {
-			border: 1px solid $color-blue;
-			width: 4px;
-			height: 4px;
-			margin: 0 12px;
+		&--adaptive {
+			@include mobile-l {
+				border: 1px solid $color-blue;
+				width: 4px;
+				height: 4px;
+				margin: 0 12px;
+			}
 		}
 	}
 
 	&__dots-item {
 		padding: 15px;
 
-		@include mobile-l {
-			padding: 12px;
+		&--adaptive {
+			@include mobile-l {
+				padding: 12px;
+			}
 		}
 
 		// фикс 105 строки для новой разметки точек, потом надо будет обновить во всех слайдерах и убрать 105 строку
