@@ -8,6 +8,10 @@
 		height: 850px;
 		-webkit-transform: translateZ(0);
 		-webkit-backface-visibility: hidden;
+
+		@include laptop {
+			height: 950px;
+		}
 	}
 
 	&__slide {
@@ -16,6 +20,11 @@
 		height: 100%;
 		padding-left: 158px;
 		box-sizing: border-box;
+
+		@include laptop {
+			padding-top: 100px;
+			width: 100% !important;
+		}
 
 		&--1 {
 			width: 1075px !important;
@@ -395,12 +404,19 @@
 		position: absolute;
 		top: 0;
 		display: flex;
-		transform: rotate(90deg) translateY(-100%);
 		transform-origin: left top;
-		margin-top: 45px;
 		margin-left: 30px;
 		border: 2px solid $color-white;
 		z-index: 2;
+
+		@include laptop("min") {
+			transform: rotate(90deg) translateY(-100%);
+			margin-top: 45px;
+		}
+
+		@include laptop {
+			margin-top: 30px;
+		}
 	}
 
 	&__nav-section {
@@ -440,10 +456,16 @@
 
 		&--prev {
 			transform: rotate(90deg);
+
+			@include laptop {
+				transform: rotate(180deg);
+			}
 		}
 
 		&--next {
-			transform: rotate(-90deg);
+			@include laptop("min") {
+				transform: rotate(-90deg);
+			}
 		}
 	}
 }
