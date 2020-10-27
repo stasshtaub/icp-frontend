@@ -3,12 +3,11 @@ const intersectionObserver = new IntersectionObserver((entries) => {
 		if (isIntersecting) {
 			const box = target.getBoundingClientRect();
 			const top = box.top + pageYOffset;
-
-			console.log(top, target.className);
+			console.log("top:", top);
 
 			window.addEventListener("scroll", onScroll);
 		} else {
-			window.removeEventListener("scroll", onscroll);
+			window.removeEventListener("scroll", onScroll);
 		}
 	});
 });
