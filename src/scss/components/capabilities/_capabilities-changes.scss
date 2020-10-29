@@ -24,11 +24,12 @@
 		transform: translateX(-50%);
 		margin-left: 50%;
 		margin-top: 55px;
+	}
 
+	&__strikethrough-line {
 		&--animated {
 			#{$p}__strikethrough-item::after {
-				transform: translateY(-50%) scaleX(1);
-				// animation-play-state: running;				
+				transform: translateY(-50%) scaleX(1);			
 			}
 		}
 	}
@@ -52,54 +53,6 @@
 			transition: transform 0.7s linear;
 			transform: translateY(-50%) scaleX(0);
 			transform-origin: left;
-			// animation: strike 0.7s linear infinite;
-			// animation-play-state: paused;
-			// animation-iteration-count: 1;
-			// animation-fill-mode: both;
-		}
-
-		&--2::after {
-			transition-delay: 0.7s;
-		}
-
-		&--3::after {
-			transition-delay: 0.8s;
-		}
-
-		&--4::after {
-			transition-delay: 1.5s;
-		}
-
-		&--5::after {
-			transition-delay: 1.8s;
-		}
-
-		&--6::after {
-			transition-delay: 2.3s;
-		}
-
-		&--7::after {
-			transition-delay: 3s;
-		}
-
-		&--8::after {
-			transition-delay: 3.5s;
-		}
-
-		&--9::after {
-			transition-delay: 3.9s;
-		}
-
-		&--10::after {
-			transition-delay: 4.6s;
-		}
-
-		&--11::after {
-			transition-delay: 5s;
-		}
-
-		&--12::after {
-			transition-delay: 5.3s;
 		}
 
 		&--white::after {
@@ -116,6 +69,7 @@
 
 		&--left::after {
 			left: 10px;
+			transition-delay: 0.7s;
 		}
 
 		&--infinity {

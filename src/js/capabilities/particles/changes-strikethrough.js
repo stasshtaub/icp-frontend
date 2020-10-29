@@ -23,14 +23,16 @@ const intersectionObserver = new IntersectionObserver((entries) => {
 	entries.forEach(({isIntersecting, target}) => {
 		if (isIntersecting) {
 			target.classList.add(
-				'capabilities-changes__strikethrough--animated',
+				'capabilities-changes__strikethrough-line--animated',
 			);
 		}
 	});
 });
 
-const container = document.querySelector(
-	'.capabilities-changes__strikethrough',
+const lines = document.querySelectorAll(
+	'.capabilities-changes__strikethrough-line',
 );
 
-intersectionObserver.observe(container);
+lines.forEach((line) => {
+	intersectionObserver.observe(line);
+});
