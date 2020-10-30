@@ -24,7 +24,7 @@ section.capabilities-more
         ul.capabilities-more__list
             each moreItem, i in moreItems
                 li.capabilities-more__item
-                    .capabilities-more__shape-wrp
+                    .capabilities-more__shape-wrp(class=`capabilities-more__shape-wrp--${i+1}`)
                         .capabilities-more__shape(class=`capabilities-more__shape--${i+1} ${moreItem.isVip ? 'capabilities-more__shape--vip' : ''}`)
                             case i
                                 when 0

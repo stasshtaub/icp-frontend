@@ -13,6 +13,98 @@
 		border-bottom: 10px solid $color-blue4;
 	}
 
+	&__list {
+		display: flex;
+		justify-content: space-evenly;
+		width: 100%;
+		margin: 9px 0 -15px 0;
+
+		@include laptop-s {
+			flex-wrap: wrap;
+		}
+
+		@include tablet {
+			margin: 9px -15px -15px -15px;
+			justify-content: space-evenly;
+		}
+
+		@include tablet-xs {
+			margin: 16px -8px -8px -8px;
+		}
+
+		@include mobile-l {
+			margin-top: 24px;
+		}
+
+		&--animated {
+			#{$p}__shape-wrp {
+				animation: bounce-top 1.4s both;
+				// animation: wobble-hor-bottom 1.4s both;
+			}
+		}
+	}
+
+	@keyframes bounce-top {
+		0% {
+			opacity: 1;
+		}
+		16% {
+			transform: translateY(-45px);
+			animation-timing-function: ease-in;
+		}
+		45% {
+			transform: translateY(-24px);
+			animation-timing-function: ease-in;
+		}
+		65% {
+			transform: translateY(-12px);
+			animation-timing-function: ease-in;
+		}
+		80% {
+			transform: translateY(-8px);
+			animation-timing-function: ease-in;
+		}
+		94% {
+			transform: translateY(-4px);
+			animation-timing-function: ease-in;
+		}
+		30%,
+		55%,
+		73%,
+		87% {
+			transform: translateY(0px);
+			animation-timing-function: ease-out;
+		}
+		100% {
+			transform: translateY(0px);
+			animation-timing-function: ease-out;
+			opacity: 1;
+		}
+	}
+
+	@keyframes wobble-hor-bottom {
+		0%,
+		100% {
+			transform: translateX(0%);
+			transform-origin: 50% 50%;
+		}
+		15% {
+			transform: translateX(-30px) rotate(-6deg);
+		}
+		30% {
+			transform: translateX(15px) rotate(6deg);
+		}
+		45% {
+			transform: translateX(-15px) rotate(-3.6deg);
+		}
+		60% {
+			transform: translateX(9px) rotate(2.4deg);
+		}
+		75% {
+			transform: translateX(-6px) rotate(-1.2deg);
+		}
+	}
+
 	&__shape-wrp {
 		height: 81px;
 		display: flex;
@@ -20,6 +112,10 @@
 
 		@include mobile-l {
 			height: unset;
+		}
+
+		&--2, &--4 {
+			animation-delay: 0.05s !important;
 		}
 	}
 
@@ -78,31 +174,6 @@
 				letter-spacing: 1px;
 				text-transform: uppercase;
 			}
-		}
-	}
-
-	&__list {
-		display: flex;
-		justify-content: space-evenly;
-		width: 100%;
-		margin: 9px 0 -15px 0;
-
-		@include laptop-s {
-			flex-wrap: wrap;
-		}
-
-		@include tablet {
-			margin: 9px -15px -15px -15px;
-			justify-content: space-evenly;
-		}
-
-		@include tablet-xs {
-			margin: 16px -8px -8px -8px;
-		}
-
-
-		@include mobile-l {
-			margin-top: 24px;
 		}
 	}
 
