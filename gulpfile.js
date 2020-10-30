@@ -125,7 +125,10 @@ gulp.task(
 gulp.task("default", gulp.series("build", gulp.parallel("watch", "serve")));
 
 gulp.task("deploy", () =>
-	ghpages.publish("dist", (err) => {
+	ghpages.publish("dist", {
+		branch: 'gh-pages',
+		repo: 'https://github.com/stasshtaub/icp-frontend/'
+	  }, (err) => {
 		console.log(err);
 	})
 );
