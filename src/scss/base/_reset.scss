@@ -31,3 +31,7 @@ a[role="button"]:not([disabled]) {
 ul {
     list-style: none;
 }
+
+.swiper-wrapper {
+	-webkit-backface-visibility: hidden;
+}
