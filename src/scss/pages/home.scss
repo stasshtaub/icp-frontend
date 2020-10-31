@@ -34,10 +34,7 @@
 		&--first {
 			position: relative;
 			padding-top: 300px;
-			background: $color-black
-				url("../images/png/start-screen-background.png") no-repeat;
-			background-attachment: fixed;
-			background-size: 100%;
+			background: $color-black;
 
 			@include laptop-l {
 				background-size: cover;
