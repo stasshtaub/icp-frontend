@@ -55,7 +55,7 @@
 
 	&__dots {
 		display: flex;
-		margin: 30px 0 -15px 0;
+		margin-top: 30px;
 	}
 
 	&__content {
@@ -67,44 +67,3 @@
 		width: 100%;
 	}
 }
-
-// // 1
-// .capabilities-reviews {
-//     display: flex;
-//     overflow: hidden;
-
-//     &__content {
-//         flex-grow: 1;
-//         max-width: calc(100% - 100px);
-//     }
-
-//     &__title {
-//         width: 100px;
-//         flex-shrink: 0;
-//         writing-mode: tb-rl;
-//     }
-
-//     .swiper-slide {
-//         max-width: 100%;
-//     }
-// }
-
-// // 2
-// .capabilities-reviews {
-//     display: flex;
-
-//     &__content {
-//         flex-grow: 1;
-//         overflow: hidden;
-//     }
-
-//     &__title {
-//         flex-basis: 100px;
-//         flex-shrink: 0;
-//         writing-mode: tb-rl;
-//     }
-
-//     .swiper-slide {
-//         width: 100%;
-//     }
-// }
