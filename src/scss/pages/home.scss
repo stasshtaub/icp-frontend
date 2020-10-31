@@ -18,12 +18,12 @@
 @import "../components/home/programs-carousel";
 @import "../components/home/programs-test";
 
-
-
 .home {
-	padding-bottom: 100px;
-
 	$video-offset: 104px;
+
+	&__first-container {
+		position: relative;
+	}
 
 	&__group {
 		&--first,
@@ -32,6 +32,7 @@
 		}
 
 		&--first {
+			position: relative;
 			padding-top: 300px;
 			background: $color-black
 				url("../images/png/start-screen-background.png") no-repeat;

@@ -1,6 +1,9 @@
 .footer {
 	$p: &;
 
+	background-color: $color-white;
+	position: relative;
+
 	@include mobile-l {
 		padding-bottom: 72px;
 	}

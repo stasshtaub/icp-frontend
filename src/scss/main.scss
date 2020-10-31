@@ -6,8 +6,10 @@
 @import "base/reset";
 
 @import "layout/container";
+@import "layout/page";
 @import "layout/header";
 @import "layout/footer";
 
+@import "components/common/video-background";
 @import "components/common/logo-duplicate";
 @import "components/common/hotline";

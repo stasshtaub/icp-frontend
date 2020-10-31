@@ -8,23 +8,26 @@ block styles
 block content
     .home
         .home__group.home__group--first
-            .container
+            video(autoplay muted loop id="video-background"  class="video-background")
+                source(src="video/home-background.mp4" type="video/mp4")
+            .home__first-container.container
                 include particles/start-screen
-        .home__group.home__group--blur-overlay
-        .home__group.home__group--video
-                include particles/video-block
-        .home__group
-            .container
-                include particles/programs
-                include particles/strengths
-                include particles/stats
-        .home__group
-            include particles/trapezoid
-        .home__group
-            include particles/programs-carousel
-        .home__group
-            .container
-                include particles/programs-test
+        .page__content
+            .home__group.home__group--blur-overlay
+            .home__group.home__group--video
+                    include particles/video-block
+            .home__group
+                .container
+                    include particles/programs
+                    include particles/strengths
+                    include particles/stats
+            .home__group
+                include particles/trapezoid
+            .home__group
+                include particles/programs-carousel
+            .home__group
+                .container
+                    include particles/programs-test
 block scripts
     script(src!=`${baseDir}js/common.js?v=${Date.now()}`)
     script(defer src!="https://unpkg.com/swiper/swiper-bundle.min.js")

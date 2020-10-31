@@ -1,0 +1,16 @@
+.video-background {
+	position: fixed;
+	transform: translateX(-50%);
+	left: 50%;
+	top: 0;
+	min-width: 100%;
+	min-height: 100%;
+	object-fit: cover;
+	opacity: 0;
+	transition: opacity 0.5s ease;
+    pointer-events: none;
+    
+    &--loaded {
+        opacity: 1;
+    }
+}
