@@ -28,7 +28,7 @@
 	&__title {
 		@include laptop {
 			writing-mode: unset;
-			color: white;
+			color: $color-white;
 			font-weight: 500;
 		}
 	}
@@ -99,19 +99,19 @@
 		height: 100%;
 
 		&--blue {
-			background-color: #1eaad7;
+			background-color: $color-blue5;
 		}
 
 		&--orange {
-			background-color: #e8a700;
+			background-color: $color-orange2;
 		}
 
 		&--blue-gray {
-			background-color: #4db0b8;
+			background-color: $color-blue8;
 		}
 
 		&--light-green {
-			background-color: #6cd3a5;
+			background-color: $color-green-light3;
 		}
 	}
 
