@@ -1,5 +1,7 @@
 const video = document.getElementById("video-background");
 
-video.onloadeddata = function () {
-    this.classList.add("video-background--loaded");
-};
+if (video) {
+	video.onloadeddata = function () {
+		this.classList.add("video-background--loaded");
+	};
+}
