@@ -26,8 +26,13 @@
 			width: 100% !important;
 		}
 
+		&--1, &--2, &--3, &--4 {
+			@include laptop("min") {
+				width: 1075px !important;
+			}
+		}
+
 		&--1 {
-			width: 1075px !important;
 			padding-left: 148px;
 			background-color: $color-green;
 
@@ -37,6 +42,10 @@
 
 			#{$p}__content {
 				padding: 43px 30px 30px 85px;
+
+				@include laptop {
+					padding: 43px 30px 60px 85px;
+				}
 			}
 
 			#{$p}__module {
@@ -47,11 +56,20 @@
 					mix-blend-mode: lighten;
 					clip-path: polygon(0 30px, 100% 0%, 100% 100%, 0% 100%);
 					transform: translate(-33px, -75px);
+
+					@include laptop {
+						height: 194px;
+						width: 764px;
+					}
 				}
 			}
 
 			#{$p}__description {
 				margin-top: 63px;
+
+				@include laptop {
+					margin-top: 44px;
+				}
 			}
 
 			#{$p}__description-block {
@@ -60,6 +78,10 @@
 
 					#{$p}__description-list {
 						max-height: 14em;
+					}
+
+					@include laptop {
+						margin-top: 95px;
 					}
 				}
 
@@ -77,7 +99,6 @@
 		}
 
 		&--2 {
-			width: 1075px !important;
 			background-color: $color-blue3;
 
 			#{$p}__module {
@@ -116,7 +137,6 @@
 		}
 
 		&--3 {
-			width: 1075px !important;
 			background-color: $color-blue4;
 
 			#{$p}__module {
@@ -149,7 +169,6 @@
 		}
 
 		&--4 {
-			width: 1075px !important;
 			background-color: $color-green-light;
 
 			#{$p}__module {
@@ -195,9 +214,12 @@
 		}
 
 		&--5 {
-			width: 1080px !important;
 			background-color: $color-blue5;
 
+			@include laptop("min") {
+				width: 1080px !important;
+			}
+			
 			#{$p}__module {
 				&::before {
 					width: 872px;
@@ -282,8 +304,11 @@
 		font-size: 70px;
 		line-height: 80px;
 		margin-top: 1px;
-		white-space: pre-line;
 		text-transform: uppercase;
+
+		@include laptop("min") {
+			white-space: pre-line;
+		}
 	}
 
 	&__content {
@@ -467,5 +492,29 @@
 				transform: rotate(-90deg);
 			}
 		}
+	}
+
+	&__dots {
+		display: none;
+
+		@include laptop {
+			position: absolute;
+			left: 20px !important;
+			bottom: 25px !important;
+			display: flex;
+			z-index: 2;
+		}
+	}
+
+	&__dots-item {
+		&--active {
+			#{$p}__dot {
+				background-color: $color-white;
+			}
+		}
+	}
+
+	&__dot {
+		border-color: $color-white;
 	}
 }
