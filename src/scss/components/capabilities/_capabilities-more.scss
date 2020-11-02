@@ -49,23 +49,23 @@
 			opacity: 1;
 		}
 		16% {
-			transform: translateY(-45px);
+			transform: translateY(-22px);
 			animation-timing-function: ease-in;
 		}
 		45% {
-			transform: translateY(-24px);
-			animation-timing-function: ease-in;
-		}
-		65% {
 			transform: translateY(-12px);
 			animation-timing-function: ease-in;
 		}
+		65% {
+			transform: translateY(-6px);
+			animation-timing-function: ease-in;
+		}
 		80% {
-			transform: translateY(-8px);
+			transform: translateY(-4px);
 			animation-timing-function: ease-in;
 		}
 		94% {
-			transform: translateY(-4px);
+			transform: translateY(-2px);
 			animation-timing-function: ease-in;
 		}
 		30%,
