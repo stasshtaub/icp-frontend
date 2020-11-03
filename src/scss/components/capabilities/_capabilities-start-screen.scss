@@ -40,10 +40,14 @@
 		}
 	}
 
+	&__text {
+		margin-top: auto;
+		min-height: 14.6em;
+	}
+	
 	&__title {
 		font-size: 80px;
 		line-height: 75px;
-        margin-top: auto;
         max-width: 15em;
 
 		@include laptop {
