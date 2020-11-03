@@ -7,76 +7,88 @@ section.capabilities-changes
                 {
                     text: "Достиг потолка по карьерной лестнице;&nbsp;", 
                     color: "white",
-                    bound: "right"
+                    bound: "right",
+                    num: 1
                 },
                 {
                     text: "Бизнес", 
                     color: "white",
-                    bound: "left"
+                    bound: "left",
+                    num: 2
                 }
             ],
             [
                 {
                     text: "набрал определённые обороты и застрял;&nbsp;",
                     color: "white",
-                    bound: "right"
+                    bound: "right",
+                    num: 3
                 },
                 {
                     text: "Хочется",
                     color: "white",
-                    bound: "left"
+                    bound: "left",
+                    num: 4
                 }
             ],
             [
                 {
                     text: "кардинально изменить жизнь, но непонятно, с",
                     color: "white",
-                    bound: "infinity"
+                    bound: "infinity",
+                    num: 5
                 }
             ],
             [
                 {
                     text: "чего начать;&nbsp;",
                     color: "white",
-                    bound: "right"
+                    bound: "right",
+                    num: 6
                 },
                 {
                     text: "Общение по работе и в целом с",
                     color: "orange",
-                    bound: "left"
+                    bound: "left",
+                    num: 7
                 }
             ],
             [
                 {
                     text: "людьми вас выматывает, требует от вас слишком",
                     color: "orange",
-                    bound: "infinity"
+                    bound: "infinity",
+                    num: 8
                 }
             ],
             [
                 {
                     text: "много усилий;&nbsp;",
                     color: "orange",
-                    bound: "right"
+                    bound: "right",
+                    num: 9
                 },
                 {
                     text: "Посещают мысли о смене работы",
                     color: "white",
-                    bound: "left"
+                    bound: "left",
+                    num: 10
                 }
             ],
             [
                 {
                     text: "или даже профессии; Хочется больше",
                     color: "white",
-                    bound: "infinity"
+                    bound: "infinity",
+                    num: 11
                 }
             ],
             [
                 {
                     text: "зарабатывать.",
                     color: "white",
-                    bound: "right"
+                    bound: "right",
+                    num: 12
                 }
             ]
         ]
@@ -84,7 +96,7 @@ section.capabilities-changes
         each line in lines
             p.capabilities-changes__strikethrough-line
                 each lineItem in line
-                    span.capabilities-changes__strikethrough-item(class=`capabilities-changes__strikethrough-item--${lineItem.color} capabilities-changes__strikethrough-item--${lineItem.bound}`) !{lineItem.text}
+                    span.capabilities-changes__strikethrough-item(class=`capabilities-changes__strikethrough-item--${lineItem.num} capabilities-changes__strikethrough-item--${lineItem.color} capabilities-changes__strikethrough-item--${lineItem.bound}`) !{lineItem.text}
     
     .container
         -
