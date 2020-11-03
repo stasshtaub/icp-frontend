@@ -81,6 +81,12 @@
 			flex-basis: 50%;
 			flex-grow: 1;
 		}
+
+		&:last-child:nth-child(odd) {
+			#{$p}__person-wrp {
+				padding-bottom: 50%;
+			}
+		}
 	}
 
 	&__person-wrp {
