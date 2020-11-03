@@ -9,30 +9,32 @@ block content
     .capabilities
         .capabilities__group.capabilities__group--first
             .capabilities__background-wrp
-                img(src="images/jpg/capabilities-start-screen-background.jpg", alt="capabilities-background").capabilities__background
-            .container
+                video(autoplay muted loop id="video-background" class="video-background")
+                    source(src="video/capabilities-background.mp4" type="video/mp4")
+            .container.container--relative
                 include particles/capabilities-start-screen
-        .capabilities__group
-            .container
-                include particles/capabilities-advantages
-                +programAbout('Фундаментальная программа подготовки к международной сертификации ACSTH ICF с нуля. Обеспечивает глубокое и системное погружение в профессию, помогает активировать модель коучингового мышления, выработать профессиональную этику и изучить инструменты продвижения коучинговых услуг. Учебный процесс обеспечивают более 100 специалистов — ведущие, менторы, супервизоры, ассистенты. Участником программы может стать любой желающий с любым уровнем подготовки. Обучение доступно дистанционно и очно.', 'Программа была разработана в 2015 году известным коучем, вторым в России MCC ICF Ольгой Рыбиной. Выпускниками стали более 1000 студентов из 38 стран.', 'capabilities-about')
-        .capabilities__group.capabilities__group--target
-            .container
-                include particles/capabilities-target
-        .capabilities__group.capabilities__group--gray
-            include particles/capabilities-changes
-            .container
-                include particles/capabilities-allows
-        .capabilities__group
-            include particles/capabilities-program
-            include particles/capabilities-more
-            .container
-                include particles/capabilities-stages
-        .capabilities__group
-            include particles/capabilities-schedule
-            include particles/capabilities-leading
-            include particles/capabilities-tariffs
-            include particles/capabilities-reviews
+        .page__content
+            .capabilities__group
+                .container
+                    include particles/capabilities-advantages
+                    +programAbout('Фундаментальная программа подготовки к международной сертификации ACSTH ICF с нуля. Обеспечивает глубокое и системное погружение в профессию, помогает активировать модель коучингового мышления, выработать профессиональную этику и изучить инструменты продвижения коучинговых услуг. Учебный процесс обеспечивают более 100 специалистов — ведущие, менторы, супервизоры, ассистенты. Участником программы может стать любой желающий с любым уровнем подготовки. Обучение доступно дистанционно и очно.', 'Программа была разработана в 2015 году известным коучем, вторым в России MCC ICF Ольгой Рыбиной. Выпускниками стали более 1000 студентов из 38 стран.', 'capabilities-about')
+            .capabilities__group.capabilities__group--target
+                .container
+                    include particles/capabilities-target
+            .capabilities__group.capabilities__group--gray
+                include particles/capabilities-changes
+                .container
+                    include particles/capabilities-allows
+            .capabilities__group
+                include particles/capabilities-program
+                include particles/capabilities-more
+                .container
+                    include particles/capabilities-stages
+            .capabilities__group
+                include particles/capabilities-schedule
+                include particles/capabilities-leading
+                include particles/capabilities-tariffs
+                include particles/capabilities-reviews
 
 block scripts
     script(src!=`${baseDir}js/common.js?v=${Date.now()}`)

@@ -87,23 +87,4 @@
 			);
 		}
 	}
-	&__background {
-		width: inherit;
-		height: inherit;
-		object-fit: cover;
-
-		@include desktop {
-			object-fit: unset;
-		}
-
-		@include tablet {
-			object-fit: cover;
-		}
-
-		@include mobile-l {
-			width: 1099px;
-			height: unset;
-			transform: translateX(-20px);
-		}
-	}
 }
