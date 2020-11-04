@@ -4,9 +4,9 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width">
-    <link rel="stylesheet" href="./css/main.css?v=1604394646048">
-    <link rel="stylesheet" href="./css/capabilities.css?v=1604394646048">
-    <link rel="stylesheet" href="./css/font-awesome.css?v=1604394646048">
+    <link rel="stylesheet" href="./css/main.css?v=1604440275592">
+    <link rel="stylesheet" href="./css/capabilities.css?v=1604440275592">
+    <link rel="stylesheet" href="./css/font-awesome.css?v=1604440275592">
     <link rel="stylesheet" href="https://unpkg.com/swiper@6.3.2/swiper-bundle.min.css">
   </head>
   <body>
@@ -51,815 +51,817 @@
       <div class="container"><a href="/"><img class="logo-duplicate" src="images/svg/logo.svg"></a></div>
       <div class="capabilities">
         <div class="capabilities__group capabilities__group--first">
-          <div class="capabilities__background-wrp"><img class="capabilities__background" src="images/jpg/capabilities-start-screen-background.jpg" alt="capabilities-background"></div>
-          <div class="container">
+          <div class="capabilities__background-wrp">
+            <video class="video-background" autoplay muted loop id="video-background">
+              <source src="video/capabilities-background.mp4" type="video/mp4">
+            </video>
+          </div>
+          <div class="container container--relative">
             <section class="capabilities-start-screen">
               <div class="capabilities-start-screen__content">
                 <h2 class="subtitle capabilities-start-screen__subtitle">Международная программа CCE ICF.<br> Используйте методы коучинга в работе и<br> жизни.</h2>
-                <h1 class="title capabilities-start-screen__title"><span class="title__partial title__partial--black">КОУЧИНГ. ВОЗМОЖНОСТИ БЕЗ ГРАНИЦ</span></h1>
-                <p class="description">Старт обучения 24 октября 2020</p>
-              </div>
-            </section>
-          </div>
-        </div>
-        <div class="capabilities__group">
-          <div class="container">
-            <section class="capabilities-advantages">
-              <div class="capabilities-advantages__events">
-                <div class="capabilities-advantages__event-group">
-                  <div class="capabilities-advantages__event capabilities-advantages__event--offset-large">
-                    <div class="capabilities-advantages__place capabilities-advantages__place--marked"><span class="capabilities-advantages__text capabilities-advantages__text--bold">Онлайн</span>
-                    </div>
-                    <p class="capabilities-advantages__date-text capabilities-advantages__date-text--defined">Старт онлайн обучения 24 октября 2020</p>
-                  </div>
-                </div>
-                <div class="capabilities-advantages__event-group">
-                  <div class="capabilities-advantages__event capabilities-advantages__event--offset-short">
-                    <div class="capabilities-advantages__place"><span class="capabilities-advantages__text capabilities-advantages__text--regular">Очное в </span><span class="capabilities-advantages__text capabilities-advantages__text--bold">Санкт-Петербурге</span>
-                    </div>
-                    <p class="capabilities-advantages__date-text capabilities-advantages__date-text--undefined">Даты уточняются</p>
-                  </div>
-                  <div class="capabilities-advantages__event capabilities-advantages__event--offset-short">
-                    <div class="capabilities-advantages__place"><span class="capabilities-advantages__text capabilities-advantages__text--regular">Очное в </span><span class="capabilities-advantages__text capabilities-advantages__text--bold">Москве</span>
-                    </div>
-                    <p class="capabilities-advantages__date-text capabilities-advantages__date-text--undefined">Даты уточняются</p>
-                  </div>
-                </div>
-              </div><a class="button button--link button--color-primary button--size-xl capabilities-advantages__btn" href="#">Записаться
-                                        <svg class="button__icon">
-                                          <use xlink:href="images/sprite.svg#icon-ok"></use>
-                                        </svg></a>
-            </section>
-            <section class="capabilities-about programs-about double-block">
-              <aside class="double-block__aside">
-                <h3 class="double-block__title">О программе</h3>
-              </aside>
-              <div class="double-block__content programs-about__content">
-                <p class="programs-about__text">Фундаментальная программа подготовки к международной сертификации ACSTH ICF с нуля. Обеспечивает глубокое и системное погружение в профессию, помогает активировать модель коучингового мышления, выработать профессиональную этику и изучить инструменты продвижения коучинговых услуг. Учебный процесс обеспечивают более 100 специалистов — ведущие, менторы, супервизоры, ассистенты. Участником программы может стать любой желающий с любым уровнем подготовки. Обучение доступно дистанционно и очно.</p>
-                <p class="programs-about__secondary-text">Программа была разработана в 2015 году известным коучем, вторым в России MCC ICF Ольгой Рыбиной. Выпускниками стали более 1000 студентов из 38 стран.</p>
-              </div>
-            </section>
-          </div>
-        </div>
-        <div class="capabilities__group capabilities__group--target">
-          <div class="container">
-            <section class="capabilities-target double-block">
-              <aside class="double-block__aside">
-                <h3 class="capabilities-target__title double-block__title">Для кого этот курс:</h3>
-              </aside>
-              <div class="double-block__content double-block__content--narrow capabilities-target__content">
-                <p class="capabilities-target__text">HR-специалистов, бизнес-тренеров, психологов.<br> Тех, кто ищет новую поддерживающую профессию. Владельцев и директоров компаний, предпринимателей. Всех, кто заинтересован в личностном развитии.</p>
-                <div class="capabilities-target__acquirement">
-                  <p class="capabilities-target__acquirement-title">После окончания курса у вас появятся:</p>
-                  <ul class="capabilities-target__acquirement-list">
-                    <li class="capabilities-target__acquirement-item">Современная и перспективная профессия</li>
-                    <li class="capabilities-target__acquirement-item">Умение находить общий язык&nbsp;с любым человеком</li>
-                    <li class="capabilities-target__acquirement-item">Навыки поддерживающего стиля управления</li>
-                    <li class="capabilities-target__acquirement-item">Умение решать повседневные задачи в разы проще и быстрее </li>
-                  </ul>
+                <div class="capabilities-start-screen__text">
+                  <h1 class="title capabilities-start-screen__title"><span class="title__partial title__partial--black">КОУЧИНГ. ВОЗМОЖНОСТИ БЕЗ ГРАНИЦ</span></h1>
+                  <p class="description">Старт обучения 24 октября 2020</p>
                 </div>
               </div>
             </section>
           </div>
         </div>
-        <div class="capabilities__group capabilities__group--gray">
-          <section class="capabilities-changes">
+        <div class="page__content">
+          <div class="capabilities__group">
             <div class="container">
-              <h3 class="capabilities-changes__title">Что измениться после прохождения курса:</h3>
+              <section class="capabilities-advantages">
+                <div class="capabilities-advantages__events">
+                  <div class="capabilities-advantages__event-group">
+                    <div class="capabilities-advantages__event capabilities-advantages__event--offset-large">
+                      <div class="capabilities-advantages__place capabilities-advantages__place--marked"><span class="capabilities-advantages__text capabilities-advantages__text--bold">Онлайн</span>
+                      </div>
+                      <p class="capabilities-advantages__date-text capabilities-advantages__date-text--defined">Старт онлайн обучения 24 октября 2020</p>
+                    </div>
+                  </div>
+                  <div class="capabilities-advantages__event-group">
+                    <div class="capabilities-advantages__event capabilities-advantages__event--offset-short">
+                      <div class="capabilities-advantages__place"><span class="capabilities-advantages__text capabilities-advantages__text--regular">Очное в </span><span class="capabilities-advantages__text capabilities-advantages__text--bold">Санкт-Петербурге</span>
+                      </div>
+                      <p class="capabilities-advantages__date-text capabilities-advantages__date-text--undefined">Даты уточняются</p>
+                    </div>
+                    <div class="capabilities-advantages__event capabilities-advantages__event--offset-short">
+                      <div class="capabilities-advantages__place"><span class="capabilities-advantages__text capabilities-advantages__text--regular">Очное в </span><span class="capabilities-advantages__text capabilities-advantages__text--bold">Москве</span>
+                      </div>
+                      <p class="capabilities-advantages__date-text capabilities-advantages__date-text--undefined">Даты уточняются</p>
+                    </div>
+                  </div>
+                </div><a class="button button--link button--color-primary button--size-xl capabilities-advantages__btn" href="#">Записаться
+                                              <svg class="button__icon">
+                                                <use xlink:href="images/sprite.svg#icon-ok"></use>
+                                              </svg></a>
+              </section>
+              <section class="capabilities-about programs-about double-block">
+                <aside class="double-block__aside">
+                  <h3 class="double-block__title">О программе</h3>
+                </aside>
+                <div class="double-block__content programs-about__content">
+                  <p class="programs-about__text">Фундаментальная программа подготовки к международной сертификации ACSTH ICF с нуля. Обеспечивает глубокое и системное погружение в профессию, помогает активировать модель коучингового мышления, выработать профессиональную этику и изучить инструменты продвижения коучинговых услуг. Учебный процесс обеспечивают более 100 специалистов — ведущие, менторы, супервизоры, ассистенты. Участником программы может стать любой желающий с любым уровнем подготовки. Обучение доступно дистанционно и очно.</p>
+                  <p class="programs-about__secondary-text">Программа была разработана в 2015 году известным коучем, вторым в России MCC ICF Ольгой Рыбиной. Выпускниками стали более 1000 студентов из 38 стран.</p>
+                </div>
+              </section>
             </div>
-            <div class="capabilities-changes__strikethrough">
-              <p class="capabilities-changes__strikethrough-line"><span class="capabilities-changes__strikethrough-item capabilities-changes__strikethrough-item--1 capabilities-changes__strikethrough-item--white capabilities-changes__strikethrough-item--right">Достиг потолка по карьерной лестнице;&nbsp;</span><span class="capabilities-changes__strikethrough-item capabilities-changes__strikethrough-item--2 capabilities-changes__strikethrough-item--white capabilities-changes__strikethrough-item--left">Бизнес</span>
-              </p>
-              <p class="capabilities-changes__strikethrough-line"><span class="capabilities-changes__strikethrough-item capabilities-changes__strikethrough-item--3 capabilities-changes__strikethrough-item--white capabilities-changes__strikethrough-item--right">набрал определённые обороты и застрял;&nbsp;</span><span class="capabilities-changes__strikethrough-item capabilities-changes__strikethrough-item--4 capabilities-changes__strikethrough-item--white capabilities-changes__strikethrough-item--left">Хочется</span>
-              </p>
-              <p class="capabilities-changes__strikethrough-line"><span class="capabilities-changes__strikethrough-item capabilities-changes__strikethrough-item--5 capabilities-changes__strikethrough-item--white capabilities-changes__strikethrough-item--infinity">кардинально изменить жизнь, но непонятно, с</span>
-              </p>
-              <p class="capabilities-changes__strikethrough-line"><span class="capabilities-changes__strikethrough-item capabilities-changes__strikethrough-item--6 capabilities-changes__strikethrough-item--white capabilities-changes__strikethrough-item--right">чего начать;&nbsp;</span><span class="capabilities-changes__strikethrough-item capabilities-changes__strikethrough-item--7 capabilities-changes__strikethrough-item--orange capabilities-changes__strikethrough-item--left">Общение по работе и в целом с</span>
-              </p>
-              <p class="capabilities-changes__strikethrough-line"><span class="capabilities-changes__strikethrough-item capabilities-changes__strikethrough-item--8 capabilities-changes__strikethrough-item--orange capabilities-changes__strikethrough-item--infinity">людьми вас выматывает, требует от вас слишком</span>
-              </p>
-              <p class="capabilities-changes__strikethrough-line"><span class="capabilities-changes__strikethrough-item capabilities-changes__strikethrough-item--9 capabilities-changes__strikethrough-item--orange capabilities-changes__strikethrough-item--right">много усилий;&nbsp;</span><span class="capabilities-changes__strikethrough-item capabilities-changes__strikethrough-item--10 capabilities-changes__strikethrough-item--white capabilities-changes__strikethrough-item--left">Посещают мысли о смене работы</span>
-              </p>
-              <p class="capabilities-changes__strikethrough-line"><span class="capabilities-changes__strikethrough-item capabilities-changes__strikethrough-item--11 capabilities-changes__strikethrough-item--white capabilities-changes__strikethrough-item--infinity">или даже профессии; Хочется больше</span>
-              </p>
-              <p class="capabilities-changes__strikethrough-line"><span class="capabilities-changes__strikethrough-item capabilities-changes__strikethrough-item--12 capabilities-changes__strikethrough-item--white capabilities-changes__strikethrough-item--right">зарабатывать.</span>
-              </p>
-            </div>
+          </div>
+          <div class="capabilities__group capabilities__group--target">
             <div class="container">
-              <ul class="capabilities-changes__list">
-                <li class="capabilities-changes__list-item capabilities-changes__list-item--1">Приобретете свободу от&nbsp;офисного графика и&nbsp;возможность работать в&nbsp;любой точке мира, в&nbsp;том числе — дистанционно</li>
-                <li class="capabilities-changes__list-item capabilities-changes__list-item--2">Освоите инструменты, подходящие для решения как профессиональных, так&nbsp;и&nbsp;любых других жизненных задач</li>
-                <li class="capabilities-changes__list-item capabilities-changes__list-item--3">Поймете, куда двигаться дальше в профессии</li>
-                <li class="capabilities-changes__list-item capabilities-changes__list-item--4">Сможете систематизировать тот опыт, который уже&nbsp;есть</li>
-                <li class="capabilities-changes__list-item capabilities-changes__list-item--5">Начнете больше зарабатывать
+              <section class="capabilities-target double-block">
+                <aside class="double-block__aside">
+                  <h3 class="capabilities-target__title double-block__title">Для кого этот курс:</h3>
+                </aside>
+                <div class="double-block__content double-block__content--narrow capabilities-target__content">
+                  <p class="capabilities-target__text">HR-специалистов, бизнес-тренеров, психологов.<br> Тех, кто ищет новую поддерживающую профессию. Владельцев и директоров компаний, предпринимателей. Всех, кто заинтересован в личностном развитии.</p>
+                  <div class="capabilities-target__acquirement">
+                    <p class="capabilities-target__acquirement-title">После окончания курса у вас появятся:</p>
+                    <ul class="capabilities-target__acquirement-list">
+                      <li class="capabilities-target__acquirement-item">Современная и перспективная профессия</li>
+                      <li class="capabilities-target__acquirement-item">Умение находить общий язык&nbsp;с любым человеком</li>
+                      <li class="capabilities-target__acquirement-item">Навыки поддерживающего стиля управления</li>
+                      <li class="capabilities-target__acquirement-item">Умение решать повседневные задачи в разы проще и быстрее </li>
+                    </ul>
+                  </div>
+                </div>
+              </section>
+            </div>
+          </div>
+          <div class="capabilities__group capabilities__group--gray">
+            <section class="capabilities-changes">
+              <div class="container">
+                <h3 class="capabilities-changes__title">Что изменится после прохождения курса:</h3>
+              </div>
+              <div class="capabilities-changes__strikethrough">
+                <p class="capabilities-changes__strikethrough-line"><span class="capabilities-changes__strikethrough-item capabilities-changes__strikethrough-item--1 capabilities-changes__strikethrough-item--white capabilities-changes__strikethrough-item--right">Устали искать клиентов на коучинг;&nbsp;</span><span class="capabilities-changes__strikethrough-item capabilities-changes__strikethrough-item--2 capabilities-changes__strikethrough-item--white capabilities-changes__strikethrough-item--left">Не можете</span>
+                </p>
+                <p class="capabilities-changes__strikethrough-line"><span class="capabilities-changes__strikethrough-item capabilities-changes__strikethrough-item--3 capabilities-changes__strikethrough-item--white capabilities-changes__strikethrough-item--infinity">практиковать коучинг на основной работе;&nbsp;</span>
+                </p>
+                <p class="capabilities-changes__strikethrough-line"><span class="capabilities-changes__strikethrough-item capabilities-changes__strikethrough-item--4 capabilities-changes__strikethrough-item--orange capabilities-changes__strikethrough-item--infinity">Думаете, что Agile доступен только айтишникам;</span>
+                </p>
+                <p class="capabilities-changes__strikethrough-line"><span class="capabilities-changes__strikethrough-item capabilities-changes__strikethrough-item--5 capabilities-changes__strikethrough-item--white capabilities-changes__strikethrough-item--infinity">Не можете найти работу коучем в компании,&nbsp;</span>
+                </p>
+                <p class="capabilities-changes__strikethrough-line"><span class="capabilities-changes__strikethrough-item capabilities-changes__strikethrough-item--6 capabilities-changes__strikethrough-item--white capabilities-changes__strikethrough-item--right">а быть одиночкой не хотите</span>
+                </p>
+              </div>
+              <div class="container">
+                <ul class="capabilities-changes__list">
+                  <li class="capabilities-changes__list-item capabilities-changes__list-item--1">Приобретете свободу от&nbsp;офисного графика и&nbsp;возможность работать в&nbsp;любой точке мира, в&nbsp;том числе — дистанционно</li>
+                  <li class="capabilities-changes__list-item capabilities-changes__list-item--2">Освоите инструменты, подходящие для решения как профессиональных, так&nbsp;и&nbsp;любых других жизненных задач</li>
+                  <li class="capabilities-changes__list-item capabilities-changes__list-item--3">Поймете, куда двигаться дальше в профессии</li>
+                  <li class="capabilities-changes__list-item capabilities-changes__list-item--4">Сможете систематизировать тот опыт, который уже&nbsp;есть</li>
+                  <li class="capabilities-changes__list-item capabilities-changes__list-item--5">Начнете больше зарабатывать
 и&nbsp;осознаете свою ценность как профессионала</li>
-                <li class="capabilities-changes__list-item capabilities-changes__list-item--6">Вы станете более спокойны
+                  <li class="capabilities-changes__list-item capabilities-changes__list-item--6">Вы станете более спокойны
 и&nbsp;удовлетворены жизнью</li>
-              </ul>
-            </div>
-          </section>
-          <div class="container">
-            <section class="capabilities-allows double-block">
-              <aside class="double-block__aside">
-                <h3 class="double-block__title">Это вам позволит</h3>
-              </aside>
-              <div class="double-block__content">
-                            <div class="slider swiper-container capabilities-allows__slider">
-                              <div class="slider__controls">
-                                <div class="slider__counter"><span class="capabilities-allows__counter-curr slider__counter-curr">1</span><span class="slider__counter-devider">/</span><span class="capabilities-allows__counter-total slider__counter-total">1</span></div>
-                                <div class="slider__buttons">
-                                  <button class="capabilities-allows__btn--prev slider__btn slider__btn--prev"></button>
-                                  <button class="capabilities-allows__btn--next slider__btn slider__btn--next"></button>
-                                </div>
-                              </div>
-                              <ul class="slider__slides swiper-wrapper">
-                                <li class="slider__slide swiper-slide">
-                                  <p class="slider__slide-text">Решать профессиональные вопросы просто и без потери сил и энергии</p>
-                                </li>
-                                <li class="slider__slide swiper-slide">
-                                  <p class="slider__slide-text">Решать профессиональные вопросы просто и без потери сил и энергии</p>
-                                </li>
-                                <li class="slider__slide swiper-slide">
-                                  <p class="slider__slide-text">Решать профессиональные вопросы просто и без потери сил и энергии</p>
-                                </li>
-                                <li class="slider__slide swiper-slide">
-                                  <p class="slider__slide-text">Решать профессиональные вопросы просто и без потери сил и энергии</p>
-                                </li>
-                                <li class="slider__slide swiper-slide">
-                                  <p class="slider__slide-text">Решать профессиональные вопросы просто и без потери сил и энергии</p>
-                                </li>
-                              </ul>
-                              <ul class="capabilities-allows__dots slider__dots"></ul>
-                            </div>
+                </ul>
               </div>
             </section>
+            <div class="container">
+              <section class="capabilities-allows double-block">
+                <aside class="double-block__aside">
+                  <h3 class="double-block__title">Это вам позволит</h3>
+                </aside>
+                <div class="double-block__content">
+                                <div class="slider swiper-container capabilities-allows__slider">
+                                  <div class="slider__controls">
+                                    <div class="slider__counter"><span class="capabilities-allows__counter-curr slider__counter-curr">1</span><span class="slider__counter-devider">/</span><span class="capabilities-allows__counter-total slider__counter-total">1</span></div>
+                                    <div class="slider__buttons">
+                                      <button class="capabilities-allows__btn--prev slider__btn slider__btn--prev"></button>
+                                      <button class="capabilities-allows__btn--next slider__btn slider__btn--next"></button>
+                                    </div>
+                                  </div>
+                                  <ul class="slider__slides swiper-wrapper">
+                                    <li class="slider__slide swiper-slide">
+                                      <p class="slider__slide-text">Решать профессиональные вопросы просто и без потери сил и энергии</p>
+                                    </li>
+                                    <li class="slider__slide swiper-slide">
+                                      <p class="slider__slide-text">Решать профессиональные вопросы просто и без потери сил и энергии</p>
+                                    </li>
+                                    <li class="slider__slide swiper-slide">
+                                      <p class="slider__slide-text">Решать профессиональные вопросы просто и без потери сил и энергии</p>
+                                    </li>
+                                    <li class="slider__slide swiper-slide">
+                                      <p class="slider__slide-text">Решать профессиональные вопросы просто и без потери сил и энергии</p>
+                                    </li>
+                                    <li class="slider__slide swiper-slide">
+                                      <p class="slider__slide-text">Решать профессиональные вопросы просто и без потери сил и энергии</p>
+                                    </li>
+                                  </ul>
+                                  <ul class="capabilities-allows__dots slider__dots"></ul>
+                                </div>
+                </div>
+              </section>
+            </div>
           </div>
-        </div>
-        <div class="capabilities__group">
-          <section class="capabilities-program">
-            <div class="capabilities-program__slider swiper-container">
-              <ul class="capabilities-program__slides swiper-wrapper">
-                <li class="capabilities-program__slide--1 capabilities-program__slide swiper-slide">
-                  <div class="capabilities-program__path"><svg width="4326" height="379" viewBox="0 0 4326 379" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <div class="capabilities__group">
+            <section class="capabilities-program">
+              <div class="capabilities-program__slider swiper-container">
+                <ul class="capabilities-program__slides swiper-wrapper">
+                  <li class="capabilities-program__slide--1 capabilities-program__slide swiper-slide">
+                    <div class="capabilities-program__path"><svg width="4326" height="379" viewBox="0 0 4326 379" fill="none" xmlns="http://www.w3.org/2000/svg">
 <path d="M6 0V373H900M897 373H1089V106H1999M1972 106H2164V373H2956L3074 255M4148 164L3165 164.001L3047 282.001M4122 164H4320V54" stroke="white" stroke-width="11" stroke-linejoin="bevel"/>
 </svg>
 
-                  </div>
-                  <div class="capabilities-program__shape"><svg width="301" height="210" viewBox="0 0 301 210" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    </div>
+                    <div class="capabilities-program__shape"><svg width="301" height="210" viewBox="0 0 301 210" fill="none" xmlns="http://www.w3.org/2000/svg">
 <g style="mix-blend-mode:screen">
 <path fill-rule="evenodd" clip-rule="evenodd" d="M0 0L244 3L301 210L57 207L0 0Z" fill="#70C28B"/>
 </g>
 </svg>
 
-                  </div>
-                  <p class="capabilities-program__number">1</p>
-                  <div class="capabilities-program__content">
-                    <div class="capabilities-program__module">
-                      <p class="capabilities-program__module-text">Модуль</p>
-                      <h4 class="capabilities-program__module-title">Создай 
- будущее</h4>
                     </div>
-                    <div class="capabilities-program__description capabilities-program__description--col">
-                      <div class="capabilities-program__description-block capabilities-program__description-block--topics capabilities-program__description-block--row ">
-                        <p class="capabilities-program__description-title">Что будет</p>
-                        <ul class="capabilities-program__description-list">
-                          <li class="capabilities-program__description-item">Формирование навыка осознанного выбора желаемого будущего</li>
-                          <li class="capabilities-program__description-item">Знакомство с технологиями исследования ресурсов настоящего</li>
-                          <li class="capabilities-program__description-item">Активирование интереса к личностным изменениям</li>
-                        </ul>
+                    <p class="capabilities-program__number">1</p>
+                    <div class="capabilities-program__content">
+                      <div class="capabilities-program__module">
+                        <p class="capabilities-program__module-text">Модуль</p>
+                        <h4 class="capabilities-program__module-title">Создай 
+ будущее</h4>
                       </div>
-                      <div class="capabilities-program__description-block capabilities-program__description-block--results capabilities-program__description-block--row ">
-                        <p class="capabilities-program__description-title">Результат после прохождения модуля</p>
-                        <ul class="capabilities-program__description-list">
-                          <li class="capabilities-program__description-item">Освоите навык фактичного мышления</li>
-                          <li class="capabilities-program__description-item">Научитесь вести развивающий разговор с применением коучинговых технологий</li>
-                          <li class="capabilities-program__description-item">Поймете, что такое коучинг по стандартам ICF и в чем его сила</li>
-                          <li class="capabilities-program__description-item">Научитесь создавать желаемое будущее и план по его достижению</li>
-                        </ul>
-                      </div>
-                    </div><a class="capabilities-program__description-title capabilities-program__description-title--link" href="#">Расписание</a>
-                  </div>
-                </li>
-                <li class="capabilities-program__slide--2 capabilities-program__slide swiper-slide">
-                  <div class="capabilities-program__shape"><svg width="260" height="135" viewBox="0 0 260 135" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <div class="capabilities-program__description capabilities-program__description--col">
+                        <div class="capabilities-program__description-block capabilities-program__description-block--topics capabilities-program__description-block--row ">
+                          <p class="capabilities-program__description-title">Что будет</p>
+                          <ul class="capabilities-program__description-list">
+                            <li class="capabilities-program__description-item">Формирование навыка осознанного выбора желаемого будущего</li>
+                            <li class="capabilities-program__description-item">Знакомство с технологиями исследования ресурсов настоящего</li>
+                            <li class="capabilities-program__description-item">Активирование интереса к личностным изменениям</li>
+                          </ul>
+                        </div>
+                        <div class="capabilities-program__description-block capabilities-program__description-block--results capabilities-program__description-block--row ">
+                          <p class="capabilities-program__description-title">Результат после прохождения модуля</p>
+                          <ul class="capabilities-program__description-list">
+                            <li class="capabilities-program__description-item">Освоите навык фактичного мышления</li>
+                            <li class="capabilities-program__description-item">Научитесь вести развивающий разговор с применением коучинговых технологий</li>
+                            <li class="capabilities-program__description-item">Поймете, что такое коучинг по стандартам ICF и в чем его сила</li>
+                            <li class="capabilities-program__description-item">Научитесь создавать желаемое будущее и план по его достижению</li>
+                          </ul>
+                        </div>
+                      </div><a class="capabilities-program__description-title capabilities-program__description-title--link" href="#">Расписание</a>
+                    </div>
+                  </li>
+                  <li class="capabilities-program__slide--2 capabilities-program__slide swiper-slide">
+                    <div class="capabilities-program__shape"><svg width="260" height="135" viewBox="0 0 260 135" fill="none" xmlns="http://www.w3.org/2000/svg">
 <g style="mix-blend-mode:screen">
 <path fill-rule="evenodd" clip-rule="evenodd" d="M0 0L203 1.29201L260 135L57 133.708L0 0Z" fill="#70C28B"/>
 </g>
 </svg>
 
-                  </div>
-                  <p class="capabilities-program__number">2</p>
-                  <div class="capabilities-program__content">
-                    <div class="capabilities-program__module">
-                      <p class="capabilities-program__module-text">Модуль</p>
-                      <h4 class="capabilities-program__module-title">Мысли 
- результатами</h4>
                     </div>
-                    <div class="capabilities-program__description capabilities-program__description--row">
-                      <div class="capabilities-program__description-block capabilities-program__description-block--topics capabilities-program__description-block--col capabilities-program__description-block--long">
-                        <p class="capabilities-program__description-title">Что будет</p>
-                        <ul class="capabilities-program__description-list">
-                          <li class="capabilities-program__description-item">Формирование навыка проведения коуч-сессий в соответствии с 8 ключевыми компетенциями ICF.</li>
-                          <li class="capabilities-program__description-item">Заключение контракта на сессию.</li>
-                          <li class="capabilities-program__description-item">Создание доверительных отношений.</li>
-                          <li class="capabilities-program__description-item">Коучинговое присутствие.</li>
-                          <li class="capabilities-program__description-item">Активное слушание клиента.</li>
-                          <li class="capabilities-program__description-item">Сильные вопросы.</li>
-                          <li class="capabilities-program__description-item">Безоценочность, недирективность, сфокусированное. слушание себя и других.</li>
-                        </ul>
+                    <p class="capabilities-program__number">2</p>
+                    <div class="capabilities-program__content">
+                      <div class="capabilities-program__module">
+                        <p class="capabilities-program__module-text">Модуль</p>
+                        <h4 class="capabilities-program__module-title">Мысли 
+ результатами</h4>
                       </div>
-                      <div class="capabilities-program__description-block capabilities-program__description-block--results capabilities-program__description-block--col capabilities-program__description-block--short">
-                        <p class="capabilities-program__description-title">Результат после прохождения модуля</p>
-                        <ul class="capabilities-program__description-list">
-                          <li class="capabilities-program__description-item">Научитесь быть коучем.</li>
-                          <li class="capabilities-program__description-item">Сможете самостоятельно проводить коуч-сессии.</li>
-                          <li class="capabilities-program__description-item">Начнете управлять слушанием и пониманием других людей.</li>
-                          <li class="capabilities-program__description-item">Узнаете собственный стиль общения с людьми.</li>
-                          <li class="capabilities-program__description-item">Сможете фокусировать свое внимание осознанно и управлять качеством вашего внимания.</li>
-                        </ul>
-                      </div>
-                    </div><a class="capabilities-program__description-title capabilities-program__description-title--link" href="#">Расписание</a>
-                  </div>
-                </li>
-                <li class="capabilities-program__slide--3 capabilities-program__slide swiper-slide">
-                  <div class="capabilities-program__shape"><svg width="225" height="244" viewBox="0 0 225 244" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <div class="capabilities-program__description capabilities-program__description--row">
+                        <div class="capabilities-program__description-block capabilities-program__description-block--topics capabilities-program__description-block--col capabilities-program__description-block--long">
+                          <p class="capabilities-program__description-title">Что будет</p>
+                          <ul class="capabilities-program__description-list">
+                            <li class="capabilities-program__description-item">Формирование навыка проведения коуч-сессий в соответствии с 8 ключевыми компетенциями ICF.</li>
+                            <li class="capabilities-program__description-item">Заключение контракта на сессию.</li>
+                            <li class="capabilities-program__description-item">Создание доверительных отношений.</li>
+                            <li class="capabilities-program__description-item">Коучинговое присутствие.</li>
+                            <li class="capabilities-program__description-item">Активное слушание клиента.</li>
+                            <li class="capabilities-program__description-item">Сильные вопросы.</li>
+                            <li class="capabilities-program__description-item">Безоценочность, недирективность, сфокусированное. слушание себя и других.</li>
+                          </ul>
+                        </div>
+                        <div class="capabilities-program__description-block capabilities-program__description-block--results capabilities-program__description-block--col capabilities-program__description-block--short">
+                          <p class="capabilities-program__description-title">Результат после прохождения модуля</p>
+                          <ul class="capabilities-program__description-list">
+                            <li class="capabilities-program__description-item">Научитесь быть коучем.</li>
+                            <li class="capabilities-program__description-item">Сможете самостоятельно проводить коуч-сессии.</li>
+                            <li class="capabilities-program__description-item">Начнете управлять слушанием и пониманием других людей.</li>
+                            <li class="capabilities-program__description-item">Узнаете собственный стиль общения с людьми.</li>
+                            <li class="capabilities-program__description-item">Сможете фокусировать свое внимание осознанно и управлять качеством вашего внимания.</li>
+                          </ul>
+                        </div>
+                      </div><a class="capabilities-program__description-title capabilities-program__description-title--link" href="#">Расписание</a>
+                    </div>
+                  </li>
+                  <li class="capabilities-program__slide--3 capabilities-program__slide swiper-slide">
+                    <div class="capabilities-program__shape"><svg width="225" height="244" viewBox="0 0 225 244" fill="none" xmlns="http://www.w3.org/2000/svg">
 <g style="mix-blend-mode:screen">
 <path fill-rule="evenodd" clip-rule="evenodd" d="M207.99 0.888974C211.91 -1.20803 216.67 1.53998 216.81 5.98498L224.33 237.378C224.48 242.081 219.41 245.122 215.33 242.769L3.66997 120.562C-0.410032 118.209 -0.309866 112.294 3.84013 110.075L207.99 0.888974Z" fill="#6FC18E"/>
 </g>
 </svg>
 
-                  </div>
-                  <p class="capabilities-program__number">3</p>
-                  <div class="capabilities-program__content">
-                    <div class="capabilities-program__module">
-                      <p class="capabilities-program__module-text">Модуль</p>
-                      <h4 class="capabilities-program__module-title">Прямая 
- коммуникация</h4>
                     </div>
-                    <div class="capabilities-program__description capabilities-program__description--col">
-                      <div class="capabilities-program__description-block capabilities-program__description-block--topics capabilities-program__description-block--row ">
-                        <p class="capabilities-program__description-title">Что будет</p>
-                        <ul class="capabilities-program__description-list">
-                          <li class="capabilities-program__description-item">Прямая коммуникация.</li>
-                          <li class="capabilities-program__description-item">Осознанность клиента.</li>
-                          <li class="capabilities-program__description-item">Проектирование действий.</li>
-                          <li class="capabilities-program__description-item">Планирование и постановка целей.</li>
-                          <li class="capabilities-program__description-item">Управление прогрессом и ответственностью.</li>
-                        </ul>
+                    <p class="capabilities-program__number">3</p>
+                    <div class="capabilities-program__content">
+                      <div class="capabilities-program__module">
+                        <p class="capabilities-program__module-text">Модуль</p>
+                        <h4 class="capabilities-program__module-title">Прямая 
+ коммуникация</h4>
                       </div>
-                      <div class="capabilities-program__description-block capabilities-program__description-block--results capabilities-program__description-block--row ">
-                        <p class="capabilities-program__description-title">Результат после прохождения модуля</p>
-                        <ul class="capabilities-program__description-list">
-                          <li class="capabilities-program__description-item">Научитесь выбирать сильные действия для решения своих задач.</li>
-                          <li class="capabilities-program__description-item">Сможете поддержать клиента в поиске самостоятельных решений.</li>
-                          <li class="capabilities-program__description-item">Научитесь быть в долгосрочных отношениях с клиентом.</li>
-                          <li class="capabilities-program__description-item">Научитесь разделять и распределять ответственность за результат с другими людьми, сотрудниками, клиентами.</li>
-                        </ul>
-                      </div>
-                    </div><a class="capabilities-program__description-title capabilities-program__description-title--link" href="#">Расписание</a>
-                  </div>
-                </li>
-                <li class="capabilities-program__slide--4 capabilities-program__slide swiper-slide">
-                  <div class="capabilities-program__shape"><svg width="188" height="188" viewBox="0 0 188 188" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <div class="capabilities-program__description capabilities-program__description--col">
+                        <div class="capabilities-program__description-block capabilities-program__description-block--topics capabilities-program__description-block--row ">
+                          <p class="capabilities-program__description-title">Что будет</p>
+                          <ul class="capabilities-program__description-list">
+                            <li class="capabilities-program__description-item">Прямая коммуникация.</li>
+                            <li class="capabilities-program__description-item">Осознанность клиента.</li>
+                            <li class="capabilities-program__description-item">Проектирование действий.</li>
+                            <li class="capabilities-program__description-item">Планирование и постановка целей.</li>
+                            <li class="capabilities-program__description-item">Управление прогрессом и ответственностью.</li>
+                          </ul>
+                        </div>
+                        <div class="capabilities-program__description-block capabilities-program__description-block--results capabilities-program__description-block--row ">
+                          <p class="capabilities-program__description-title">Результат после прохождения модуля</p>
+                          <ul class="capabilities-program__description-list">
+                            <li class="capabilities-program__description-item">Научитесь выбирать сильные действия для решения своих задач.</li>
+                            <li class="capabilities-program__description-item">Сможете поддержать клиента в поиске самостоятельных решений.</li>
+                            <li class="capabilities-program__description-item">Научитесь быть в долгосрочных отношениях с клиентом.</li>
+                            <li class="capabilities-program__description-item">Научитесь разделять и распределять ответственность за результат с другими людьми, сотрудниками, клиентами.</li>
+                          </ul>
+                        </div>
+                      </div><a class="capabilities-program__description-title capabilities-program__description-title--link" href="#">Расписание</a>
+                    </div>
+                  </li>
+                  <li class="capabilities-program__slide--4 capabilities-program__slide swiper-slide">
+                    <div class="capabilities-program__shape"><svg width="188" height="188" viewBox="0 0 188 188" fill="none" xmlns="http://www.w3.org/2000/svg">
 <g style="mix-blend-mode:lighten">
 <path d="M94 188C145.915 188 188 145.915 188 94C188 42.0852 145.915 0 94 0C42.0852 0 0 42.0852 0 94C0 145.915 42.0852 188 94 188Z" fill="#EDEE66"/>
 </g>
 </svg>
 
-                  </div>
-                  <p class="capabilities-program__number">4</p>
-                  <div class="capabilities-program__content">
-                    <div class="capabilities-program__module">
-                      <p class="capabilities-program__module-text">Модуль</p>
-                      <h4 class="capabilities-program__module-title">Эмоциональная 
+                    </div>
+                    <p class="capabilities-program__number">4</p>
+                    <div class="capabilities-program__content">
+                      <div class="capabilities-program__module">
+                        <p class="capabilities-program__module-text">Модуль</p>
+                        <h4 class="capabilities-program__module-title">Эмоциональная 
  компетентность</h4>
+                      </div>
+                      <div class="capabilities-program__description capabilities-program__description--row">
+                        <div class="capabilities-program__description-block capabilities-program__description-block--topics capabilities-program__description-block--col capabilities-program__description-block--normal">
+                          <p class="capabilities-program__description-title">Что будет</p>
+                          <ul class="capabilities-program__description-list">
+                            <li class="capabilities-program__description-item">Ценностный уровень в работе коуча.</li>
+                            <li class="capabilities-program__description-item">Эмоциональная компетентность и личный ресурс коуча как личности.</li>
+                            <li class="capabilities-program__description-item">Интегральный подход во взрослении взрослых людей.</li>
+                            <li class="capabilities-program__description-item">Базовые психологические модели и способы работы с ними в коучинге.</li>
+                          </ul>
+                        </div>
+                        <div class="capabilities-program__description-block capabilities-program__description-block--results capabilities-program__description-block--col capabilities-program__description-block--normal">
+                          <p class="capabilities-program__description-title">Результат после прохождения модуля</p>
+                          <ul class="capabilities-program__description-list">
+                            <li class="capabilities-program__description-item">Научитесь  работать с ценностями, убеждениями и метафорами клиента.</li>
+                            <li class="capabilities-program__description-item">Научитесь поддержать клиента в периоды жизненных изменений и кризисов.</li>
+                            <li class="capabilities-program__description-item">Научитесь видеть целостность клиента за счет понимания психологических закономерностей.</li>
+                            <li class="capabilities-program__description-item">Углубите знание собственных ценностей, что помогает жить в соответствии с ними, а значит, в гармонии с собой.</li>
+                          </ul>
+                        </div>
+                      </div><a class="capabilities-program__description-title capabilities-program__description-title--link" href="#">Расписание</a>
                     </div>
-                    <div class="capabilities-program__description capabilities-program__description--row">
-                      <div class="capabilities-program__description-block capabilities-program__description-block--topics capabilities-program__description-block--col capabilities-program__description-block--normal">
-                        <p class="capabilities-program__description-title">Что будет</p>
-                        <ul class="capabilities-program__description-list">
-                          <li class="capabilities-program__description-item">Ценностный уровень в работе коуча.</li>
-                          <li class="capabilities-program__description-item">Эмоциональная компетентность и личный ресурс коуча как личности.</li>
-                          <li class="capabilities-program__description-item">Интегральный подход во взрослении взрослых людей.</li>
-                          <li class="capabilities-program__description-item">Базовые психологические модели и способы работы с ними в коучинге.</li>
-                        </ul>
-                      </div>
-                      <div class="capabilities-program__description-block capabilities-program__description-block--results capabilities-program__description-block--col capabilities-program__description-block--normal">
-                        <p class="capabilities-program__description-title">Результат после прохождения модуля</p>
-                        <ul class="capabilities-program__description-list">
-                          <li class="capabilities-program__description-item">Научитесь  работать с ценностями, убеждениями и метафорами клиента.</li>
-                          <li class="capabilities-program__description-item">Научитесь поддержать клиента в периоды жизненных изменений и кризисов.</li>
-                          <li class="capabilities-program__description-item">Научитесь видеть целостность клиента за счет понимания психологических закономерностей.</li>
-                          <li class="capabilities-program__description-item">Углубите знание собственных ценностей, что помогает жить в соответствии с ними, а значит, в гармонии с собой.</li>
-                        </ul>
-                      </div>
-                    </div><a class="capabilities-program__description-title capabilities-program__description-title--link" href="#">Расписание</a>
-                  </div>
-                </li>
-                <li class="capabilities-program__slide--5 capabilities-program__slide swiper-slide">
-                  <p class="capabilities-program__number">5</p>
-                  <div class="capabilities-program__content">
-                    <div class="capabilities-program__module">
-                      <p class="capabilities-program__module-text">Модуль</p>
-                      <h4 class="capabilities-program__module-title">Прямая 
+                  </li>
+                  <li class="capabilities-program__slide--5 capabilities-program__slide swiper-slide">
+                    <p class="capabilities-program__number">5</p>
+                    <div class="capabilities-program__content">
+                      <div class="capabilities-program__module">
+                        <p class="capabilities-program__module-text">Модуль</p>
+                        <h4 class="capabilities-program__module-title">Прямая 
  коммуникация</h4>
+                      </div>
+                      <div class="capabilities-program__description capabilities-program__description--col">
+                        <div class="capabilities-program__description-block capabilities-program__description-block--topics capabilities-program__description-block--row ">
+                          <p class="capabilities-program__description-title">Что будет</p>
+                          <ul class="capabilities-program__description-list">
+                            <li class="capabilities-program__description-item">Бизнес-инструменты в работе коуча.</li>
+                            <li class="capabilities-program__description-item">Специализации в коучинге.</li>
+                            <li class="capabilities-program__description-item">Трехсторонние соглашения.</li>
+                            <li class="capabilities-program__description-item">Частная практика коуча как бизнес.</li>
+                          </ul>
+                        </div>
+                        <div class="capabilities-program__description-block capabilities-program__description-block--results capabilities-program__description-block--row ">
+                          <p class="capabilities-program__description-title">Результат после прохождения модуля</p>
+                          <ul class="capabilities-program__description-list">
+                            <li class="capabilities-program__description-item">Построите план своего профессионального развития.</li>
+                            <li class="capabilities-program__description-item">Откроете карьерные перспективы в коучинге для себя.</li>
+                            <li class="capabilities-program__description-item">Подготовите себя к международной сертификации в коучинге.</li>
+                            <li class="capabilities-program__description-item">Откроете возможности работы в разных коучинговых профессиональных направлениях (life-, бизнес-коучинг, agile).</li>
+                          </ul>
+                        </div>
+                      </div><a class="capabilities-program__description-title capabilities-program__description-title--link" href="#">Расписание</a>
                     </div>
-                    <div class="capabilities-program__description capabilities-program__description--col">
-                      <div class="capabilities-program__description-block capabilities-program__description-block--topics capabilities-program__description-block--row ">
-                        <p class="capabilities-program__description-title">Что будет</p>
-                        <ul class="capabilities-program__description-list">
-                          <li class="capabilities-program__description-item">Бизнес-инструменты в работе коуча.</li>
-                          <li class="capabilities-program__description-item">Специализации в коучинге.</li>
-                          <li class="capabilities-program__description-item">Трехсторонние соглашения.</li>
-                          <li class="capabilities-program__description-item">Частная практика коуча как бизнес.</li>
-                        </ul>
-                      </div>
-                      <div class="capabilities-program__description-block capabilities-program__description-block--results capabilities-program__description-block--row ">
-                        <p class="capabilities-program__description-title">Результат после прохождения модуля</p>
-                        <ul class="capabilities-program__description-list">
-                          <li class="capabilities-program__description-item">Построите план своего профессионального развития.</li>
-                          <li class="capabilities-program__description-item">Откроете карьерные перспективы в коучинге для себя.</li>
-                          <li class="capabilities-program__description-item">Подготовите себя к международной сертификации в коучинге.</li>
-                          <li class="capabilities-program__description-item">Откроете возможности работы в разных коучинговых профессиональных направлениях (life-, бизнес-коучинг, agile).</li>
-                        </ul>
-                      </div>
-                    </div><a class="capabilities-program__description-title capabilities-program__description-title--link" href="#">Расписание</a>
+                  </li>
+                </ul>
+                <div class="capabilities-program__nav">
+                  <div class="capabilities-program__nav-section capabilities-program__nav-section--title">
+                    <h3 class="capabilities-program__title">Программа курса</h3>
                   </div>
-                </li>
-              </ul>
-              <div class="capabilities-program__nav">
-                <div class="capabilities-program__nav-section capabilities-program__nav-section--title">
-                  <h3 class="capabilities-program__title">Программа курса</h3>
+                  <div class="capabilities-program__nav-section capabilities-program__nav-section--btn">
+                    <button class="capabilities-program__btn capabilities-program__btn--prev"></button>
+                  </div>
+                  <div class="capabilities-program__nav-section capabilities-program__nav-section--btn">
+                    <button class="capabilities-program__btn capabilities-program__btn--next"></button>
+                  </div>
                 </div>
-                <div class="capabilities-program__nav-section capabilities-program__nav-section--btn">
-                  <button class="capabilities-program__btn capabilities-program__btn--prev"></button>
-                </div>
-                <div class="capabilities-program__nav-section capabilities-program__nav-section--btn">
-                  <button class="capabilities-program__btn capabilities-program__btn--next"></button>
-                </div>
+                <ul class="capabilities-program__dots"></ul>
               </div>
-              <ul class="capabilities-program__dots"></ul>
-            </div>
-          </section>
-          <section class="capabilities-more">
-            <div class="capabilities-more__content">
-              <h3 class="capabilities-more__title">Что еще входит в программу:</h3>
-              <ul class="capabilities-more__list">
-                <li class="capabilities-more__item">
-                  <div class="capabilities-more__shape-wrp capabilities-more__shape-wrp--1">
-                    <div class="capabilities-more__shape capabilities-more__shape--1 "><svg width="69" height="58" viewBox="0 0 69 58" fill="none" xmlns="http://www.w3.org/2000/svg">
+            </section>
+            <section class="capabilities-more">
+              <div class="capabilities-more__content">
+                <h3 class="capabilities-more__title">Что еще входит в программу:</h3>
+                <ul class="capabilities-more__list">
+                  <li class="capabilities-more__item">
+                    <div class="capabilities-more__shape-wrp capabilities-more__shape-wrp--1">
+                      <div class="capabilities-more__shape capabilities-more__shape--1 "><svg width="69" height="58" viewBox="0 0 69 58" fill="none" xmlns="http://www.w3.org/2000/svg">
 <path fill-rule="evenodd" clip-rule="evenodd" d="M29.4028 3.20848C31.7499 -0.571249 37.2501 -0.571246 39.5972 3.20849L67.3087 47.8348C69.7906 51.8317 66.9163 57 62.2115 57H6.7885C2.08371 57 -0.790641 51.8317 1.69129 47.8348L29.4028 3.20848Z" fill="#6FC18E"/>
 </svg>
 
+                      </div>
                     </div>
-                  </div>
-                  <p class="capabilities-more__item-name">Межмодульные практики</p>
-                </li>
-                <li class="capabilities-more__item">
-                  <div class="capabilities-more__shape-wrp capabilities-more__shape-wrp--2">
-                    <div class="capabilities-more__shape capabilities-more__shape--2 ">
+                    <p class="capabilities-more__item-name">Межмодульные практики</p>
+                  </li>
+                  <li class="capabilities-more__item">
+                    <div class="capabilities-more__shape-wrp capabilities-more__shape-wrp--2">
+                      <div class="capabilities-more__shape capabilities-more__shape--2 ">
+                      </div>
                     </div>
-                  </div>
-                  <p class="capabilities-more__item-name">Демо-сессии</p>
-                </li>
-                <li class="capabilities-more__item">
-                  <div class="capabilities-more__shape-wrp capabilities-more__shape-wrp--3">
-                    <div class="capabilities-more__shape capabilities-more__shape--3 ">
+                    <p class="capabilities-more__item-name">Демо-сессии</p>
+                  </li>
+                  <li class="capabilities-more__item">
+                    <div class="capabilities-more__shape-wrp capabilities-more__shape-wrp--3">
+                      <div class="capabilities-more__shape capabilities-more__shape--3 ">
+                      </div>
                     </div>
-                  </div>
-                  <p class="capabilities-more__item-name">Групповая супервизия (по&nbsp;желанию&nbsp;участников обучения)</p>
-                </li>
-                <li class="capabilities-more__item">
-                  <div class="capabilities-more__shape-wrp capabilities-more__shape-wrp--4">
-                    <div class="capabilities-more__shape capabilities-more__shape--4 capabilities-more__shape--vip">
+                    <p class="capabilities-more__item-name">Групповая супервизия (по&nbsp;желанию&nbsp;участников обучения)</p>
+                  </li>
+                  <li class="capabilities-more__item">
+                    <div class="capabilities-more__shape-wrp capabilities-more__shape-wrp--4">
+                      <div class="capabilities-more__shape capabilities-more__shape--4 capabilities-more__shape--vip">
+                      </div>
                     </div>
-                  </div>
-                  <p class="capabilities-more__item-name">Наблюдаемые сессии (для пакета Проф. и VIP)</p>
-                </li>
-                <li class="capabilities-more__item">
-                  <div class="capabilities-more__shape-wrp capabilities-more__shape-wrp--5">
-                    <div class="capabilities-more__shape capabilities-more__shape--5 capabilities-more__shape--vip"><svg width="56" height="55" viewBox="0 0 56 55" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <p class="capabilities-more__item-name">Наблюдаемые сессии (для пакета Проф. и VIP)</p>
+                  </li>
+                  <li class="capabilities-more__item">
+                    <div class="capabilities-more__shape-wrp capabilities-more__shape-wrp--5">
+                      <div class="capabilities-more__shape capabilities-more__shape--5 capabilities-more__shape--vip"><svg width="56" height="55" viewBox="0 0 56 55" fill="none" xmlns="http://www.w3.org/2000/svg">
 <path fill-rule="evenodd" clip-rule="evenodd" d="M22.1221 2.27051C25.627 -0.275928 30.373 -0.27593 33.8779 2.27051L51.6049 15.15C55.1098 17.6964 56.5764 22.2101 55.2376 26.3303L48.4665 47.1697C47.1277 51.2899 43.2882 54.0795 38.9559 54.0795H17.0441C12.7118 54.0795 8.87226 51.2899 7.53352 47.1697L0.762389 26.3303C-0.576354 22.2101 0.890226 17.6964 4.3951 15.15L22.1221 2.27051Z" fill="#AEF0CB"/>
 </svg>
 
+                      </div>
                     </div>
-                  </div>
-                  <p class="capabilities-more__item-name">Дополнительные&nbsp;часы индивидуального и&nbsp;группового&nbsp;менторинга</p>
-                </li>
-              </ul>
-            </div>
-          </section>
-          <div class="container">
-            <section class="capabilities-stages double-block">
-              <aside class="double-block__aside">
-                <h3 class="capabilities-stages__title double-block__title">Как будет проходить обучение:</h3>
-              </aside>
-              <div class="double-block__content double-block__content--narrow capabilities-stages__content">
-                <ul class="capabilities-stages__list">
-                  <li class="capabilities-stages__stage">
-                    <p class="capabilities-stages__item-num">1</p>
-                    <p class="capabilities-stages__item-title">ОНЛАЙН-ФОРМАТ</p>
-                    <p class="capabilities-stages__item-description">Вам не придется куда-то ехать. Для участия в вебинарах понадобится только компьютер, гарнитура и интернет.</p>
-                  </li>
-                  <li class="capabilities-stages__stage">
-                    <p class="capabilities-stages__item-num">2</p>
-                    <p class="capabilities-stages__item-title">Длительность</p>
-                    <p class="capabilities-stages__item-description">Программа рассчитана&nbsp;на 6 месяцев — 2 встречи&nbsp;в неделю, каждая встреча&nbsp;по 2 часа.</p>
-                  </li>
-                  <li class="capabilities-stages__stage">
-                    <p class="capabilities-stages__item-num">3</p>
-                    <p class="capabilities-stages__item-title">Личный кабинет</p>
-                    <p class="capabilities-stages__item-description">Вам будет предоставлен доступ в&nbsp;личный кабинет, где будет все необходимое — ссылки, материалы, полезная информация. Записи вебинаров, демо-сессий и&nbsp;презентаций будут доступны только в&nbsp;режиме «просмотр». Остальные материалы в&nbsp;режиме «скачать».</p>
-                  </li>
-                  <li class="capabilities-stages__stage">
-                    <p class="capabilities-stages__item-num">4</p>
-                    <p class="capabilities-stages__item-title">Вебинары</p>
-                    <p class="capabilities-stages__item-description">Теоретическая часть один раз в&nbsp;неделю будет проходить в&nbsp;формате вебинара.</p>
-                  </li>
-                  <li class="capabilities-stages__stage">
-                    <p class="capabilities-stages__item-num">5</p>
-                    <p class="capabilities-stages__item-title">Менторинг</p>
-                    <p class="capabilities-stages__item-description">Каждый участник получит конструктивную обратную связь по&nbsp;ключевым компетенциям профессии.</p>
-                  </li>
-                  <li class="capabilities-stages__stage">
-                    <p class="capabilities-stages__item-num">6</p>
-                    <p class="capabilities-stages__item-title">Практика в малых группах</p>
-                    <p class="capabilities-stages__item-description">На&nbsp;каждой практике весь поток участников будет объединен в&nbsp;мини-группы («тройки») для отработки полученных инструментов и&nbsp;техник. «Тройки» будут курироваться ассистентами — профессиональными, сертифицированными коучами ICP Centre.</p>
-                  </li>
-                  <li class="capabilities-stages__stage">
-                    <p class="capabilities-stages__item-num">7</p>
-                    <p class="capabilities-stages__item-title">Связь в Facebook</p>
-                    <p class="capabilities-stages__item-description">Вы будете добавлены в&nbsp;закрытую группу, где сможете общаться с&nbsp;другими учениками, делиться успехами и&nbsp;консультироваться по&nbsp;любым вопросам обучения с&nbsp;кураторами.</p>
-                  </li>
-                  <li class="capabilities-stages__stage">
-                    <p class="capabilities-stages__item-num">8</p>
-                    <p class="capabilities-stages__item-title">Завершение курса</p>
-                    <p class="capabilities-stages__item-description">Для&nbsp;получения международного сертификата ACSTH ICF, после окончания курса, Вам необходимо будет пройти тест и&nbsp;провести завершающую курс коуч-сессию.</p>
+                    <p class="capabilities-more__item-name">Дополнительные&nbsp;часы индивидуального и&nbsp;группового&nbsp;менторинга</p>
                   </li>
                 </ul>
               </div>
             </section>
+            <div class="container">
+              <section class="capabilities-stages double-block">
+                <aside class="double-block__aside">
+                  <h3 class="capabilities-stages__title double-block__title">Как будет проходить обучение:</h3>
+                </aside>
+                <div class="double-block__content double-block__content--narrow capabilities-stages__content">
+                  <ul class="capabilities-stages__list">
+                    <li class="capabilities-stages__stage">
+                      <p class="capabilities-stages__item-num">1</p>
+                      <p class="capabilities-stages__item-title">ОНЛАЙН-ФОРМАТ</p>
+                      <p class="capabilities-stages__item-description">Вам не придется куда-то ехать. Для участия в вебинарах понадобится только компьютер, гарнитура и интернет.</p>
+                    </li>
+                    <li class="capabilities-stages__stage">
+                      <p class="capabilities-stages__item-num">2</p>
+                      <p class="capabilities-stages__item-title">Длительность</p>
+                      <p class="capabilities-stages__item-description">Программа рассчитана&nbsp;на 6 месяцев — 2 встречи&nbsp;в неделю, каждая встреча&nbsp;по 2 часа.</p>
+                    </li>
+                    <li class="capabilities-stages__stage">
+                      <p class="capabilities-stages__item-num">3</p>
+                      <p class="capabilities-stages__item-title">Личный кабинет</p>
+                      <p class="capabilities-stages__item-description">Вам будет предоставлен доступ в&nbsp;личный кабинет, где будет все необходимое — ссылки, материалы, полезная информация. Записи вебинаров, демо-сессий и&nbsp;презентаций будут доступны только в&nbsp;режиме «просмотр». Остальные материалы в&nbsp;режиме «скачать».</p>
+                    </li>
+                    <li class="capabilities-stages__stage">
+                      <p class="capabilities-stages__item-num">4</p>
+                      <p class="capabilities-stages__item-title">Вебинары</p>
+                      <p class="capabilities-stages__item-description">Теоретическая часть один раз в&nbsp;неделю будет проходить в&nbsp;формате вебинара.</p>
+                    </li>
+                    <li class="capabilities-stages__stage">
+                      <p class="capabilities-stages__item-num">5</p>
+                      <p class="capabilities-stages__item-title">Менторинг</p>
+                      <p class="capabilities-stages__item-description">Каждый участник получит конструктивную обратную связь по&nbsp;ключевым компетенциям профессии.</p>
+                    </li>
+                    <li class="capabilities-stages__stage">
+                      <p class="capabilities-stages__item-num">6</p>
+                      <p class="capabilities-stages__item-title">Практика в малых группах</p>
+                      <p class="capabilities-stages__item-description">На&nbsp;каждой практике весь поток участников будет объединен в&nbsp;мини-группы («тройки») для отработки полученных инструментов и&nbsp;техник. «Тройки» будут курироваться ассистентами — профессиональными, сертифицированными коучами ICP Centre.</p>
+                    </li>
+                    <li class="capabilities-stages__stage">
+                      <p class="capabilities-stages__item-num">7</p>
+                      <p class="capabilities-stages__item-title">Связь в Facebook</p>
+                      <p class="capabilities-stages__item-description">Вы будете добавлены в&nbsp;закрытую группу, где сможете общаться с&nbsp;другими учениками, делиться успехами и&nbsp;консультироваться по&nbsp;любым вопросам обучения с&nbsp;кураторами.</p>
+                    </li>
+                    <li class="capabilities-stages__stage">
+                      <p class="capabilities-stages__item-num">8</p>
+                      <p class="capabilities-stages__item-title">Завершение курса</p>
+                      <p class="capabilities-stages__item-description">Для&nbsp;получения международного сертификата ACSTH ICF, после окончания курса, Вам необходимо будет пройти тест и&nbsp;провести завершающую курс коуч-сессию.</p>
+                    </li>
+                  </ul>
+                </div>
+              </section>
+            </div>
           </div>
-        </div>
-        <div class="capabilities__group">
-          <section class="capabilities-schedule">
-            <div class="container">
-              <h3 class="capabilities-schedule__title">Расписание курса</h3>
-              <div class="double-block">
-                <aside class="double-block__aside"></aside>
-                <div class="double-block__content double-block__content--narrow capabilities-schedule__content">
-                  <ul class="capabilities-schedule__modules">
-                    <li class="capabilities-schedule__module">
-                      <input class="capabilities-schedule__switch-input" type="checkbox" id="capabilities-schedule__switch-input-1">
-                      <label class="capabilities-schedule__module-title" for="capabilities-schedule__switch-input-1">                       
-                        <p class="capabilities-schedule__module-num">1 модуль                        </p><span class="capabilities-schedule__module-name">Создай будущее</span>
-                      </label>
-                      <div class="capabilities-schedule__timetable">      
-                        <div class="capabilities-schedule__months capabilities-schedule__months--short">24&nbsp;октября&nbsp;— 11&nbsp;ноября</div>
-                        <ul class="capabilities-schedule__months capabilities-schedule__months--full">
-                          <li class="capabilities-schedule__month">
-                            <div class="capabilities-schedule__month-name">Октябрь</div>
-                            <ul class="capabilities-schedule__days">
-                              <li class="capabilities-schedule__day"><span class="capabilities-schedule__date"><span class="capabilities-schedule__date-day">24</span><span class="capabilities-schedule__date-divider">&nbsp;/&nbsp;</span><span class="capabilities-schedule__date-month">10</span></span><span class="capabilities-schedule__day-text">Проектируй будущее</span></li>
-                              <li class="capabilities-schedule__day"><span class="capabilities-schedule__date"><span class="capabilities-schedule__date-day">29</span><span class="capabilities-schedule__date-divider">&nbsp;/&nbsp;</span><span class="capabilities-schedule__date-month">10</span></span><span class="capabilities-schedule__day-text capabilities-schedule__day-text--italic">Практика</span></li>
-                              <li class="capabilities-schedule__day"><span class="capabilities-schedule__date"><span class="capabilities-schedule__date-day">31</span><span class="capabilities-schedule__date-divider">&nbsp;/&nbsp;</span><span class="capabilities-schedule__date-month">10</span></span><span class="capabilities-schedule__day-text">Осознай реальность</span></li>
-                            </ul>
-                          </li>
-                          <li class="capabilities-schedule__month">
-                            <div class="capabilities-schedule__month-name">Ноябрь</div>
-                            <ul class="capabilities-schedule__days">
-                              <li class="capabilities-schedule__day"><span class="capabilities-schedule__date"><span class="capabilities-schedule__date-day">05</span><span class="capabilities-schedule__date-divider">&nbsp;/&nbsp;</span><span class="capabilities-schedule__date-month">11</span></span><span class="capabilities-schedule__day-text capabilities-schedule__day-text--italic">Практика</span></li>
-                              <li class="capabilities-schedule__day"><span class="capabilities-schedule__date"><span class="capabilities-schedule__date-day">07</span><span class="capabilities-schedule__date-divider">&nbsp;/&nbsp;</span><span class="capabilities-schedule__date-month">11</span></span><span class="capabilities-schedule__day-text">Выбери действие</span></li>
-                              <li class="capabilities-schedule__day"><span class="capabilities-schedule__date"><span class="capabilities-schedule__date-day">12</span><span class="capabilities-schedule__date-divider">&nbsp;/&nbsp;</span><span class="capabilities-schedule__date-month">11</span></span><span class="capabilities-schedule__day-text capabilities-schedule__day-text--italic">Практика</span></li>
-                            </ul>
-                          </li>
-                        </ul>
-                      </div>
-                    </li>
-                    <li class="capabilities-schedule__module">
-                      <input class="capabilities-schedule__switch-input" type="checkbox" id="capabilities-schedule__switch-input-2">
-                      <label class="capabilities-schedule__module-title" for="capabilities-schedule__switch-input-2">                       
-                        <p class="capabilities-schedule__module-num">2 модуль                        </p><span class="capabilities-schedule__module-name">Мысли результатами</span>
-                      </label>
-                      <div class="capabilities-schedule__timetable">      
-                        <div class="capabilities-schedule__months capabilities-schedule__months--short">14&nbsp;ноября&nbsp;— 17&nbsp;декабря</div>
-                        <ul class="capabilities-schedule__months capabilities-schedule__months--full">
-                          <li class="capabilities-schedule__month">
-                            <div class="capabilities-schedule__month-name">Октябрь</div>
-                            <ul class="capabilities-schedule__days">
-                              <li class="capabilities-schedule__day"><span class="capabilities-schedule__date"><span class="capabilities-schedule__date-day">24</span><span class="capabilities-schedule__date-divider">&nbsp;/&nbsp;</span><span class="capabilities-schedule__date-month">10</span></span><span class="capabilities-schedule__day-text">Проектируй будущее</span></li>
-                              <li class="capabilities-schedule__day"><span class="capabilities-schedule__date"><span class="capabilities-schedule__date-day">29</span><span class="capabilities-schedule__date-divider">&nbsp;/&nbsp;</span><span class="capabilities-schedule__date-month">10</span></span><span class="capabilities-schedule__day-text capabilities-schedule__day-text--italic">Практика</span></li>
-                              <li class="capabilities-schedule__day"><span class="capabilities-schedule__date"><span class="capabilities-schedule__date-day">31</span><span class="capabilities-schedule__date-divider">&nbsp;/&nbsp;</span><span class="capabilities-schedule__date-month">10</span></span><span class="capabilities-schedule__day-text">Осознай реальность</span></li>
-                            </ul>
-                          </li>
-                          <li class="capabilities-schedule__month">
-                            <div class="capabilities-schedule__month-name">Ноябрь</div>
-                            <ul class="capabilities-schedule__days">
-                              <li class="capabilities-schedule__day"><span class="capabilities-schedule__date"><span class="capabilities-schedule__date-day">05</span><span class="capabilities-schedule__date-divider">&nbsp;/&nbsp;</span><span class="capabilities-schedule__date-month">11</span></span><span class="capabilities-schedule__day-text capabilities-schedule__day-text--italic">Практика</span></li>
-                              <li class="capabilities-schedule__day"><span class="capabilities-schedule__date"><span class="capabilities-schedule__date-day">07</span><span class="capabilities-schedule__date-divider">&nbsp;/&nbsp;</span><span class="capabilities-schedule__date-month">11</span></span><span class="capabilities-schedule__day-text">Выбери действие</span></li>
-                              <li class="capabilities-schedule__day"><span class="capabilities-schedule__date"><span class="capabilities-schedule__date-day">12</span><span class="capabilities-schedule__date-divider">&nbsp;/&nbsp;</span><span class="capabilities-schedule__date-month">11</span></span><span class="capabilities-schedule__day-text capabilities-schedule__day-text--italic">Практика</span></li>
-                            </ul>
-                          </li>
-                        </ul>
-                      </div>
-                    </li>
-                    <li class="capabilities-schedule__module">
-                      <input class="capabilities-schedule__switch-input" type="checkbox" id="capabilities-schedule__switch-input-3">
-                      <label class="capabilities-schedule__module-title" for="capabilities-schedule__switch-input-3">                       
-                        <p class="capabilities-schedule__module-num">3 модуль                        </p><span class="capabilities-schedule__module-name">Действуй осознанно</span>
-                      </label>
-                      <div class="capabilities-schedule__timetable">      
-                        <div class="capabilities-schedule__months capabilities-schedule__months--short">19&nbsp;декабря&nbsp;— 4&nbsp;февраля</div>
-                        <ul class="capabilities-schedule__months capabilities-schedule__months--full">
-                          <li class="capabilities-schedule__month">
-                            <div class="capabilities-schedule__month-name">Октябрь</div>
-                            <ul class="capabilities-schedule__days">
-                              <li class="capabilities-schedule__day"><span class="capabilities-schedule__date"><span class="capabilities-schedule__date-day">24</span><span class="capabilities-schedule__date-divider">&nbsp;/&nbsp;</span><span class="capabilities-schedule__date-month">10</span></span><span class="capabilities-schedule__day-text">Проектируй будущее</span></li>
-                              <li class="capabilities-schedule__day"><span class="capabilities-schedule__date"><span class="capabilities-schedule__date-day">29</span><span class="capabilities-schedule__date-divider">&nbsp;/&nbsp;</span><span class="capabilities-schedule__date-month">10</span></span><span class="capabilities-schedule__day-text capabilities-schedule__day-text--italic">Практика</span></li>
-                              <li class="capabilities-schedule__day"><span class="capabilities-schedule__date"><span class="capabilities-schedule__date-day">31</span><span class="capabilities-schedule__date-divider">&nbsp;/&nbsp;</span><span class="capabilities-schedule__date-month">10</span></span><span class="capabilities-schedule__day-text">Осознай реальность</span></li>
-                            </ul>
-                          </li>
-                          <li class="capabilities-schedule__month">
-                            <div class="capabilities-schedule__month-name">Ноябрь</div>
-                            <ul class="capabilities-schedule__days">
-                              <li class="capabilities-schedule__day"><span class="capabilities-schedule__date"><span class="capabilities-schedule__date-day">05</span><span class="capabilities-schedule__date-divider">&nbsp;/&nbsp;</span><span class="capabilities-schedule__date-month">11</span></span><span class="capabilities-schedule__day-text capabilities-schedule__day-text--italic">Практика</span></li>
-                              <li class="capabilities-schedule__day"><span class="capabilities-schedule__date"><span class="capabilities-schedule__date-day">07</span><span class="capabilities-schedule__date-divider">&nbsp;/&nbsp;</span><span class="capabilities-schedule__date-month">11</span></span><span class="capabilities-schedule__day-text">Выбери действие</span></li>
-                              <li class="capabilities-schedule__day"><span class="capabilities-schedule__date"><span class="capabilities-schedule__date-day">12</span><span class="capabilities-schedule__date-divider">&nbsp;/&nbsp;</span><span class="capabilities-schedule__date-month">11</span></span><span class="capabilities-schedule__day-text capabilities-schedule__day-text--italic">Практика</span></li>
-                            </ul>
-                          </li>
-                        </ul>
-                      </div>
-                    </li>
-                    <li class="capabilities-schedule__module">
-                      <input class="capabilities-schedule__switch-input" type="checkbox" id="capabilities-schedule__switch-input-4">
-                      <label class="capabilities-schedule__module-title" for="capabilities-schedule__switch-input-4">                       
-                        <p class="capabilities-schedule__module-num">4 модуль                        </p><span class="capabilities-schedule__module-name">Слушай сердцем</span>
-                      </label>
-                      <div class="capabilities-schedule__timetable">      
-                        <div class="capabilities-schedule__months capabilities-schedule__months--short">13&nbsp;февраля&nbsp;— 18&nbsp;марта</div>
-                        <ul class="capabilities-schedule__months capabilities-schedule__months--full">
-                          <li class="capabilities-schedule__month">
-                            <div class="capabilities-schedule__month-name">Октябрь</div>
-                            <ul class="capabilities-schedule__days">
-                              <li class="capabilities-schedule__day"><span class="capabilities-schedule__date"><span class="capabilities-schedule__date-day">24</span><span class="capabilities-schedule__date-divider">&nbsp;/&nbsp;</span><span class="capabilities-schedule__date-month">10</span></span><span class="capabilities-schedule__day-text">Проектируй будущее</span></li>
-                              <li class="capabilities-schedule__day"><span class="capabilities-schedule__date"><span class="capabilities-schedule__date-day">29</span><span class="capabilities-schedule__date-divider">&nbsp;/&nbsp;</span><span class="capabilities-schedule__date-month">10</span></span><span class="capabilities-schedule__day-text capabilities-schedule__day-text--italic">Практика</span></li>
-                              <li class="capabilities-schedule__day"><span class="capabilities-schedule__date"><span class="capabilities-schedule__date-day">31</span><span class="capabilities-schedule__date-divider">&nbsp;/&nbsp;</span><span class="capabilities-schedule__date-month">10</span></span><span class="capabilities-schedule__day-text">Осознай реальность</span></li>
-                            </ul>
-                          </li>
-                          <li class="capabilities-schedule__month">
-                            <div class="capabilities-schedule__month-name">Ноябрь</div>
-                            <ul class="capabilities-schedule__days">
-                              <li class="capabilities-schedule__day"><span class="capabilities-schedule__date"><span class="capabilities-schedule__date-day">05</span><span class="capabilities-schedule__date-divider">&nbsp;/&nbsp;</span><span class="capabilities-schedule__date-month">11</span></span><span class="capabilities-schedule__day-text capabilities-schedule__day-text--italic">Практика</span></li>
-                              <li class="capabilities-schedule__day"><span class="capabilities-schedule__date"><span class="capabilities-schedule__date-day">07</span><span class="capabilities-schedule__date-divider">&nbsp;/&nbsp;</span><span class="capabilities-schedule__date-month">11</span></span><span class="capabilities-schedule__day-text">Выбери действие</span></li>
-                              <li class="capabilities-schedule__day"><span class="capabilities-schedule__date"><span class="capabilities-schedule__date-day">12</span><span class="capabilities-schedule__date-divider">&nbsp;/&nbsp;</span><span class="capabilities-schedule__date-month">11</span></span><span class="capabilities-schedule__day-text capabilities-schedule__day-text--italic">Практика</span></li>
-                            </ul>
-                          </li>
-                        </ul>
-                      </div>
-                    </li>
-                    <li class="capabilities-schedule__module">
-                      <input class="capabilities-schedule__switch-input" type="checkbox" id="capabilities-schedule__switch-input-5">
-                      <label class="capabilities-schedule__module-title" for="capabilities-schedule__switch-input-5">                       
-                        <p class="capabilities-schedule__module-num">5 модуль                        </p><span class="capabilities-schedule__module-name">Реализуй возможности</span>
-                      </label>
-                      <div class="capabilities-schedule__timetable">      
-                        <div class="capabilities-schedule__months capabilities-schedule__months--short">20&nbsp;марта&nbsp;— 2&nbsp;мая</div>
-                        <ul class="capabilities-schedule__months capabilities-schedule__months--full">
-                          <li class="capabilities-schedule__month">
-                            <div class="capabilities-schedule__month-name">Октябрь</div>
-                            <ul class="capabilities-schedule__days">
-                              <li class="capabilities-schedule__day"><span class="capabilities-schedule__date"><span class="capabilities-schedule__date-day">24</span><span class="capabilities-schedule__date-divider">&nbsp;/&nbsp;</span><span class="capabilities-schedule__date-month">10</span></span><span class="capabilities-schedule__day-text">Проектируй будущее</span></li>
-                              <li class="capabilities-schedule__day"><span class="capabilities-schedule__date"><span class="capabilities-schedule__date-day">29</span><span class="capabilities-schedule__date-divider">&nbsp;/&nbsp;</span><span class="capabilities-schedule__date-month">10</span></span><span class="capabilities-schedule__day-text capabilities-schedule__day-text--italic">Практика</span></li>
-                              <li class="capabilities-schedule__day"><span class="capabilities-schedule__date"><span class="capabilities-schedule__date-day">31</span><span class="capabilities-schedule__date-divider">&nbsp;/&nbsp;</span><span class="capabilities-schedule__date-month">10</span></span><span class="capabilities-schedule__day-text">Осознай реальность</span></li>
-                            </ul>
-                          </li>
-                          <li class="capabilities-schedule__month">
-                            <div class="capabilities-schedule__month-name">Ноябрь</div>
-                            <ul class="capabilities-schedule__days">
-                              <li class="capabilities-schedule__day"><span class="capabilities-schedule__date"><span class="capabilities-schedule__date-day">05</span><span class="capabilities-schedule__date-divider">&nbsp;/&nbsp;</span><span class="capabilities-schedule__date-month">11</span></span><span class="capabilities-schedule__day-text capabilities-schedule__day-text--italic">Практика</span></li>
-                              <li class="capabilities-schedule__day"><span class="capabilities-schedule__date"><span class="capabilities-schedule__date-day">07</span><span class="capabilities-schedule__date-divider">&nbsp;/&nbsp;</span><span class="capabilities-schedule__date-month">11</span></span><span class="capabilities-schedule__day-text">Выбери действие</span></li>
-                              <li class="capabilities-schedule__day"><span class="capabilities-schedule__date"><span class="capabilities-schedule__date-day">12</span><span class="capabilities-schedule__date-divider">&nbsp;/&nbsp;</span><span class="capabilities-schedule__date-month">11</span></span><span class="capabilities-schedule__day-text capabilities-schedule__day-text--italic">Практика</span></li>
-                            </ul>
-                          </li>
-                        </ul>
-                      </div>
-                    </li>
-                  </ul>
-                  <div class="capabilities-schedule__info">
-                    <div class="capabilities-schedule__info-icon"></div>
-                    <ul class="capabilities-schedule__info-list">
-                      <li class="capabilities-schedule__info-item"><span class="capabilities-schedule__info-span">Вебинары проходят по&nbsp;субботам с&nbsp;10:00 по&nbsp;12:00</span>
+          <div class="capabilities__group">
+            <section class="capabilities-schedule">
+              <div class="container">
+                <h3 class="capabilities-schedule__title">Расписание курса</h3>
+                <div class="double-block">
+                  <aside class="double-block__aside"></aside>
+                  <div class="double-block__content double-block__content--narrow capabilities-schedule__content">
+                    <ul class="capabilities-schedule__modules">
+                      <li class="capabilities-schedule__module">
+                        <input class="capabilities-schedule__switch-input" type="checkbox" id="capabilities-schedule__switch-input-1">
+                        <label class="capabilities-schedule__module-title" for="capabilities-schedule__switch-input-1">                       
+                          <p class="capabilities-schedule__module-num">1 модуль                        </p><span class="capabilities-schedule__module-name">Создай будущее</span>
+                        </label>
+                        <div class="capabilities-schedule__timetable">      
+                          <div class="capabilities-schedule__months capabilities-schedule__months--short">24&nbsp;октября&nbsp;— 11&nbsp;ноября</div>
+                          <ul class="capabilities-schedule__months capabilities-schedule__months--full">
+                            <li class="capabilities-schedule__month">
+                              <div class="capabilities-schedule__month-name">Октябрь</div>
+                              <ul class="capabilities-schedule__days">
+                                <li class="capabilities-schedule__day"><span class="capabilities-schedule__date"><span class="capabilities-schedule__date-day">24</span><span class="capabilities-schedule__date-divider">&nbsp;/&nbsp;</span><span class="capabilities-schedule__date-month">10</span></span><span class="capabilities-schedule__day-text">Проектируй будущее</span></li>
+                                <li class="capabilities-schedule__day"><span class="capabilities-schedule__date"><span class="capabilities-schedule__date-day">29</span><span class="capabilities-schedule__date-divider">&nbsp;/&nbsp;</span><span class="capabilities-schedule__date-month">10</span></span><span class="capabilities-schedule__day-text capabilities-schedule__day-text--italic">Практика</span></li>
+                                <li class="capabilities-schedule__day"><span class="capabilities-schedule__date"><span class="capabilities-schedule__date-day">31</span><span class="capabilities-schedule__date-divider">&nbsp;/&nbsp;</span><span class="capabilities-schedule__date-month">10</span></span><span class="capabilities-schedule__day-text">Осознай реальность</span></li>
+                              </ul>
+                            </li>
+                            <li class="capabilities-schedule__month">
+                              <div class="capabilities-schedule__month-name">Ноябрь</div>
+                              <ul class="capabilities-schedule__days">
+                                <li class="capabilities-schedule__day"><span class="capabilities-schedule__date"><span class="capabilities-schedule__date-day">05</span><span class="capabilities-schedule__date-divider">&nbsp;/&nbsp;</span><span class="capabilities-schedule__date-month">11</span></span><span class="capabilities-schedule__day-text capabilities-schedule__day-text--italic">Практика</span></li>
+                                <li class="capabilities-schedule__day"><span class="capabilities-schedule__date"><span class="capabilities-schedule__date-day">07</span><span class="capabilities-schedule__date-divider">&nbsp;/&nbsp;</span><span class="capabilities-schedule__date-month">11</span></span><span class="capabilities-schedule__day-text">Выбери действие</span></li>
+                                <li class="capabilities-schedule__day"><span class="capabilities-schedule__date"><span class="capabilities-schedule__date-day">12</span><span class="capabilities-schedule__date-divider">&nbsp;/&nbsp;</span><span class="capabilities-schedule__date-month">11</span></span><span class="capabilities-schedule__day-text capabilities-schedule__day-text--italic">Практика</span></li>
+                              </ul>
+                            </li>
+                          </ul>
+                        </div>
                       </li>
-                      <li class="capabilities-schedule__info-item"><span class="capabilities-schedule__info-span capabilities-schedule__info-span--italic">Практика&nbsp; </span><span class="capabilities-schedule__info-span">проходят по&nbsp;четвергам c&nbsp;8:00 по&nbsp;10:00 и&nbsp;с&nbsp;20:00 по&nbsp;22:00</span>
+                      <li class="capabilities-schedule__module">
+                        <input class="capabilities-schedule__switch-input" type="checkbox" id="capabilities-schedule__switch-input-2">
+                        <label class="capabilities-schedule__module-title" for="capabilities-schedule__switch-input-2">                       
+                          <p class="capabilities-schedule__module-num">2 модуль                        </p><span class="capabilities-schedule__module-name">Мысли результатами</span>
+                        </label>
+                        <div class="capabilities-schedule__timetable">      
+                          <div class="capabilities-schedule__months capabilities-schedule__months--short">14&nbsp;ноября&nbsp;— 17&nbsp;декабря</div>
+                          <ul class="capabilities-schedule__months capabilities-schedule__months--full">
+                            <li class="capabilities-schedule__month">
+                              <div class="capabilities-schedule__month-name">Октябрь</div>
+                              <ul class="capabilities-schedule__days">
+                                <li class="capabilities-schedule__day"><span class="capabilities-schedule__date"><span class="capabilities-schedule__date-day">24</span><span class="capabilities-schedule__date-divider">&nbsp;/&nbsp;</span><span class="capabilities-schedule__date-month">10</span></span><span class="capabilities-schedule__day-text">Проектируй будущее</span></li>
+                                <li class="capabilities-schedule__day"><span class="capabilities-schedule__date"><span class="capabilities-schedule__date-day">29</span><span class="capabilities-schedule__date-divider">&nbsp;/&nbsp;</span><span class="capabilities-schedule__date-month">10</span></span><span class="capabilities-schedule__day-text capabilities-schedule__day-text--italic">Практика</span></li>
+                                <li class="capabilities-schedule__day"><span class="capabilities-schedule__date"><span class="capabilities-schedule__date-day">31</span><span class="capabilities-schedule__date-divider">&nbsp;/&nbsp;</span><span class="capabilities-schedule__date-month">10</span></span><span class="capabilities-schedule__day-text">Осознай реальность</span></li>
+                              </ul>
+                            </li>
+                            <li class="capabilities-schedule__month">
+                              <div class="capabilities-schedule__month-name">Ноябрь</div>
+                              <ul class="capabilities-schedule__days">
+                                <li class="capabilities-schedule__day"><span class="capabilities-schedule__date"><span class="capabilities-schedule__date-day">05</span><span class="capabilities-schedule__date-divider">&nbsp;/&nbsp;</span><span class="capabilities-schedule__date-month">11</span></span><span class="capabilities-schedule__day-text capabilities-schedule__day-text--italic">Практика</span></li>
+                                <li class="capabilities-schedule__day"><span class="capabilities-schedule__date"><span class="capabilities-schedule__date-day">07</span><span class="capabilities-schedule__date-divider">&nbsp;/&nbsp;</span><span class="capabilities-schedule__date-month">11</span></span><span class="capabilities-schedule__day-text">Выбери действие</span></li>
+                                <li class="capabilities-schedule__day"><span class="capabilities-schedule__date"><span class="capabilities-schedule__date-day">12</span><span class="capabilities-schedule__date-divider">&nbsp;/&nbsp;</span><span class="capabilities-schedule__date-month">11</span></span><span class="capabilities-schedule__day-text capabilities-schedule__day-text--italic">Практика</span></li>
+                              </ul>
+                            </li>
+                          </ul>
+                        </div>
                       </li>
-                      <li class="capabilities-schedule__info-item"><span class="capabilities-schedule__info-span capabilities-schedule__info-span--bold-blue">Демо-сессии&nbsp; </span><span class="capabilities-schedule__info-span">проходят по&nbsp;субботам с&nbsp;8:00 по&nbsp;9:00</span>
+                      <li class="capabilities-schedule__module">
+                        <input class="capabilities-schedule__switch-input" type="checkbox" id="capabilities-schedule__switch-input-3">
+                        <label class="capabilities-schedule__module-title" for="capabilities-schedule__switch-input-3">                       
+                          <p class="capabilities-schedule__module-num">3 модуль                        </p><span class="capabilities-schedule__module-name">Действуй осознанно</span>
+                        </label>
+                        <div class="capabilities-schedule__timetable">      
+                          <div class="capabilities-schedule__months capabilities-schedule__months--short">19&nbsp;декабря&nbsp;— 4&nbsp;февраля</div>
+                          <ul class="capabilities-schedule__months capabilities-schedule__months--full">
+                            <li class="capabilities-schedule__month">
+                              <div class="capabilities-schedule__month-name">Октябрь</div>
+                              <ul class="capabilities-schedule__days">
+                                <li class="capabilities-schedule__day"><span class="capabilities-schedule__date"><span class="capabilities-schedule__date-day">24</span><span class="capabilities-schedule__date-divider">&nbsp;/&nbsp;</span><span class="capabilities-schedule__date-month">10</span></span><span class="capabilities-schedule__day-text">Проектируй будущее</span></li>
+                                <li class="capabilities-schedule__day"><span class="capabilities-schedule__date"><span class="capabilities-schedule__date-day">29</span><span class="capabilities-schedule__date-divider">&nbsp;/&nbsp;</span><span class="capabilities-schedule__date-month">10</span></span><span class="capabilities-schedule__day-text capabilities-schedule__day-text--italic">Практика</span></li>
+                                <li class="capabilities-schedule__day"><span class="capabilities-schedule__date"><span class="capabilities-schedule__date-day">31</span><span class="capabilities-schedule__date-divider">&nbsp;/&nbsp;</span><span class="capabilities-schedule__date-month">10</span></span><span class="capabilities-schedule__day-text">Осознай реальность</span></li>
+                              </ul>
+                            </li>
+                            <li class="capabilities-schedule__month">
+                              <div class="capabilities-schedule__month-name">Ноябрь</div>
+                              <ul class="capabilities-schedule__days">
+                                <li class="capabilities-schedule__day"><span class="capabilities-schedule__date"><span class="capabilities-schedule__date-day">05</span><span class="capabilities-schedule__date-divider">&nbsp;/&nbsp;</span><span class="capabilities-schedule__date-month">11</span></span><span class="capabilities-schedule__day-text capabilities-schedule__day-text--italic">Практика</span></li>
+                                <li class="capabilities-schedule__day"><span class="capabilities-schedule__date"><span class="capabilities-schedule__date-day">07</span><span class="capabilities-schedule__date-divider">&nbsp;/&nbsp;</span><span class="capabilities-schedule__date-month">11</span></span><span class="capabilities-schedule__day-text">Выбери действие</span></li>
+                                <li class="capabilities-schedule__day"><span class="capabilities-schedule__date"><span class="capabilities-schedule__date-day">12</span><span class="capabilities-schedule__date-divider">&nbsp;/&nbsp;</span><span class="capabilities-schedule__date-month">11</span></span><span class="capabilities-schedule__day-text capabilities-schedule__day-text--italic">Практика</span></li>
+                              </ul>
+                            </li>
+                          </ul>
+                        </div>
                       </li>
-                      <li class="capabilities-schedule__info-item"><span class="capabilities-schedule__info-span capabilities-schedule__info-span--medium">Групповой менторинг&nbsp; </span><span class="capabilities-schedule__info-span">проходит по&nbsp;средам с&nbsp;12:00 по&nbsp;13:30 и&nbsp;с&nbsp;20:00 по&nbsp;21:30</span>
+                      <li class="capabilities-schedule__module">
+                        <input class="capabilities-schedule__switch-input" type="checkbox" id="capabilities-schedule__switch-input-4">
+                        <label class="capabilities-schedule__module-title" for="capabilities-schedule__switch-input-4">                       
+                          <p class="capabilities-schedule__module-num">4 модуль                        </p><span class="capabilities-schedule__module-name">Слушай сердцем</span>
+                        </label>
+                        <div class="capabilities-schedule__timetable">      
+                          <div class="capabilities-schedule__months capabilities-schedule__months--short">13&nbsp;февраля&nbsp;— 18&nbsp;марта</div>
+                          <ul class="capabilities-schedule__months capabilities-schedule__months--full">
+                            <li class="capabilities-schedule__month">
+                              <div class="capabilities-schedule__month-name">Октябрь</div>
+                              <ul class="capabilities-schedule__days">
+                                <li class="capabilities-schedule__day"><span class="capabilities-schedule__date"><span class="capabilities-schedule__date-day">24</span><span class="capabilities-schedule__date-divider">&nbsp;/&nbsp;</span><span class="capabilities-schedule__date-month">10</span></span><span class="capabilities-schedule__day-text">Проектируй будущее</span></li>
+                                <li class="capabilities-schedule__day"><span class="capabilities-schedule__date"><span class="capabilities-schedule__date-day">29</span><span class="capabilities-schedule__date-divider">&nbsp;/&nbsp;</span><span class="capabilities-schedule__date-month">10</span></span><span class="capabilities-schedule__day-text capabilities-schedule__day-text--italic">Практика</span></li>
+                                <li class="capabilities-schedule__day"><span class="capabilities-schedule__date"><span class="capabilities-schedule__date-day">31</span><span class="capabilities-schedule__date-divider">&nbsp;/&nbsp;</span><span class="capabilities-schedule__date-month">10</span></span><span class="capabilities-schedule__day-text">Осознай реальность</span></li>
+                              </ul>
+                            </li>
+                            <li class="capabilities-schedule__month">
+                              <div class="capabilities-schedule__month-name">Ноябрь</div>
+                              <ul class="capabilities-schedule__days">
+                                <li class="capabilities-schedule__day"><span class="capabilities-schedule__date"><span class="capabilities-schedule__date-day">05</span><span class="capabilities-schedule__date-divider">&nbsp;/&nbsp;</span><span class="capabilities-schedule__date-month">11</span></span><span class="capabilities-schedule__day-text capabilities-schedule__day-text--italic">Практика</span></li>
+                                <li class="capabilities-schedule__day"><span class="capabilities-schedule__date"><span class="capabilities-schedule__date-day">07</span><span class="capabilities-schedule__date-divider">&nbsp;/&nbsp;</span><span class="capabilities-schedule__date-month">11</span></span><span class="capabilities-schedule__day-text">Выбери действие</span></li>
+                                <li class="capabilities-schedule__day"><span class="capabilities-schedule__date"><span class="capabilities-schedule__date-day">12</span><span class="capabilities-schedule__date-divider">&nbsp;/&nbsp;</span><span class="capabilities-schedule__date-month">11</span></span><span class="capabilities-schedule__day-text capabilities-schedule__day-text--italic">Практика</span></li>
+                              </ul>
+                            </li>
+                          </ul>
+                        </div>
                       </li>
-                      <li class="capabilities-schedule__info-item"><span class="capabilities-schedule__info-span capabilities-schedule__info-span--bold-blue">Групповая супервизия&nbsp; </span><span class="capabilities-schedule__info-span">проходит по&nbsp;вторниам с&nbsp;11:00 по&nbsp;12:30 и&nbsp;с&nbsp;20:00 по&nbsp;21:30</span>
+                      <li class="capabilities-schedule__module">
+                        <input class="capabilities-schedule__switch-input" type="checkbox" id="capabilities-schedule__switch-input-5">
+                        <label class="capabilities-schedule__module-title" for="capabilities-schedule__switch-input-5">                       
+                          <p class="capabilities-schedule__module-num">5 модуль                        </p><span class="capabilities-schedule__module-name">Реализуй возможности</span>
+                        </label>
+                        <div class="capabilities-schedule__timetable">      
+                          <div class="capabilities-schedule__months capabilities-schedule__months--short">20&nbsp;марта&nbsp;— 2&nbsp;мая</div>
+                          <ul class="capabilities-schedule__months capabilities-schedule__months--full">
+                            <li class="capabilities-schedule__month">
+                              <div class="capabilities-schedule__month-name">Октябрь</div>
+                              <ul class="capabilities-schedule__days">
+                                <li class="capabilities-schedule__day"><span class="capabilities-schedule__date"><span class="capabilities-schedule__date-day">24</span><span class="capabilities-schedule__date-divider">&nbsp;/&nbsp;</span><span class="capabilities-schedule__date-month">10</span></span><span class="capabilities-schedule__day-text">Проектируй будущее</span></li>
+                                <li class="capabilities-schedule__day"><span class="capabilities-schedule__date"><span class="capabilities-schedule__date-day">29</span><span class="capabilities-schedule__date-divider">&nbsp;/&nbsp;</span><span class="capabilities-schedule__date-month">10</span></span><span class="capabilities-schedule__day-text capabilities-schedule__day-text--italic">Практика</span></li>
+                                <li class="capabilities-schedule__day"><span class="capabilities-schedule__date"><span class="capabilities-schedule__date-day">31</span><span class="capabilities-schedule__date-divider">&nbsp;/&nbsp;</span><span class="capabilities-schedule__date-month">10</span></span><span class="capabilities-schedule__day-text">Осознай реальность</span></li>
+                              </ul>
+                            </li>
+                            <li class="capabilities-schedule__month">
+                              <div class="capabilities-schedule__month-name">Ноябрь</div>
+                              <ul class="capabilities-schedule__days">
+                                <li class="capabilities-schedule__day"><span class="capabilities-schedule__date"><span class="capabilities-schedule__date-day">05</span><span class="capabilities-schedule__date-divider">&nbsp;/&nbsp;</span><span class="capabilities-schedule__date-month">11</span></span><span class="capabilities-schedule__day-text capabilities-schedule__day-text--italic">Практика</span></li>
+                                <li class="capabilities-schedule__day"><span class="capabilities-schedule__date"><span class="capabilities-schedule__date-day">07</span><span class="capabilities-schedule__date-divider">&nbsp;/&nbsp;</span><span class="capabilities-schedule__date-month">11</span></span><span class="capabilities-schedule__day-text">Выбери действие</span></li>
+                                <li class="capabilities-schedule__day"><span class="capabilities-schedule__date"><span class="capabilities-schedule__date-day">12</span><span class="capabilities-schedule__date-divider">&nbsp;/&nbsp;</span><span class="capabilities-schedule__date-month">11</span></span><span class="capabilities-schedule__day-text capabilities-schedule__day-text--italic">Практика</span></li>
+                              </ul>
+                            </li>
+                          </ul>
+                        </div>
                       </li>
                     </ul>
+                    <div class="capabilities-schedule__info">
+                      <div class="capabilities-schedule__info-icon"></div>
+                      <ul class="capabilities-schedule__info-list">
+                        <li class="capabilities-schedule__info-item"><span class="capabilities-schedule__info-span">Вебинары проходят по&nbsp;субботам с&nbsp;10:00 по&nbsp;12:00</span>
+                        </li>
+                        <li class="capabilities-schedule__info-item"><span class="capabilities-schedule__info-span capabilities-schedule__info-span--italic">Практика&nbsp; </span><span class="capabilities-schedule__info-span">проходят по&nbsp;четвергам c&nbsp;8:00 по&nbsp;10:00 и&nbsp;с&nbsp;20:00 по&nbsp;22:00</span>
+                        </li>
+                        <li class="capabilities-schedule__info-item"><span class="capabilities-schedule__info-span capabilities-schedule__info-span--bold-blue">Демо-сессии&nbsp; </span><span class="capabilities-schedule__info-span">проходят по&nbsp;субботам с&nbsp;8:00 по&nbsp;9:00</span>
+                        </li>
+                        <li class="capabilities-schedule__info-item"><span class="capabilities-schedule__info-span capabilities-schedule__info-span--medium">Групповой менторинг&nbsp; </span><span class="capabilities-schedule__info-span">проходит по&nbsp;средам с&nbsp;12:00 по&nbsp;13:30 и&nbsp;с&nbsp;20:00 по&nbsp;21:30</span>
+                        </li>
+                        <li class="capabilities-schedule__info-item"><span class="capabilities-schedule__info-span capabilities-schedule__info-span--bold-blue">Групповая супервизия&nbsp; </span><span class="capabilities-schedule__info-span">проходит по&nbsp;вторниам с&nbsp;11:00 по&nbsp;12:30 и&nbsp;с&nbsp;20:00 по&nbsp;21:30</span>
+                        </li>
+                      </ul>
+                    </div>
                   </div>
                 </div>
               </div>
-            </div>
-          </section>
-          <section class="capabilities-leading">
-            <div class="capabilities-leading__container container">
-              <div class="capabilities-leading__double-block double-block">
-                <aside class="capabilities-leading__aside double-block__aside">
-                  <h3 class="capabilities-leading__title double-block__title">Ведущие программы</h3>
-                </aside>
-                <div class="capabilities-leading__content double-block__content double-block__content--narrow">
-                  <ul class="capabilities-leading__persons">
-                    <li class="capabilities-leading__person">
-                      <div class="capabilities-leading__person-wrp">
-                        <div class="capabilities-leading__person-content capabilities-leading__person-content--blue"><img class="capabilities-leading__img" src="images/png/capabilities-leading-1.png">
-                          <div class="capabilities-leading__info">
-                            <p class="capabilities-leading__name">Мария
+            </section>
+            <section class="capabilities-leading">
+              <div class="capabilities-leading__container container">
+                <div class="capabilities-leading__double-block double-block">
+                  <aside class="capabilities-leading__aside double-block__aside">
+                    <h3 class="capabilities-leading__title double-block__title">Ведущие программы</h3>
+                  </aside>
+                  <div class="capabilities-leading__content double-block__content double-block__content--narrow">
+                    <ul class="capabilities-leading__persons">
+                      <li class="capabilities-leading__person">
+                        <div class="capabilities-leading__person-wrp">
+                          <div class="capabilities-leading__person-content capabilities-leading__person-content--blue"><img class="capabilities-leading__img" src="images/png/capabilities-leading-1.png">
+                            <div class="capabilities-leading__info">
+                              <p class="capabilities-leading__name">Мария
 Балашова</p>
-                            <p class="capabilities-leading__description capabilities-leading__description--short">Профессиональный сертифицированный коуч, PCC ICF</p>
-                            <p class="capabilities-leading__description capabilities-leading__description--full">Управляющий партнер ICP Centre. Учредитель и руководитель Центра семейной культуры и развития «Радуга». Практикующий семейный психолог.
+                              <p class="capabilities-leading__description capabilities-leading__description--short">Профессиональный сертифицированный коуч, PCC ICF</p>
+                              <p class="capabilities-leading__description capabilities-leading__description--full">Управляющий партнер ICP Centre. Учредитель и руководитель Центра семейной культуры и развития «Радуга». Практикующий семейный психолог.
 
 Коуч для родителей — опыт работы с детьми и родителями с 1989 года, счастливая мама троих детей. </p><a class="button button--link button--color-white button--size-normal capabilities-leading__btn" href="#">Подробнее</a>
+                            </div>
                           </div>
                         </div>
-                      </div>
-                    </li>
-                    <li class="capabilities-leading__person">
-                      <div class="capabilities-leading__person-wrp">
-                        <div class="capabilities-leading__person-content capabilities-leading__person-content--orange"><img class="capabilities-leading__img" src="images/png/capabilities-leading-2.png">
-                          <div class="capabilities-leading__info">
-                            <p class="capabilities-leading__name">Галина
+                      </li>
+                      <li class="capabilities-leading__person">
+                        <div class="capabilities-leading__person-wrp">
+                          <div class="capabilities-leading__person-content capabilities-leading__person-content--orange"><img class="capabilities-leading__img" src="images/png/capabilities-leading-2.png">
+                            <div class="capabilities-leading__info">
+                              <p class="capabilities-leading__name">Галина
 Вдовиченко</p>
-                            <p class="capabilities-leading__description capabilities-leading__description--short">Профессиональный сертифицированный коуч, PCC ICF</p>
-                            <p class="capabilities-leading__description capabilities-leading__description--full">Управляющий партнер ICP Centre. Учредитель и руководитель Центра семейной культуры и развития «Радуга». Практикующий семейный психолог.
+                              <p class="capabilities-leading__description capabilities-leading__description--short">Профессиональный сертифицированный коуч, PCC ICF</p>
+                              <p class="capabilities-leading__description capabilities-leading__description--full">Управляющий партнер ICP Centre. Учредитель и руководитель Центра семейной культуры и развития «Радуга». Практикующий семейный психолог.
 
 Коуч для родителей — опыт работы с детьми и родителями с 1989 года, счастливая мама троих детей. </p><a class="button button--link button--color-white button--size-normal capabilities-leading__btn" href="#">Подробнее</a>
+                            </div>
                           </div>
                         </div>
-                      </div>
-                    </li>
-                    <li class="capabilities-leading__person">
-                      <div class="capabilities-leading__person-wrp">
-                        <div class="capabilities-leading__person-content capabilities-leading__person-content--blue-gray"><img class="capabilities-leading__img" src="images/png/capabilities-leading-2.png">
-                          <div class="capabilities-leading__info">
-                            <p class="capabilities-leading__name">Елена
+                      </li>
+                      <li class="capabilities-leading__person">
+                        <div class="capabilities-leading__person-wrp">
+                          <div class="capabilities-leading__person-content capabilities-leading__person-content--blue-gray"><img class="capabilities-leading__img" src="images/png/capabilities-leading-2.png">
+                            <div class="capabilities-leading__info">
+                              <p class="capabilities-leading__name">Елена
 Челокиди</p>
-                            <p class="capabilities-leading__description capabilities-leading__description--short">Профессиональный сертифицированный коуч, PCC ICF</p>
-                            <p class="capabilities-leading__description capabilities-leading__description--full">Управляющий партнер ICP Centre. Учредитель и руководитель Центра семейной культуры и развития «Радуга». Практикующий семейный психолог.
+                              <p class="capabilities-leading__description capabilities-leading__description--short">Профессиональный сертифицированный коуч, PCC ICF</p>
+                              <p class="capabilities-leading__description capabilities-leading__description--full">Управляющий партнер ICP Centre. Учредитель и руководитель Центра семейной культуры и развития «Радуга». Практикующий семейный психолог.
 
 Коуч для родителей — опыт работы с детьми и родителями с 1989 года, счастливая мама троих детей. </p><a class="button button--link button--color-white button--size-normal capabilities-leading__btn" href="#">Подробнее</a>
+                            </div>
                           </div>
                         </div>
-                      </div>
-                    </li>
-                    <li class="capabilities-leading__person">
-                      <div class="capabilities-leading__person-wrp">
-                        <div class="capabilities-leading__person-content capabilities-leading__person-content--light-green"><img class="capabilities-leading__img" src="images/png/capabilities-leading-1.png">
-                          <div class="capabilities-leading__info">
-                            <p class="capabilities-leading__name">Наталья
+                      </li>
+                      <li class="capabilities-leading__person">
+                        <div class="capabilities-leading__person-wrp">
+                          <div class="capabilities-leading__person-content capabilities-leading__person-content--light-green"><img class="capabilities-leading__img" src="images/png/capabilities-leading-1.png">
+                            <div class="capabilities-leading__info">
+                              <p class="capabilities-leading__name">Наталья
 Гульчевская</p>
-                            <p class="capabilities-leading__description capabilities-leading__description--short">Профессиональный сертифицированный коуч, PCC ICF</p>
-                            <p class="capabilities-leading__description capabilities-leading__description--full">Управляющий партнер ICP Centre. Учредитель и руководитель Центра семейной культуры и развития «Радуга». Практикующий семейный психолог.
+                              <p class="capabilities-leading__description capabilities-leading__description--short">Профессиональный сертифицированный коуч, PCC ICF</p>
+                              <p class="capabilities-leading__description capabilities-leading__description--full">Управляющий партнер ICP Centre. Учредитель и руководитель Центра семейной культуры и развития «Радуга». Практикующий семейный психолог.
 
 Коуч для родителей — опыт работы с детьми и родителями с 1989 года, счастливая мама троих детей. </p><a class="button button--link button--color-white button--size-normal capabilities-leading__btn" href="#">Подробнее</a>
+                            </div>
                           </div>
-                        </div>
-                      </div>
-                    </li>
-                  </ul>
-                  <div class="capabilities-leading__buttons slider__buttons">
-                    <button class="capabilities-leading__slider-btn slider__btn slider__btn--prev"></button>
-                    <button class="capabilities-leading__slider-btn slider__btn slider__btn--next"></button>
-                  </div>
-                  <ul class="capabilities-leading__dots"></ul>
-                </div>
-              </div>
-            </div>
-          </section>
-          <section class="capabilities-tariffs">
-            <div class="container">
-              <div class="double-block">
-                <aside class="capabilities-tariffs__aside double-block__aside">
-                  <h3 class="capabilities-tariffs__title double-block__title">Стоимость курса</h3>
-                </aside>
-                <div class="double-block__content double-block__content--narrow capabilities-tariffs__content">
-                  <ul class="capabilities-tariffs__list">
-                    <li class="capabilities-tariffs__tariff">
-                      <div class="capabilities-tariffs__col capabilities-tariffs__col--num">
-                        <p class="capabilities-tariffs__num">1</p>
-                      </div>
-                      <div class="capabilities-tariffs__col capabilities-tariffs__col--info">
-                        <p class="capabilities-tariffs__name">Профессиональный</p>
-                        <p class="capabilities-tariffs__description">Для тех, кому важна международная сертификация, кто планирует построить карьеру коуча.</p>
-                        <ul class="capabilities-tariffs__elements">
-                          <li class="capabilities-tariffs__element">125 часов обучения</li>
-                          <li class="capabilities-tariffs__element">личный кабинет со всеми материалами курса</li>
-                          <li class="capabilities-tariffs__element">доступ в закрытую группу в facebook</li>
-                          <li class="capabilities-tariffs__element">2 устные + 3 письменные наблюдаемые сессии</li>
-                          <li class="capabilities-tariffs__element">3 часа группового менторинга</li>
-                          <li class="capabilities-tariffs__element">международный сертификат ACSTH ICF</li>
-                        </ul>
-                      </div>
-                      <div class="capabilities-tariffs__col capabilities-tariffs__col--pay">
-                        <div class="capabilities-tariffs__price">165 500 ₽</div>
-                        <div class="capabilities-tariffs__pay-format">единовременный платеж</div>
-                        <div class="capabilities-tariffs__modular-wrp"><span class="capabilities-tariffs__modular underlined">Возможна помодульная оплата</span></div><a class="button button--link button--color-primary button--size-xl capabilities-tariffs__btn" href="#">Оплатить
-                                                  <svg class="button__icon">
-                                                    <use xlink:href="images/sprite.svg#icon-ok"></use>
-                                                  </svg></a>
-                      </div>
-                    </li>
-                    <li class="capabilities-tariffs__tariff">
-                      <div class="capabilities-tariffs__col capabilities-tariffs__col--num">
-                        <p class="capabilities-tariffs__num capabilities-tariffs__num--vip">2</p>
-                      </div>
-                      <div class="capabilities-tariffs__col capabilities-tariffs__col--info">
-                        <p class="capabilities-tariffs__name capabilities-tariffs__name--vip">VIP</p>
-                        <p class="capabilities-tariffs__description">Для тех, кто после обучения хочет пройти ACC — сертификацию в Международной Федерации Коучинга (ICF). По итогам, ученик получает 10 часов менторинга (необходимые для сертификации) и рекомендации по выбору сессии для предоставления в ICF</p>
-                        <ul class="capabilities-tariffs__elements">
-                          <li class="capabilities-tariffs__element">125 часов обучения</li>
-                          <li class="capabilities-tariffs__element">личный кабинет со всеми материалами курса</li>
-                          <li class="capabilities-tariffs__element">доступ в закрытую группу в facebook</li>
-                          <li class="capabilities-tariffs__element">2 устные + 3 письменные наблюдаемые сессии</li>
-                          <li class="capabilities-tariffs__element">3 часа группового менторинга + 7,5 дополнительных часов группового и индивидуального менторинга</li>
-                          <li class="capabilities-tariffs__element">международный сертификат ACSTH ICF</li>
-                        </ul>
-                      </div>
-                      <div class="capabilities-tariffs__col capabilities-tariffs__col--pay">
-                        <div class="capabilities-tariffs__price">180 500 ₽</div>
-                        <div class="capabilities-tariffs__pay-format">единовременный платеж</div>
-                        <div class="capabilities-tariffs__modular-wrp"><span class="capabilities-tariffs__modular underlined">Возможна помодульная оплата</span></div><a class="button button--link button--color-primary button--size-xl capabilities-tariffs__btn" href="#">Оплатить
-                                                  <svg class="button__icon">
-                                                    <use xlink:href="images/sprite.svg#icon-ok"></use>
-                                                  </svg></a>
-                      </div>
-                    </li>
-                  </ul>
-                </div>
-              </div>
-              <div class="capabilities-tariffs__refund">
-                <div class="capabilities-tariffs__refund-col capabilities-tariffs__refund-col--title">
-                  <p class="capabilities-tariffs__refund-title">Мы настолько уверены в программе и спикерах, что гарантируем вам 100% возврат средств.</p>
-                </div>
-                <div class="capabilities-tariffs__refund-col capabilities-tariffs__refund-col--description">
-                  <p class="capabilities-tariffs__refund-description">Если после первого занятия вы решите, что данный курс не для вас, то мы просто вернём всю сумму без лишних вопросов.</p>
-                </div>
-              </div>
-            </div>
-          </section>
-          <section class="capabilities-reviews">
-            <div class="container">
-              <div class="double-block">
-                <aside class="capabilities-reviews__aside double-block__aside">
-                  <h3 class="capabilities-reviews__title double-block__title">Отзывы выпускников</h3>
-                </aside>
-                <div class="capabilities-reviews__content double-block__content double-block__content--narrow">
-                  <div class="capabilities-reviews__slider swiper-container">
-                    <ul class="capabilities-reviews__slides swiper-wrapper">
-                      <li class="capabilities-reviews__slide swiper-slide">
-                        <p class="capabilities-reviews__text">Эта уникальная программа раскрыла глубокий и безграничный мир коучинга во всей его красоте и богатстве, позволила мне раскрыть свои потенциальные возможности, овладеть 11 компетенциями коуча, почувствовать уверенность и желание развиваться и совершенствоваться.<br><br> Высокопрофессиональная команда ICP центра очень качественно, системно, экологично сопровождает каждого студента на его индивидуальном маршруте обучения. Благодарность всем преподавателям, ассистентам, менторам за поддержку и веру в возможности каждого!</p>
-                        <div class="capabilities-reviews__author">
-                          <div class="capabilities-reviews__avatar"><img class="capabilities-reviews__avatar-img" src="images/jpg/elon.jpg"></div>
-                          <p class="capabilities-reviews__name">Марина Жигулина         </p>
-                        </div>
-                      </li>
-                      <li class="capabilities-reviews__slide swiper-slide">
-                        <p class="capabilities-reviews__text">Эта уникальная программа раскрыла глубокий и безграничный мир коучинга во всей его красоте и богатстве, позволила мне раскрыть свои потенциальные возможности, овладеть 11 компетенциями коуча, почувствовать уверенность и желание развиваться и совершенствоваться.<br><br> Высокопрофессиональная команда ICP центра очень качественно, системно, экологично сопровождает каждого студента на его индивидуальном маршруте обучения. Благодарность всем преподавателям, ассистентам, менторам за поддержку и веру в возможности каждого!</p>
-                        <div class="capabilities-reviews__author">
-                          <div class="capabilities-reviews__avatar"><img class="capabilities-reviews__avatar-img" src="images/jpg/elon.jpg"></div>
-                          <p class="capabilities-reviews__name">Марина Жигулина         </p>
-                        </div>
-                      </li>
-                      <li class="capabilities-reviews__slide swiper-slide">
-                        <p class="capabilities-reviews__text">Эта уникальная программа раскрыла глубокий и безграничный мир коучинга во всей его красоте и богатстве, позволила мне раскрыть свои потенциальные возможности, овладеть 11 компетенциями коуча, почувствовать уверенность и желание развиваться и совершенствоваться.<br><br> Высокопрофессиональная команда ICP центра очень качественно, системно, экологично сопровождает каждого студента на его индивидуальном маршруте обучения. Благодарность всем преподавателям, ассистентам, менторам за поддержку и веру в возможности каждого!</p>
-                        <div class="capabilities-reviews__author">
-                          <div class="capabilities-reviews__avatar"><img class="capabilities-reviews__avatar-img" src="images/jpg/elon.jpg"></div>
-                          <p class="capabilities-reviews__name">Марина Жигулина         </p>
-                        </div>
-                      </li>
-                      <li class="capabilities-reviews__slide swiper-slide">
-                        <p class="capabilities-reviews__text">Эта уникальная программа раскрыла глубокий и безграничный мир коучинга во всей его красоте и богатстве, позволила мне раскрыть свои потенциальные возможности, овладеть 11 компетенциями коуча, почувствовать уверенность и желание развиваться и совершенствоваться.<br><br> Высокопрофессиональная команда ICP центра очень качественно, системно, экологично сопровождает каждого студента на его индивидуальном маршруте обучения. Благодарность всем преподавателям, ассистентам, менторам за поддержку и веру в возможности каждого!</p>
-                        <div class="capabilities-reviews__author">
-                          <div class="capabilities-reviews__avatar"><img class="capabilities-reviews__avatar-img" src="images/jpg/elon.jpg"></div>
-                          <p class="capabilities-reviews__name">Марина Жигулина         </p>
-                        </div>
-                      </li>
-                      <li class="capabilities-reviews__slide swiper-slide">
-                        <p class="capabilities-reviews__text">Эта уникальная программа раскрыла глубокий и безграничный мир коучинга во всей его красоте и богатстве, позволила мне раскрыть свои потенциальные возможности, овладеть 11 компетенциями коуча, почувствовать уверенность и желание развиваться и совершенствоваться.<br><br> Высокопрофессиональная команда ICP центра очень качественно, системно, экологично сопровождает каждого студента на его индивидуальном маршруте обучения. Благодарность всем преподавателям, ассистентам, менторам за поддержку и веру в возможности каждого!</p>
-                        <div class="capabilities-reviews__author">
-                          <div class="capabilities-reviews__avatar"><img class="capabilities-reviews__avatar-img" src="images/jpg/elon.jpg"></div>
-                          <p class="capabilities-reviews__name">Марина Жигулина         </p>
                         </div>
                       </li>
                     </ul>
-                    <ul class="capabilities-reviews__dots"></ul>
+                    <div class="capabilities-leading__buttons slider__buttons">
+                      <button class="capabilities-leading__slider-btn slider__btn slider__btn--prev"></button>
+                      <button class="capabilities-leading__slider-btn slider__btn slider__btn--next"></button>
+                    </div>
+                    <ul class="capabilities-leading__dots"></ul>
                   </div>
                 </div>
               </div>
-            </div>
-          </section>
+            </section>
+            <section class="capabilities-tariffs">
+              <div class="container">
+                <div class="double-block">
+                  <aside class="capabilities-tariffs__aside double-block__aside">
+                    <h3 class="capabilities-tariffs__title double-block__title">Стоимость курса</h3>
+                  </aside>
+                  <div class="double-block__content double-block__content--narrow capabilities-tariffs__content">
+                    <ul class="capabilities-tariffs__list">
+                      <li class="capabilities-tariffs__tariff">
+                        <div class="capabilities-tariffs__col capabilities-tariffs__col--num">
+                          <p class="capabilities-tariffs__num">1</p>
+                        </div>
+                        <div class="capabilities-tariffs__col capabilities-tariffs__col--info">
+                          <p class="capabilities-tariffs__name">Профессиональный</p>
+                          <p class="capabilities-tariffs__description">Для тех, кому важна международная сертификация, кто планирует построить карьеру коуча.</p>
+                          <ul class="capabilities-tariffs__elements">
+                            <li class="capabilities-tariffs__element">125 часов обучения</li>
+                            <li class="capabilities-tariffs__element">личный кабинет со всеми материалами курса</li>
+                            <li class="capabilities-tariffs__element">доступ в закрытую группу в facebook</li>
+                            <li class="capabilities-tariffs__element">2 устные + 3 письменные наблюдаемые сессии</li>
+                            <li class="capabilities-tariffs__element">3 часа группового менторинга</li>
+                            <li class="capabilities-tariffs__element">международный сертификат ACSTH ICF</li>
+                          </ul>
+                        </div>
+                        <div class="capabilities-tariffs__col capabilities-tariffs__col--pay">
+                          <div class="capabilities-tariffs__price">165 500 ₽</div>
+                          <div class="capabilities-tariffs__pay-format">единовременный платеж</div>
+                          <div class="capabilities-tariffs__modular-wrp"><span class="capabilities-tariffs__modular underlined">Возможна помодульная оплата</span></div><a class="button button--link button--color-primary button--size-xl capabilities-tariffs__btn" href="#">Оплатить
+                                                        <svg class="button__icon">
+                                                          <use xlink:href="images/sprite.svg#icon-ok"></use>
+                                                        </svg></a>
+                        </div>
+                      </li>
+                      <li class="capabilities-tariffs__tariff">
+                        <div class="capabilities-tariffs__col capabilities-tariffs__col--num">
+                          <p class="capabilities-tariffs__num capabilities-tariffs__num--vip">2</p>
+                        </div>
+                        <div class="capabilities-tariffs__col capabilities-tariffs__col--info">
+                          <p class="capabilities-tariffs__name capabilities-tariffs__name--vip">VIP</p>
+                          <p class="capabilities-tariffs__description">Для тех, кто после обучения хочет пройти ACC — сертификацию в Международной Федерации Коучинга (ICF). По итогам, ученик получает 10 часов менторинга (необходимые для сертификации) и рекомендации по выбору сессии для предоставления в ICF</p>
+                          <ul class="capabilities-tariffs__elements">
+                            <li class="capabilities-tariffs__element">125 часов обучения</li>
+                            <li class="capabilities-tariffs__element">личный кабинет со всеми материалами курса</li>
+                            <li class="capabilities-tariffs__element">доступ в закрытую группу в facebook</li>
+                            <li class="capabilities-tariffs__element">2 устные + 3 письменные наблюдаемые сессии</li>
+                            <li class="capabilities-tariffs__element">3 часа группового менторинга + 7,5 дополнительных часов группового и индивидуального менторинга</li>
+                            <li class="capabilities-tariffs__element">международный сертификат ACSTH ICF</li>
+                          </ul>
+                        </div>
+                        <div class="capabilities-tariffs__col capabilities-tariffs__col--pay">
+                          <div class="capabilities-tariffs__price">180 500 ₽</div>
+                          <div class="capabilities-tariffs__pay-format">единовременный платеж</div>
+                          <div class="capabilities-tariffs__modular-wrp"><span class="capabilities-tariffs__modular underlined">Возможна помодульная оплата</span></div><a class="button button--link button--color-primary button--size-xl capabilities-tariffs__btn" href="#">Оплатить
+                                                        <svg class="button__icon">
+                                                          <use xlink:href="images/sprite.svg#icon-ok"></use>
+                                                        </svg></a>
+                        </div>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+                <div class="capabilities-tariffs__refund">
+                  <div class="capabilities-tariffs__refund-col capabilities-tariffs__refund-col--title">
+                    <p class="capabilities-tariffs__refund-title">Мы настолько уверены в программе и спикерах, что гарантируем вам 100% возврат средств.</p>
+                  </div>
+                  <div class="capabilities-tariffs__refund-col capabilities-tariffs__refund-col--description">
+                    <p class="capabilities-tariffs__refund-description">Если после первого занятия вы решите, что данный курс не для вас, то мы просто вернём всю сумму без лишних вопросов.</p>
+                  </div>
+                </div>
+              </div>
+            </section>
+            <section class="capabilities-reviews">
+              <div class="container">
+                <div class="double-block">
+                  <aside class="capabilities-reviews__aside double-block__aside">
+                    <h3 class="capabilities-reviews__title double-block__title">Отзывы выпускников</h3>
+                  </aside>
+                  <div class="capabilities-reviews__content double-block__content double-block__content--narrow">
+                    <div class="capabilities-reviews__slider swiper-container">
+                      <ul class="capabilities-reviews__slides swiper-wrapper">
+                        <li class="capabilities-reviews__slide swiper-slide">
+                          <p class="capabilities-reviews__text">Эта уникальная программа раскрыла глубокий и безграничный мир коучинга во всей его красоте и богатстве, позволила мне раскрыть свои потенциальные возможности, овладеть 11 компетенциями коуча, почувствовать уверенность и желание развиваться и совершенствоваться.<br><br> Высокопрофессиональная команда ICP центра очень качественно, системно, экологично сопровождает каждого студента на его индивидуальном маршруте обучения. Благодарность всем преподавателям, ассистентам, менторам за поддержку и веру в возможности каждого!</p>
+                          <div class="capabilities-reviews__author">
+                            <div class="capabilities-reviews__avatar"><img class="capabilities-reviews__avatar-img" src="images/jpg/elon.jpg"></div>
+                            <p class="capabilities-reviews__name">Марина Жигулина         </p>
+                          </div>
+                        </li>
+                        <li class="capabilities-reviews__slide swiper-slide">
+                          <p class="capabilities-reviews__text">Эта уникальная программа раскрыла глубокий и безграничный мир коучинга во всей его красоте и богатстве, позволила мне раскрыть свои потенциальные возможности, овладеть 11 компетенциями коуча, почувствовать уверенность и желание развиваться и совершенствоваться.<br><br> Высокопрофессиональная команда ICP центра очень качественно, системно, экологично сопровождает каждого студента на его индивидуальном маршруте обучения. Благодарность всем преподавателям, ассистентам, менторам за поддержку и веру в возможности каждого!</p>
+                          <div class="capabilities-reviews__author">
+                            <div class="capabilities-reviews__avatar"><img class="capabilities-reviews__avatar-img" src="images/jpg/elon.jpg"></div>
+                            <p class="capabilities-reviews__name">Марина Жигулина         </p>
+                          </div>
+                        </li>
+                        <li class="capabilities-reviews__slide swiper-slide">
+                          <p class="capabilities-reviews__text">Эта уникальная программа раскрыла глубокий и безграничный мир коучинга во всей его красоте и богатстве, позволила мне раскрыть свои потенциальные возможности, овладеть 11 компетенциями коуча, почувствовать уверенность и желание развиваться и совершенствоваться.<br><br> Высокопрофессиональная команда ICP центра очень качественно, системно, экологично сопровождает каждого студента на его индивидуальном маршруте обучения. Благодарность всем преподавателям, ассистентам, менторам за поддержку и веру в возможности каждого!</p>
+                          <div class="capabilities-reviews__author">
+                            <div class="capabilities-reviews__avatar"><img class="capabilities-reviews__avatar-img" src="images/jpg/elon.jpg"></div>
+                            <p class="capabilities-reviews__name">Марина Жигулина         </p>
+                          </div>
+                        </li>
+                        <li class="capabilities-reviews__slide swiper-slide">
+                          <p class="capabilities-reviews__text">Эта уникальная программа раскрыла глубокий и безграничный мир коучинга во всей его красоте и богатстве, позволила мне раскрыть свои потенциальные возможности, овладеть 11 компетенциями коуча, почувствовать уверенность и желание развиваться и совершенствоваться.<br><br> Высокопрофессиональная команда ICP центра очень качественно, системно, экологично сопровождает каждого студента на его индивидуальном маршруте обучения. Благодарность всем преподавателям, ассистентам, менторам за поддержку и веру в возможности каждого!</p>
+                          <div class="capabilities-reviews__author">
+                            <div class="capabilities-reviews__avatar"><img class="capabilities-reviews__avatar-img" src="images/jpg/elon.jpg"></div>
+                            <p class="capabilities-reviews__name">Марина Жигулина         </p>
+                          </div>
+                        </li>
+                        <li class="capabilities-reviews__slide swiper-slide">
+                          <p class="capabilities-reviews__text">Эта уникальная программа раскрыла глубокий и безграничный мир коучинга во всей его красоте и богатстве, позволила мне раскрыть свои потенциальные возможности, овладеть 11 компетенциями коуча, почувствовать уверенность и желание развиваться и совершенствоваться.<br><br> Высокопрофессиональная команда ICP центра очень качественно, системно, экологично сопровождает каждого студента на его индивидуальном маршруте обучения. Благодарность всем преподавателям, ассистентам, менторам за поддержку и веру в возможности каждого!</p>
+                          <div class="capabilities-reviews__author">
+                            <div class="capabilities-reviews__avatar"><img class="capabilities-reviews__avatar-img" src="images/jpg/elon.jpg"></div>
+                            <p class="capabilities-reviews__name">Марина Жигулина         </p>
+                          </div>
+                        </li>
+                      </ul>
+                      <ul class="capabilities-reviews__dots"></ul>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </section>
+          </div>
         </div>
       </div>
     </main>
@@ -869,8 +871,8 @@
           <h3 class="hotline__title">Горячая<br> линия</h3>
           <div class="hotline__group">
             <p class="hotline__description">Волонтерский проект Международного Центра<br> Профессионального Коучинга ICP Centre.</p><a class="hotline__link">
-                          <button class="button button--color-white button--size-normal hotline__btn">Подробнее
-                          </button></a>
+                            <button class="button button--color-white button--size-normal hotline__btn">Подробнее
+                            </button></a>
           </div>
         </div>
       </div>
@@ -959,8 +961,8 @@
         </div>
       </div>
     </footer>
-    <script src="./js/common.js?v=1604394646049"></script>
+    <script src="./js/common.js?v=1604440275596"></script>
     <script defer src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
-    <script defer src="./js/capabilities.js?v=1604394646049"></script>
+    <script defer src="./js/capabilities.js?v=1604440275596"></script>
   </body>
 </html>
