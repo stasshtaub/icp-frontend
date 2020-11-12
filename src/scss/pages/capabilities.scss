@@ -26,12 +26,6 @@
 @import "../components/capabilities/capabilities-reviews";
 
 .capabilities {
-	padding-bottom: 100px;
-
-	@include mobile-l {
-		padding-bottom: 30px;
-	}
-
 	&__group {
 		&--first {
 			position: relative;

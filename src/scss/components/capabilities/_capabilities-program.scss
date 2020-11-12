@@ -401,6 +401,7 @@
 		&--row {
 			#{$p}__description-item {
 				max-width: 50%;
+				width: 50%;
 			}
 		}
 
@@ -408,7 +409,7 @@
 			padding: 0 15px;
 
 			#{$p}__description-title {
-				color: white;
+				color: $color-white;
 			}
 		}
 
