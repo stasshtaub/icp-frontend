@@ -1,21 +1,4 @@
 .capabilities-start-screen {
-    position: relative;
-	display: flex;
-	height: 795px;
-	z-index: 1;
-
-	@include laptop {
-		height: 651px;
-	}
-
-	@include tablet {
-		height: 605px;
-	}
-
-	@include mobile-l {
-		height: 560px;
-	}
-
 	&__content {
 		display: flex;
 		flex-direction: column;
