@@ -46,7 +46,8 @@ section.capabilities-changes
                     text: "а быть одиночкой не хотите",
                     color: "white",
                     bound: "right",
-                    num: 6
+                    num: 6,
+                    last: true
                 }
             ]
         ]
@@ -54,7 +55,7 @@ section.capabilities-changes
         each line in lines
             p.capabilities-changes__strikethrough-line
                 each lineItem in line
-                    span.capabilities-changes__strikethrough-item(class=`capabilities-changes__strikethrough-item--${lineItem.num} capabilities-changes__strikethrough-item--${lineItem.color} capabilities-changes__strikethrough-item--${lineItem.bound}`) !{lineItem.text}
+                    span.capabilities-changes__strikethrough-item(class=`capabilities-changes__strikethrough-item--${lineItem.num} capabilities-changes__strikethrough-item--${lineItem.color} capabilities-changes__strikethrough-item--${lineItem.bound} ${lineItem.last ? 'capabilities-changes__strikethrough-item--last' : ''}`) !{lineItem.text}
     
     .container
         -
