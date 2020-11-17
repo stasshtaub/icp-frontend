@@ -26,6 +26,8 @@
 @import "../components/capabilities/capabilities-reviews";
 
 .capabilities {
+	overflow: hidden;
+	
 	&__group {
 		&--first {
 			position: relative;
