@@ -1,4 +1,147 @@
-- var menuItems = [{title: 'О центре', level2: [{text: 'Миссия+ценности', href: '#'}, {text: 'История компании', href: '#'}, {text: 'Команда', href: '#'}, {text: 'Коучинговые компетенции', href: '#'}, {text: 'Членство в ICF', href: '#'}, {text: 'Ведущие', href: '#'}, {text: 'Партнеры', href: '#'}, {text: 'Представительства', href: '#'}, {text: 'Лаборатория научных исследований коучинга', href: '#'}, {text: 'Новости', href: '#'}, {text: 'Отзывы слушателей', href: '#'}]}, {title: 'Направления', level2: [{text: 'Программы развития коучинговых компетенций',href: '#'}, {text: 'Развитие профессиональных коучей GV: Коучинг для организаций',href: '#'}, {text: 'Agile-коучинг',href: '#'}, {text: 'Современные подходы в образовании и воспитании',href: '#'}, {text: 'Индивидуальный коучинг',href: '#'}]}, {title: 'Процесс обучения', level2: [{text: 'Расписание',href: '#'}, {text: 'Очное обучение',href: '#'}, {text: 'Онлайн-обучение',href: '#'}, {text: 'Песочница',href: '#'}, {text: 'Практика+стажировки',href: '#'}, {text: 'Программа лояльности',href: '#'}, {text: 'Институт обратной связи',href: '#'}, {text: 'Фестиваль коучинга',href: '#'}, {text: 'Коуч-туры',href: '#'}, {text: 'Бесплатные мастер-классы, вебинары и лекции',href: '#'}, {text: 'Горячая линия',href: '#'}]}, {title: 'База знаний', level2: [{text: 'Коучинг в HR: инструкция по применению',href: '#'}, {text: 'Спецпроект. История коучинга в России: 1990 − 2020. Команды, люди, события.',href: '#'}, {text: 'О коучинге понятным языком: 15 статей',href: '#'}, {text: 'Онлайн-библиотека',href: '#'}, {text: 'Подкаст: «Хроники одного коуча»',href: '#'}]}]
+- 
+    const menuItems = [
+        { 
+            title: 'О центре', 
+            level2: [
+                { text: 'Миссия+ценности', href: '#' }, 
+                { text: 'История компании', href: '#' }, 
+                { text: 'Команда', href: '#' }, 
+                { text: 'Коучинговые компетенции', href: '#' }, 
+                { text: 'Членство в ICF', href: '#' }, 
+                { text: 'Ведущие', href: '#' },
+                { text: 'Партнеры', href: '#' }, 
+                { text: 'Представительства', href: '#' }, 
+                { text: 'Лаборатория научных исследований коучинга', href: '#' }, 
+                { text: 'Новости', href: '#' }, 
+                { text: 'Отзывы слушателей', href: '#' }
+            ]
+        }, 
+        {
+            title: 'Направления', 
+            level2: [
+                { 
+                    text: 'Программы развития коучинговых компетенций', 
+                    href: '#',
+                    level3: [
+                        {
+                            text: "Концепт коучинга",
+                            href: "#"
+                        },
+                        {
+                            text: "Полный курс коучинга",
+                            href: "#"
+                        },
+                        {
+                            text: "Уникальный код коуча",
+                            href: "#"
+                        }
+                    ]
+                }, 
+                { 
+                    text: 'Развитие профессиональных коучей', 
+                    href: '#',
+                    level3: [
+                        {
+                            text: "Международная программа подготовки супервизоров для коучей",
+                            href: "#"
+                        },
+                        {
+                            text: "Ментор для коучей ICF",
+                            href: "#"
+                        },
+                        {
+                            text: "Школа института обратной связи",
+                            href: "#"
+                        }
+                    ]
+                }, 
+                { 
+                    text: 'Agile-коучинг', 
+                    href: '#',
+                    level3: [
+                        {
+                            text: "Agile-коучинг",
+                            href: "#"
+                        }
+                    ]
+                }, 
+                { 
+                    text: 'Коучинг для организаций', 
+                    href: '#',
+                    level3: [
+                        {
+                            text: "Менторинг в бизнесе",
+                            href: "#"
+                        },
+                        {
+                            text: "Поддержка внутренних институтов коучинга",
+                            href: "#"
+                        },
+                        {
+                            text: "Фидбек-коучинг",
+                            href: "#"
+                        },
+                        {
+                            text: "Тренинг по переговорам",
+                            href: "#"
+                        },
+                        {
+                            text: "Коучинг в HR",
+                            href: "#"
+                        },
+                        {
+                            text: "Коучинг для лидеров",
+                            href: "#"
+                        },
+                        {
+                            text: "Мастерство командного коучинга",
+                            href: "#"
+                        }
+                    ]
+                }, 
+                { 
+                    text: 'Современные подходы в воспитании и образовании', 
+                    href: '#',
+                    level3: [
+                        {
+                            text: "Осознанное родительство",
+                            href: "#"
+                        },
+                        {
+                            text: "Коучинг для специалиство в сфере образованя",
+                            href: "#"
+                        }
+                    ]
+                }
+            ]
+        }, 
+        {
+            title: 'Процесс обучения', 
+            level2: [
+                { text: 'Расписание', href: '#' }, 
+                { text: 'Очное обучение', href: '#' }, 
+                { text: 'Онлайн-обучение', href: '#' }, 
+                { text: 'Песочница', href: '#' }, 
+                { text: 'Практика+стажировки', href: '#' }, 
+                { text: 'Программа лояльности', href: '#' }, 
+                { text: 'Институт обратной связи', href: '#' }, 
+                { text: 'Фестиваль коучинга', href: '#' }, 
+                { text: 'Коуч-туры', href: '#' }, 
+                { text: 'Бесплатные мастер-классы, вебинары и лекции', href: '#' }, 
+                { text: 'Горячая линия', href: '#' }
+            ]
+        }, 
+        {
+            title: 'База знаний', 
+            level2: [
+                { text: 'Коучинг в HR: инструкция по применению', href: '#' }, 
+                { text: 'Спецпроект. История коучинга в России: 1990 − 2020. Команды, люди, события.', href: '#' }, 
+                { text: 'О коучинге понятным языком: 15 статей', href: '#' }, 
+                { text: 'Онлайн-библиотека', href: '#' }, 
+                { text: 'Подкаст: «Хроники одного коуча»', href: '#' }
+            ]
+        }
+    ]
 
 input(type="checkbox" id="header__checkbox-dropdown").header__checkbox-dropdown
 input(type="checkbox" id="header__checkbox-hamburger").header__checkbox-hamburger
@@ -24,12 +167,14 @@ header.header
                         .header__mail-icon
                     a(href="tel:+78005513531").header__link.header__link--phone 8&nbsp;800&nbsp;551&#8209;35&#8209;31
             nav.header__row.header__row--navbar
-                    ul.header__navbar-list
-                        each menuItem in menuItems 
-                            li(data-elements=menuItem.level2).header__navbar-item.header__navbar-item--has-dropdown= menuItem.title
-                                span.header__dropdown-icon
-                    label(for="header__checkbox-dropdown").header__dropdown-backdrop
-                    .header__row.header__row--dropdown
-                        ul.header__dropdown-list
-                        .header__dropdown-search-container
-                            input(type="search" placeholder="Поиск").header__dropdown-search-input
+                ul.header__navbar-list
+                    each menuItem in menuItems 
+                        li(data-elements=menuItem.level2).header__navbar-item.header__navbar-item--has-dropdown= menuItem.title
+                            span.header__dropdown-icon
+                label(for="header__checkbox-dropdown").header__dropdown-backdrop
+                .header__row.header__row--dropdown
+                    ul.header__dropdown-list
+                    .header__backdrop.header__backdrop--level3
+                    ul.header__level3-list
+                    .header__dropdown-search-container
+                        input(type="search" placeholder="Поиск").header__dropdown-search-input

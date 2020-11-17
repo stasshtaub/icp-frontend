@@ -127,9 +127,6 @@
 
 			@include tablet {
 				display: flex;
-				position: absolute;
-				top: 0;
-				right: 0;
 				height: 100%;
 				background-color: $color-white;
 				max-height: 100%;
@@ -139,8 +136,12 @@
 			}
 
 			@include tablet-xs {
+				position: absolute;
+				top: 0;
+				right: 0;
 				z-index: 2;
 				transform: translateX(100%);
+				overflow: visible;
 			}
 
 			&::after {
@@ -298,6 +299,16 @@
 		width: 100vw;
 		height: 100vh;
 		opacity: 0;
+
+		&--level3 {
+			position: absolute;
+			background-color: $color-black;
+			opacity: 0.6;
+		}
+
+		&--show {
+			display: block;
+		}
 	}
 
 	&__checkbox-dropdown {
@@ -320,10 +331,6 @@
 
 				#{$p}__row--dropdown {
 					display: flex;
-
-					@include tablet {
-						transform: translateX(100%);
-					}
 
 					@include tablet-xs {
 						transform: none;
@@ -426,9 +433,14 @@
 		background-color: $color-white;
 		border-right: 1px solid $color-black-opacity10;
 		border-bottom: 1px solid $color-black-opacity10;
+
+		@include tablet {	
+			// max-width: 100%;
+			padding-right: 20px;
+		}
 	}
 
-	&__dropdown-link {
+	&__dropdown-link, &__dropdown-item-text {
 		display: flex;
 		height: 100%;
 		width: 100%;
@@ -444,16 +456,35 @@
 		}
 	}
 
+	&__dropdown-item-text {
+		pointer-events: none;
+	}
+
 	&__dropdown-list {
-		display: grid;
-		grid-auto-flow: column;
-		grid-template-rows: repeat(8, fit-content(1em));
 		margin-left: -45px;
 		border-left: 1px solid $color-black-opacity10;
 
 		@include tablet {
 			display: block;
 			margin-left: unset;
+		}
+	}
+
+	&__level3-list {
+		display: none;
+		border-left: 1px solid $color-black-opacity10;
+
+		@include tablet-xs {
+			position: absolute;
+			left: calc(100% - 100vw);
+			top: 0;
+			z-index: 2;
+			height: 100%;
+			background: $color-white;
+		}
+
+		&--show {
+			display: block;
 		}
 	}
 
