@@ -81,7 +81,7 @@
 
 	&__modules {
 		flex-grow: 1;
-		flex-shrink: 1;
+		flex-shrink: 2;
 		margin: -25px 0;
 
 		@include beetween-laptop-and-tablet {
@@ -119,8 +119,9 @@
 	&__module-title {
 		position: relative;
 		flex-basis: 330px;
-		flex-shrink: 0;
+		flex-shrink: 1;
 		align-self: flex-start;
+		margin-right: 20px;
 		cursor: pointer;
 
 		&::before {
@@ -304,11 +305,18 @@
 			margin-right: vw(35px);
 		}
 
+		@include beetween-tablet-and-mobile {
+			margin-right: 2vw;
+			width: 13vw;
+			flex-shrink: 0;
+		}
+
 		@include mobile-l {
 			margin-right: unset;
 			flex-shrink: 0;
 		}
 	}
+
 
 	&__days {
 		margin: -10px 0;
@@ -349,25 +357,16 @@
 
 	&__day-text {
 		display: inline-block;
-		white-space: nowrap;
 
 		&--italic {
 			font-style: italic;
-		}
-
-		@include beetween-tablet-s1-and-mobile {
-			min-width: vw(300px, 630px);
-		}
-
-		@include mobile-l {
-			white-space: normal;
 		}
 	}
 
 	&__info {
 		margin-left: 30px;
 		flex-basis: 320px;
-		flex-shrink: 1;
+		flex-shrink: 3;
 
 		@include beetween-laptop-and-tablet {
 			margin-left: vw(30px);
