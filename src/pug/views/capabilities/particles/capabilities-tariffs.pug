@@ -36,6 +36,21 @@ section.capabilities-tariffs
                             price: "180 500 ₽",
                             payFormat: "единовременный платеж",
                             modularPay: true
+                        },
+                        {
+                            name: "Пакет \"Практик\"",
+                            description: "На 2 модуль можно поступить только после успешного прохождения 1 модуля или если вы действующий скрам-мастер, agile-коуч, после прохождения курса \"Концепт коучинга\".",
+                            elements: [
+                                "125 часов обучения",
+                                "личный кабинет со всеми материалами курса",
+                                "доступ в закрытую группу в facebook",
+                                "2 устные + 3 письменные наблюдаемые сессии",
+                                "3 часа группового менторинга + 7,5 дополнительных часов группового и индивидуального менторинга",
+                                "международный сертификат ACSTH ICF"
+                            ],
+                            price: "50 000 ₽",
+                            payFormat: "единовременный платеж",
+                            modularPay: true
                         }
                     ]
                 ul.capabilities-tariffs__list
@@ -44,8 +59,8 @@ section.capabilities-tariffs
                             .capabilities-tariffs__col.capabilities-tariffs__col--num
                                 p.capabilities-tariffs__num(class=`${tariff.isVip ? "capabilities-tariffs__num--vip" : ""}`)= i+1
                             .capabilities-tariffs__col.capabilities-tariffs__col--info
-                                p.capabilities-tariffs__name(class=`${tariff.isVip ? "capabilities-tariffs__name--vip" : ""}`)= tariff.name
-                                p.capabilities-tariffs__description= tariff.description
+                                p.capabilities-tariffs__name(class=`${tariff.isVip ? "capabilities-tariffs__name--vip" : ""}`) !{tariff.name}
+                                p.capabilities-tariffs__description !{tariff.description}
                                 ul.capabilities-tariffs__elements
                                     each element in tariff.elements
                                         li.capabilities-tariffs__element= element

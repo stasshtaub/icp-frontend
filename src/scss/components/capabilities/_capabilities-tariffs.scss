@@ -11,16 +11,16 @@
 			padding: 70px 40px;
 			flex-basis: 50%;
 		}
+			
+		@include beetween-laptop-and-mobile {
+			max-width: 50%;
+		}
 
 		@include mobile-l {
 			padding: 27px 0 !important;
 		}
 
 		& + & {
-			@include beetween-laptop-and-mobile {
-				border-left: 1px solid $color-black-opacity05;
-			}
-
 			@include mobile-l {
 				position: relative;
 			}
@@ -31,8 +31,6 @@
 					height: 1px;
 					background-color: $color-black-opacity05;
 					position: absolute;
-					left: -webkit-calc(50% - 50vw);
-					left: -moz-calc(50% - 50vw);
 					left: calc(50% - 50vw);
 					width: 100vw;
 					top: 0;
@@ -46,23 +44,60 @@
 			}
 
 			@include beetween-laptop-and-tablet {
-				flex-basis: calc(50% + 26px);
+				flex-basis: calc(50vw - 29px);
 				flex-shrink: 0;
 			}
 
 			@include tablet {
 				padding: vw(30px, 768px) 0 vw(30px, 768px) vw(30px, 768px);
 			}
+			
+			@include beetween-laptop-and-mobile {
+				border-left: 1px solid $color-black-opacity05;
+			}
 		}
 
 		&:nth-child(odd) {
+			position: relative;
+
 			@include beetween-laptop-and-tablet {
-				flex-basis: unset;
+				flex-basis: calc(50vw - 81px);
 				flex-shrink: 1;
 			}
 
 			@include tablet {
 				padding: vw(30px, 768px) vw(30px, 768px) vw(30px, 768px) 0;
+			}
+
+			&:last-child {
+				@include beetween-laptop-and-mobile {
+					flex-basis: 100%;
+					max-width: unset;
+				}
+			}
+
+			&:not(:first-child):before {
+				@include beetween-laptop-and-mobile {
+					content:  "";
+					position: absolute;
+					display: block;
+					width: calc(100% + 29px);
+					height: 1px;
+					background-color: $color-black-opacity05;
+					left: 0;
+					top: 0;
+				}
+
+				@include tablet {
+					width: 100vw;
+					left: calc(50% - 50vw);			
+				}
+			}
+
+			&:not(:first-child):not(:last-child):before {
+				@include tablet {
+					left: calc(100% - 50vw);			
+				}
 			}
 		}
 	}
@@ -305,6 +340,7 @@
 	&__list {
 		@include laptop {
 			display: flex;
+			flex-wrap: wrap;
 		}
 
 		@include tablet {
