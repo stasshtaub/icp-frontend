@@ -63,14 +63,6 @@
 		// фикс обрезки видео
 		transform: translate3d(0,0,0);
 
-		@include desktop {
-			height: unset;
-		}
-
-		@include tablet {
-			height: 100%;
-		}
-
 		&::after {
 			content: "";
 			position: absolute;
