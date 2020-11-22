@@ -1,0 +1,95 @@
+- 
+    const news = [
+        {
+            img: "https://via.placeholder.com/315x218",
+            title: "Международной Федерации коучинга ICF — 25 лет.",
+            description: "В этом юбилейном для ICF году праздник российского подразделения!<br>1 сентября ICF Russia Chapter исполнилось 15 лет!",
+            date: "1 сентября"
+        },
+        {
+            img: "https://via.placeholder.com/315x186",
+            title: "Изменения в ICP Centre",
+            description: "Это очень важный пост о больших переменах. Он касается каждого, кому интересна не только история ICP Centre, но и российского коучинга в целом. ",
+            date: "30  августа"
+        },
+        {
+            img: "https://via.placeholder.com/315x218",
+            title: "ICP Centre Объединяет мир, весна 2020",
+            description: "Один раз в год мы делаем сверку количества стран, в которых живут наши студенты и выпускники.<br>Год назад насчитывалось 27 стран, в этом году на 11 страны больше! ",
+            date: "30  августа"
+        },
+        {
+            img: "https://via.placeholder.com/315x218",
+            title: "ICP Centre Объединяет мир, весна 2020",
+            description: "Один раз в год мы делаем сверку количества стран, в которых живут наши студенты и выпускники.<br>Год назад насчитывалось 27 стран, в этом году на 11 страны больше! ",
+            date: "30  августа"
+        },
+        {
+            img: "https://via.placeholder.com/315x218",
+            title: "Международной Федерации коучинга ICF — 25 лет.",
+            description: "В этом юбилейном для ICF году праздник российского подразделения!<br>1 сентября ICF Russia Chapter исполнилось 15 лет!",
+            date: "1 сентября"
+        },
+        {
+            img: "https://via.placeholder.com/315x186",
+            title: "Изменения в ICP Centre",
+            description: "Это очень важный пост о больших переменах. Он касается каждого, кому интересна не только история ICP Centre, но и российского коучинга в целом. ",
+            date: "30  августа"
+        },
+        {
+            img: "https://via.placeholder.com/315x218",
+            title: "ICP Centre Объединяет мир, весна 2020",
+            description: "Один раз в год мы делаем сверку количества стран, в которых живут наши студенты и выпускники.<br>Год назад насчитывалось 27 стран, в этом году на 11 страны больше! ",
+            date: "30  августа"
+        },
+        {
+            img: "https://via.placeholder.com/315x218",
+            title: "ICP Centre Объединяет мир, весна 2020",
+            description: "Один раз в год мы делаем сверку количества стран, в которых живут наши студенты и выпускники.<br>Год назад насчитывалось 27 стран, в этом году на 11 страны больше! ",
+            date: "30  августа"
+        },
+        {
+            img: "https://via.placeholder.com/315x218",
+            title: "Международной Федерации коучинга ICF — 25 лет.",
+            description: "В этом юбилейном для ICF году праздник российского подразделения!<br>1 сентября ICF Russia Chapter исполнилось 15 лет!",
+            date: "1 сентября"
+        },
+        {
+            img: "https://via.placeholder.com/315x186",
+            title: "Изменения в ICP Centre",
+            description: "Это очень важный пост о больших переменах. Он касается каждого, кому интересна не только история ICP Centre, но и российского коучинга в целом. ",
+            date: "30  августа"
+        },
+        {
+            img: "https://via.placeholder.com/315x218",
+            title: "ICP Centre Объединяет мир, весна 2020",
+            description: "Один раз в год мы делаем сверку количества стран, в которых живут наши студенты и выпускники.<br>Год назад насчитывалось 27 стран, в этом году на 11 страны больше! ",
+            date: "30  августа"
+        },
+        {
+            img: "https://via.placeholder.com/315x218",
+            title: "ICP Centre Объединяет мир, весна 2020",
+            description: "Один раз в год мы делаем сверку количества стран, в которых живут наши студенты и выпускники.<br>Год назад насчитывалось 27 стран, в этом году на 11 страны больше! ",
+            date: "30  августа"
+        }
+    ]
+section.about-news
+    .container
+        .about-news__double-block.double-block
+            aside.double-block__aside
+                h3.double-block__title Новости
+            .about-news__content.double-block__content.double-block__content--narrow
+                .about-news__slider.swiper-container
+                    ul.about-news__slides.swiper-wrapper
+                        each slide in news
+                            li.about-news__slide.swiper-slide
+                                .about-news__card
+                                    img(src=slide.img alt=slide.title).about-news__img
+                                    p.about-news__title= slide.title
+                                    p.about-news__description !{slide.description}
+                                    p.about-news__date= slide.date
+                        li.about-news__slide.about-news__slide--loader.swiper-slide
+                            .about-news__card.about-news__card--loader
+                                img(src="images/sprite.svg#loader" alt="loading...").about-news__loader-img
+                    .about-news__next-mask
+                        button.about-news__next-btn >
