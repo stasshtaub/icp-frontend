@@ -1,0 +1,11 @@
+.about-development {
+    margin-top: 200px;
+
+    @include laptop {
+        margin-top: 150px;
+    } 
+
+    @include tablet {
+        margin-top: 100px;
+    } 
+}

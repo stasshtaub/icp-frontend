@@ -1,0 +1,20 @@
+.about-title {
+    @include tablet-xs {
+        $img-width: 100px;
+
+        display: flex;
+        align-items: center;
+        height: $img-width;
+        margin-top: calc(-#{$img-width} - 30px);
+        margin-left: calc(#{$img-width} + 20px);
+    
+        &__img {
+            width: $img-width;
+            margin-right: auto;
+        }
+
+        br {
+            display: none;
+        }
+    }
+}
