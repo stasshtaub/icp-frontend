@@ -1,0 +1,44 @@
+.row {
+    display: flex;
+    margin: -15px;
+
+    &--tablet-column {
+        @include tablet {
+            flex-direction: column;
+        }
+    }
+
+    &--xs-column {
+        @include tablet-xs {
+            flex-direction: column;
+        }
+    }
+
+    &__col {
+        padding: 15px;
+
+        &--md-3 {
+            flex: 0 0 25%;
+        }
+
+        &--md-4 {
+            flex: 0 0 33.3333333%;
+        }
+
+        &--md-6 {
+            flex: 0 0 50%;            
+        }
+
+        &--centered {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        &--xs-order-2 {
+            @include tablet-xs {
+                order: 2;
+            }
+        }
+    }
+}

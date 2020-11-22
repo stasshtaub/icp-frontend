@@ -26,11 +26,26 @@
         }
 
         @include tablet {
-            font-size: 24px;
+            font-size: 22px;
         }
 
         @include mobile-l {
             font-size: 20px;
+            line-height: 150%;
+        }
+
+        &--bold {
+            font-weight: 500;
+        }
+	}
+    
+	&--s {
+        font-size: 20px;
+        line-height: 150%;
+
+        @include mobile-l {
+            font-size: 18px;
+            line-height: 160%;
         }
 	}
 }

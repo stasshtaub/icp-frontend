@@ -1,0 +1,11 @@
+.about-training {
+    margin-top: 160px;
+
+    @include laptop {
+        margin-top: 130px;
+    } 
+
+    @include tablet {
+        margin-top: 100px;
+    } 
+}
