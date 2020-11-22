@@ -3,6 +3,7 @@ extends ../../layouts/default
 block styles
     link(rel="stylesheet" href!=`${baseDir}css/main.css?v=${Date.now()}`)
     link(rel="stylesheet" href!=`${baseDir}css/about.css?v=${Date.now()}`)
+    link(rel="stylesheet" href!="https://unpkg.com/swiper@6.3.2/swiper-bundle.min.css")
 block content
     .about
         include particles/about-start
@@ -11,6 +12,9 @@ block content
         include particles/about-lifelong
         include particles/about-online
         include particles/about-ecosystem
+        include particles/about-reviews
        
 block scripts
     script(src!=`${baseDir}js/common.js?v=${Date.now()}`)
+    script(defer src!="https://unpkg.com/swiper/swiper-bundle.min.js")
+    script(defer src!=`${baseDir}js/about.js?v=${Date.now()}`)

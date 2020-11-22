@@ -4,7 +4,8 @@ module.exports = {
 	entry: {
 		common: "./src/js/common",
 		home: "./src/js/home",
-		capabilities: "./src/js/capabilities"
+		capabilities: "./src/js/capabilities",
+		about: "./src/js/about"
 	},
 	module: {
 		rules: [
