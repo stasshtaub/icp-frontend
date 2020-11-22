@@ -14,6 +14,10 @@
         }
     }
 
+    &--justify-center {
+        justify-content: center;
+    }
+
     &__col {
         padding: 30px 30px 0 0;
 
@@ -31,6 +35,16 @@
 
         &--md-8 {
             flex: 0 0 66.6666667%;            
+        }
+
+        &--md-10 {
+            flex: 0 0 83.3333333%;            
+        }
+
+        &--tablet-12 {
+            @include tablet {
+                flex: 0 0 100%;
+            }
         }
 
         &--centered {

@@ -1,0 +1,32 @@
+.about-online {
+    margin-top: 200px;
+
+    @include laptop {
+        margin-top: 150px;
+    } 
+
+    @include tablet {
+        margin-top: 100px;
+    }
+
+    &__title {
+        position: relative;
+
+        &::after {
+            content: "";
+            position: absolute;
+            display: inline-block;
+            width: 9px;
+            height: 9px;
+            border-radius: 50%;
+            background-color: $color-blue;
+            top: 6px;
+            margin-left: 2px;
+
+            @include mobile-l {
+                width: 7px;
+                height: 7px;
+            }
+        }
+    }
+}
