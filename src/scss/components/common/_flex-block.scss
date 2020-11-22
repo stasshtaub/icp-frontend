@@ -1,0 +1,16 @@
+.flex-block {
+    display: flex;
+    margin: -15px;
+
+    @include tablet {
+        flex-direction: column;
+    }
+
+    &__col {
+        padding: 15px;
+
+        &--md-3 {
+            flex: 0 0 25%;
+        }
+    }
+}

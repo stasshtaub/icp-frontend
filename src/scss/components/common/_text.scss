@@ -1,0 +1,36 @@
+.text {
+	&--l {
+        font-weight: 500;
+        font-size: 50px;
+        line-height: 110%;
+
+        @include laptop {
+            font-size: 45px;
+        }
+
+        @include tablet {
+            font-size: 40px;
+        }
+
+        @include mobile-l {
+            font-size: 30px;
+        }
+    }
+    
+	&--m {
+        font-size: 30px;
+        line-height: 123.333333%;
+
+        @include laptop {
+            font-size: 26px;
+        }
+
+        @include tablet {
+            font-size: 24px;
+        }
+
+        @include mobile-l {
+            font-size: 20px;
+        }
+	}
+}

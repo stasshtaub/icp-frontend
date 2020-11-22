@@ -1,0 +1,12 @@
+@import "../utils/variables";
+@import "../utils/breakpoints";
+@import "../utils/helpers";
+
+@import "../components/common/flex-block";
+@import "../components/common/text";
+@import "../components/common/slider";
+@import "../components/common/double-block";
+
+.about {
+    padding: 240px 0 100px 0;
+}

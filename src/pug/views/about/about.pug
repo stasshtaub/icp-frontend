@@ -1,0 +1,11 @@
+extends ../../layouts/default
+
+block styles
+    link(rel="stylesheet" href!=`${baseDir}css/main.css?v=${Date.now()}`)
+    link(rel="stylesheet" href!=`${baseDir}css/about.css?v=${Date.now()}`)
+block content
+    .about
+        include particles/about-start
+       
+block scripts
+    script(src!=`${baseDir}js/common.js?v=${Date.now()}`)
