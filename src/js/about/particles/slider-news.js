@@ -5,7 +5,7 @@
 	let loading = false;
 
 	const loadNews = async () => {
-		const response = await fetch(`http://jsonplaceholder.typicode.com/photos?_start=${lastId}&_limit=${limit}`);
+		const response = await fetch(`https://jsonplaceholder.typicode.com/photos?_start=${lastId}&_limit=${limit}`);
 		return await response.json();
 	};
 
