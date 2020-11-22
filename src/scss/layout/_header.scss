@@ -11,6 +11,16 @@
 		background-color: $color-white;
 	}
 
+	&--dark {
+		* {
+			color: $color-gray;
+		}
+		
+		#{$p}__logo {
+			filter: none;
+		}
+	}
+
 	&__container {
 		@include mobile-l {
 			padding: 0;
