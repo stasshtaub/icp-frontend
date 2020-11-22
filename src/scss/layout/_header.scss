@@ -13,7 +13,11 @@
 
 	&--dark {
 		* {
-			color: $color-gray;
+			color: $color-gray !important;
+		}
+
+		#{$p}__dropdown-icon {
+			background: url(../images/svg/icon-arrow-down-gray.svg) no-repeat 50% !important;
 		}
 		
 		#{$p}__logo {
