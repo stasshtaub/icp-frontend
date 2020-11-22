@@ -33,10 +33,6 @@
             font-size: 20px;
             line-height: 150%;
         }
-
-        &--bold {
-            font-weight: 500;
-        }
 	}
     
 	&--s {
@@ -48,4 +44,8 @@
             line-height: 160%;
         }
 	}
+
+    &--bold {
+        font-weight: 500;
+    }
 }
