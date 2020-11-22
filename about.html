@@ -1,0 +1,402 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width">
+    <link rel="stylesheet" href="./css/main.css?v=1606084772710">
+    <link rel="stylesheet" href="./css/about.css?v=1606084772710">
+    <link rel="stylesheet" href="https://unpkg.com/swiper@6.3.2/swiper-bundle.min.css">
+  </head>
+  <body>
+    <input class="header__checkbox-dropdown" type="checkbox" id="header__checkbox-dropdown">
+    <input class="header__checkbox-hamburger" type="checkbox" id="header__checkbox-hamburger">
+    <header class="header">
+      <div class="container header__container">
+        <div class="header__content">
+          <label class="header__backdrop header__backdrop--hamburger" for="header__checkbox-hamburger"></label>
+          <label class="header__backdrop header__backdrop--dropdown" for="header__checkbox-dropdown"></label>
+          <div class="header__row header__row--panel">
+            <div class="header__wrapper header__wrapper--hamburger">
+              <div class="header__hamburger">
+                <label class="header__hamburger-icon" for="header__checkbox-hamburger"></label>
+              </div>
+            </div>
+            <div class="header__wrapper header__wrapper--general"><a href="/"><img class="header__logo" src="images/svg/logo.svg"></a>
+              <p class="header__title">Один из крупнейших в Европе международных<br> центров обуения с сертификацией ICF</p>
+            </div>
+            <div class="header__wrapper header__wrapper--contacts"><a class="header__link header__link--mail" href="mailto:info@icpcentre.org"><span class="header__mail-text">info@icpcentre.org</span>
+                <div class="header__mail-icon"></div></a><a class="header__link header__link--phone" href="tel:+78005513531">8&nbsp;800&nbsp;551&#8209;35&#8209;31</a></div>
+          </div>
+          <nav class="header__row header__row--navbar">
+            <ul class="header__navbar-list">
+              <li class="header__navbar-item header__navbar-item--has-dropdown" data-elements="[{&quot;text&quot;:&quot;Миссия+ценности&quot;,&quot;href&quot;:&quot;#&quot;},{&quot;text&quot;:&quot;История компании&quot;,&quot;href&quot;:&quot;#&quot;},{&quot;text&quot;:&quot;Команда&quot;,&quot;href&quot;:&quot;#&quot;},{&quot;text&quot;:&quot;Коучинговые компетенции&quot;,&quot;href&quot;:&quot;#&quot;},{&quot;text&quot;:&quot;Членство в ICF&quot;,&quot;href&quot;:&quot;#&quot;},{&quot;text&quot;:&quot;Ведущие&quot;,&quot;href&quot;:&quot;#&quot;},{&quot;text&quot;:&quot;Партнеры&quot;,&quot;href&quot;:&quot;#&quot;},{&quot;text&quot;:&quot;Представительства&quot;,&quot;href&quot;:&quot;#&quot;},{&quot;text&quot;:&quot;Лаборатория научных исследований коучинга&quot;,&quot;href&quot;:&quot;#&quot;},{&quot;text&quot;:&quot;Новости&quot;,&quot;href&quot;:&quot;#&quot;},{&quot;text&quot;:&quot;Отзывы слушателей&quot;,&quot;href&quot;:&quot;#&quot;}]">О центре<span class="header__dropdown-icon"></span></li>
+              <li class="header__navbar-item header__navbar-item--has-dropdown" data-elements="[{&quot;text&quot;:&quot;Программы развития коучинговых компетенций&quot;,&quot;href&quot;:&quot;#&quot;,&quot;level3&quot;:[{&quot;text&quot;:&quot;Концепт коучинга&quot;,&quot;href&quot;:&quot;#&quot;},{&quot;text&quot;:&quot;Полный курс коучинга&quot;,&quot;href&quot;:&quot;#&quot;},{&quot;text&quot;:&quot;Уникальный код коуча&quot;,&quot;href&quot;:&quot;#&quot;}]},{&quot;text&quot;:&quot;Развитие профессиональных коучей&quot;,&quot;href&quot;:&quot;#&quot;,&quot;level3&quot;:[{&quot;text&quot;:&quot;Международная программа подготовки супервизоров для коучей&quot;,&quot;href&quot;:&quot;#&quot;},{&quot;text&quot;:&quot;Ментор для коучей ICF&quot;,&quot;href&quot;:&quot;#&quot;},{&quot;text&quot;:&quot;Школа института обратной связи&quot;,&quot;href&quot;:&quot;#&quot;}]},{&quot;text&quot;:&quot;Agile-коучинг&quot;,&quot;href&quot;:&quot;#&quot;,&quot;level3&quot;:[{&quot;text&quot;:&quot;Agile-коучинг&quot;,&quot;href&quot;:&quot;#&quot;}]},{&quot;text&quot;:&quot;Коучинг для организаций&quot;,&quot;href&quot;:&quot;#&quot;,&quot;level3&quot;:[{&quot;text&quot;:&quot;Менторинг в бизнесе&quot;,&quot;href&quot;:&quot;#&quot;},{&quot;text&quot;:&quot;Поддержка внутренних институтов коучинга&quot;,&quot;href&quot;:&quot;#&quot;},{&quot;text&quot;:&quot;Фидбек-коучинг&quot;,&quot;href&quot;:&quot;#&quot;},{&quot;text&quot;:&quot;Тренинг по переговорам&quot;,&quot;href&quot;:&quot;#&quot;},{&quot;text&quot;:&quot;Коучинг в HR&quot;,&quot;href&quot;:&quot;#&quot;},{&quot;text&quot;:&quot;Коучинг для лидеров&quot;,&quot;href&quot;:&quot;#&quot;},{&quot;text&quot;:&quot;Мастерство командного коучинга&quot;,&quot;href&quot;:&quot;#&quot;}]},{&quot;text&quot;:&quot;Современные подходы в воспитании и образовании&quot;,&quot;href&quot;:&quot;#&quot;,&quot;level3&quot;:[{&quot;text&quot;:&quot;Осознанное родительство&quot;,&quot;href&quot;:&quot;#&quot;},{&quot;text&quot;:&quot;Коучинг для специалиство в сфере образованя&quot;,&quot;href&quot;:&quot;#&quot;}]}]">Направления<span class="header__dropdown-icon"></span></li>
+              <li class="header__navbar-item header__navbar-item--has-dropdown" data-elements="[{&quot;text&quot;:&quot;Расписание&quot;,&quot;href&quot;:&quot;#&quot;},{&quot;text&quot;:&quot;Очное обучение&quot;,&quot;href&quot;:&quot;#&quot;},{&quot;text&quot;:&quot;Онлайн-обучение&quot;,&quot;href&quot;:&quot;#&quot;},{&quot;text&quot;:&quot;Песочница&quot;,&quot;href&quot;:&quot;#&quot;},{&quot;text&quot;:&quot;Практика+стажировки&quot;,&quot;href&quot;:&quot;#&quot;},{&quot;text&quot;:&quot;Программа лояльности&quot;,&quot;href&quot;:&quot;#&quot;},{&quot;text&quot;:&quot;Институт обратной связи&quot;,&quot;href&quot;:&quot;#&quot;},{&quot;text&quot;:&quot;Фестиваль коучинга&quot;,&quot;href&quot;:&quot;#&quot;},{&quot;text&quot;:&quot;Коуч-туры&quot;,&quot;href&quot;:&quot;#&quot;},{&quot;text&quot;:&quot;Бесплатные мастер-классы, вебинары и лекции&quot;,&quot;href&quot;:&quot;#&quot;},{&quot;text&quot;:&quot;Горячая линия&quot;,&quot;href&quot;:&quot;#&quot;}]">Процесс обучения<span class="header__dropdown-icon"></span></li>
+              <li class="header__navbar-item header__navbar-item--has-dropdown" data-elements="[{&quot;text&quot;:&quot;Коучинг в HR: инструкция по применению&quot;,&quot;href&quot;:&quot;#&quot;},{&quot;text&quot;:&quot;Спецпроект. История коучинга в России: 1990 − 2020. Команды, люди, события.&quot;,&quot;href&quot;:&quot;#&quot;},{&quot;text&quot;:&quot;О коучинге понятным языком: 15 статей&quot;,&quot;href&quot;:&quot;#&quot;},{&quot;text&quot;:&quot;Онлайн-библиотека&quot;,&quot;href&quot;:&quot;#&quot;},{&quot;text&quot;:&quot;Подкаст: «Хроники одного коуча»&quot;,&quot;href&quot;:&quot;#&quot;}]">База знаний<span class="header__dropdown-icon"></span></li>
+            </ul>
+            <label class="header__dropdown-backdrop" for="header__checkbox-dropdown"></label>
+            <div class="header__row header__row--dropdown">
+              <ul class="header__dropdown-list"></ul>
+              <div class="header__backdrop header__backdrop--level3"></div>
+              <ul class="header__level3-list"></ul>
+              <div class="header__dropdown-search-container">
+                <input class="header__dropdown-search-input" type="search" placeholder="Поиск">
+              </div>
+            </div>
+          </nav>
+        </div>
+      </div>
+    </header>
+    <main>
+      <div class="container"><a href="/"><img class="logo-duplicate" src="images/svg/logo.svg"></a></div>
+      <div class="about">
+        <section class="about-start">
+          <div class="container">
+            <div class="row row--tablet-column">
+              <div class="row__col row__col--md-3">
+                <h1 class="text text--l">О&nbsp;центре</h1>
+              </div>
+              <div class="row__col">
+                <p class="text text--m">ICP Centre — один из крупнейших в Восточной Европе центров развития, изучения и популяризации коучинговых компетенций. Масштабный проект от команды сертифицированных российских коучей, в том числе лидеров Северо-Западного бранча ICF Russia.<br><br>Программы Центра ориентированы на обучение гибким гибридным подходам в управлении, на профессиональное и персональное развитие. </p>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section class="about-training">
+          <div class="container">
+            <div class="row row--xs-column">
+              <div class="row__col row__col--xs-order-2">
+                <h2 class="text text--m text--bold mb-30 about-title">Обучение коучей</h2>
+                <p class="text text--s">Компания была основана в 2015 году как центр обучения профессиональному коучингу. ICP Centre попал в число первых официальных российских провайдеров, помогающих подготовиться к сертификации ICF — вплоть до уровня MCC.<br><br>Основа этого направления — большая авторская программа «Полный курс коучинга». Со временем были открыты школы профессиональных фидбек-коучей, менторов и супервизоров и внутренний институт обратной связи. Сегодня Центр помогает развитию коучей любого уровня подготовки.</p>
+              </div>
+              <div class="row__col row__col--md-4 row__col--centered"><img class="about-icon about-title__img" src="images/sprite.svg#about-training" alt="Обучение коучей"></div>
+            </div>
+          </div>
+        </section>
+        <section class="about-development">
+          <div class="container">
+            <div class="row row--xs-column">
+              <div class="row__col row__col--md-4 row__col--centered"><img class="about-icon about-title__img" src="images/sprite.svg#about-development" alt="Обучение коучей"></div>
+              <div class="row__col">
+                <h2 class="text text--m text--bold mb-30 about-title">Программы развития компаний<br>и персонального развития</h2>
+                <p class="text text--s">Программы центра разбиты на 6 направлений обучения, включая коучинг для организаций и бизнес-лидеров, agile-коучинг, программы развития для специалистов в сфере образования и несколько универсальных программ развития коучинговых компетенций для широкой аудитории. </p><a class="text text--s text--link mt-30" href="#">Все программы ICP Centre</a>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section class="about-lifelong">
+          <div class="container">
+            <p class="text text--xs text--bold">Парадигма lifelong-learning</p>
+            <h2 class="about-lifelong__title text text--xl">lifelong—learning</h2>
+            <div class="mt-30">
+              <div class="row row--xs-column">
+                <div class="row__col row__col--md-6">
+                  <p class="text text--s">К осени 2020 года Центр окончательно сформировался как lifelong-learning платформа со многими точками входа для практически любого человека с любым запросом на развитиеи персональную или профессиональную эволюцию. <br><br>ICP Centre пошел дальше других крупных игроков рынка — проект концептуально выстроен вокруг стандартов не только ICF, но и EMCC, ICAgile и профессионального этического кодекса.</p>
+                </div>
+                <div class="row__col row__col--md-6">
+                  <p class="text text--s">Все программы и продукты Центра, ролевая и бизнес-модель команды основаны на трех ключевых принципах — профессионализм, содействие эволюции и человечность. <br><br>Каждый из членов команды выступает амбассадором коучинговых компетенций. Каждый студент на время обучения погружается в цельную среду, наблюдая, как работают люди, команды и бизнесы, построенные на коучинговой модели мышления.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section class="about-online">
+          <div class="container">
+            <div class="row">
+              <div class="row__col row__col--md-10 row__col--tablet-12 mx-auto">
+                <h2 class="about-online__title text text--m text--bold">Онлайн-обучение</h2>
+                <p class="text text--s mt-30">ICP Centre задумывался в первую очередь как центр дистанционного обучения коучингу. Команда проекта — это специалисты из нескольких десятков городов. Поэтому онлайн-инструменты интегрированы во все процессы и саму среду обучения. Это позволило Центру быстро вырасти до международного уровня — сегодня ICP Centre работает с русскоязычным пространством 32 стран. При этом все программы доступны очно для студентов в городах присутствия компании — Санкт-Петербурге, Москве и Екатеринбурге.</p><a class="text text--s text--link mt-30" href="#">Все представительства ICP Centre</a>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section class="about-ecosystem">
+          <div class="container">
+            <div class="row">
+              <div class="row__col row__col--md-10 row__col--tablet-12 mx-auto">
+                <div class="row row--xs-column">
+                  <div class="row__col row__col--md-4"><img class="about-icon about-title__img" src="images/sprite.svg#about-ecosystem" alt="Экосистема"></div>
+                  <div class="row__col">
+                    <h2 class="text text--m text--bold mb-30 about-title">Экосистема</h2>
+                    <p class="text text--s">ICP Centre инициирует научные коллаборации со специалистами в сфере нейронаук, психологии, социологии и образования, выпускает книги, организует открытые публичные мероприятия и занимается популяризацией профессионального коучинга.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section class="about-news">
+          <div class="container">
+            <div class="about-news__double-block double-block">
+              <aside class="double-block__aside">
+                <h3 class="double-block__title">Новости</h3>
+              </aside>
+              <div class="about-news__content double-block__content double-block__content--narrow">
+                <div class="about-news__slider swiper-container">
+                  <ul class="about-news__slides swiper-wrapper">
+                    <li class="about-news__slide swiper-slide">
+                      <div class="about-news__card"><img class="about-news__img" src="https://via.placeholder.com/315x218" alt="Международной Федерации коучинга ICF — 25 лет.">
+                        <p class="about-news__title">Международной Федерации коучинга ICF — 25 лет.</p>
+                        <p class="about-news__description">В этом юбилейном для ICF году праздник российского подразделения!<br>1 сентября ICF Russia Chapter исполнилось 15 лет!</p>
+                        <p class="about-news__date">1 сентября</p>
+                      </div>
+                    </li>
+                    <li class="about-news__slide swiper-slide">
+                      <div class="about-news__card"><img class="about-news__img" src="https://via.placeholder.com/315x186" alt="Изменения в ICP Centre">
+                        <p class="about-news__title">Изменения в ICP Centre</p>
+                        <p class="about-news__description">Это очень важный пост о больших переменах. Он касается каждого, кому интересна не только история ICP Centre, но и российского коучинга в целом. </p>
+                        <p class="about-news__date">30  августа</p>
+                      </div>
+                    </li>
+                    <li class="about-news__slide swiper-slide">
+                      <div class="about-news__card"><img class="about-news__img" src="https://via.placeholder.com/315x218" alt="ICP Centre Объединяет мир, весна 2020">
+                        <p class="about-news__title">ICP Centre Объединяет мир, весна 2020</p>
+                        <p class="about-news__description">Один раз в год мы делаем сверку количества стран, в которых живут наши студенты и выпускники.<br>Год назад насчитывалось 27 стран, в этом году на 11 страны больше! </p>
+                        <p class="about-news__date">30  августа</p>
+                      </div>
+                    </li>
+                    <li class="about-news__slide swiper-slide">
+                      <div class="about-news__card"><img class="about-news__img" src="https://via.placeholder.com/315x218" alt="ICP Centre Объединяет мир, весна 2020">
+                        <p class="about-news__title">ICP Centre Объединяет мир, весна 2020</p>
+                        <p class="about-news__description">Один раз в год мы делаем сверку количества стран, в которых живут наши студенты и выпускники.<br>Год назад насчитывалось 27 стран, в этом году на 11 страны больше! </p>
+                        <p class="about-news__date">30  августа</p>
+                      </div>
+                    </li>
+                    <li class="about-news__slide swiper-slide">
+                      <div class="about-news__card"><img class="about-news__img" src="https://via.placeholder.com/315x218" alt="Международной Федерации коучинга ICF — 25 лет.">
+                        <p class="about-news__title">Международной Федерации коучинга ICF — 25 лет.</p>
+                        <p class="about-news__description">В этом юбилейном для ICF году праздник российского подразделения!<br>1 сентября ICF Russia Chapter исполнилось 15 лет!</p>
+                        <p class="about-news__date">1 сентября</p>
+                      </div>
+                    </li>
+                    <li class="about-news__slide swiper-slide">
+                      <div class="about-news__card"><img class="about-news__img" src="https://via.placeholder.com/315x186" alt="Изменения в ICP Centre">
+                        <p class="about-news__title">Изменения в ICP Centre</p>
+                        <p class="about-news__description">Это очень важный пост о больших переменах. Он касается каждого, кому интересна не только история ICP Centre, но и российского коучинга в целом. </p>
+                        <p class="about-news__date">30  августа</p>
+                      </div>
+                    </li>
+                    <li class="about-news__slide swiper-slide">
+                      <div class="about-news__card"><img class="about-news__img" src="https://via.placeholder.com/315x218" alt="ICP Centre Объединяет мир, весна 2020">
+                        <p class="about-news__title">ICP Centre Объединяет мир, весна 2020</p>
+                        <p class="about-news__description">Один раз в год мы делаем сверку количества стран, в которых живут наши студенты и выпускники.<br>Год назад насчитывалось 27 стран, в этом году на 11 страны больше! </p>
+                        <p class="about-news__date">30  августа</p>
+                      </div>
+                    </li>
+                    <li class="about-news__slide swiper-slide">
+                      <div class="about-news__card"><img class="about-news__img" src="https://via.placeholder.com/315x218" alt="ICP Centre Объединяет мир, весна 2020">
+                        <p class="about-news__title">ICP Centre Объединяет мир, весна 2020</p>
+                        <p class="about-news__description">Один раз в год мы делаем сверку количества стран, в которых живут наши студенты и выпускники.<br>Год назад насчитывалось 27 стран, в этом году на 11 страны больше! </p>
+                        <p class="about-news__date">30  августа</p>
+                      </div>
+                    </li>
+                    <li class="about-news__slide swiper-slide">
+                      <div class="about-news__card"><img class="about-news__img" src="https://via.placeholder.com/315x218" alt="Международной Федерации коучинга ICF — 25 лет.">
+                        <p class="about-news__title">Международной Федерации коучинга ICF — 25 лет.</p>
+                        <p class="about-news__description">В этом юбилейном для ICF году праздник российского подразделения!<br>1 сентября ICF Russia Chapter исполнилось 15 лет!</p>
+                        <p class="about-news__date">1 сентября</p>
+                      </div>
+                    </li>
+                    <li class="about-news__slide swiper-slide">
+                      <div class="about-news__card"><img class="about-news__img" src="https://via.placeholder.com/315x186" alt="Изменения в ICP Centre">
+                        <p class="about-news__title">Изменения в ICP Centre</p>
+                        <p class="about-news__description">Это очень важный пост о больших переменах. Он касается каждого, кому интересна не только история ICP Centre, но и российского коучинга в целом. </p>
+                        <p class="about-news__date">30  августа</p>
+                      </div>
+                    </li>
+                    <li class="about-news__slide swiper-slide">
+                      <div class="about-news__card"><img class="about-news__img" src="https://via.placeholder.com/315x218" alt="ICP Centre Объединяет мир, весна 2020">
+                        <p class="about-news__title">ICP Centre Объединяет мир, весна 2020</p>
+                        <p class="about-news__description">Один раз в год мы делаем сверку количества стран, в которых живут наши студенты и выпускники.<br>Год назад насчитывалось 27 стран, в этом году на 11 страны больше! </p>
+                        <p class="about-news__date">30  августа</p>
+                      </div>
+                    </li>
+                    <li class="about-news__slide swiper-slide">
+                      <div class="about-news__card"><img class="about-news__img" src="https://via.placeholder.com/315x218" alt="ICP Centre Объединяет мир, весна 2020">
+                        <p class="about-news__title">ICP Centre Объединяет мир, весна 2020</p>
+                        <p class="about-news__description">Один раз в год мы делаем сверку количества стран, в которых живут наши студенты и выпускники.<br>Год назад насчитывалось 27 стран, в этом году на 11 страны больше! </p>
+                        <p class="about-news__date">30  августа</p>
+                      </div>
+                    </li>
+                    <li class="about-news__slide about-news__slide--loader swiper-slide">
+                      <div class="about-news__card about-news__card--loader"><img class="about-news__loader-img" src="images/sprite.svg#loader" alt="loading..."></div>
+                    </li>
+                  </ul>
+                  <div class="about-news__next-mask">
+                    <button class="about-news__next-btn">></button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section class="about-reviews">
+          <div class="container">
+            <div class="double-block">
+              <aside class="about-reviews__aside double-block__aside">
+                <h3 class="about-reviews__title double-block__title">Отзывы выпускников</h3>
+              </aside>
+              <div class="about-reviews__content double-block__content double-block__content--narrow">
+                <div class="about-reviews__slider swiper-container">
+                  <ul class="about-reviews__slides swiper-wrapper">
+                    <li class="about-reviews__slide swiper-slide">
+                      <p class="text text--s">Эта уникальная программа раскрыла глубокий и безграничный мир коучинга во всей его красоте и богатстве, позволила мне раскрыть свои потенциальные возможности, овладеть 11 компетенциями коуча, почувствовать уверенность и желание развиваться и совершенствоваться.<br><br> Высокопрофессиональная команда ICP центра очень качественно, системно, экологично сопровождает каждого студента на его индивидуальном маршруте обучения. Благодарность всем преподавателям, ассистентам, менторам за поддержку и веру в возможности каждого!</p>
+                      <div class="about-reviews__author">
+                        <div class="about-reviews__author-info">
+                          <div class="about-reviews__avatar"><img class="about-reviews__avatar-img" src="images/jpg/elon.jpg"></div>
+                          <p class="about-reviews__name">Марина Жигулина         </p>
+                        </div>
+                        <p class="about-reviews__author-description text text--xs">Прошла программу Agile-коучинг         </p>
+                      </div>
+                    </li>
+                    <li class="about-reviews__slide swiper-slide">
+                      <p class="text text--s">Эта уникальная программа раскрыла глубокий и безграничный мир коучинга во всей его красоте и богатстве, позволила мне раскрыть свои потенциальные возможности, овладеть 11 компетенциями коуча, почувствовать уверенность и желание развиваться и совершенствоваться.<br><br> Высокопрофессиональная команда ICP центра очень качественно, системно, экологично сопровождает каждого студента на его индивидуальном маршруте обучения. Благодарность всем преподавателям, ассистентам, менторам за поддержку и веру в возможности каждого!</p>
+                      <div class="about-reviews__author">
+                        <div class="about-reviews__author-info">
+                          <div class="about-reviews__avatar"><img class="about-reviews__avatar-img" src="images/jpg/elon.jpg"></div>
+                          <p class="about-reviews__name">Марина Жигулина         </p>
+                        </div>
+                        <p class="about-reviews__author-description text text--xs">Прошла программу Agile-коучинг         </p>
+                      </div>
+                    </li>
+                    <li class="about-reviews__slide swiper-slide">
+                      <p class="text text--s">Эта уникальная программа раскрыла глубокий и безграничный мир коучинга во всей его красоте и богатстве, позволила мне раскрыть свои потенциальные возможности, овладеть 11 компетенциями коуча, почувствовать уверенность и желание развиваться и совершенствоваться.<br><br> Высокопрофессиональная команда ICP центра очень качественно, системно, экологично сопровождает каждого студента на его индивидуальном маршруте обучения. Благодарность всем преподавателям, ассистентам, менторам за поддержку и веру в возможности каждого!</p>
+                      <div class="about-reviews__author">
+                        <div class="about-reviews__author-info">
+                          <div class="about-reviews__avatar"><img class="about-reviews__avatar-img" src="images/jpg/elon.jpg"></div>
+                          <p class="about-reviews__name">Марина Жигулина         </p>
+                        </div>
+                        <p class="about-reviews__author-description text text--xs">Прошла программу Agile-коучинг         </p>
+                      </div>
+                    </li>
+                    <li class="about-reviews__slide swiper-slide">
+                      <p class="text text--s">Эта уникальная программа раскрыла глубокий и безграничный мир коучинга во всей его красоте и богатстве, позволила мне раскрыть свои потенциальные возможности, овладеть 11 компетенциями коуча, почувствовать уверенность и желание развиваться и совершенствоваться.<br><br> Высокопрофессиональная команда ICP центра очень качественно, системно, экологично сопровождает каждого студента на его индивидуальном маршруте обучения. Благодарность всем преподавателям, ассистентам, менторам за поддержку и веру в возможности каждого!</p>
+                      <div class="about-reviews__author">
+                        <div class="about-reviews__author-info">
+                          <div class="about-reviews__avatar"><img class="about-reviews__avatar-img" src="images/jpg/elon.jpg"></div>
+                          <p class="about-reviews__name">Марина Жигулина         </p>
+                        </div>
+                        <p class="about-reviews__author-description text text--xs">Прошла программу Agile-коучинг         </p>
+                      </div>
+                    </li>
+                    <li class="about-reviews__slide swiper-slide">
+                      <p class="text text--s">Эта уникальная программа раскрыла глубокий и безграничный мир коучинга во всей его красоте и богатстве, позволила мне раскрыть свои потенциальные возможности, овладеть 11 компетенциями коуча, почувствовать уверенность и желание развиваться и совершенствоваться.<br><br> Высокопрофессиональная команда ICP центра очень качественно, системно, экологично сопровождает каждого студента на его индивидуальном маршруте обучения. Благодарность всем преподавателям, ассистентам, менторам за поддержку и веру в возможности каждого!</p>
+                      <div class="about-reviews__author">
+                        <div class="about-reviews__author-info">
+                          <div class="about-reviews__avatar"><img class="about-reviews__avatar-img" src="images/jpg/elon.jpg"></div>
+                          <p class="about-reviews__name">Марина Жигулина         </p>
+                        </div>
+                        <p class="about-reviews__author-description text text--xs">Прошла программу Agile-коучинг         </p>
+                      </div>
+                    </li>
+                  </ul>
+                  <ul class="about-reviews__dots"></ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+      </div>
+    </main>
+    <footer class="footer">
+      <div class="hotline">
+        <div class="container hotline__container">
+          <h3 class="hotline__title">Горячая<br> линия</h3>
+          <div class="hotline__group">
+            <p class="hotline__description">Волонтерский проект Международного Центра<br> Профессионального Коучинга ICP Centre.</p><a class="hotline__link">
+              <button class="button button--color-white button--size-normal hotline__btn">Подробнее
+              </button></a>
+          </div>
+        </div>
+      </div>
+      <div class="footer__row footer__row--contacts">
+        <div class="container footer__row-container footer__row-container--fill">
+          <div class="footer__col footer__col--align-center"><a class="footer__primary-link footer__primary-link--email" href="mailto:info@icpcentre.org"><span class="footer__email-text">info@icpcentre.org</span>
+              <div class="footer__email-icon"></div></a></div>
+          <div class="footer__col footer__col--align-center footer__col--phone"><a class="footer__primary-link" href="tel:88005513531">8 800 551-35-31</a></div>
+          <div class="footer__col footer__col--align-center footer__col--social">
+            <ul class="footer__social-list">
+              <li class="footer__social-item"><a href="#"><i class="fa fa-facebook-f footer__social-icon"></i></a></li>
+              <li class="footer__social-item"><a href="#"><i class="fa fa-vk footer__social-icon"></i></a></li>
+              <li class="footer__social-item"><a href="#"><i class="fa fa-instagram footer__social-icon"></i></a></li>
+              <li class="footer__social-item"><a href="#"><i class="fa fa-youtube-play footer__social-icon"></i></a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="footer__row footer__row--categories">
+        <div class="container footer__row-container footer__row-container--fill">
+          <div class="footer__col">
+            <p class="footer__col-title">О центре</p>
+            <ul class="footer__col-list">
+              <li class="footer__col-item"><a class="footer__col-link" href="#">Миссия+ценности</a></li>
+              <li class="footer__col-item"><a class="footer__col-link" href="#">История компании</a></li>
+              <li class="footer__col-item"><a class="footer__col-link" href="#">Команда</a></li>
+              <li class="footer__col-item"><a class="footer__col-link" href="#">Коучинговые компетенции</a></li>
+              <li class="footer__col-item"><a class="footer__col-link" href="#">Членство в ICF</a></li>
+              <li class="footer__col-item"><a class="footer__col-link" href="#">Ведущие</a></li>
+              <li class="footer__col-item"><a class="footer__col-link" href="#">Партнеры</a></li>
+              <li class="footer__col-item"><a class="footer__col-link" href="#">Представительства</a></li>
+              <li class="footer__col-item"><a class="footer__col-link" href="#">Лаборатория научных исследований коучинга</a></li>
+              <li class="footer__col-item"><a class="footer__col-link" href="#">Новости</a></li>
+              <li class="footer__col-item"><a class="footer__col-link" href="#">Отзывы</a></li>
+            </ul>
+          </div>
+          <div class="footer__col">
+            <p class="footer__col-title">Направления</p>
+            <ul class="footer__col-list">
+              <li class="footer__col-item"><a class="footer__col-link" href="#">Программы развития коучинговых компетенций</a></li>
+              <li class="footer__col-item"><a class="footer__col-link" href="#">Развитие профессиональных коучей</a></li>
+              <li class="footer__col-item"><a class="footer__col-link" href="#">GV: Коучинг для организаций</a></li>
+              <li class="footer__col-item"><a class="footer__col-link" href="#">Agile-коучинг</a></li>
+              <li class="footer__col-item"><a class="footer__col-link" href="#">Современные подходы в образовании и воспитании</a></li>
+              <li class="footer__col-item"><a class="footer__col-link" href="#">Индивидуальный коучинг</a></li>
+            </ul>
+          </div>
+          <div class="footer__col">
+            <p class="footer__col-title">Процесс обучения</p>
+            <ul class="footer__col-list">
+              <li class="footer__col-item"><a class="footer__col-link" href="#">Расписание</a></li>
+              <li class="footer__col-item"><a class="footer__col-link" href="#">Очное обучение</a></li>
+              <li class="footer__col-item"><a class="footer__col-link" href="#">Онлайн-обучение</a></li>
+              <li class="footer__col-item"><a class="footer__col-link" href="#">Песочница</a></li>
+              <li class="footer__col-item"><a class="footer__col-link" href="#">Практика+стажировки</a></li>
+              <li class="footer__col-item"><a class="footer__col-link" href="#">Программа лояльности</a></li>
+              <li class="footer__col-item"><a class="footer__col-link" href="#">Институт обратной связи</a></li>
+              <li class="footer__col-item"><a class="footer__col-link" href="#">Фестиваль коучинга</a></li>
+              <li class="footer__col-item"><a class="footer__col-link" href="#">Коуч-туры</a></li>
+              <li class="footer__col-item"><a class="footer__col-link" href="#">Бесплатные мастер-классы, вебинары и лекции</a></li>
+              <li class="footer__col-item"><a class="footer__col-link" href="#">Горячая линия</a></li>
+            </ul>
+          </div>
+          <div class="footer__col">
+            <p class="footer__col-title">База знаний</p>
+            <ul class="footer__col-list">
+              <li class="footer__col-item"><a class="footer__col-link" href="#">Коучинг в HR: инструкция по применению</a></li>
+              <li class="footer__col-item"><a class="footer__col-link" href="#">Спецпроект. История коучинга в России: 1990 − 2020. Команды, люди, события.</a></li>
+              <li class="footer__col-item"><a class="footer__col-link" href="#">О коучинге понятным языком: 15 статей</a></li>
+              <li class="footer__col-item"><a class="footer__col-link" href="#">Онлайн-библиотека</a></li>
+              <li class="footer__col-item"><a class="footer__col-link" href="#">Подкаст: «Хроники одного коуча»</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="footer__row">
+        <div class="container footer__row-container footer__row-container--fit">
+          <div class="footer__col footer__col--flex footer__col--align-center footer__col--copyright">
+            <p class="footer__bottom-text footer__copyright"> <span class="footer__copyright-item footer__copyright-item--bold">© 2019-2020 ICP Centre.&nbsp;</span><br><span class="footer__copyright-item">Все права защищены.</span></p>
+          </div>
+          <div class="footer__col footer__col--flex footer__col--align-center footer__col--bottom-info">
+            <div class="footer__bottom-info-item"><a class="footer__bottom-text footer__bottom-text--link" href="">Договор-оферта</a></div>
+            <div class="footer__bottom-info-item"><a class="footer__bottom-text footer__bottom-text--link" href="">Политика конфиденциальности</a></div>
+            <div class="footer__bottom-info-item footer__bottom-info-item--chat"><a class="footer__chat-icon" href=""></a></div>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <script src="./js/common.js?v=1606084772711"></script>
+    <script defer src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <script defer src="./js/about.js?v=1606084772711"></script>
+  </body>
+</html>
