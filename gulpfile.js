@@ -12,7 +12,7 @@ const ghpages = require("gh-pages");
 const sass = require("gulp-sass");
 const webpack = require("webpack-stream");
 const webpackConfig = require("./webpack.config");
-const svgstore = require("gulp-svgstore");
+const svgSprite = require("gulp-svg-sprite");
 
 const settings = {
 	dist: "dist",
@@ -53,15 +53,16 @@ gulp.task("images", () =>
 );
 
 gulp.task("svg-sprite", () =>
-	gulp
-		.src("src/images/svg/*.svg")
-		.pipe(
-			svgstore({
-				inlineSvg: true,
-			})
-		)
-		.pipe(rename("sprite.svg"))
-		.pipe(gulp.dest(`${settings.dist}/images`))
+	gulp.src("src/images/sprites/*.svg")
+		.pipe(svgSprite({
+			mode: {
+				stack: {
+					sprite: "../sprite.svg"
+				}
+			},
+		}
+	))
+	.pipe(gulp.dest('dist/images/'))
 );
 
 gulp.task("scss", () => {
@@ -81,7 +82,7 @@ gulp.task("js", () =>
 );
 
 gulp.task("watch", () => {
-	gulp.watch("src/images/svg/*.svg", gulp.series('svg-sprite'));
+	gulp.watch("src/images/sprites/*.svg", gulp.series('svg-sprite'));
 
 	gulp.watch(
 		["src/resources/**/*.*", "src/resources/**/.*"],
