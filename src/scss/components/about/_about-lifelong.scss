@@ -1,0 +1,18 @@
+.about-lifelong {
+    margin-top: 140px;
+
+    @include laptop {
+        margin-top: 110px;
+    } 
+
+    @include tablet {
+        margin-top: 100px;
+    }
+
+    &__title {
+        margin-top: 9px;
+        background: -webkit-linear-gradient(360deg, $color-blue2, $color-blue);
+        background-clip: text;
+        -webkit-text-fill-color: transparent;
+    }
+}

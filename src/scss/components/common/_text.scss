@@ -1,4 +1,22 @@
 .text {
+    &--xl {
+        font-weight: 700;
+        font-size: 70px;
+        line-height: 122.3%;
+
+        @include laptop {
+            font-size: 58px;
+        } 
+
+        @include tablet {
+            font-size: 40px;
+        } 
+
+        @include mobile-l {
+            font-size: 36px;
+        } 
+    }
+    
 	&--l {
         font-weight: 500;
         font-size: 50px;
@@ -43,6 +61,11 @@
             font-size: 18px;
             line-height: 160%;
         }
+	}
+    
+	&--xs {
+        font-size: 14px;
+        line-height: 122.285714%;
 	}
 
     &--bold {
