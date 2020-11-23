@@ -34,7 +34,6 @@
 		z-index: 999;
 		height: 110%;
 		width: 210px;
-		background: linear-gradient(270deg, $color-gray-light6 45%, rgba($color-gray-light6, 0));
 		opacity: 0;
 		transition: opacity 0.3s ease;	
 		
@@ -47,11 +46,17 @@
 		}
 
 		&--left {
+			width: 50px;
+			left: 2.77777778vw;
 			transform: rotate(180deg);
-			left: -2px;	
+			
+			@include tablet {
+				left: -30px;
+			}
 		}
 
 		&--right {
+			background: linear-gradient(270deg, $color-gray-light6 45%, rgba($color-gray-light6, 0));
 			right: -2px;
 		}
 
