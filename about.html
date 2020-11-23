@@ -4,8 +4,8 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width">
-    <link rel="stylesheet" href="./css/main.css?v=1606085504687">
-    <link rel="stylesheet" href="./css/about.css?v=1606085504687">
+    <link rel="stylesheet" href="./css/main.css?v=1606171470515">
+    <link rel="stylesheet" href="./css/about.css?v=1606171470515">
     <link rel="stylesheet" href="https://unpkg.com/swiper@6.3.2/swiper-bundle.min.css">
   </head>
   <body>
@@ -133,6 +133,9 @@
                 <h3 class="double-block__title">Новости</h3>
               </aside>
               <div class="about-news__content double-block__content double-block__content--narrow">
+                <div class="about-news__nav-mask about-news__nav-mask--left">
+                  <button class="about-news__nav-btn about-news__nav-btn--prev">></button>
+                </div>
                 <div class="about-news__slider swiper-container">
                   <ul class="about-news__slides swiper-wrapper">
                     <li class="about-news__slide swiper-slide">
@@ -223,8 +226,8 @@
                       <div class="about-news__card about-news__card--loader"><img class="about-news__loader-img" src="images/sprite.svg#loader" alt="loading..."></div>
                     </li>
                   </ul>
-                  <div class="about-news__next-mask">
-                    <button class="about-news__next-btn">></button>
+                  <div class="about-news__nav-mask about-news__nav-mask--right about-news__nav-mask--visible">
+                    <button class="about-news__nav-btn about-news__nav-btn--next">></button>
                   </div>
                 </div>
               </div>
@@ -395,8 +398,8 @@
         </div>
       </div>
     </footer>
-    <script src="./js/common.js?v=1606085504688"></script>
+    <script src="./js/common.js?v=1606171470516"></script>
     <script defer src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
-    <script defer src="./js/about.js?v=1606085504688"></script>
+    <script defer src="./js/about.js?v=1606171470516"></script>
   </body>
 </html>
