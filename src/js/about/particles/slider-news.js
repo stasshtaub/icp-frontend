@@ -1,4 +1,8 @@
 {
+	const prevMask = document.querySelector(".about-news__nav-mask--left");
+	const prevEl = document.querySelector(".about-news__nav-btn--prev");
+	const nextEl = document.querySelector(".about-news__nav-btn--next");
+
 	const loader = document.querySelector(".about-news__slide--loader");
 	let lastId = document.querySelectorAll(".about-news__slide:not(.about-news__slide--loader)").length;
 	let limit = 10;
@@ -13,9 +17,20 @@
 		slidesPerView: "auto",
 		spaceBetween: 30,
 		navigation: {
-			nextEl: document.querySelector(".about-news__next-btn")
+			prevEl,
+			nextEl
 		},
 		on: {
+			reachBeginning: () => {
+				prevMask.classList.remove("about-news__nav-mask--visible");
+			},
+
+			slideNextTransitionStart: () => {
+				if (!prevMask.classList.contains("about-news__nav-mask--visible")) {
+					prevMask.classList.add("about-news__nav-mask--visible");
+				}
+			},
+
 			slideNextTransitionEnd: async ({ slides, activeIndex }) => {
 				// 4 - количество оставшихся справа слайдов до подгрузки
 				if (!loading && slides.length >= limit && activeIndex >= slides.length - 4) {

@@ -26,17 +26,18 @@
 		object-fit: cover;
 	}
 
-	&__next-mask {
+	&__nav-mask {
 		position: absolute;
 		display: flex;
 		align-items: center;
 		top: -5%;
-		right: -2px;
 		z-index: 999;
 		height: 110%;
 		width: 210px;
 		background: linear-gradient(270deg, $color-gray-light6 45%, rgba($color-gray-light6, 0));
-
+		opacity: 0;
+		transition: opacity 0.3s ease;	
+		
 		@include tablet-xs {
 			width: 100px;
 		}
@@ -44,9 +45,22 @@
 		@include mobile-l {
 			display: none;
 		}
+
+		&--left {
+			transform: rotate(180deg);
+			left: -2px;	
+		}
+
+		&--right {
+			right: -2px;
+		}
+
+		&--visible {
+			opacity: 1;			
+		}
 	}
 
-	&__next-btn {
+	&__nav-btn {
 		width: 40px;
 		height: 100%;
 		border: none;
