@@ -7,6 +7,7 @@ module.exports = {
 		capabilities: "./src/js/capabilities",
 		about: "./src/js/about",
 		schedule: "./src/js/schedule",
+		branches: "./src/js/branches"
 	},
 	module: {
 		rules: [

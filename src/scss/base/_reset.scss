@@ -28,6 +28,10 @@ a[role="button"]:not([disabled]) {
 	cursor: pointer;
 }
 
+a {
+	color: $color-blue;
+}
+
 ul {
     list-style: none;
 }

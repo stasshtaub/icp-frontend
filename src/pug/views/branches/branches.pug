@@ -1,0 +1,12 @@
+extends ../../layouts/default
+
+block styles
+    link(rel="stylesheet" href!=`${baseDir}css/main.css?v=${Date.now()}`)
+    link(rel="stylesheet" href!=`${baseDir}css/branches.css?v=${Date.now()}`)
+block content
+    .branches
+        include particles/branches-header
+       
+block scripts
+    script(src!=`${baseDir}js/common.js?v=${Date.now()}`)
+    script(defer src!=`${baseDir}js/branches.js?v=${Date.now()}`)

@@ -1,0 +1,15 @@
+@import "../utils/variables";
+@import "../utils/breakpoints";
+@import "../utils/helpers";
+
+@import "../layout/spaces";
+
+@import "../components/common/breadcrumbs";
+@import "../components/common/row";
+@import "../components/common/underlined";
+@import "../components/common/text";
+@import "../components/common/button";
+
+.branches {
+    padding: 216px 0 100px 0;
+}
