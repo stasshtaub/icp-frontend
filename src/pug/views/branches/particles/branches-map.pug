@@ -1,0 +1,36 @@
+-
+    const branches = [
+        {
+            city: "Санкт-Петербург",
+            info: "Лиговский проспект, 94, литер А, 5 этаж.<br>БЦ Лиговский проспект",
+            showOnMap: true,
+            icon: "star",
+            modificator: "spb"
+        },
+        {
+            city: "Екатеринбург",
+            info: "<a href=\"mailto:ural@icpcentre.pro\">ural@icpcentre.pro</a>",
+            icon: "location",
+            modificator: "ekb"
+        },
+        {
+            city: "Москва",
+            info: "<a href=\"mailto:info@icpcentre.org\">ural@icpcentre.pro</a>",
+            icon: "location",
+            modificator: "msk"
+        }
+    ]
+
+.branches-map
+    .container
+        .branches-map__wrp
+            .branches-map__img-container
+                img(src="images/sprite.svg#branches-map" alt="Представительства")
+            ul.branches-map__branches
+                each branch in branches
+                    li.branches-map__branch(class=`branches-map__branch--${branch.icon} branches-map__branch--${branch.modificator}`)
+                        .branches-map__branch-info
+                            p.branches-map__city.text.text--m.text--bold= branch.city
+                            p.branches-map__text.text.text--s !{branch.info}
+                            if branch.showOnMap
+                                a(href="#").branches-map__text.text.text--s.text--link Посмотреть на карте
