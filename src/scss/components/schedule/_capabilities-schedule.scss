@@ -1,0 +1,18 @@
+.capabilities-schedule {
+    margin-top: 0;
+    margin-left: 115px;
+    padding: 0;
+    border: none;
+
+    @include laptop {
+        margin-left: 50px;
+    }
+
+    @include tablet {
+        margin-left: 0;
+    }
+
+    &__title {
+        display: none;
+    }
+}

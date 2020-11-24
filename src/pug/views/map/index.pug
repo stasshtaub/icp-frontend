@@ -4,6 +4,14 @@ html
         block styles
             link(rel="stylesheet" href!=`./css/map.css?v=${Date.now()}`)
     body
-        a(href="./home.html") Главная
-        a(href="./capabilities.html") Возможности
-        a(href="./about.html") О центре
+        ul
+            li
+                a(href="./home.html") Главная
+            li
+                a(href="./capabilities.html") Возможности 
+            li
+                a(href="./about.html") О центре
+            li Процесс обучения
+                ul
+                    li 
+                        a(href="./schedule.html") Расписание

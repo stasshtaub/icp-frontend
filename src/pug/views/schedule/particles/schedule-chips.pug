@@ -1,0 +1,42 @@
+-
+    const chips = [
+        {
+            text: "«Концепт коучинга» CCE ICF",
+            date: "ноябрь",
+            active: true
+        },
+        {
+            text: "Ментор для коучей",
+            date: "осень 2020"
+        },
+        {
+            text: "Agile-коучинг",
+            date: "осень 2020"
+        },
+        {
+            text: "Feedback coaching"
+        },
+        {
+            text: "Уникальный код коуча",
+            date: "осень 2020"
+        },
+        {
+            text: "Полный курс коучинга",
+            date: "осень 2020"
+        },
+        {
+            text: "Полный курс коучинга",
+            date: "зима 2021"
+        }
+    ]
+
+.schedule-chips
+    .container
+        ul.chips__list
+            each chipsItem in chips
+                li.chips__item
+                    .chips__item-inner(class=`${chipsItem.active ? 'chips__item-inner--active' : ''}`)
+                        span.text.text--s
+                            a(href="#").schedule-chips__link.text.text--bold.underlined= chipsItem.text
+                            if (chipsItem.date)
+                                span.schedule-chips__date  (!{chipsItem.date})

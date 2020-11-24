@@ -5,7 +5,8 @@ module.exports = {
 		common: "./src/js/common",
 		home: "./src/js/home",
 		capabilities: "./src/js/capabilities",
-		about: "./src/js/about"
+		about: "./src/js/about",
+		schedule: "./src/js/schedule",
 	},
 	module: {
 		rules: [

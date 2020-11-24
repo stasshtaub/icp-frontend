@@ -1,0 +1,22 @@
+@import "../utils/variables";
+@import "../utils/breakpoints";
+@import "../utils/helpers";
+
+@import "../layout/spaces";
+
+@import "../components/common/breadcrumbs";
+@import "../components/common/row";
+@import "../components/common/underlined";
+@import "../components/common/text";
+@import "../components/common/chips";
+@import "../components/common/double-block";
+@import "../components/common/button";
+
+@import "../components/schedule/schedule-header";
+@import "../components/schedule/schedule-chips";
+@import "../components/capabilities/capabilities-schedule";
+@import "../components/schedule/capabilities-schedule";
+
+.schedule {
+    padding: 216px 0 100px 0;
+}

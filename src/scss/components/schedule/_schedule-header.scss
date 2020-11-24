@@ -1,0 +1,9 @@
+.schedule-header {
+    &__link {
+        &--current {
+            text-decoration: none;
+            color: unset;
+            pointer-events: none;
+        }
+    }
+}
