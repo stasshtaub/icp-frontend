@@ -1,6 +1,7 @@
 .branches-map {
 	@include tablet {
 		margin-top: 50px;
+		overflow: hidden;
 	}
 
 	&__wrp {
