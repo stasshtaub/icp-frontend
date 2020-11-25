@@ -1,0 +1,116 @@
+.team-list {
+	margin-top: 85px;
+
+	&__card {
+		max-width: 315px;
+		width: 100%;
+	}
+
+	&__img-outer {
+		&--small {
+            width: 200px;
+            max-width: 100%;
+
+			@include laptop-xs {
+                width: 100%;
+			}
+		}
+	}
+
+	&__img-inner {
+		position: relative;
+
+		&--large {
+			padding-bottom: 80.952381%;
+		}
+
+		&--small {
+			padding-bottom: 100%;
+		}
+	}
+
+	&__img {
+		position: absolute;
+		height: 100%;
+		width: 100%;
+		object-fit: cover;
+	}
+
+	&__info {
+		margin-top: 22px;
+	}
+
+	&__name {
+		font-weight: 700;
+	}
+
+	&__description {
+		margin-top: 5px;
+	}
+
+	&__email {
+		margin-top: 5px;
+        color: $color-black;
+        word-break: break-all;
+	}
+
+	&__row {
+		display: grid;
+		grid-gap: 42px 30px;
+
+		@include tablet {
+			grid-gap: 25px 15px;
+		}
+
+		&--partners {
+			grid-template-columns: repeat(3, minmax(200px, 1fr));
+
+			@include tablet-s {
+				grid-template-columns: repeat(2, 1fr);
+			}
+
+			@include mobile-l {
+				grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+			}
+		}
+
+		&--managers {
+			margin-top: 42px;
+			grid-template-columns: repeat(4, minmax(180px, 1fr));
+
+			@include laptop-xs {
+                grid-template-columns: repeat(3, 1fr);
+			}
+
+			@include tablet-xs {
+                grid-template-columns: repeat(2, 1fr);
+			}
+
+			@include mobile-l {
+				grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+			}
+		}
+	}
+
+	&__col {
+		display: flex;
+
+		&--large {
+			&:nth-child(6n + 1),
+			&:nth-child(6n + 2),
+			&:nth-child(6n + 3) {
+				justify-content: flex-end;
+			}
+		}
+
+		&--small {
+			&:nth-child(3n + 5),
+			&:nth-child(6n + 7),
+			&:nth-child(9n + 6) {
+				transform: translateX(
+                    unquote("max(calc(min(100vw, 1440px) - 1325px), 0.1px)")
+				);
+			}
+		}
+	}
+}

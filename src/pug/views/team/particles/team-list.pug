@@ -1,0 +1,98 @@
+-
+    const partners = [
+        {
+            img: "https://via.placeholder.com/315x255/FD9E53",
+            name: "Галина Вдовиченко",
+            description: "Управляющий партнер, ведущий тренер", 
+            email: "gv@icpcentre.com"
+        },
+        {
+            img: "https://via.placeholder.com/315x255/d8d8d8",
+            name: "Дарья Кочерган",
+            description: "Управляющий партнер, руководитель отдела продаж", 
+            email: "dk@icpcentre.org"
+        },
+        {
+            img: "https://via.placeholder.com/315x255/3e50bc",
+            name: "Марина Балашова",
+            description: "Управляющий партнер, руководитель регионального развития", 
+            email: "regions@icpcentre.com"
+        }
+    ];
+
+    const managers = [
+        {
+            img: "https://via.placeholder.com/200x200/d8d8d8",
+            name: "Марина Макарова",
+            description: "Менеджер онлайн-обучения", 
+            email: "gv@icpcentre.com"
+        },
+        {
+            img: "https://via.placeholder.com/200x200/44C1BB",
+            name: "Юлианна Вохмякова",
+            description: "Менеджер по работе с клиентами",
+            phone: "+7 958 761-80-45",
+            email: "m3@icpcentre.org"
+        },
+        {
+            img: "https://via.placeholder.com/200x200/4db0b8",
+            name: "Эльвира Кашапова",
+            description: "Менеджер по работе с клиентами",
+            phone: "+7 958 761-80-99",
+            email: "m5@icpcentre.org"
+        },
+        {
+            img: "https://via.placeholder.com/200x200/269A68",
+            name: "Нина Румянцева",
+            description: "Менеджер по работес корпоративными клиентами", 
+            phone: "+7 921 308-51-88",
+            email: "nr@icpcentre.org"
+        },
+        {
+            img: "https://via.placeholder.com/200x200/cccccc",
+            name: "Аня Федюшкина",
+            description: "Менеджер отдела заботы и качества", 
+            phone: "+7 911 814-02-34",
+            email: "af@icpcentre.org"
+        },
+        {
+            img: "https://via.placeholder.com/200x200/1488cc",
+            name: "Ирина Анянова",
+            description: "Куратор школы ассистентов, очных и онлайн практик курса КВБГ", 
+            email: "feedbackcoach@icpcentre.org"
+        },
+        {
+            img: "https://via.placeholder.com/200x200/3e50bc",
+            name: "Антон Бегин",
+            description: "IT-специалист", 
+            email: "smm@icpcentre.org"
+        }
+    ];
+
+.team-list
+    .container
+        ul.team-list__row.team-list__row--partners
+            each partner in partners
+                 li.team-list__col.team-list__col--large
+                    .team-list__card
+                        .team-list__img-outer
+                            .team-list__img-inner.team-list__img-inner--large
+                                img(src=partner.img).team-list__img
+                        .team-list__info.text.text--s
+                            p.team-list__name= partner.name
+                            p.team-list__description= partner.description
+                            a(href=`mailto:${ partner.email }`).team-list__email= partner.email
+        
+        ul.team-list__row.team-list__row--managers
+            each manager in managers
+                 li.team-list__col.team-list__col--small
+                    .team-list__card
+                        .team-list__img-outer.team-list__img-outer--small
+                            .team-list__img-inner.team-list__img-inner--small
+                                img(src=manager.img).team-list__img
+                        .team-list__info.text.text--s
+                            p.team-list__name= manager.name
+                            p.team-list__description= manager.description
+                            if (manager.phone)
+                                p.team-list__phone= manager.phone
+                            a(href=`mailto:${ manager.email }`).team-list__email= manager.email
