@@ -1,0 +1,14 @@
+extends ../../layouts/default
+
+block styles
+    link(rel="stylesheet" href!=`${baseDir}css/main.css?v=${Date.now()}`)
+    link(rel="stylesheet" href!=`${baseDir}css/partners.css?v=${Date.now()}`)
+block content
+    .partners
+        include particles/partners-header
+        include particles/partners-events
+        include particles/partners-partners
+       
+block scripts
+    script(src!=`${baseDir}js/common.js?v=${Date.now()}`)
+    script(defer src!=`${baseDir}js/partners.js?v=${Date.now()}`)

@@ -1,0 +1,52 @@
+.partners-events {
+	margin-top: 40px;
+
+	&__event {
+		padding: 50px 0;
+
+		&--blue {
+			background-color: $color-blue9;
+		}
+
+		&--red {
+			background-color: $color-red;
+		}
+
+		* {
+			color: $color-white;
+		}
+	}
+
+	&__author {
+		min-width: 180px;
+	}
+
+	&__author-avatar {
+		display: block;
+		width: 80px;
+		height: 80px;
+		border-radius: 50%;
+		object-fit: cover;
+	}
+
+	&__author-name {
+		margin-top: 15px;
+	}
+
+	&__author-description {
+		margin-top: 15px;
+	}
+    
+	&__icf-logo {
+		max-width: 108px;
+	}
+
+	&__emcc-logo {
+		max-width: 158px;
+		margin-top: 80px;
+	}
+
+	&__btn {
+		margin-top: 70px;
+	}
+}

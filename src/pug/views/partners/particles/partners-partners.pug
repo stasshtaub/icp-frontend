@@ -1,0 +1,23 @@
+-
+    const partners = [
+        {
+            img: "partners-logo-1.png"
+        },
+        {
+            img: "partners-logo-2.png"
+        },
+        {
+            img: "partners-logo-3.png"
+        },
+        {
+            img: "partners-logo-4.png"
+        }
+    ]
+
+.partners-partners.mt-40
+    .container
+        .partners-partners__title.text.text--m2.text--bold Наши партнеры
+        ul.partners-partners__list
+            each partner in partners
+                li.partners-partners__item
+                    img(src=`images/png/${ partner.img }` alt="partner logo").partners-partners__logo

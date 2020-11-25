@@ -1,0 +1,87 @@
+- 
+    const authors = [
+        {
+            img: "",
+            name: "Сильвианна Каннио",
+            description: "MCC ICF, SP, Супервизор, Асессор ICF"
+        },
+        {
+            img: "",
+            name: "Шерил Купер",
+            description: "Executive коуч и супервизор для коучей в учреждениях ЕС, с 2020 года входит в состав директоров EMCC (Бельгия)"
+        },
+        {
+            img: "",
+            name: "Френ Фишер",
+            description: "MCC ICF, супервизор, асессор ICF (PCC MCC)"
+        },
+        {
+            img: "",
+            name: "Татьяна Косяева",
+            description: "Доктор социологии, бизнес-коуч, супервизор"
+        },
+        {
+            img: "",
+            name: "Людмила Констандова",
+            description: "Еxecutive coach, ментор ICF"
+        }
+    ]
+
+ul.partners-events
+    li.partners-events__event.partners-events__event--blue
+        .container
+            .row.row--tablet-column
+                .row__col.row__col--md-4
+                    p.text.text--m2.text--bold 27 января
+                .row__col
+                    h2.text.text--m2.text--bold ICP Centre, с гордостью, представляет вашему вниманию программу подготовки супервизоров для коучей!
+                    br
+                    br
+                    p.text.text--s Программа создана для русскоязычных коучей Академией Коучинговой Супервизии и Менторинга (ACSM) в коллаборации с ICP. 
+                        br
+                        | Программа имеет 2 сертификации: ICF и EMCC, что немаловажно, так как стандарты профессии супервизора для коучей есть только в EMCC.
+                        br
+                        | Основная задача программы — сделать профессию супервизоров для коучей доступной на русскоязычном рынке и усилить профессию коучинга.
+                        br
+                        | Профессионализм является одной из ведущих ценностей программы, поэтому идёт серьёзный, вдумчивый отбор на программу, и все потенциальные участники проходят собеседование с авторами. Это даст возможность для особой атмосферы в группе и повысит качество взаимообогащения студентов.
+            .partners-events__authors.mt-50
+                .row.row--tablet-column
+                    .row__col.row__col--md-4
+                    .row__col
+                        p.text.text--s.text--bold Авторы и ведущие программы:
+                .mt-40
+                    .row.row--wrap.row--justify-arround
+                        .row__col.row__col--md-2
+                            img(src="images/sprite.svg#icf-logo").partners-events__icf-logo
+                            img(src="images/sprites/emcc-logo.svg").partners-events__emcc-logo
+                        each author in authors
+                            .row__col.row__col--md-2
+                                .partners-events__author
+                                    img(src="http://placeimg.com/300/300/animals").partners-events__author-avatar
+                                    p.partners-events__author-name.text.text--s.text--bold= author.name
+                                    p.partners-events__author-description.text.text--s= author.description
+                .row.row--tablet-column
+                    .row__col.row__col--md-4
+                    .row__col
+                        +button("Записаться на программу", ["partners-events__btn"], "size-normal", "color-white")
+    
+    li.partners-events__event.partners-events__event--red
+        .container
+            .row.row--tablet-column
+                .row__col.row__col--md-4
+                    p.text.text--m2.text--bold 10 ноября
+                .row__col
+                    h2.text.text--m2.text--bold Впервые в России! Зоран Тодорович с авторской программой «Эволюционный коучинг. Продвинутый курс» на русском языке.
+                    br
+                    br
+                    p.text.text--s Это уникальная онлайн-программа, которую впервые могут пройти русскоязычные коучи из любой точки мира. 
+                    br
+                    p.text.text--s.text--bold Программа:
+                    ul.partners-events__program
+                        li.partners-events__program-item
+                            br
+                            p.text.text--s — Берет за основу знания, которые вы уже приобрели в процессе обучения основным навыкам коучинга в вашей школе коучинга.
+                        li.partners-events__program-item
+                            br
+                            p.text.text--s — Предоставит вам возможность непрерывно развиваться и стать экстраординарным и умелым коучем продвинутого уровня.
+                    +button("Подробнее", ["partners-events__btn"], "size-normal", "color-white")

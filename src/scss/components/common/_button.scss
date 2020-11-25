@@ -7,10 +7,7 @@
 	font-weight: 500;
 	font-size: 15px;
 	line-height: 30px;
-
-	&--link {
-		text-decoration: none;
-	}
+	text-decoration: none !important;
 
 	&--color-primary {
 		background-color: $color-blue;
@@ -19,7 +16,7 @@
 
 	&--color-white {
 		background-color: $color-white;
-		color: $color-blue;
+		color: $color-blue !important;
 	}
 
 	&--size-normal {

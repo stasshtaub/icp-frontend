@@ -35,9 +35,8 @@
         }
     }
     
-	&--m {
+	&--m, &--m2 {
         font-size: 30px;
-        line-height: 123.333333%;
 
         @include laptop {
             font-size: 26px;
@@ -49,8 +48,19 @@
 
         @include mobile-l {
             font-size: 20px;
+        }
+    }
+    
+	&--m {
+        line-height: 123.333333%;
+
+        @include mobile-l {
             line-height: 150%;
         }
+    }
+    
+	&--m2 {
+        line-height: 150%;
 	}
     
 	&--s {

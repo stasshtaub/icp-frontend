@@ -1,0 +1,32 @@
+.partners-partners {
+	&__list {
+		display: flex;
+		flex-wrap: wrap;
+		margin-top: 20px;
+		border: 1px solid $color-gray-light2;
+		border-right: none;
+		border-top: unset;
+	}
+
+	&__item {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		flex-basis: 25%;
+		flex-grow: 1;
+		height: 315px;
+		min-width: 240px;
+		border-right: 1px solid $color-gray-light2;
+		border-top: 1px solid $color-gray-light2;
+	}
+
+	&__logo {
+		max-height: 102px;
+		max-width: 80%;
+		object-fit: contain;
+	}
+
+	&__title {
+		text-align: center;
+	}
+}

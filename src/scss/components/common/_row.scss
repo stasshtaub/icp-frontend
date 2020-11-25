@@ -18,6 +18,10 @@
         justify-content: center;
     }
 
+    &--justify-arround {
+        justify-content: space-around;
+    }
+
     &--wrap {
         flex-wrap: wrap;
     }
