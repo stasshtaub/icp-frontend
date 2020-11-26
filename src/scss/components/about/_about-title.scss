@@ -10,7 +10,9 @@
     
         &__img {
             width: $img-width;
+            height: $img-width;
             margin-right: auto;
+            object-fit: cover;
         }
 
         br {
