@@ -23,6 +23,17 @@
 		#{$p}__logo {
 			filter: none;
 		}
+		
+		#{$p}__hamburger-icon {
+			background: url("../images/svg/icon-hamburger-gray.svg") no-repeat
+				center;
+		}
+
+		& ~ main {
+			.logo-duplicate {
+				filter: none;
+			}
+		}
 	}
 
 	&__container {
