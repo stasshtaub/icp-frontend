@@ -14,4 +14,12 @@
 
 .branches {
     padding: 216px 0 100px 0;
+
+    @include tablet {
+        padding-top: 100px;
+    }
+
+    @include mobile-l {
+        padding-top: 90px;
+    }
 }
