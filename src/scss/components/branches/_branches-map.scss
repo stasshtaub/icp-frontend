@@ -97,6 +97,7 @@
 
 		&--ekb {
 			@include tablet("min") {
+				max-width: 220px;
 				top: 16.704%;
 				right: 0.2%;
 				transform: translateX(100%);
@@ -111,7 +112,21 @@
 		}
 	}
 
+	&__adress-wrp {
+		overflow: hidden;
+		transform: none;
+		opacity: 1;
+		transition: all 0.3s ease;
+
+		&--collapsed {
+			height: 0 !important;
+			transform: scale(0.7);
+			opacity: 0;
+		}
+	}
+
 	&__city {
+		cursor: pointer;
 		line-height: 128.571428571%;
 
 		@include beetween-laptop-and-tablet {

@@ -2,20 +2,22 @@
     const branches = [
         {
             city: "Санкт-Петербург",
-            info: "Лиговский проспект, 94, литер А, 5 этаж.<br>БЦ Лиговский проспект",
+            adress: "Лиговский проспект, 94, литер А, 5 этаж.<br>БЦ Лиговский проспект",
             showOnMap: true,
             icon: "star",
             modificator: "spb"
         },
         {
             city: "Екатеринбург",
-            info: "<a href=\"mailto:ural@icpcentre.pro\">ural@icpcentre.pro</a>",
+            adress: "Лиговский проспект, 94, литер А, 5 этаж.<br>БЦ Лиговский проспект",
+            email: "ural@icpcentre.pro",
             icon: "location",
             modificator: "ekb"
         },
         {
             city: "Москва",
-            info: "<a href=\"mailto:info@icpcentre.org\">ural@icpcentre.pro</a>",
+            adress: "Лиговский проспект, 94, литер А, 5 этаж.<br>БЦ Лиговский проспект",
+            email: "ural@icpcentre.pro",
             icon: "location",
             modificator: "msk"
         }
@@ -31,6 +33,9 @@
                     li.branches-map__branch(class=`branches-map__branch--${branch.icon} branches-map__branch--${branch.modificator}`)
                         .branches-map__branch-info
                             p.branches-map__city.text.text--m.text--bold= branch.city
-                            p.branches-map__text.text.text--s !{branch.info}
+                            .branches-map__adress-wrp.branches-map__adress-wrp--collapsed
+                                p.branches-map__adress.branches-map__text.text.text--s !{branch.adress}
+                            if branch.email
+                                a(href=`mailto:${ branch.email }`).branches-map__text.text.text--s.text--link= branch.email
                             if branch.showOnMap
                                 a(href="#").branches-map__text.text.text--s.text--link Посмотреть на карте
