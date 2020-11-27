@@ -4,21 +4,18 @@
             city: "Санкт-Петербург",
             adress: "Лиговский проспект, 94, литер А, 5 этаж.<br>БЦ Лиговский проспект",
             showOnMap: true,
-            icon: "star",
             modificator: "spb"
         },
         {
             city: "Екатеринбург",
             adress: "Лиговский проспект, 94, литер А, 5 этаж.<br>БЦ Лиговский проспект",
             email: "ural@icpcentre.pro",
-            icon: "location",
             modificator: "ekb"
         },
         {
             city: "Москва",
             adress: "Лиговский проспект, 94, литер А, 5 этаж.<br>БЦ Лиговский проспект",
             email: "ural@icpcentre.pro",
-            icon: "location",
             modificator: "msk"
         }
     ]
@@ -30,10 +27,10 @@
                 img(src="images/sprite.svg#branches-map" alt="Представительства")
             ul.branches-map__branches
                 each branch in branches
-                    li.branches-map__branch(class=`branches-map__branch--${branch.icon} branches-map__branch--${branch.modificator}`)
+                    li.branches-map__branch.branches-map__branch--collapsed(class=`branches-map__branch--${branch.modificator}`)
                         .branches-map__branch-info
                             p.branches-map__city.text.text--m.text--bold= branch.city
-                            .branches-map__adress-wrp.branches-map__adress-wrp--collapsed
+                            .branches-map__adress-wrp
                                 p.branches-map__adress.branches-map__text.text.text--s !{branch.adress}
                             if branch.email
                                 a(href=`mailto:${ branch.email }`).branches-map__text.text.text--s.text--link= branch.email

@@ -1,27 +1,25 @@
-const colapsedClassName = "branches-map__adress-wrp--collapsed";
+const colapsedClassName = "branches-map__branch--collapsed";
 
-const adressWrps = document.querySelectorAll(".branches-map__adress-wrp");
-const branchInfoContainers = document.querySelectorAll(
-	".branches-map__branch-info"
-);
+const branches = document.querySelectorAll(".branches-map__branch");
 
-branchInfoContainers.forEach((branchInfo) => {
-	const cityName = branchInfo.querySelector(".branches-map__city");
-	const adressWrp = branchInfo.querySelector(".branches-map__adress-wrp");
-	const adress = branchInfo.querySelector(".branches-map__adress");
+branches.forEach((branch) => {
+	const cityName = branch.querySelector(".branches-map__city");
+	const adressWrp = branch.querySelector(".branches-map__adress-wrp");
+	const adress = branch.querySelector(".branches-map__adress");
 
 	cityName.addEventListener("click", () => {
-		if (adressWrp.classList.contains(colapsedClassName)) {
-            adressWrps.forEach(({ classList }) => {
+		console.log("click, branch:", branch);
+		if (branch.classList.contains(colapsedClassName)) {
+            branches.forEach(({ classList }) => {
                 if (!classList.contains(colapsedClassName)) {
                     classList.add(colapsedClassName);
                 }
             });
 
-			adressWrp.classList.remove(colapsedClassName);
+			branch.classList.remove(colapsedClassName);
 			adressWrp.style.height = `${adress.offsetHeight}px`;
 		} else {
-			adressWrp.classList.add(colapsedClassName);
+			branch.classList.add(colapsedClassName);
 		}
 	});
 });
