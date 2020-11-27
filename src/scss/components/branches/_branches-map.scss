@@ -8,7 +8,7 @@
 		max-width: 1160px;
 
 		@include desktop {
-			max-width: calc(100% - 196px);
+			max-width: calc(100% - 240px);
 		}
 
 		@include tablet {
@@ -97,7 +97,7 @@
 
 		&--ekb {
 			@include tablet("min") {
-				max-width: 220px;
+				max-width: 240px;
 				top: 16.704%;
 				right: 0.2%;
 				transform: translateX(100%);
