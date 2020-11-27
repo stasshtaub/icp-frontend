@@ -13,13 +13,13 @@
 @import "../components/branches/branches-map";
 
 .branches {
-    padding: 216px 0 100px 0;
+    padding: 216px 0 200px 0;
 
     @include tablet {
-        padding-top: 100px;
+        padding: 100px 0 160px 0;
     }
 
     @include mobile-l {
-        padding-top: 90px;
+        padding: 90px 0 60px 0;
     }
 }
