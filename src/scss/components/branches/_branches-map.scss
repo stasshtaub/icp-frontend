@@ -90,7 +90,7 @@
 				}
 			}
 
-			#{$p}__adress-wrp {
+			#{$p}__collapsed-wrp {
 				height: 0 !important;
 				transform: scale(0.7);
 				opacity: 0;
@@ -121,7 +121,7 @@
 		}
 	}
 
-	&__adress-wrp {
+	&__collapsed-wrp {
 		overflow: hidden;
 		transform: none;
 		opacity: 1;

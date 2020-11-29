@@ -4,8 +4,8 @@ const branches = document.querySelectorAll(".branches-map__branch");
 
 branches.forEach((branch) => {
 	const cityName = branch.querySelector(".branches-map__city");
-	const adressWrp = branch.querySelector(".branches-map__adress-wrp");
-	const adress = branch.querySelector(".branches-map__adress");
+	const collapsedWrp = branch.querySelector(".branches-map__collapsed-wrp");
+	const collapsedContent = branch.querySelector(".branches-map__collapsed-content");
 
 	cityName.addEventListener("click", () => {
 		console.log("click, branch:", branch);
@@ -17,7 +17,7 @@ branches.forEach((branch) => {
             });
 
 			branch.classList.remove(colapsedClassName);
-			adressWrp.style.height = `${adress.offsetHeight}px`;
+			collapsedWrp.style.height = `${collapsedContent.offsetHeight}px`;
 		} else {
 			branch.classList.add(colapsedClassName);
 		}

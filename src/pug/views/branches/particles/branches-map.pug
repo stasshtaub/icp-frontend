@@ -30,9 +30,10 @@
                     li.branches-map__branch.branches-map__branch--collapsed(class=`branches-map__branch--${branch.modificator}`)
                         .branches-map__branch-info
                             p.branches-map__city.text.text--m.text--bold= branch.city
-                            .branches-map__adress-wrp
-                                p.branches-map__adress.branches-map__text.text.text--s !{branch.adress}
-                            if branch.email
-                                a(href=`mailto:${ branch.email }`).branches-map__text.text.text--s.text--link= branch.email
+                            .branches-map__collapsed-wrp
+                                .branches-map__collapsed-content
+                                    p.branches-map__text.text.text--s !{branch.adress}
+                                    if branch.email
+                                        a(href=`mailto:${ branch.email }`).branches-map__text.text.text--s.text--link= branch.email
                             if branch.showOnMap
                                 a(href="#").branches-map__text.text.text--s.text--link Посмотреть на карте
