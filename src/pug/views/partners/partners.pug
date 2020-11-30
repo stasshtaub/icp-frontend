@@ -14,5 +14,5 @@ block content
 block scripts
     script(src!=`${baseDir}js/common.js?v=${Date.now()}`)
     script(defer src!="https://unpkg.com/swiper/swiper-bundle.min.js")
-    script(src!="https://cdn.jsdelivr.net/gh/mcstudios/glightbox/dist/js/glightbox.min.js")
+    script(defer src!="https://cdn.jsdelivr.net/gh/mcstudios/glightbox/dist/js/glightbox.min.js")
     script(defer src!=`${baseDir}js/partners.js?v=${Date.now()}`)
