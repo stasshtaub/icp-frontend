@@ -1,8 +1,19 @@
 .webinars-list {
-    display: grid;
-    grid-template-columns: repeat(2, minmax(50%, 548px));
-    grid-gap: 25px;
-    margin-top: 117px;
+	display: grid;
+	grid-template-columns: repeat(2, minmax(50%, 548px));
+	grid-row-gap: 50px;
+	grid-column-gap: 25px;
+	margin-top: 117px;
+
+	@include tablet {
+		margin-top: 55px;
+	}
+
+	@include tablet-xs {
+		margin-top: 40px;
+		grid-template-columns: 1fr;
+		grid-gap: 50px;
+	}
 
 	&__online {
 		font-weight: 700;
@@ -20,11 +31,41 @@
 	}
 
 	&__title {
+		margin-top: 17px;
 		font-size: 40px;
-		line-height: 49px;
-    }
-    
-    &__leads {
-        max-width: 430px;
-    }
+		line-height: 122%;
+
+		@include laptop {
+			font-size: 34px;
+		}
+
+		@include tablet {
+			font-size: 28px;
+		}
+
+		@include mobile-l {
+			font-size: 20px;
+		}
+	}
+
+	&__leads {
+		margin-top: 15px;
+		max-width: 430px;
+	}
+
+	&__btn {
+		margin-top: 40px;
+
+		@include laptop {
+			margin-top: 30px;
+		}
+
+		@include tablet {
+			margin-top: 25px;
+		}
+		
+		@include tablet-xs {
+			margin-top: 20px;
+		}
+	}
 }
