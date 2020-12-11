@@ -1,0 +1,53 @@
+@import "../utils/variables";
+@import "../utils/breakpoints";
+@import "../utils/helpers";
+
+@import "../layout/spaces";
+
+@import "../components/common/button";
+@import "../components/common/title";
+@import "../components/common/subtitle";
+@import "../components/common/description";
+@import "../components/common/double-block";
+@import "../components/common/program-about";
+
+@import "../components/capabilities/capabilities-start-screen";
+@import "../components/webinars/webinars-list";
+
+.webinars {
+	&__background {
+		position: absolute;
+		top: 0;
+		width: 100%;
+		height: 100%;
+		background: conic-gradient(from 180deg at 50% 50%, #B7261D 0deg, rgba(39, 149, 50, 0) 360deg);
+		background-size: cover;
+		background-attachment: fixed;
+
+		&::after {
+			content: "";
+			position: absolute;
+			bottom: 0;
+			left: 0;
+			width: 100%;
+			height: 300px;
+			background-image: linear-gradient(
+				to top,
+				$color-black,
+				rgba($color-black, 0)
+			);
+		}
+	}
+}
+
+.capabilities {
+	overflow: hidden;
+
+	&__group {
+		&--first {
+			position: relative;
+			color: $color-white;
+			background-color: $color-black2;
+		}
+	}
+}

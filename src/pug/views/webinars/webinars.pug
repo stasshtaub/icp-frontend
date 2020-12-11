@@ -1,0 +1,21 @@
+extends ../../layouts/default
+
+block styles
+    link(rel="stylesheet" href!=`${baseDir}css/main.css?v=${Date.now()}`)
+    link(rel="stylesheet" href!=`${baseDir}css/webinars.css?v=${Date.now()}`)
+    link(rel="stylesheet" href!=`${baseDir}css/font-awesome.css?v=${Date.now()}`)
+
+block content
+    .capabilities
+        .capabilities__group.capabilities__group--first
+            .capabilities__background-wrp.webinars__background
+            .container.container--relative
+                include particles/capabilities-start-screen
+        .page__content
+            .capabilities__group
+                .container
+                    +programAbout('Фундаментальная программа подготовки к международной сертификации ACSTH ICF с нуля. Обеспечивает глубокое и системное погружение в профессию, помогает активировать модель коучингового мышления, выработать профессиональную этику и изучить инструменты продвижения коучинговых услуг. Учебный процесс обеспечивают более 100 специалистов — ведущие, менторы, супервизоры, ассистенты. Участником программы может стать любой желающий с любым уровнем подготовки. Обучение доступно дистанционно и очно.', 'Программа была разработана в 2015 году известным коучем, вторым в России MCC ICF Ольгой Рыбиной. Выпускниками стали более 1000 студентов из 38 стран.', 'mt-65')
+                    include particles/webinars-list
+
+block scripts
+    script(src!=`${baseDir}js/common.js?v=${Date.now()}`)

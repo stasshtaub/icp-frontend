@@ -1,0 +1,39 @@
+- 
+    const webinars = [
+        {
+            online: true,
+            description: "Открытый вебинар 15 сентября",
+            title: "Мотивация поколений M и Z. Зачем нужен Agile коуч?",
+            leads: [
+                { name: "Сергей Артюхов", gender: "man" },
+                { name: "Мария Ветницкая", gender: "woman" },
+                { name: "Наталья Гульчевская", gender: "woman" }
+            ]
+        },
+        {
+            online: true,
+            description: "Бесплатный курс",
+            title: "Не проспи жизнь",
+            leads: [
+                { name: "Галина Вдовиченко", gender: "woman" }
+            ]
+        }
+    ]
+
+.double-block
+    aside.double-block__aside
+    .double-block__content.double-block__content--narrow
+        ul.webinars-list
+            each web in webinars
+                - const { online, description, title, leads } = web
+                    li.webinars-list__webinar
+                        p.text.text--s2
+                            if (online)
+                                span.webinars-list__online Онлайн
+                                br
+                            span= description
+                        p.webinars-list__title= title
+                        p.webinars-list__leads.text.text--s
+                            span= `Ведущ${ leads.length > 1 ? "ие" :  leads[0].gender === "man" ? "ий" : "ая" }: ${ leads.map(({ name }) => name).join(", ") }`
+                        +button("Подробнее", ["webinars-list__btn"], "size-normal", "color-primary", "icon-ok", "a")
+                    
