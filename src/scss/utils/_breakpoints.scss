@@ -11,8 +11,14 @@
 }
 
 @mixin laptop-m($dimension: "max") {
-	@media (#{$dimension}-width: 1200px) {
-		@content;
+	@if $dimension == "max" {
+		@media (max-width: 1200px) {
+			@content;
+		}
+	} @else {
+		@media (min-width: 1201px) {
+			@content;
+		}
 	}
 }
 

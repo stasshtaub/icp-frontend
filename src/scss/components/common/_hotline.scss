@@ -18,8 +18,8 @@
 			padding: 26px 28px;
 		}
 
-		@include desktop("min") {
-			padding: 23px 160px;
+		@include laptop-m("min") {
+			padding: 23px 150px;
 		}
 
 		@include tablet-xs {
