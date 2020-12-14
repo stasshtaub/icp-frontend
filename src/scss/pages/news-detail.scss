@@ -1,0 +1,31 @@
+@import "../utils/variables";
+@import "../utils/breakpoints";
+@import "../utils/helpers";
+
+@import "../layout/spaces";
+
+@import "../components/common/row";
+@import "../components/common/text";
+@import "../components/common/slider";
+@import "../components/common/double-block";
+@import "../components/common/button";
+
+@import "../components/about/about-news";
+
+.news-detail {
+    padding-top: 155px;
+
+    @include tablet {
+        padding-top: 100px;
+    }
+    
+    &__content {
+        padding: 60px 0;
+        background-color: $color-gray-light7;
+    }
+
+    .about-news {
+        background-color: inherit;
+        margin-top: 60px;
+    }
+}

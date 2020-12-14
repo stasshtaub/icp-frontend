@@ -1,0 +1,17 @@
+extends ../../layouts/default
+
+block styles
+    link(rel="stylesheet" href!=`${baseDir}css/main.css?v=${Date.now()}`)
+    link(rel="stylesheet" href!=`${baseDir}css/news-detail.css?v=${Date.now()}`)
+    link(rel="stylesheet" href!="https://unpkg.com/swiper@6.3.2/swiper-bundle.min.css")
+block content
+    .news-detail
+        .news-detail__content
+            include particles/news-detail-breadcrumbs
+            include particles/news-detail-card
+            include ../about/particles/about-news
+       
+block scripts
+    script(src!=`${baseDir}js/common.js?v=${Date.now()}`)
+    script(defer src!="https://unpkg.com/swiper/swiper-bundle.min.js")
+    script(defer src!=`${baseDir}js/news-detail.js?v=${Date.now()}`)

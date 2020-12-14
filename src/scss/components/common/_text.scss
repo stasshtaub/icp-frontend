@@ -34,6 +34,23 @@
             font-size: 30px;
         }
     }
+
+	&--l2 {
+        font-size: 40px;
+        line-height: 122.3%;
+
+        @include laptop {
+            font-size: 35px;
+        }
+
+        @include tablet {
+            font-size: 30px;
+        }
+
+        @include mobile-l {
+            font-size: 25px;
+        }
+    }
     
 	&--m, &--m2 {
         font-size: 30px;
