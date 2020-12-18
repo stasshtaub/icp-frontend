@@ -10,7 +10,8 @@ module.exports = {
 		branches: "./src/js/branches",
 		team: "./src/js/team",
 		partners: "./src/js/partners",
-		"news-detail": "./src/js/news-detail"
+		"news-detail": "./src/js/news-detail",
+		news: "./src/js/news"
 	},
 	module: {
 		rules: [

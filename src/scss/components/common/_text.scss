@@ -117,9 +117,23 @@
         }
 	}
     
+	&--s3 {
+        font-size: 16px;
+        line-height: 150%;
+
+        @include tablet-xs {
+            font-size: 14px;
+        }
+	}
+    
 	&--xs {
         font-size: 14px;
         line-height: 122.285714%;
+	}
+    
+	&--xs2 {
+        font-size: 12px;
+        line-height: 122.333333%;
 	}
 
     &--bold {

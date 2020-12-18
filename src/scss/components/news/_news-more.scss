@@ -1,0 +1,30 @@
+.news-more {
+    margin-top: 130px;
+
+    &__btn {
+        position: relative;
+        display: block;
+        margin: 0 auto;
+        overflow: hidden;
+
+        &:disabled {
+            &:after {
+                opacity: 1;
+            }
+        }
+
+        &:after {
+            content: "";
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            background: $color-blue5 url("../images/sprite.svg#loader") no-repeat center;
+            background-size: 80%;
+            left: 0;
+            top: 0;
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+    }
+}

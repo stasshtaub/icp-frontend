@@ -1,0 +1,15 @@
+extends ../../layouts/default
+
+block styles
+    link(rel="stylesheet" href!=`${baseDir}css/main.css?v=${Date.now()}`)
+    link(rel="stylesheet" href!=`${baseDir}css/news.css?v=${Date.now()}`)
+block content
+    .news
+        .news__content
+            include particles/news-breadcrumbs
+            include particles/news-list
+            include particles/news-more
+       
+block scripts
+    script(src!=`${baseDir}js/common.js?v=${Date.now()}`)
+    script(defer src!=`${baseDir}js/news.js?v=${Date.now()}`)
