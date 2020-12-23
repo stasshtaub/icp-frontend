@@ -6,15 +6,17 @@
 	let limit = 8;
 	let totalPages = 2;
 
-	const addNews = (img, title, description, date) => {
+	const addNews = (img, title, description, date, url) => {
 		const artictle = `
 			<article class="news-card">
-				<img src="${ img }" alt="news image" class="news-card__img" />
-				<div class="news-card__info">
-					<p class="news-card__title text text--s">${ title }</p>
-					<p class="news-card__description text text--s3">${ description }</p>
-					<p class="news-card__date text text--xs2">${ date }</p>
-				</div>
+				<a class="news-card__link" href="${ url }">
+					<img src="${ img }" alt="news image" class="news-card__img" />
+					<div class="news-card__info">
+						<p class="news-card__title text text--s">${ title }</p>
+						<p class="news-card__description text text--s3">${ description }</p>
+						<p class="news-card__date text text--xs2">${ date }</p>
+					</div>
+				<a>
 			</article>
 		`;
 
@@ -43,8 +45,8 @@
 
 		const { response: { items, total_page_count } } = await fetchNews();
 
-		items.forEach(({ img, name, description, prop_date }) => {
-			addNews(img, name, description, prop_date)
+		items.forEach(({ img, name, description, prop_date, url }) => {
+			addNews(img, name, description, prop_date, url)
 		});
 
 		if (totalPages !== total_page_count) {

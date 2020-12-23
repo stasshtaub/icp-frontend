@@ -1,7 +1,8 @@
-mixin newsCard(img="https://loremflickr.com/640/400", title, description, date)
+mixin newsCard(img="https://loremflickr.com/640/400", title, description, date, href)
     article.news-card&attributes(attributes)
-        img(src=img alt="news image").news-card__img
-        .news-card__info
-            p.news-card__title.text.text--s= title
-            p.news-card__description.text.text--s3 !{description}
-            p.news-card__date.text.text--xs2= date
+        a(href= href target="_blank").news-card__link
+            img(src=img alt="news image").news-card__img
+            .news-card__info
+                p.news-card__title.text.text--s= title
+                p.news-card__description.text.text--s3 !{description}
+                p.news-card__date.text.text--xs2= date
