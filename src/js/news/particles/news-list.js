@@ -2,8 +2,9 @@
 	const moreBtn = document.getElementById("news-more__btn");
 	const listContainer = document.querySelector(".news-list__list");
 	
-	let lastId = listContainer.querySelectorAll(".news-card").length;
+	let currentPage = 1;
 	let limit = 8;
+	let totalPages = 2;
 
 	const addNews = (img, title, description, date) => {
 		const artictle = `
@@ -23,19 +24,36 @@
 	}
 
 	const fetchNews = async () => {
-		const response = await fetch(`https://jsonplaceholder.typicode.com/posts?_start=${ lastId }&_limit=${ limit }`);
+		const response = await fetch(
+			"/local/templates/icpcenter/components/bitrix/news/news/bitrix/news.list/.default/ajax.php?" +
+				new URLSearchParams({
+					ajax: "y",
+					i_num_page: currentPage,
+					n_page_size: limit
+				})
+		);
+
 		return await response.json();
 	};
 
 	const loadNews = async () => {
 		moreBtn.disabled = true;
 
-		const news = await fetchNews();
+		currentPage++;
 
-		news.forEach(({ id, title, body }) => {
-			addNews(`https://loremflickr.com/640/${ 400 + id }`, title, body, "1 декабря")
-			lastId++;
+		const { response: { items, total_page_count } } = await fetchNews();
+
+		items.forEach(({ img, name, description, prop_date }) => {
+			addNews(img, name, description, prop_date)
 		});
+
+		if (totalPages !== total_page_count) {
+			totalPages = total_page_count;
+		}
+		
+		if (currentPage === totalPages) {
+			moreBtn.parentNode.removeChild(moreBtn);
+		}
 
 		moreBtn.disabled = false;
 	}
