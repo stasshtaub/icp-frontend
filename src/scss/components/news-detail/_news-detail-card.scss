@@ -1,0 +1,26 @@
+.news-detail-card {
+	img[align="left"] {
+		margin: 2em 2em 1em 0;
+	}
+
+	img[align="right"] {
+		margin: 2em 0 1em 2em;
+	}
+
+	h2 {
+		clear: both;
+	}
+
+	img {
+		max-width: min(630px, 60%);
+		height: auto;
+        object-fit: contain;
+        
+        @include tablet-s2{
+            max-width: unset;
+            width: 100vw;
+            margin: 2em 0 1em calc(50% - 50vw) !important;
+            float: none;
+        }
+	}
+}

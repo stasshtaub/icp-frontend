@@ -90,4 +90,13 @@
 			align-items: center;
 		}
 	}
+
+	&__link {
+		color: unset;
+		text-decoration: none;
+
+		&:hover {
+			text-decoration: underline;
+		}
+	}
 }

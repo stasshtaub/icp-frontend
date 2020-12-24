@@ -86,10 +86,11 @@ section.about-news
                         each slide in news
                             li.about-news__slide.swiper-slide
                                 .about-news__card
-                                    img(src=slide.img alt=slide.title).about-news__img
-                                    p.about-news__title= slide.title
-                                    p.about-news__description !{slide.description}
-                                    p.about-news__date= slide.date
+                                    .about-news__link
+                                        img(src=slide.img alt=slide.title).about-news__img
+                                        p.about-news__title= slide.title
+                                        p.about-news__description !{slide.description}
+                                        p.about-news__date= slide.date
                         li.about-news__slide.about-news__slide--loader.swiper-slide
                             .about-news__card.about-news__card--loader
                                 img(src="images/sprite.svg#loader" alt="loading...").about-news__loader-img
