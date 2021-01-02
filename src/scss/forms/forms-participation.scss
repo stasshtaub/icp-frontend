@@ -1,0 +1,42 @@
+@import "../utils/variables";
+@import "../utils/breakpoints";
+@import "../utils/helpers";
+
+@import "../components/common/form";
+@import "../components/common/checkbox";
+
+.forms-participation {
+    display: flex;
+
+    &__col {
+        padding: 90px 0 30px 0;
+
+        &--left {
+            width: 420px;
+            background-color: $color-blue3;
+            padding-left: 30px;
+        }
+
+        &--right {
+            padding-left: 70px;
+            padding-right: 30px;
+        }
+    }
+
+    &__input {
+        background: $color-white;
+        border: 1px solid $color-gray-light8;
+        padding: 0 15px;
+        height: 44px;
+        width: 430px;
+        outline: none;
+    }
+
+    &__submit-btn {
+        margin-top: 40px;
+    }
+
+    &__consent {
+        margin-top: 26px;
+    }
+}

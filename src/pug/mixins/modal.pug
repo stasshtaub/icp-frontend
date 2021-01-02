@@ -1,0 +1,9 @@
+mixin modal(title)
+    .modal&attributes(attributes)
+        .modal__backdrop.modal__close-trigger
+        .modal__window
+            .modal__header
+                p.modal__title= title
+                .modal__close-btn.modal__close-trigger
+            .modal__content
+                block

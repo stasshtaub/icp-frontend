@@ -10,7 +10,9 @@ module.exports = {
 		branches: "./src/js/branches",
 		team: "./src/js/team",
 		partners: "./src/js/partners",
-		"news-detail": "./src/js/news-detail"
+		"news-detail": "./src/js/news-detail",
+		"forms-page": "./src/js/forms-page",
+		"forms-participation": "./src/js/forms/forms-participation",
 	},
 	module: {
 		rules: [
@@ -27,7 +29,9 @@ module.exports = {
 		],
 	},
 	output: {
-		filename: "[name].js",
+		filename: ({ chunk: { name } }) => {
+			return ["forms-participation"].includes(name) ? "forms/[name].js" : "[name].js";
+		},
 		path: path.resolve(__dirname, "dist/js"),
 	},
 };

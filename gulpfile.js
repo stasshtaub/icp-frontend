@@ -75,6 +75,16 @@ gulp.task("scss", () => {
 		.pipe(gulp.dest(`${settings.dist}/css`));
 });
 
+gulp.task("scss:forms", () => {
+	const plugins = [autoprefixer(), cssnano()];
+
+	return gulp
+		.src("./src/scss/forms/*.scss")
+		.pipe(sass().on("error", sass.logError))
+		.pipe(postcss(plugins))
+		.pipe(gulp.dest(`${settings.dist}/css/forms`));
+});
+
 gulp.task("js", () =>
 	webpack(webpackConfig)
 		// .pipe(uglify())
@@ -101,7 +111,7 @@ gulp.task("watch", () => {
 		global.emittyPugChangedFile = event === "unlink" ? undefined : file;
 	});
 
-	gulp.watch("src/scss/**/*.scss", gulp.series("scss"));
+	gulp.watch("src/scss/**/*.scss", gulp.series("scss", "scss:forms"));
 
 	gulp.watch("src/js/**/*.js", gulp.series("js"));
 });
@@ -120,7 +130,7 @@ gulp.task("serve", () => {
 
 gulp.task(
 	"build",
-	gulp.series("copy", "pug", gulp.parallel("images", "scss", "js", "svg-sprite"))
+	gulp.series("copy", "pug", gulp.parallel("images", "scss", "scss:forms", "js", "svg-sprite"))
 );
 
 gulp.task("default", gulp.series("build", gulp.parallel("watch", "serve")));

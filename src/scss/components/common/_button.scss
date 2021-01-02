@@ -36,4 +36,8 @@
 		width: 32px;
 		margin-left: 34px;
 	}
+
+	&:disabled {
+		background-color: $color-blue8;
+	}
 }

@@ -1,0 +1,17 @@
+include ../../../mixins/modal
+include ../../../mixins/form-item
+include ../../../mixins/checkbox
+
++modal("Заявка на участие")#modal-participation
+    .forms-participation
+        .forms-participation__col.forms-participation__col--left
+        .forms-participation__col.forms-participation__col--right
+            form(action="https://jsonplaceholder.typicode.com/posts" method="POST").form.forms-participation__form#forms-participation
+                +form-item("Как вас зовут?")
+                    input(name="name" placeholder="Фамилия и имя" required).forms-participation__input
+                +form-item("Эл. почта")
+                    input(name="email" required).forms-participation__input
+                +form-item("Номер телефона")
+                    input(name="phone" required).forms-participation__input
+                +checkbox("consent").forms-participation__consent Даю согласие на обработку персональных данных
+                +button("Отправить")(type="submit" disabled).forms-participation__submit-btn

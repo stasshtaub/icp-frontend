@@ -1,0 +1,6 @@
+mixin form-item(label)
+    .form-item&attributes(attributes)
+        if (label)
+            .form-item__label= label
+        .form-item__content
+            block

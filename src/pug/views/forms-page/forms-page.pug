@@ -1,0 +1,17 @@
+extends ../../layouts/default
+
+block styles
+    link(rel="stylesheet" href!=`${baseDir}css/main.css?v=${Date.now()}`)
+    link(rel="stylesheet" href!=`${baseDir}css/forms-page.css?v=${Date.now()}`)
+    link(rel="stylesheet" href!=`${baseDir}css/forms/forms-participation.css?v=${Date.now()}`)
+
+block content
+    .forms-page
+        .container
+            +button("Заявка на участие")(data-modal="modal-participation")
+    include particles/forms-participation
+       
+block scripts
+    script(src!=`${baseDir}js/common.js?v=${Date.now()}`)
+    script(src!=`${baseDir}js/forms-page.js?v=${Date.now()}`)
+    script(src!=`${baseDir}js/forms/forms-participation.js?v=${Date.now()}`)

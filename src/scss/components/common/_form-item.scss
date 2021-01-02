@@ -1,0 +1,10 @@
+.form-item {
+    &__label {
+        font-weight: bold;
+        font-size: 10px;
+        line-height: 20px;
+        text-transform: uppercase;
+        color: $color-black;
+        margin-bottom: 10px;
+    }
+}

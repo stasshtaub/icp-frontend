@@ -1,0 +1,7 @@
+@import "../components/common/form-item";
+
+.form {
+    .form-item + .form-item {
+        margin-top: 20px;
+    }
+}
