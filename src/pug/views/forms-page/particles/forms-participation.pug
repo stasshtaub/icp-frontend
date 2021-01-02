@@ -1,6 +1,7 @@
 include ../../../mixins/modal
 include ../../../mixins/form-item
 include ../../../mixins/checkbox
+include ../../../mixins/loader
 
 +modal("Заявка на участие")#modal-participation
     .forms-participation
@@ -15,3 +16,4 @@ include ../../../mixins/checkbox
                     input(name="phone" required).forms-participation__input
                 +checkbox("consent").forms-participation__consent Даю согласие на обработку персональных данных
                 +button("Отправить")(type="submit" disabled).forms-participation__submit-btn
+            +loader()

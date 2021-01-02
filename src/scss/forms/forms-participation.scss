@@ -4,6 +4,7 @@
 
 @import "../components/common/form";
 @import "../components/common/checkbox";
+@import "../components/common/loader";
 
 .forms-participation {
     display: flex;
@@ -18,6 +19,7 @@
         }
 
         &--right {
+            position: relative;
             padding-left: 70px;
             padding-right: 30px;
         }
