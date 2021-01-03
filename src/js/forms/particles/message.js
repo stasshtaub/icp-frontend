@@ -1,39 +1,93 @@
-const createModal = () => {
-    const div = document.createElement("div");
-    div.innerHTML = `
-        <div class="modal">
-            <div class="modal__backdrop modal__close-trigger"></div>
-        </div>
-    `;
+export class Modal {
+    el = null;
 
-    return div.querySelector(".modal");
+    _title = "";
+
+    constructor(title, modal) {
+        if (modal) {
+            this.el = modal;
+        } else {
+            const div = document.createElement("div");
+    
+            div.innerHTML = `
+                <div class="modal">
+                    <div class="modal__backdrop modal__close-trigger">
+                    </div>
+                    <div class="modal__window modal__window--active">
+                        <div class="modal__header">
+                            <p class="modal__title">${ this.title }</p>
+                        </div>
+                        <div class="modal__content">
+                        </div>
+                    </div>
+                </div>
+            `;
+    
+            this.el = div.firstChild;
+        }
+
+        this.title = title;
+    }
+
+    get title() {
+        return this._title;
+    }
+
+    set title(value) {
+        this._title = value;
+        this.el.querySelector(".modal__title").textContent = value;
+    }
+
+    setContent(contentString) {
+        this.el.querySelector(".modal__content").innerHTML = contentString;
+    }
+
+    showModal() {
+        this.el.classList.add("modal--active");
+    }
+
+    hideModal() {
+        this.el.classList.remove("modal--active");
+    }
+
+    showWindow() {
+        this.el.querySelector(".modal__window").classList.add("modal__window--active");
+    }
+
+    hideWindow() {
+        this.el.querySelector(".modal__window").classList.remove("modal__window--active");
+    }
+
+    toggleContent(contentString, title) {
+        this.hideWindow();
+        this.setContent(contentString);
+        if (title) {
+            this.title = title;
+        }
+
+        setTimeout(() => {
+            this.showWindow();
+        }, 100);
+    }
 }
 
-const createMessage = (title, footer, body, type) => {
-    const div = document.createElement("div");
-    div.innerHTML = `
-        <div class="modal__window">
-            <div class="modal__header">
-                <p class="modal__title">${ title }</p>
+const createMessage = (footer, body, type) => {
+    return `
+        <div class="message message--${ type }">
+            <div class="message__body">
+                ${ body ? body : "" }
             </div>
-            <div class="modal__content">
-                <div class="message message--${ type }">
-                    <div class="message__body">
-                        ${ body ? body : "" }
-                    </div>
-                    ${ footer }
-                </div>
-            </div>
+            ${ footer }
         </div>
     `;
-
-    return div.querySelector(".modal__window");
 }
 
 export const showMessage = (title, footer, body, type = "success", modal, timer = 5) => {
+    console.log("show", type);
     if (!footer) {
         switch (type) {
             case "success":
+                console.log("case success");
                 footer = `
                     <footer>
                         <span class="text">Окно автоматически закроется через:&nbsp;</span>
@@ -43,6 +97,7 @@ export const showMessage = (title, footer, body, type = "success", modal, timer 
                 break;
         
             case "danger":
+                console.log("case danger");
                 footer = `
                     <footer>
                         <span class="text">Обратитесь пожалуйста к администратору по эл. почте:&nbsp;</span>
@@ -53,16 +108,16 @@ export const showMessage = (title, footer, body, type = "success", modal, timer 
         }
     }
 
-    const modalWindow = createMessage(title, footer, body, type);
+    const message = createMessage(footer, body, type);
 
     if (!modal) {
-        modal = createModal();
-        document.body.append(modal);
-    } 
-    modal.append(modalWindow);
+        modal = new Modal(title);
+        document.body.append(modal.el);
+    }
+    modal.toggleContent(message, title);
 
     if (type === "success") {
-        const timer = modalWindow.querySelector("message__timer");
+        const timer = modal.el.querySelector(".message__timer");
 
         let time = 5;
         const id = setInterval(() => {
@@ -71,7 +126,7 @@ export const showMessage = (title, footer, body, type = "success", modal, timer 
 
             if (time === 0) {
                 clearInterval(id);
-                modal.parentNode.removeChild(modal);
+                modal.hideModal();
             }
         }, 1000);
     }

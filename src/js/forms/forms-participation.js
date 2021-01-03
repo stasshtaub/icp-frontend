@@ -1,5 +1,6 @@
-import { showMessage } from "./particles/message";
+import { Modal, showMessage, hideModalWindow, showModalWindow } from "./particles/message";
 
+const modal = new Modal("Заявка на участие", document.getElementById("modal-participation"));
 const form = document.getElementById("forms-participation");
 const consentCheckbox = form.querySelector("[name='consent']");
 const submitButton = form.querySelector("[type='submit']");
@@ -18,16 +19,22 @@ form.addEventListener("submit", async (e) => {
     if (action) {
         const body = new FormData(form);
 
+        let title, messageBody, type;
+
         try {
             const response = await fetch(action, {
                 method,
                 body
             });
             await response.json();
-            
-            showMessage("Заявка на участие успешно отправлена");
+
+            title = "Заявка на участие успешно отправлена";
         } catch (error) {
-            showMessage("Заявка на участие не отправлена", null, "Произошла какая-то внутренная ошибка сайта и ваша заявка не отправлена.", "danger");
+            title = "Заявка на участие не отправлена";
+            messageBody = "Произошла какая-то внутренная ошибка сайта и ваша заявка не отправлена.";
+            type = "danger";
+        } finally {
+            showMessage(title, null, messageBody, type, modal);
         }
     }
     
