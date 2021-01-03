@@ -1,3 +1,5 @@
+import { showMessage } from "./particles/message";
+
 const form = document.getElementById("forms-participation");
 const consentCheckbox = form.querySelector("[name='consent']");
 const submitButton = form.querySelector("[type='submit']");
@@ -21,12 +23,13 @@ form.addEventListener("submit", async (e) => {
                 method,
                 body
             });
-            const result = await response.json();
-            console.log('Успех:', JSON.stringify(result));
+            await response.json();
+            
+            showMessage("Заявка на участие успешно отправлена");
         } catch (error) {
-            console.error('Ошибка:', error);
+            showMessage("Заявка на участие не отправлена", null, "Произошла какая-то внутренная ошибка сайта и ваша заявка не отправлена.", "danger");
         }
     }
     
     loader.classList.remove("loader--active");
-})
+});
