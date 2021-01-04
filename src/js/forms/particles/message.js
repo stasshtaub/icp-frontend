@@ -4,6 +4,7 @@ export class Modal {
     _title = "";
 
     constructor(title, modal) {
+        console.log("constr", modal);
         if (modal) {
             this.el = modal;
         } else {
@@ -23,7 +24,7 @@ export class Modal {
                 </div>
             `;
     
-            this.el = div.firstChild;
+            this.el = div.querySelector(".modal");
         }
 
         this.title = title;
@@ -50,23 +51,14 @@ export class Modal {
         this.el.classList.remove("modal--active");
     }
 
-    showWindow() {
-        this.el.querySelector(".modal__window").classList.add("modal__window--active");
+    mount() {
+        document.body.append(this.el);
     }
 
-    hideWindow() {
-        this.el.querySelector(".modal__window").classList.remove("modal__window--active");
-    }
-
-    toggleContent(contentString, title) {
-        this.hideWindow();
-        this.setContent(contentString);
-        if (title) {
-            this.title = title;
-        }
-
+    destroy() {
+        this.hideModal();
         setTimeout(() => {
-            this.showWindow();
+            this.el.parent.removeChild(this.el);
         }, 100);
     }
 }
@@ -82,8 +74,7 @@ const createMessage = (footer, body, type) => {
     `;
 }
 
-export const showMessage = (title, footer, body, type = "success", modal, timer = 5) => {
-    console.log("show", type);
+export const showMessage = (title, footer, body, type = "success", timer = 5) => {
     if (!footer) {
         switch (type) {
             case "success":
@@ -109,12 +100,10 @@ export const showMessage = (title, footer, body, type = "success", modal, timer 
     }
 
     const message = createMessage(footer, body, type);
-
-    if (!modal) {
-        modal = new Modal(title);
-        document.body.append(modal.el);
-    }
-    modal.toggleContent(message, title);
+    const modal = new Modal(title);
+    modal.setContent(message)
+    modal.mount();
+    modal.showModal();
 
     if (type === "success") {
         const timer = modal.el.querySelector(".message__timer");
@@ -126,7 +115,7 @@ export const showMessage = (title, footer, body, type = "success", modal, timer 
 
             if (time === 0) {
                 clearInterval(id);
-                modal.hideModal();
+                modal.destroy();
             }
         }, 1000);
     }

@@ -28,13 +28,14 @@ form.addEventListener("submit", async (e) => {
             });
             await response.json();
 
+            modal.hideModal();
             title = "Заявка на участие успешно отправлена";
         } catch (error) {
             title = "Заявка на участие не отправлена";
             messageBody = "Произошла какая-то внутренная ошибка сайта и ваша заявка не отправлена.";
             type = "danger";
         } finally {
-            showMessage(title, null, messageBody, type, modal);
+            showMessage(title, null, messageBody, type);
         }
     }
     
