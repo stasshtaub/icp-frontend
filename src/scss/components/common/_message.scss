@@ -1,0 +1,23 @@
+.message {
+    width: 600px;
+    height: 350px;
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    color: $color-white;
+    box-sizing: border-box;
+
+    &--success {
+        background: $color-orange3;
+    }
+
+    
+    &--danger {
+        background: $color-orange;
+    }
+
+    &__body {
+        margin-bottom: 1em;
+    }
+}
