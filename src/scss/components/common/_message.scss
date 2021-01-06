@@ -1,17 +1,22 @@
 .message {
     width: 600px;
     height: 350px;
-    padding: 30px;
+    padding: 60px 30px 30px 30px;
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
     color: $color-white;
     box-sizing: border-box;
+    max-width: 90vw;
+    max-height: 90vh;
+
+    @include tablet {
+        padding: 60px 20px 20px 20px;
+    }
 
     &--success {
         background: $color-orange3;
     }
-
     
     &--danger {
         background: $color-orange;

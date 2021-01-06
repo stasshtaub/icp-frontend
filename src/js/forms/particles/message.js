@@ -65,7 +65,7 @@ export class Modal {
     destroy() {
         this.hideModal();
         setTimeout(() => {
-            this.el.parentNode.removeChild(this.el);
+            this.el.parentNode?.removeChild(this.el);
         }, 100);
     }
 }
@@ -85,7 +85,6 @@ export const showMessage = (title, footer, body, type = "success", timer = 5) =>
     if (!footer) {
         switch (type) {
             case "success":
-                console.log("case success");
                 footer = `
                     <footer>
                         <span class="text">Окно автоматически закроется через:&nbsp;</span>
@@ -95,7 +94,6 @@ export const showMessage = (title, footer, body, type = "success", timer = 5) =>
                 break;
         
             case "danger":
-                console.log("case danger");
                 footer = `
                     <footer>
                         <span class="text">Обратитесь пожалуйста к администратору по эл. почте:&nbsp;</span>
