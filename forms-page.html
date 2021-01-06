@@ -4,8 +4,10 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width">
-    <link rel="stylesheet" href="./css/main.css?v=1608729474492">
-    <link rel="stylesheet" href="./css/news.css?v=1608729474492">
+    <link rel="stylesheet" href="./css/main.css?v=1609903413863">
+    <!-- forms-page.css - не нужен, он тут только для страницы демки -->
+    <link rel="stylesheet" href="./css/forms-page.css?v=1609903413863">
+    <link rel="stylesheet" href="./css/forms/forms-participation.css?v=1609903413863">
   </head>
   <body>
     <input class="header__checkbox-dropdown" type="checkbox" id="header__checkbox-dropdown">
@@ -49,120 +51,54 @@
     </header>
     <main>
       <div class="container"><a href="/"><img class="logo-duplicate" src="images/svg/logo.svg"></a></div>
-      <div class="news">
-        <div class="news__content">
-          <div class="breadcrumbs">
-            <div class="container">
-              <p class="text text-xs"><span>О центре</span><span>&nbsp;/&nbsp; </span><span>Новости</span></p>
-            </div>
+      <div class="forms-page">
+        <div class="container">
+          <!-- ТРИГГЕР -->
+          <button class="button button--color-primary button--size-normal" id="btn-modal-participation">
+            Заявка на участие
+          </button>
+        </div>
+      </div>
+
+      <!-- МОДАЛКА С ФОРМОЙ -->
+      <div class="modal" id="modal-participation">
+        <div class="modal__backdrop modal__close-trigger"></div>
+        <div class="modal__window modal__window--active">
+          <div class="modal__header">
+            <p class="modal__title">Заявка на участие</p>
+            <div class="modal__close-btn modal__close-trigger"></div>
           </div>
-          <div class="news-list">
-            <div class="container">
-              <h1 class="text text--l">Новости</h1>
-              <ul class="news-list__list">
-                <li class="news-list__item">
-                            <article class="news-card"><a class="news-card__link" href="#" target="_blank"><img class="news-card__img" src="https://loremflickr.com/640/400" alt="news image">
-                                <div class="news-card__info">
-                                  <p class="news-card__title text text--s">Международной Федерации коучинга ICF — 25 лет.</p>
-                                  <p class="news-card__description text text--s3">В этом юбилейном для ICF году праздник российского подразделения!<br>1 сентября ICF Russia Chapter исполнилось 15 лет!</p>
-                                  <p class="news-card__date text text--xs2">1 сентября</p>
-                                </div></a></article>
-                </li>
-                <li class="news-list__item">
-                            <article class="news-card"><a class="news-card__link" href="#" target="_blank"><img class="news-card__img" src="https://loremflickr.com/500/400" alt="news image">
-                                <div class="news-card__info">
-                                  <p class="news-card__title text text--s">Изменения в ICP Centre</p>
-                                  <p class="news-card__description text text--s3">Это очень важный пост о больших переменах. Он касается каждого, кому интересна не только история ICP Centre, но и российского коучинга в целом. </p>
-                                  <p class="news-card__date text text--xs2">30  августа</p>
-                                </div></a></article>
-                </li>
-                <li class="news-list__item">
-                            <article class="news-card"><a class="news-card__link" href="#" target="_blank"><img class="news-card__img" src="https://loremflickr.com/350/250" alt="news image">
-                                <div class="news-card__info">
-                                  <p class="news-card__title text text--s">ICP Centre Объединяет мир, весна 2020</p>
-                                  <p class="news-card__description text text--s3">Один раз в год мы делаем сверку количества стран, в которых живут наши студенты и выпускники.<br>Год назад насчитывалось 27 стран, в этом году на 11 страны больше!</p>
-                                  <p class="news-card__date text text--xs2">30  августа</p>
-                                </div></a></article>
-                </li>
-                <li class="news-list__item">
-                            <article class="news-card"><a class="news-card__link" href="#" target="_blank"><img class="news-card__img" src="https://loremflickr.com/640/500" alt="news image">
-                                <div class="news-card__info">
-                                  <p class="news-card__title text text--s">ICP Centre Объединяет мир, весна 2020</p>
-                                  <p class="news-card__description text text--s3">Один раз в год мы делаем сверку количества стран, в которых живут наши студенты и выпускники.<br>Год назад насчитывалось 27 стран, в этом году на 11 страны больше!</p>
-                                  <p class="news-card__date text text--xs2">30  августа</p>
-                                </div></a></article>
-                </li>
-                <li class="news-list__item">
-                            <article class="news-card"><a class="news-card__link" href="#" target="_blank"><img class="news-card__img" src="https://loremflickr.com/640/401" alt="news image">
-                                <div class="news-card__info">
-                                  <p class="news-card__title text text--s">Международной Федерации коучинга ICF — 25 лет.</p>
-                                  <p class="news-card__description text text--s3">В этом юбилейном для ICF году праздник российского подразделения!<br>1 сентября ICF Russia Chapter исполнилось 15 лет!</p>
-                                  <p class="news-card__date text text--xs2">1 сентября</p>
-                                </div></a></article>
-                </li>
-                <li class="news-list__item">
-                            <article class="news-card"><a class="news-card__link" href="#" target="_blank"><img class="news-card__img" src="https://loremflickr.com/500/410" alt="news image">
-                                <div class="news-card__info">
-                                  <p class="news-card__title text text--s">Изменения в ICP Centre</p>
-                                  <p class="news-card__description text text--s3">Это очень важный пост о больших переменах. Он касается каждого, кому интересна не только история ICP Centre, но и российского коучинга в целом. </p>
-                                  <p class="news-card__date text text--xs2">30  августа</p>
-                                </div></a></article>
-                </li>
-                <li class="news-list__item">
-                            <article class="news-card"><a class="news-card__link" href="#" target="_blank"><img class="news-card__img" src="https://loremflickr.com/350/260" alt="news image">
-                                <div class="news-card__info">
-                                  <p class="news-card__title text text--s">ICP Centre Объединяет мир, весна 2020</p>
-                                  <p class="news-card__description text text--s3">Один раз в год мы делаем сверку количества стран, в которых живут наши студенты и выпускники.<br>Год назад насчитывалось 27 стран, в этом году на 11 страны больше!</p>
-                                  <p class="news-card__date text text--xs2">30  августа</p>
-                                </div></a></article>
-                </li>
-                <li class="news-list__item">
-                            <article class="news-card"><a class="news-card__link" href="#" target="_blank"><img class="news-card__img" src="https://loremflickr.com/640/530" alt="news image">
-                                <div class="news-card__info">
-                                  <p class="news-card__title text text--s">ICP Centre Объединяет мир, весна 2020</p>
-                                  <p class="news-card__description text text--s3">Один раз в год мы делаем сверку количества стран, в которых живут наши студенты и выпускники.<br>Год назад насчитывалось 27 стран, в этом году на 11 страны больше!</p>
-                                  <p class="news-card__date text text--xs2">30  августа</p>
-                                </div></a></article>
-                </li>
-                <li class="news-list__item">
-                            <article class="news-card"><a class="news-card__link" href="#" target="_blank"><img class="news-card__img" src="https://loremflickr.com/640/409" alt="news image">
-                                <div class="news-card__info">
-                                  <p class="news-card__title text text--s">Международной Федерации коучинга ICF — 25 лет.</p>
-                                  <p class="news-card__description text text--s3">В этом юбилейном для ICF году праздник российского подразделения!<br>1 сентября ICF Russia Chapter исполнилось 15 лет!</p>
-                                  <p class="news-card__date text text--xs2">1 сентября</p>
-                                </div></a></article>
-                </li>
-                <li class="news-list__item">
-                            <article class="news-card"><a class="news-card__link" href="#" target="_blank"><img class="news-card__img" src="https://loremflickr.com/500/420" alt="news image">
-                                <div class="news-card__info">
-                                  <p class="news-card__title text text--s">Изменения в ICP Centre</p>
-                                  <p class="news-card__description text text--s3">Это очень важный пост о больших переменах. Он касается каждого, кому интересна не только история ICP Centre, но и российского коучинга в целом. </p>
-                                  <p class="news-card__date text text--xs2">30  августа</p>
-                                </div></a></article>
-                </li>
-                <li class="news-list__item">
-                            <article class="news-card"><a class="news-card__link" href="#" target="_blank"><img class="news-card__img" src="https://loremflickr.com/350/259" alt="news image">
-                                <div class="news-card__info">
-                                  <p class="news-card__title text text--s">ICP Centre Объединяет мир, весна 2020</p>
-                                  <p class="news-card__description text text--s3">Один раз в год мы делаем сверку количества стран, в которых живут наши студенты и выпускники.<br>Год назад насчитывалось 27 стран, в этом году на 11 страны больше!</p>
-                                  <p class="news-card__date text text--xs2">30  августа</p>
-                                </div></a></article>
-                </li>
-                <li class="news-list__item">
-                            <article class="news-card"><a class="news-card__link" href="#" target="_blank"><img class="news-card__img" src="https://loremflickr.com/640/503" alt="news image">
-                                <div class="news-card__info">
-                                  <p class="news-card__title text text--s">ICP Centre Объединяет мир, весна 2020</p>
-                                  <p class="news-card__description text text--s3">Один раз в год мы делаем сверку количества стран, в которых живут наши студенты и выпускники.<br>Год назад насчитывалось 27 стран, в этом году на 11 страны больше!</p>
-                                  <p class="news-card__date text text--xs2">30  августа</p>
-                                </div></a></article>
-                </li>
-              </ul>
-            </div>
-          </div>
-          <div class="news-more">
-            <div class="container">
-              <button class="button button--color-primary button--size-normal news-more__btn" id="news-more__btn">Загрузить ещё
-              </button>
+          <div class="modal__content">
+            <div class="forms-participation">
+              <div class="forms-participation__col forms-participation__col--left"></div>
+              <div class="forms-participation__col forms-participation__col--right">
+                <form class="form forms-participation__form" action="https://jsonplaceholder.typicode.com/posts" method="POST" id="forms-participation">
+                        <div class="form-item">
+                          <div class="form-item__label">Как вас зовут?</div>
+                          <div class="form-item__content">
+                            <input class="forms-participation__input" name="name" placeholder="Фамилия и имя" required>
+                          </div>
+                        </div>
+                        <div class="form-item">
+                          <div class="form-item__label">Эл. почта</div>
+                          <div class="form-item__content">
+                            <input class="forms-participation__input" name="email" placeholder="E-mail" type="email" required>
+                          </div>
+                        </div>
+                        <div class="form-item">
+                          <div class="form-item__label">Номер телефона</div>
+                          <div class="form-item__content">
+                            <input class="forms-participation__input" name="phone" placeholder="+7" type="tel" pattern="\+7-[0-9]{3}-\d{3}-\d{2}-?\d{2}" required>
+                          </div>
+                        </div>
+                        <label class="checkbox forms-participation__consent">Даю согласие на обработку персональных данных
+                          <input class="checkbox__input" type="checkbox" name="consent"><span class="checkbox__mark"></span>
+                        </label>
+                  <button class="button button--color-primary button--size-normal  forms-participation__submit-btn" type="submit" disabled="disabled">Отправить
+                  </button>
+                </form>
+                <div class="loader"></div>
+              </div>
             </div>
           </div>
         </div>
@@ -264,7 +200,10 @@
         </div>
       </div>
     </footer>
-    <script src="./js/common.js?v=1608729474493"></script>
-    <script defer src="./js/news.js?v=1608729474493"></script>
+    <script src="./js/common.js?v=1609903413864"></script>
+    <!-- forms-page.js - не нужен, он тут только для страницы демки -->
+    <script src="./js/forms-page.js?v=1609903413864"></script>
+    <script src="https://unpkg.com/imask"></script>
+    <script src="./js/forms/forms-participation.js?v=1609903413864"></script>
   </body>
 </html>
