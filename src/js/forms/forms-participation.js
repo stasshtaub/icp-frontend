@@ -1,4 +1,3 @@
-import { error } from "jquery";
 import { Modal, showMessage } from "./particles/message";
 
 const button = document.getElementById("btn-modal-participation");
@@ -44,4 +43,9 @@ form.addEventListener("submit", async (e) => {
     }
     
     loader.classList.remove("loader--active");
+});
+
+// Маска номера телефона
+IMask(form.querySelector("input[name='phone']"), {
+	mask: "+{7}-000-000-00-00"
 });
