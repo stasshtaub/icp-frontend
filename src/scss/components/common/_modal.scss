@@ -42,6 +42,10 @@
         width: 100%;
         padding: 30px;
         z-index: 1;
+
+        @include tablet-xs {
+            padding: 20px;
+        }
     }
 
     &__title {
@@ -59,6 +63,10 @@
         background: url("../images/sprite.svg#icon-close") no-repeat center;
         background-size: cover;
         cursor: pointer;
+
+        @include tablet {
+            filter: brightness(10);
+        }
 
         &--white {
             filter: brightness(10);

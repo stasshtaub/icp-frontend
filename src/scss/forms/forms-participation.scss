@@ -9,19 +9,51 @@
 .forms-participation {
     display: flex;
 
+    @include tablet {
+        flex-direction: column;
+        max-height: 90vh;
+    }
+
     &__col {
-        padding: 90px 0 30px 0;
+        @include tablet {
+            width: 100% !important;
+        }        
 
         &--left {
-            width: 420px;
+            padding: 90px 0 30px 30px;
             background-color: $color-blue3;
-            padding-left: 30px;
+
+            @include tablet("min") {
+                width: 420px;                
+            }
+            
+            @include tablet {
+                padding-top: 30px;
+                height: 24px;
+                box-sizing: content-box;
+                flex-shrink: 0;
+            }
+
+            @include tablet-xs {
+                padding: 20px;
+            }
         }
 
         &--right {
             position: relative;
-            padding-left: 70px;
-            padding-right: 30px;
+            overflow: auto;
+        }
+    }
+
+    &__form {
+        padding: 90px 70px 30px 30px;
+
+        @include tablet {
+            padding: 30px;
+        }
+
+        @include tablet-xs {
+            padding: 20px;
         }
     }
 
@@ -32,10 +64,15 @@
         height: 44px;
         width: 430px;
         outline: none;
+        max-width: 100%;
     }
 
     &__submit-btn {
         margin-top: 40px;
+
+        @include tablet-xs {
+            margin-top: 20px;
+        }
     }
 
     &__consent {
