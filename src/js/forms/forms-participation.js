@@ -1,3 +1,5 @@
+import IMask from "imask";
+
 import { Modal, showMessage } from "./particles/message";
 
 const button = document.getElementById("btn-modal-participation");
