@@ -1,0 +1,26 @@
+include ./programs-block
+
+- 
+    const programsBlocks = [
+        {
+            title: "Программы развития коучинговых компетенций",
+            items: [
+                {
+                    title: "Полный курс коучинга",
+                    date: "Старт обучения — 19 октября 2020"
+                },
+                {
+                    title: "Концепт коучинга",
+                    date: "Старт обучения — 19 октября 2020"
+                },
+                {
+                    title: "Уникальный код коуча",
+                    date: "Старт обучения — 19 октября 2020"
+                }
+            ]
+        }
+    ]
+
+.programs-content
+    each block in programsBlocks
+        +programs-block(block.title, block.items)
