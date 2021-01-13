@@ -1,0 +1,11 @@
+.programs-block {
+    &__header {
+        word-break: break-word;
+
+        * {
+            @include tablet-xs {
+                font-size: 20px !important;
+            }
+        }
+    }
+}

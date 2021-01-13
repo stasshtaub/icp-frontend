@@ -1,8 +1,9 @@
 include ./programs-card
 
 mixin programs-list(items)
-    li.programs-list
+    ul.programs-list
         each item in items
-            .programs-list__item
+            li.programs-list__item
                 .programs-list__item-inner
-                    +programs-card(item)
+                    .programs-list__item-content
+                        +programs-card(item)
