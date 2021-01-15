@@ -1,0 +1,13 @@
+extends ../../layouts/default
+
+block styles
+    link(rel="stylesheet" href!=`${baseDir}css/main.css?v=${Date.now()}`)
+    link(rel="stylesheet" href!=`${baseDir}css/leading.css?v=${Date.now()}`)
+block content
+    .leading
+        include particles/leading-header
+        include particles/leading-content
+       
+block scripts
+    script(src!=`${baseDir}js/common.js?v=${Date.now()}`)
+    script(defer src!=`${baseDir}js/leading.js?v=${Date.now()}`)

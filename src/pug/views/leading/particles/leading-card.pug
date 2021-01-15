@@ -1,0 +1,14 @@
+mixin leading-card(name, img, type="orange")
+    .leading-card(class=`leading-card--${ type }`)
+        header.leading-card__header
+            .row
+                .row__col.row__col--md-6
+                    h2.leading-card__name= name
+                    p.leading-card__description
+                        block description
+                .row__col.row__col--md-6
+                    img(src=img).leading-card__img
+        section.leading-card__body
+            block
+        footer.leading-card__footer
+            .leading-card__logo
