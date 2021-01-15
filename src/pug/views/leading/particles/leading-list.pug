@@ -215,7 +215,7 @@ ul.leading-list
                     | Автор и ведущая тренингов для родителей.
                 +leading-specialization(specializations)
                 .mt-65
-                    .row
+                    .row.row--tablet-column
                         .row__col.row__col--md-4
                             +leading-block-list("Образование", educationItems)
                         .row__col.row__col--md-4
@@ -223,7 +223,7 @@ ul.leading-list
                         .row__col.row__col--md-4
                             +leading-block-list("Дополнительно", additionalItems)
                 .mt-30
-                    .row
+                    .row.row--tablet-column
                         .row__col.row__col--md-8
                             +leading-block-list("Опыт:", experienceItems)
                         .row__col.row__col--md-4
@@ -309,14 +309,13 @@ ul.leading-list
                     | Эксперт Международного Бизнес Клуба IBCMBA
                     br
                     | Автор и ведущая тренингов для родителей.
-                .row
+                .row.row--xs-column
                     .row__col.row__col--md-6
                         +leading-block-list("Образование", educationItems)
                     .row__col.row__col--md-6
                         +leading-block-list("Образование в коучинге", qualificationItems)
                 +leading-history("Профессиональный опыт:", experienceItems)
                 +leading-history("Основные коучинг и тренинг проекты:", projectItems)
-                 
 
     li.leading-list__item
         +leading-card("Елена Челокиди", "https://via.placeholder.com/600x400", "gray")

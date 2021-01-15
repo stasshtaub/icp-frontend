@@ -8,14 +8,14 @@ mixin leading-card(name, img, type="orange")
 
     .leading-card(class=`leading-card--${ type }`)
         header.leading-card__header
-            .row
-                .row__col.row__col--md-6
+            .row.row--s1-col-reverse
+                .row__col.row__col--md-6.row__col--s1-12
                     .leading-card__info
                         h2.leading-card__name= name
                         if slots.description
                             .leading-card__description
                                 - slots.description()
-                .row__col.row__col--md-6
+                .row__col.row__col--md-6.row__col--s1-12
                     .leading-card__img-wrp
                         img(src=img).leading-card__img
         if slots.body

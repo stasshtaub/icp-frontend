@@ -11,6 +11,10 @@
 	&__list {
 		margin-top: 25px;
 		column-count: 2;
+
+		@include tablet-s1 {
+			column-count: 1;
+		}
 	}
 
 	&__item {
