@@ -10,12 +10,26 @@ const loader = document.querySelector(".forms-participation .loader");
 buttons.forEach((btn) => {
     btn.addEventListener("click", () => {
         const tariff = btn.dataset.tariff || null;
+        
+        let tariffInput = form.querySelector("[name='tariff']");
 
-        const hiidenInput = document.createElement("input");
-        hiidenInput.type = "hidden";
-        hiidenInput.value = tariff;
-        hiidenInput.name = "tariff";
-        form.appendChild(hiidenInput);
+        if (tariffInput) {
+            if (tariff) {
+                tariffInput.value = tariff;
+                tariffInput.type = "hidden";
+                tariffInput.name = "tariff";
+            } else {
+                tariffInput.parentNode.removeChild(tariffInput);
+            }
+        } else {
+            if (tariff) {
+                tariffInput = document.createElement("input");
+                form.appendChild(tariffInput);
+                tariffInput.value = tariff;
+                tariffInput.type = "hidden";
+                tariffInput.name = "tariff";
+            }
+        }
 
         modal.showModal()
     });
