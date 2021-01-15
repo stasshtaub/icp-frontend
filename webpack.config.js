@@ -13,7 +13,8 @@ module.exports = {
 		"news-detail": "./src/js/news-detail",
 		"forms-page": "./src/js/forms-page",
 		"forms-participation": "./src/js/forms/forms-participation",
-		reviews: "./src/js/reviews"
+		reviews: "./src/js/reviews",
+		programs: "./src/js/programs"
 	},
 	module: {
 		rules: [

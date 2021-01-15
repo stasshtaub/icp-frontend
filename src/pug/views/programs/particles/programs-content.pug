@@ -1,0 +1,91 @@
+include ./programs-block
+
+- 
+    const programsBlocks = [
+        {
+            title: "Программы развития коучинговых компетенций",
+            items: [
+                {
+                    title: "Полный курс коучинга",
+                    date: "Старт обучения — 19 октября 2020",
+                    img: "images/jpg/program-img.jpg"
+                },
+                {
+                    title: "Концепт коучинга",
+                    date: "Старт обучения — 19 октября 2020",
+                    img: "images/jpg/program-img.jpg"
+                },
+                {
+                    title: "Уникальный код коуча",
+                    date: "Старт обучения — 19 октября 2020",
+                    img: "images/jpg/program-img.jpg"
+                }
+            ]
+        },
+        {
+            title: "Развитие профессиональных коучей",
+            items: [
+                {
+                    title: "Международная программа подготовки супервизоров для коучей",
+                    date: "Старт обучения — 19 октября 2020",
+                    img: "images/jpg/program-img.jpg"
+                },
+                {
+                    title: "Ментор для коучей ICF",
+                    date: "Старт обучения — 19 октября 2020",
+                    img: "images/jpg/program-img.jpg"
+                },
+                {
+                    title: "Школа института обратной связи",
+                    date: "Старт обучения — 19 октября 2020",
+                    img: "images/jpg/program-img.jpg"
+                }
+            ]
+        },
+        {
+            title: "Коучинг для организаций",
+            items: [
+                {
+                    title: "Поддержка внутренних институтов коучинга",
+                    date: "Старт обучения — 19 октября 2020",
+                    img: "images/jpg/program-img.jpg"
+                },
+                {
+                    title: "Фидбек-коучинг",
+                    date: "Старт обучения — 19 октября 2020",
+                    img: "images/jpg/program-img.jpg"
+                },
+                {
+                    title: "Тренинг по переговорам",
+                    date: "Старт обучения — 19 октября 2020",
+                    img: "images/jpg/program-img.jpg"
+                },
+                {
+                    title: "Коучинг для лидеров",
+                    date: "Старт обучения — 19 октября 2020",
+                    img: "images/jpg/program-img.jpg"
+                },
+                {
+                    title: "Мастерство командного коучинга",
+                    date: "Старт обучения — 19 октября 2020",
+                    img: "images/jpg/program-img.jpg"
+                },
+                {
+                    title: "Менторинг в бизнесе",
+                    date: "Старт обучения — 19 октября 2020",
+                    img: "images/jpg/program-img.jpg"
+                },
+                {
+                    title: "Коучинг в HR",
+                    date: "Старт обучения — 19 октября 2020",
+                    img: "images/jpg/program-img.jpg"
+                }
+            ]
+        }
+    ]
+
+.programs-content.mt-30
+    ul.programs-content__blocks
+        each block in programsBlocks
+            li.programs-content__block
+                +programs-block(block.title, block.items)
