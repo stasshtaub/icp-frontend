@@ -1,0 +1,7 @@
+.leading-list {
+	&__item {
+		& ~ & {
+			margin-top: 140px;
+		}
+	}
+}

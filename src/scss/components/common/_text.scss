@@ -80,6 +80,23 @@
         line-height: 150%;
 	}
     
+	&--m3 {
+        font-size: 25px;
+        line-height: 125%;
+
+        @include laptop {
+            font-size: 22px;
+        }
+
+        @include tablet {
+            font-size: 20px;
+        }
+
+        @include mobile-l {
+            font-size: 18px;
+        }
+	}
+    
 	&--s {
         font-size: 20px;
         line-height: 150%;

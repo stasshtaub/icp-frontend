@@ -1,0 +1,8 @@
+mixin leading-block-list(title, items)
+    .leading-block-list
+        p.leading-block-list__title= title
+        ul.leading-block-list__list
+            each item in items
+                li.leading-block-list__item
+                    .text.text--xs
+                        span.text.text--s3 !{ item }

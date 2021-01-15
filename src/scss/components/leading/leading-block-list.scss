@@ -1,17 +1,16 @@
-.leading-history {
-	&__title {
+.leading-block-list {
+    &__title {
         margin-top: 50px;
 		font-weight: bold;
 		font-size: 10px;
 		line-height: 20px;
 		letter-spacing: 1px;
 		text-transform: uppercase;
-	}
+    }
 
-	&__list {
-		margin-top: 25px;
-		column-count: 2;
-	}
+    &__list {
+        margin-top: 25px;
+    }
 
 	&__item {
 		font-feature-settings: "ordn" on, "ss09" on, "ss08" on, "ss07" on,
@@ -20,9 +19,5 @@
 		& + & {
 			margin-top: 1em;
 		}
-	}
-
-	&__date {
-		font-weight: 500;
 	}
 }

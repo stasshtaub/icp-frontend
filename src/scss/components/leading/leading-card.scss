@@ -15,6 +15,18 @@
         }
     }
 
+    &--blue {
+        box-shadow: inset 0px 0px 0px 10px $color-blue;
+        
+        #{$p}__name {
+            color: $color-blue;
+        }
+        
+        #{$p}__img-wrp {
+            background-color: $color-blue;
+        }
+    }
+
     &__header {
         // -40px (padding) - 30px (row negative margin) - 30px (offset)
         margin-top: -100px;
@@ -51,5 +63,14 @@
 
     &__description {
         margin-top: 28px;
+    }
+
+    &__logo {
+        width: 160px;
+        height: 71px;
+    }
+    
+    &__footer {
+        margin-top: 50px;
     }
 }
