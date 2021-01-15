@@ -52,18 +52,31 @@ gulp.task("images", () =>
 	gulp.src("src/images/**/*.*").pipe(gulp.dest(`${settings.dist}/images`))
 );
 
-gulp.task("svg-sprite", () =>
-	gulp.src("src/images/sprites/*.svg")
-		.pipe(svgSprite({
-			mode: {
-				stack: {
-					sprite: "../sprite.svg"
-				}
-			},
-		}
-	))
-	.pipe(gulp.dest('dist/images/'))
-);
+gulp.task("svg-sprite", () => {
+	gulp.src("src/images/sprites/leading/*.svg")
+		.pipe(
+			svgSprite({
+				mode: {
+					stack: {
+						sprite: "../leading.svg",
+					},
+				},
+			})
+		)
+		.pipe(gulp.dest("dist/images/"));
+
+	return gulp.src("src/images/sprites/*.svg")
+		.pipe(
+			svgSprite({
+				mode: {
+					stack: {
+						sprite: "../sprite.svg",
+					},
+				},
+			})
+		)
+		.pipe(gulp.dest("dist/images/"));
+});
 
 gulp.task("scss", () => {
 	const plugins = [autoprefixer(), cssnano()];
@@ -92,7 +105,7 @@ gulp.task("js", () =>
 );
 
 gulp.task("watch", () => {
-	gulp.watch("src/images/sprites/*.svg", gulp.series('svg-sprite'));
+	gulp.watch("src/images/sprites/*.svg", gulp.series("svg-sprite"));
 
 	gulp.watch(
 		["src/resources/**/*.*", "src/resources/**/.*"],
@@ -130,16 +143,24 @@ gulp.task("serve", () => {
 
 gulp.task(
 	"build",
-	gulp.series("copy", "pug", gulp.parallel("images", "scss", "scss:forms", "js", "svg-sprite"))
+	gulp.series(
+		"copy",
+		"pug",
+		gulp.parallel("images", "scss", "scss:forms", "js", "svg-sprite")
+	)
 );
 
 gulp.task("default", gulp.series("build", gulp.parallel("watch", "serve")));
 
 gulp.task("deploy", () =>
-	ghpages.publish("dist", {
-		branch: 'gh-pages',
-		repo: 'https://github.com/stasshtaub/icp-frontend/'
-	  }, (err) => {
-		console.log(err);
-	})
+	ghpages.publish(
+		"dist",
+		{
+			branch: "gh-pages",
+			repo: "https://github.com/stasshtaub/icp-frontend/",
+		},
+		(err) => {
+			console.log(err);
+		}
+	)
 );

@@ -1,0 +1,10 @@
+mixin leading-history(title, items)
+    .leading-history
+        p.leading-history__title= title
+        ul.leading-history__list
+            each item in items
+                li.leading-history__item
+                    .text.text--xs
+                        span.leading-history__date= item.date
+                        span &nbsp;–&nbsp;
+                        span.text.text--s3 !{ item.text }

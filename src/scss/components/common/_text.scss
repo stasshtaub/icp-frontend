@@ -117,6 +117,15 @@
         }
 	}
     
+	&--s3 {
+        font-size: 16px;
+        line-height: 150%;
+        
+        @include mobile-l {
+            font-size: 14px;
+        }
+	}
+    
 	&--xs {
         font-size: 14px;
         line-height: 122.285714%;

@@ -1,0 +1,8 @@
+mixin leading-specialization(items)
+    .leading-specialization
+        .leading-specialization__title Специализация в коучинге:
+        ul.leading-specialization__list
+            each item in items
+                li.leading-specialization__item
+                    img(src=item.img).leading-specialization__img
+                    span.leading-specialization__name= item.title

@@ -1,5 +1,121 @@
 include ./leading-card
+include ./leading-history
+include ./leading-specialization
 
 ul.leading-list
     li.leading-list__item
         +leading-card("Галина Вдовиченко", "https://via.placeholder.com/600x400")
+            +slot('description')
+                p.text.text--s2 Профессиональный Сертифицированный Коуч, PCC ICF
+                    br
+                    | Управляющий ICP Centre
+
+            -
+                const careerItems = [
+                    {
+                        date: 'С 2018 по н.в.',
+                        text: 'управляющий Международного Центра профессионального коучинга ICP CENTRE;'
+                    },
+                    {
+                        date: 'С 2017 по н.в.',
+                        text: 'руководитель коучинговой компании GV Coaching (Санкт-Петербург);'
+                    },
+                    {
+                        date: 'С 2016 по н.в.',
+                        text: 'ведущий международной программы «Коучинг: возможности без границ», ICP Centre;'
+                    },
+                    {
+                        date: 'С 2014 года',
+                        text: 'руководитель коучинговых проектов;'
+                    },
+                    {
+                        date: 'С 2012 года',
+                        text: 'ассистент на международных программах коучинга формата ACTP ICF;'
+                    },
+                    {
+                        date: '2015-2016',
+                        text: 'соучредитель тренинговой компании (Inspiration LAB);'
+                    },
+                    {
+                        date: '2015',
+                        text: 'кризис-руководитель рекламного агенства полного цикла;'
+                    },
+                    {
+                        date: '2013-2014',
+                        text: 'директор коучинговой компании (КК NEXT LEVEL);'
+                    },
+                    {
+                        date: '2012-2017',
+                        text: 'руководитель коучингового проекта (GV Coaching);'
+                    },
+                    {
+                        date: '2011',
+                        text: 'заместитель директора (Коучинговая компания NEXT LEVEL);'
+                    },
+                    {
+                        date: '2010',
+                        text: 'менеджер по работе с клиентами (ТК NEXT LEVEL);'
+                    },
+                    {
+                        date: '2008-2011',
+                        text: 'руководитель отдела indoor в рекламном агентстве полного цикла.'
+                    }
+                ]
+
+                const specializations = [
+                    {
+                        img: "images/leading.svg#specialization-1",
+                        title: "Коучинг коучей"
+                    },
+                    {
+                        img: "images/leading.svg#specialization-2",
+                        title: "Коучинг личной эффективности"
+                    },
+                    {
+                        img: "images/leading.svg#specialization-3",
+                        title: "Коучинг публичных выступлений"
+                    },
+                    {
+                        img: "images/leading.svg#specialization-4",
+                        title: "Коучинг развития грамотности и культуры русской речи;"
+                    },
+                    {
+                        img: "images/leading.svg#specialization-5",
+                        title: "Менторинг для коучей по 11 профессиональным компетенциям ICF."
+                    },
+                ]
+            +slot('body')
+                +leading-history("Карьера:", careerItems)
+                +leading-specialization(specializations).mt-60
+//- -
+//-     const developmentItems = [
+//-         {
+//-             date: '2019',
+//-             text: 'Коучинг первых лиц, (CCE ICF), Coaching and Mentoring International (UK)'
+//-         },
+//-         {
+//-             date: '2019',
+//-             text: 'Ментор в международном реестре менторов ICF'
+//-         },
+//-         {
+//-             date: '2019',
+//-             text: '«Мир Командного Коучинга», (CCE ICF)'
+//-         },
+//-         {
+//-             date: '2018 — нв.',
+//-             text: 'Приглашенный преподаватель Института Практической Психологии НИУ ВШЭ'
+//-         },
+//-         {
+//-             date: '2018',
+//-             text: 'Квалификация Coaching and Mentoring International (UK) на преподавание программ менторинга в областях:<br>Менторинг развития талантов в компании<br>Executive менторинг<br>Менторинг разнообразия<br>Образовательный менторинг<br>Менторинг сообществ<br>Обзор отношений ментора и менти<br>Брифинг линейных менеджеров'
+//-         },
+//-         {
+//-             date: '2018',
+//-             text: '«Навыки эмоциональной компетентности», PEI Russia'
+//-         },
+//-         {
+//-             date: '2018',
+//-             text: 'Публикация на русском языке книги «Сильные вопросы для командных коучей», автор проф. Д. Клаттербак'
+//-         }
+//-     ]
+//- +leading-history("Проффесиональное развитие", developmentItems)
