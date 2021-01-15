@@ -1,0 +1,11 @@
+mixin reviews-card(item)
+    article.reviews-card
+        section.reviews-card__body
+            p.text.text--s !{ item.text }
+        footer.reviews-card__footer
+            .reviews-card__author
+                img(src=item.author.avatar alt=item.author.name).reviews-card__avatar
+                span.reviews-card__name.text.text--bold700= item.author.name
+            .reviews-card__program.text.text--xs
+                span Прошла программу: 
+                a(href="#").reviews-card__program-link= item.program

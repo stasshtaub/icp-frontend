@@ -1,0 +1,10 @@
+.reviews-list {
+	&__item {
+		width: 50%;
+		border: 1px solid $color-gray-light2;
+
+		@include laptop {
+			width: 100%;
+		}
+	}
+}

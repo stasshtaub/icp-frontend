@@ -1,0 +1,16 @@
+extends ../../layouts/default
+
+block styles
+    link(rel="stylesheet" href!=`${baseDir}css/main.css?v=${Date.now()}`)
+    link(rel="stylesheet" href!=`${baseDir}css/reviews.css?v=${Date.now()}`)
+block content
+    .reviews
+        .container
+            include particles/reviews-header
+            .mt-30
+                include particles/reviews-content
+       
+block scripts
+    script(src!=`${baseDir}js/common.js?v=${Date.now()}`)
+    script(defer src!=`https://unpkg.com/masonry-layout@4/dist/masonry.pkgd.min.js`)
+    script(defer src!=`${baseDir}js/reviews.js?v=${Date.now()}`)

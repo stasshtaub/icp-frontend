@@ -1,0 +1,7 @@
+include ./reviews-card
+
+mixin reviews-list(items)
+    ul.reviews-list
+        each item in items
+            li.reviews-list__item
+                +reviews-card(item)
