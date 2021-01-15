@@ -27,6 +27,18 @@
         }
     }
 
+    &--green {
+        box-shadow: inset 0px 0px 0px 10px $color-green-light4;
+        
+        #{$p}__name {
+            color: $color-green-light4;
+        }
+        
+        #{$p}__img-wrp {
+            background-color: $color-green-light4;
+        }
+    }
+
     &__header {
         // -40px (padding) - 30px (row negative margin) - 30px (offset)
         margin-top: -100px;
