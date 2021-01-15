@@ -1,0 +1,8 @@
+mixin programs-card(item)
+	a(href="#").programs-card
+		img(src=item.img alt="program image").programs-card__img
+		.programs-card__info
+			.programs-card__title
+				span.text.text--m= item.title
+			.programs-card__date
+				span.text.text--xs= item.date

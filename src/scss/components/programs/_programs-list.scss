@@ -1,0 +1,32 @@
+.programs-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+    gap: 30px;
+
+    @include laptop {
+        gap: 20px;
+    }
+
+    @include tablet {
+        gap: 15px;
+    }
+
+    @include tablet-s {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    @include mobile-l {
+        grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    }
+
+    &__item-inner {
+        position: relative;
+        padding-bottom: 119.047619%;
+    }
+
+    &__item-content {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+    }
+}

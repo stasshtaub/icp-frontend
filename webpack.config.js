@@ -14,7 +14,8 @@ module.exports = {
 		"forms-page": "./src/js/forms-page",
 		"forms-participation": "./src/js/forms/forms-participation",
 		reviews: "./src/js/reviews",
-		leading: "./src/js/leading"
+		leading: "./src/js/leading",
+		programs: "./src/js/programs"
 	},
 	module: {
 		rules: [

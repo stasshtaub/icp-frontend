@@ -1,0 +1,8 @@
+include ./programs-list
+
+mixin programs-block(title, items)
+    .row.row--tablet-column.programs-block
+        .row__col.row__col--md-3.row__col--tablet-12.programs-block__header
+            h2.text.text--normalzed.text--s= title
+        .row__col.row__col--md-9.row__col--tablet-12
+            +programs-list(items)

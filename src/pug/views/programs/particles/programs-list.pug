@@ -1,0 +1,9 @@
+include ./programs-card
+
+mixin programs-list(items)
+    ul.programs-list
+        each item in items
+            li.programs-list__item
+                .programs-list__item-inner
+                    .programs-list__item-content
+                        +programs-card(item)
