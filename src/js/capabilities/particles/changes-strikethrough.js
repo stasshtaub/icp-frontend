@@ -19,18 +19,18 @@
 
 // intersectionObserver.observe(container);
 
-const intersectionObserver = new IntersectionObserver((entries) => {
-	entries.forEach(({isIntersecting, target}) => {
-		if (isIntersecting) {
-			target.classList.add(
-				'capabilities-changes__strikethrough--animated',
-			);
-		}
+const container = document.querySelector('.capabilities-changes__strikethrough');
+
+if (container) {
+	const intersectionObserver = new IntersectionObserver((entries) => {
+		entries.forEach(({isIntersecting, target}) => {
+			if (isIntersecting) {
+				target.classList.add(
+					'capabilities-changes__strikethrough--animated',
+				);
+			}
+		});
 	});
-});
-
-const container = document.querySelector(
-	'.capabilities-changes__strikethrough',
-);
-
-intersectionObserver.observe(container);
+	
+	intersectionObserver.observe(container);
+}
