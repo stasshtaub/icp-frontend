@@ -39,6 +39,18 @@
         }
     }
 
+    &--gray {
+        box-shadow: inset 0px 0px 0px 10px $color-gray-light10;
+        
+        #{$p}__name {
+            color: $color-gray-light10;
+        }
+        
+        #{$p}__img-wrp {
+            background-color: $color-gray-light10;
+        }
+    }
+
     &__header {
         // -40px (padding) - 30px (row negative margin) - 30px (offset)
         margin-top: -100px;
