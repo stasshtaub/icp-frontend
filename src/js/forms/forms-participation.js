@@ -2,12 +2,14 @@ import IMask from "imask";
 
 import { Modal, showMessage } from "./particles/message";
 
-const button = document.getElementById("btn-modal-participation");
+const button = document.querySelector("[data-modal='modal-participation']");
 const modal = new Modal("Заявка на участие", document.getElementById("modal-participation"));
 const form = document.getElementById("forms-participation");
 const consentCheckbox = form.querySelector("[name='consent']");
 const submitButton = form.querySelector("[type='submit']");
 const loader = document.querySelector(".forms-participation .loader");
+
+const tariff = button.dataset.tariff || null;
 
 button.addEventListener("click", () => { modal.showModal() });
 
@@ -23,6 +25,7 @@ form.addEventListener("submit", async (e) => {
 
     if (action) {
         const body = new FormData(form);
+        body.append("tariff", tariff);
 
         let title, messageBody, type;
 

@@ -5,6 +5,7 @@ block styles
     link(rel="stylesheet" href!=`${baseDir}css/capabilities.css?v=${Date.now()}`)
     link(rel="stylesheet" href!=`${baseDir}css/font-awesome.css?v=${Date.now()}`)
     link(rel="stylesheet" href!="https://unpkg.com/swiper@6.3.2/swiper-bundle.min.css")
+    link(rel="stylesheet" href!=`${baseDir}css/forms/forms-participation.css?v=${Date.now()}`)
 block content
     .capabilities
         .capabilities__group.capabilities__group--first
@@ -35,8 +36,11 @@ block content
                 include particles/capabilities-leading
                 include particles/capabilities-tariffs
                 include particles/capabilities-reviews
+    include ../forms-page/particles/forms-participation
 
 block scripts
     script(src!=`${baseDir}js/common.js?v=${Date.now()}`)
     script(defer src!="https://unpkg.com/swiper/swiper-bundle.min.js")
     script(defer src!=`${baseDir}js/capabilities.js?v=${Date.now()}`)
+    script(defer src!="https://unpkg.com/imask")
+    script(defer src!=`${baseDir}js/forms/forms-participation.js?v=${Date.now()}`)
