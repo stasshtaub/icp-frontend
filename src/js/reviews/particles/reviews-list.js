@@ -4,6 +4,14 @@ const msnry = new Masonry(container, {
 	itemSelector: ".reviews-list__item",
 });
 
+const updateLayout = () => {
+	imagesLoaded(container).on('progress', () => {
+		msnry.layout();
+	});
+};
+
+updateLayout();
+
 const moreBtn = document.getElementById("reviews-more__btn");
 const listContainer = document.querySelector(".reviews-list");
 
@@ -78,6 +86,8 @@ const loadReviews = async () => {
 
 	container.appendChild(fragment);
 	msnry.appended(elems);
+	
+	updateLayout();
 
 	// if (totalPages !== total_page_count) {
 	// 	totalPages = total_page_count;
