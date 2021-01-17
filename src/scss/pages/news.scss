@@ -1,0 +1,25 @@
+@import "../utils/variables";
+@import "../utils/breakpoints";
+@import "../utils/helpers";
+
+@import "../layout/spaces";
+
+@import "../components/common/row";
+@import "../components/common/text";
+@import "../components/common/button";
+
+@import "../components/news/news-list";
+@import "../components/news/news-card";
+@import "../components/news/news-more";
+
+.news {
+    padding: 216px 0 55px 0;
+
+    @include tablet {
+        padding-top: 100px;
+    }
+
+    @include mobile-l {
+        padding-top: 90px;
+    }
+}

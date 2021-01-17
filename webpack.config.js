@@ -10,6 +10,7 @@ module.exports = {
 		branches: "./src/js/branches",
 		team: "./src/js/team",
 		partners: "./src/js/partners",
+		news: "./src/js/news",
 		"news-detail": "./src/js/news-detail",
 		"forms-page": "./src/js/forms-page",
 		"forms-participation": "./src/js/forms/forms-participation",
