@@ -12,5 +12,6 @@ block content
        
 block scripts
     script(src!=`${baseDir}js/common.js?v=${Date.now()}`)
+    script(defer src!=`https://unpkg.com/imagesloaded@4/imagesloaded.pkgd.min.js`)
     script(defer src!=`https://unpkg.com/masonry-layout@4/dist/masonry.pkgd.min.js`)
     script(defer src!=`${baseDir}js/reviews.js?v=${Date.now()}`)
