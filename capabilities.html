@@ -4,11 +4,10 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width">
-    <link rel="stylesheet" href="./css/main.css?v=1610744954714">
-    <link rel="stylesheet" href="./css/capabilities.css?v=1610744954714">
-    <link rel="stylesheet" href="./css/font-awesome.css?v=1610744954714">
+    <link rel="stylesheet" href="./css/main.css?v=1610879156433">
+    <link rel="stylesheet" href="./css/capabilities.css?v=1610879156433">
+    <link rel="stylesheet" href="./css/font-awesome.css?v=1610879156433">
     <link rel="stylesheet" href="https://unpkg.com/swiper@6.3.2/swiper-bundle.min.css">
-    <link rel="stylesheet" href="./css/forms/forms-participation.css?v=1610744954714">
   </head>
   <body>
     <input class="header__checkbox-dropdown" type="checkbox" id="header__checkbox-dropdown">
@@ -839,12 +838,10 @@
                         <div class="capabilities-tariffs__col capabilities-tariffs__col--pay">
                           <div class="capabilities-tariffs__price">165 500 ₽</div>
                           <div class="capabilities-tariffs__pay-format">единовременный платеж</div>
-                          <div class="capabilities-tariffs__modular-wrp"><span class="capabilities-tariffs__modular underlined">Возможна помодульная оплата</span></div>
-                                        <button class="button button--color-primary button--size-xl capabilities-tariffs__btn" data-modal="modal-participation" data-tariff="Профессиональный">Оплатить
+                          <div class="capabilities-tariffs__modular-wrp"><span class="capabilities-tariffs__modular underlined">Возможна помодульная оплата</span></div><a class="button button--link button--color-primary button--size-xl capabilities-tariffs__btn" href="#">Оплатить
                                                         <svg class="button__icon">
                                                           <use xlink:href="images/sprite.svg#icon-ok"></use>
-                                                        </svg>
-                                        </button>
+                                                        </svg></a>
                         </div>
                       </li>
                       <li class="capabilities-tariffs__tariff">
@@ -866,12 +863,10 @@
                         <div class="capabilities-tariffs__col capabilities-tariffs__col--pay">
                           <div class="capabilities-tariffs__price">180 500 ₽</div>
                           <div class="capabilities-tariffs__pay-format">единовременный платеж</div>
-                          <div class="capabilities-tariffs__modular-wrp"><span class="capabilities-tariffs__modular underlined">Возможна помодульная оплата</span></div>
-                                        <button class="button button--color-primary button--size-xl capabilities-tariffs__btn" data-modal="modal-participation" data-tariff="VIP">Оплатить
+                          <div class="capabilities-tariffs__modular-wrp"><span class="capabilities-tariffs__modular underlined">Возможна помодульная оплата</span></div><a class="button button--link button--color-primary button--size-xl capabilities-tariffs__btn" href="#">Оплатить
                                                         <svg class="button__icon">
                                                           <use xlink:href="images/sprite.svg#icon-ok"></use>
-                                                        </svg>
-                                        </button>
+                                                        </svg></a>
                         </div>
                       </li>
                       <li class="capabilities-tariffs__tariff">
@@ -893,12 +888,10 @@
                         <div class="capabilities-tariffs__col capabilities-tariffs__col--pay">
                           <div class="capabilities-tariffs__price">50 000 ₽</div>
                           <div class="capabilities-tariffs__pay-format">единовременный платеж</div>
-                          <div class="capabilities-tariffs__modular-wrp"><span class="capabilities-tariffs__modular underlined">Возможна помодульная оплата</span></div>
-                                        <button class="button button--color-primary button--size-xl capabilities-tariffs__btn" data-modal="modal-participation" data-tariff="Пакет "Практик"">Оплатить
+                          <div class="capabilities-tariffs__modular-wrp"><span class="capabilities-tariffs__modular underlined">Возможна помодульная оплата</span></div><a class="button button--link button--color-primary button--size-xl capabilities-tariffs__btn" href="#">Оплатить
                                                         <svg class="button__icon">
                                                           <use xlink:href="images/sprite.svg#icon-ok"></use>
-                                                        </svg>
-                                        </button>
+                                                        </svg></a>
                         </div>
                       </li>
                     </ul>
@@ -968,48 +961,6 @@
           </div>
         </div>
       </div>
-            <div class="modal" id="modal-participation">
-              <div class="modal__backdrop modal__close-trigger"></div>
-              <div class="modal__window modal__window--active">
-                <div class="modal__header">
-                  <p class="modal__title">Заявка на участие</p>
-                  <div class="modal__close-btn modal__close-trigger"></div>
-                </div>
-                <div class="modal__content">
-                  <div class="forms-participation">
-                    <div class="forms-participation__col forms-participation__col--left"></div>
-                    <div class="forms-participation__col forms-participation__col--right">
-                      <form class="form forms-participation__form" action="https://jsonplaceholder.typicode.com/posts" method="POST" id="forms-participation">
-                              <div class="form-item">
-                                <div class="form-item__label">Как вас зовут?</div>
-                                <div class="form-item__content">
-                                  <input class="forms-participation__input" name="name" placeholder="Фамилия и имя" required>
-                                </div>
-                              </div>
-                              <div class="form-item">
-                                <div class="form-item__label">Эл. почта</div>
-                                <div class="form-item__content">
-                                  <input class="forms-participation__input" name="email" placeholder="E-mail" type="email" required>
-                                </div>
-                              </div>
-                              <div class="form-item">
-                                <div class="form-item__label">Номер телефона</div>
-                                <div class="form-item__content">
-                                  <input class="forms-participation__input" name="phone" placeholder="+7" type="tel" pattern="\+7-[0-9]{3}-\d{3}-\d{2}-?\d{2}" required>
-                                </div>
-                              </div>
-                              <label class="checkbox forms-participation__consent">Даю согласие на обработку персональных данных
-                                <input class="checkbox__input" type="checkbox" name="consent"><span class="checkbox__mark"></span>
-                              </label>
-                                      <button class="button button--color-primary button--size-normal  forms-participation__submit-btn" type="submit" disabled>Отправить
-                                      </button>
-                      </form>
-                            <div class="loader"></div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
     </main>
     <footer class="footer">
       <div class="hotline">
@@ -1107,10 +1058,8 @@
         </div>
       </div>
     </footer>
-    <script src="./js/common.js?v=1610744954727"></script>
+    <script src="./js/common.js?v=1610879156435"></script>
     <script defer src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
-    <script defer src="./js/capabilities.js?v=1610744954727"></script>
-    <script defer src="https://unpkg.com/imask"></script>
-    <script defer src="./js/forms/forms-participation.js?v=1610744954727"></script>
+    <script defer src="./js/capabilities.js?v=1610879156435"></script>
   </body>
 </html>
