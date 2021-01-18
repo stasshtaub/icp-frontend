@@ -4,11 +4,11 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width">
-    <link rel="stylesheet" href="./css/main.css?v=1610880247972">
-    <link rel="stylesheet" href="./css/capabilities.css?v=1610880247972">
-    <link rel="stylesheet" href="./css/font-awesome.css?v=1610880247972">
+    <link rel="stylesheet" href="./css/main.css?v=1610966710317">
+    <link rel="stylesheet" href="./css/capabilities.css?v=1610966710317">
+    <link rel="stylesheet" href="./css/font-awesome.css?v=1610966710317">
     <link rel="stylesheet" href="https://unpkg.com/swiper@6.3.2/swiper-bundle.min.css">
-    <link rel="stylesheet" href="./css/forms/forms-participation.css?v=1610880247972">
+    <link rel="stylesheet" href="./css/forms/forms-participation.css?v=1610966710317">
   </head>
   <body>
     <input class="header__checkbox-dropdown" type="checkbox" id="header__checkbox-dropdown">
@@ -840,7 +840,7 @@
                           <div class="capabilities-tariffs__price">165 500 ₽</div>
                           <div class="capabilities-tariffs__pay-format">единовременный платеж</div>
                           <div class="capabilities-tariffs__modular-wrp"><span class="capabilities-tariffs__modular underlined">Возможна помодульная оплата</span></div>
-                                        <button class="button button--color-primary button--size-xl capabilities-tariffs__btn" data-modal="modal-participation" data-tariff="Профессиональный">Оплатить
+                                        <button class="button button--color-primary button--size-xl capabilities-tariffs__btn" data-modal="modal-participation" data-hidden='{"tariff":"Профессиональный","price":"165 500 ₽"}'>Оплатить
                                                         <svg class="button__icon">
                                                           <use xlink:href="images/sprite.svg#icon-ok"></use>
                                                         </svg>
@@ -867,7 +867,7 @@
                           <div class="capabilities-tariffs__price">180 500 ₽</div>
                           <div class="capabilities-tariffs__pay-format">единовременный платеж</div>
                           <div class="capabilities-tariffs__modular-wrp"><span class="capabilities-tariffs__modular underlined">Возможна помодульная оплата</span></div>
-                                        <button class="button button--color-primary button--size-xl capabilities-tariffs__btn" data-modal="modal-participation" data-tariff="VIP">Оплатить
+                                        <button class="button button--color-primary button--size-xl capabilities-tariffs__btn" data-modal="modal-participation" data-hidden='{"tariff":"VIP","price":"180 500 ₽"}'>Оплатить
                                                         <svg class="button__icon">
                                                           <use xlink:href="images/sprite.svg#icon-ok"></use>
                                                         </svg>
@@ -894,7 +894,7 @@
                           <div class="capabilities-tariffs__price">50 000 ₽</div>
                           <div class="capabilities-tariffs__pay-format">единовременный платеж</div>
                           <div class="capabilities-tariffs__modular-wrp"><span class="capabilities-tariffs__modular underlined">Возможна помодульная оплата</span></div>
-                                        <button class="button button--color-primary button--size-xl capabilities-tariffs__btn" data-modal="modal-participation" data-tariff="Пакет "Практик"">Оплатить
+                                        <button class="button button--color-primary button--size-xl capabilities-tariffs__btn" data-modal="modal-participation" data-hidden='{"tariff":"Пакет \"Практик\"","price":"50 000 ₽"}'>Оплатить
                                                         <svg class="button__icon">
                                                           <use xlink:href="images/sprite.svg#icon-ok"></use>
                                                         </svg>
@@ -979,7 +979,7 @@
                   <div class="forms-participation">
                     <div class="forms-participation__col forms-participation__col--left"></div>
                     <div class="forms-participation__col forms-participation__col--right">
-                      <form class="form forms-participation__form" action="https://jsonplaceholder.typicode.com/posts" method="POST" id="forms-participation">
+                      <form class="form forms-participation__form" action="https://jsonplaceholder.typicode.com/posts" method="POST" data-possible-hidden="[&quot;tariff&quot;,&quot;price&quot;]" id="forms-participation">
                               <div class="form-item">
                                 <div class="form-item__label">Как вас зовут?</div>
                                 <div class="form-item__content">
@@ -1107,10 +1107,10 @@
         </div>
       </div>
     </footer>
-    <script src="./js/common.js?v=1610880247973"></script>
+    <script src="./js/common.js?v=1610966710319"></script>
     <script defer src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
-    <script defer src="./js/capabilities.js?v=1610880247973"></script>
+    <script defer src="./js/capabilities.js?v=1610966710319"></script>
     <script defer src="https://unpkg.com/imask"></script>
-    <script defer src="./js/forms/forms-participation.js?v=1610880247973"></script>
+    <script defer src="./js/forms/forms-participation.js?v=1610966710319"></script>
   </body>
 </html>
