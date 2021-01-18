@@ -1,0 +1,16 @@
+- 
+    const themes = [
+        { name: "Карьера в условиях изменений", img: "images/hotline-page.svg#theme-1" },
+        { name: "Расстановка приоритетов", img: "images/hotline-page.svg#theme-2" },
+        { name: "Управление собой", img: "images/hotline-page.svg#theme-3" },
+        { name: "Выработка плана действи", img: "images/hotline-page.svg#theme-3" },
+        { name: "Взаимоотношения в условиях кризиса", img: "images/hotline-page.svg#theme-4" },
+    ]
+
+.hotline-page-themes
+    h2.hotline-page-themes__title.text.text--l.text--bold Темы для коучинга:
+    ul.hotline-page-themes__list
+        each theme in themes
+            li.hotline-page-themes__item
+                img(src=theme.img alt=theme.title).hotline-page-themes__img
+                span.hotline-page-themes__name.text.text--s= theme.name

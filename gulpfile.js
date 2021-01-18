@@ -65,6 +65,18 @@ gulp.task("svg-sprite", () => {
 		)
 		.pipe(gulp.dest("dist/images/"));
 
+	gulp.src("src/images/sprites/hotline-page/*.svg")
+		.pipe(
+			svgSprite({
+				mode: {
+					stack: {
+						sprite: "../hotline-page.svg",
+					},
+				},
+			})
+		)
+		.pipe(gulp.dest("dist/images/"));
+
 	return gulp.src("src/images/sprites/*.svg")
 		.pipe(
 			svgSprite({
@@ -105,7 +117,10 @@ gulp.task("js", () =>
 );
 
 gulp.task("watch", () => {
-	gulp.watch("src/images/sprites/*.svg", gulp.series("svg-sprite"));
+	gulp.watch(
+		["src/images/sprites/*.svg", "src/images/sprites/**/*.svg"],
+		gulp.series("svg-sprite")
+	);
 
 	gulp.watch(
 		["src/resources/**/*.*", "src/resources/**/.*"],

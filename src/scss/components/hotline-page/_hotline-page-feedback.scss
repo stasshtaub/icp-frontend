@@ -1,0 +1,74 @@
+.hotline-page-feedback {
+    $skew: 3.826deg;
+    
+	display: flex;
+    justify-content: center;
+    // Компенсация skew-выступа
+    padding-top: 45px;
+
+	&__card {
+		width: 690px;
+		border-radius: 6px;
+		background-color: $color-white;
+		display: flex;
+		transform: skewY(-$skew);
+		color: $color-gray;
+		transform-origin: left top;
+        overflow: hidden;   
+		filter: drop-shadow(0px 10px 20px rgba($color-black, 0.1));
+            
+        @include tablet-xs {
+            flex-direction: column-reverse;
+            transform: none;
+        }
+	}
+
+	&__content,
+	&__img-wrp {
+		transform-origin: left;
+	}
+
+	&__content {
+		transform: skewY($skew);
+        padding: 70px 30px 55px 30px;
+        
+        @include tablet-xs {
+            transform: none;
+            padding: 30px;
+        }
+    }
+
+	&__body {
+		margin-top: 1em;
+	}
+
+	&__footer {
+		margin-top: 25px;
+	}
+
+	&__img-wrp {
+		flex-basis: 315px;
+        flex-shrink: 0;
+        
+        @include tablet-s {
+            flex-basis: 40vw;
+        }
+        
+        @include tablet-xs {
+            flex-basis: 200px;
+            overflow: hidden;
+        }
+	}
+
+	&__img {
+		object-fit: cover;
+		height: 100%;
+		width: 100%;
+	}
+
+	&__title {
+		font-weight: 500;
+		font-size: 26px;
+		line-height: 115%;
+	}
+}

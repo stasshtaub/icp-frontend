@@ -1,0 +1,57 @@
+.hotline-page-questions {
+	&__list {
+		justify-content: space-evenly;
+		display: flex;
+		margin: -50px -30px 0 0;
+		flex-wrap: wrap;
+
+		@include tablet {
+			margin: -30px -15px 0 0;
+		}
+
+		@include mobile-l {
+			margin: -20px -10px 0 0;
+		}
+	}
+
+	&__item {
+		padding: 50px 30px 0 0;
+		flex-basis: 190px;
+		flex-grow: 1;
+
+		@include tablet {
+			padding: 30px 15px 0 0;
+		}
+
+		@include mobile-l {
+			display: flex;
+			padding: 20px 10px 0 0;
+			flex-basis: 100%;
+		}
+
+		&:before {
+			content: "";
+			width: 27px;
+			height: 27px;
+			border-radius: 50%;
+			background: $color-white;
+			display: block;
+			margin-bottom: 14px;
+
+			@include tablet {
+				width: 22px;
+				height: 22px;
+				margin-bottom: 10px;
+			}
+
+			@include mobile-l {
+				width: 15px;
+				height: 15px;
+				margin-bottom: 0;
+				flex-shrink: 0;
+				margin-right: 10px;
+				margin-top: 0.2em;
+			}
+		}
+	}
+}

@@ -15,6 +15,24 @@
         @include mobile-l {
             font-size: 36px;
         } 
+    
+    }
+    &--xl2 {
+        font-size: 60px;
+        line-height: 125%;
+
+        @include laptop {
+            font-size: 45px;
+        } 
+
+        @include tablet {
+            font-size: 40px;
+        } 
+
+        @include mobile-l {
+            font-size: 30px;
+            line-height: 115%;
+        } 
     }
     
 	&--l {
@@ -151,6 +169,11 @@
 	&--xs2 {
         font-size: 12px;
         line-height: 122.333333%;
+	}
+    
+	&--xs3 {
+        font-size: 14px;
+        line-height: 150%;
 	}
 
     &--bold {

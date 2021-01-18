@@ -1,0 +1,26 @@
+.hotline-page-requests {
+    &__title {
+        text-align: center;
+    }
+
+	&__list {
+		display: flex;
+		flex-wrap: wrap;
+		margin: 0 -30px 0 0;
+
+		@include mobile-l {
+			margin: 30px 0 0 0;
+		}
+	}
+
+	&__item {
+		width: 200px;
+		padding: 50px 30px 0 0;
+		box-sizing: content-box;
+
+		@include mobile-l {
+			width: 100%;
+			padding: 0.5em 0 0 0;
+		}
+	}
+}

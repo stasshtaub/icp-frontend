@@ -9,6 +9,11 @@
 @import "../components/common/text";
 @import "../components/common/button";
 
+@import "../components/hotline-page/hotline-page-themes";
+@import "../components/hotline-page/hotline-page-requests";
+@import "../components/hotline-page/hotline-page-questions";
+@import "../components/hotline-page/hotline-page-feedback";
+
 .hotline-page {
     padding: 216px 0 100px 0;
     background-color: $color-blue;
