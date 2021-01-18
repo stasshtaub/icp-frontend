@@ -70,7 +70,9 @@ section.capabilities-tariffs
                                 if tariff.modularPay
                                     .capabilities-tariffs__modular-wrp
                                         span.capabilities-tariffs__modular.underlined Возможна помодульная оплата
-                                +button("Оплатить", ["capabilities-tariffs__btn"], "size-xl", "color-primary", "icon-ok")&attributes({ "data-modal": "modal-participation", "data-tariff": tariff.name })
+                                -
+                                    const dataHidden = { tariff: tariff.name, price: tariff.price }
+                                +button("Оплатить", ["capabilities-tariffs__btn"], "size-xl", "color-primary", "icon-ok")&attributes({ "data-modal": "modal-participation", "data-hidden": dataHidden })
         .capabilities-tariffs__refund
             .capabilities-tariffs__refund-col.capabilities-tariffs__refund-col--title
                 p.capabilities-tariffs__refund-title Мы настолько уверены в программе и спикерах, что гарантируем вам 100% возврат средств.
