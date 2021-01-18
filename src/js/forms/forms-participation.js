@@ -2,30 +2,83 @@ import IMask from "imask";
 
 import { Modal, showMessage } from "./particles/message";
 
-const button = document.querySelector("[data-modal='modal-participation']");
+const buttons = document.querySelectorAll("[data-modal='modal-participation']");
 const modal = new Modal("Заявка на участие", document.getElementById("modal-participation"));
 const form = document.getElementById("forms-participation");
 const consentCheckbox = form.querySelector("[name='consent']");
 const submitButton = form.querySelector("[type='submit']");
 const loader = document.querySelector(".forms-participation .loader");
 
-const tariff = button.dataset.tariff || null;
+const possibleHidden = form.dataset.possibleHidden && JSON.parse(form.dataset.possibleHidden);
 
-button.addEventListener("click", () => { modal.showModal() });
+buttons.forEach((btn) => {
+    btn.addEventListener("click", (e) => {
+        e.preventDefault();
+
+        if (Array.isArray(possibleHidden)) {
+            possibleHidden.forEach((name) => {
+                const el = form.querySelector(`[name='${ name }']`);
+                console.log(`[name='${ name }']`);
+                if (el) {
+                    el.parentElement.removeChild(el);
+                }
+            })
+        }
+
+        const hiddenFields = btn.dataset.hidden && JSON.parse(btn.dataset.hidden);
+        
+        if (hiddenFields) {
+            for (const name in hiddenFields) {
+                if (Array.isArray(possibleHidden) && possibleHidden.includes(name)) {
+                    const el = document.createElement("input");
+                    el.type = "hidden";
+                    el.value = hiddenFields[name];
+                    el.name = name;
+                    form.appendChild(el);
+                }
+            }
+        }
+
+        // // old
+        // const tariff = btn.dataset.tariff || null;
+        
+        // let tariffInput = form.querySelector("[name='tariff']");
+
+        // if (tariffInput) {
+        //     if (tariff) {
+        //         tariffInput.value = tariff;
+        //         tariffInput.type = "hidden";
+        //         tariffInput.name = "tariff";
+        //     } else {
+        //         tariffInput.parentNode.removeChild(tariffInput);
+        //     }
+        // } else {
+        //     if (tariff) {
+        //         tariffInput = document.createElement("input");
+        //         form.appendChild(tariffInput);
+        //         tariffInput.value = tariff;
+        //         tariffInput.type = "hidden";
+        //         tariffInput.name = "tariff";
+        //     }
+        // }
+
+        modal.showModal()
+    });
+})
 
 consentCheckbox.addEventListener("change", (e) => {
     submitButton.disabled = !submitButton.disabled;
 });
 
 form.addEventListener("submit", async (e) => {
+    e.preventDefault();
+
     loader.classList.add("loader--active");
 
-    e.preventDefault();
     const { action, method } = form;
 
     if (action) {
         const body = new FormData(form);
-        body.append("tariff", tariff);
 
         let title, messageBody, type;
 
