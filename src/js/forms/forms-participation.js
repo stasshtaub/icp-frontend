@@ -8,7 +8,8 @@ const submitButton = form.querySelector("[type='submit']");
 const loader = document.querySelector(".forms-participation .loader");
 
 buttons.forEach((btn) => {
-    btn.addEventListener("click", () => {
+    btn.addEventListener("click", (e) => {
+        e.preventDefault();
         const tariff = btn.dataset.tariff || null;
         
         let tariffInput = form.querySelector("[name='tariff']");
