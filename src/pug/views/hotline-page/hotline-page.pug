@@ -1,0 +1,11 @@
+extends ../../layouts/hotline-page
+
+block styles
+    link(rel="stylesheet" href!=`${baseDir}css/main.css?v=${Date.now()}`)
+    link(rel="stylesheet" href!=`${baseDir}css/hotline-page.css?v=${Date.now()}`)
+block content
+    .hotline-page
+        include particles/hotline-page-header
+       
+block scripts
+    script(src!=`${baseDir}js/common.js?v=${Date.now()}`)
