@@ -11,7 +11,6 @@
 		align-items: center;
         position: absolute;
         white-space: nowrap;
-		will-change: transform;
 
 		&--left {
 			animation: marquee-left $default-speed linear infinite;
@@ -32,18 +31,18 @@
 
 @keyframes marquee-left {
 	from {
-		transform: translateX(0);
+		transform: translate3d(0, 0, 0);
 	}
 	to {
-		transform: translateX(-50%);
+		transform: translate3d(-50%, 0, 0);
 	}
 }
 
 @keyframes marquee-right {
 	from {
-		transform: translateX(-50%);
+		transform: translate3d(-50%, 0, 0);
 	}
 	to {
-		transform: translateX(0);
+		transform: translate3d(0, 0, 0);
 	}
 }
