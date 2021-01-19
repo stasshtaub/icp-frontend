@@ -1,4 +1,5 @@
 mixin marquee(direction)
     .marquee&attributes(attributes)
         .marquee__track(class=`marquee__track--${ direction }`)
-            block
+            .marquee__content
+                block

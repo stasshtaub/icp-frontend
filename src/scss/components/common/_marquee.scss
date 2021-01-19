@@ -1,37 +1,49 @@
 .marquee {
+	$p: &;
+	$default-speed: 7s;
+
 	position: absolute;
     display: flex;
     align-items: center;
 	width: 100vw;
+
+	&--active {
+		#{$p}__track {
+			&--left {
+				animation: marquee-left $default-speed linear infinite;
+			}
+	
+			&--right {
+				animation: marquee-right $default-speed linear infinite;
+			}
+		}
+	}
     
     &__track {
-		$default-speed: 7s;
-
+        position: absolute;
+	}
+	
+	&__content {
+		height: 100%;
 		display: flex;
 		align-items: center;
-        position: absolute;
         white-space: nowrap;
 
-		&--left {
-			animation: marquee-left $default-speed linear infinite;
-		}
-
-		&--right {
-			animation: marquee-right $default-speed linear infinite;
-		}
-
 		* {
+			display: inline-flex;
+			align-items: center;
 			// расстояние между элементами
 			padding-right: 1em;
 			// компенсация выравнивания
 			margin-top: -0.1em;
 		}
-    }
+	}
 }
 
 @keyframes marquee-left {
 	from {
 		transform: translate3d(0, 0, 0);
+		visibility: visible;
 	}
 	to {
 		transform: translate3d(-50%, 0, 0);
@@ -41,6 +53,7 @@
 @keyframes marquee-right {
 	from {
 		transform: translate3d(-50%, 0, 0);
+		visibility: visible;
 	}
 	to {
 		transform: translate3d(0, 0, 0);
