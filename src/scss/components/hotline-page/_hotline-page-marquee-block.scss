@@ -4,7 +4,11 @@
 
 	&--1 {
 		height: 3.1em;
-		font-size: 6.94444444vw;
+		font-size: 99px;
+
+		@include desktop {
+			font-size: vw(99px, 1440px);
+		}
 
 		#{$p}__marquee {
 			&--1 {
@@ -19,8 +23,12 @@
 
 	&--2 {
 		height: 3.88em;
-		font-size: 5.01543209vw;
 		margin-top: -0.5em;
+		font-size: 72px;
+
+		@include desktop {
+			font-size: vw(72px, 1440px);
+		}
 
 		#{$p}__marquee {
 			&--1 {
@@ -34,7 +42,11 @@
 		top: 50%;
 		transform: translateY(-50%);
 		height: 1.95em;
-		font-size: 3.09vw;
+		font-size: 44px;
+
+		@include desktop {
+			font-size: vw(44px	, 1440px);
+		}
 
 		@include tablet {
 			font-size: 40px;
