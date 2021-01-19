@@ -30,7 +30,7 @@
         } 
 
         @include mobile-l {
-            font-size: 30px;
+            font-size: vw(30px, 425px);
             line-height: 115%;
         } 
     }
