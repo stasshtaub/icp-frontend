@@ -1,5 +1,16 @@
+include mixins/hotline-page-marquee-block
+include mixins/marquee
+
 .hotline-page-content
     .container
+        +hotline-page-marquee-block.hotline-page-marquee-block--1
+            +marquee("left").hotline-page-marquee-block__marquee.hotline-page-marquee-block__marquee--1
+                each span in [1, 2, 3, 4]
+                    div #связьсреальностью
+            +marquee("right").hotline-page-marquee-block__marquee.hotline-page-marquee-block__marquee--2
+                each span in [1, 2, 3, 4]
+                    div #связьсреальностью
+
         .row.row--tablet-column
             .row__col.row__col--md-4
             .row__col
@@ -15,6 +26,12 @@
         
         .mt-65
             include ./hotline-page-invite
+
+        
+        +hotline-page-marquee-block.hotline-page-marquee-block--2
+            +marquee("right").hotline-page-marquee-block__marquee.hotline-page-marquee-block__marquee--1
+                each span in [1, 2, 3, 4]
+                    div #связьсреальностью
         
         .mt-65
             include ./hotline-page-themes
@@ -22,5 +39,5 @@
         .mt-80
             include ./hotline-page-requests
         
-        .mt-60
+        .mt-60     
             include ./hotline-page-feedback

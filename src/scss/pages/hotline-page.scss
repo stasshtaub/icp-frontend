@@ -8,11 +8,14 @@
 @import "../components/common/row";
 @import "../components/common/text";
 @import "../components/common/button";
+@import "../components/common/marquee-block";
+@import "../components/common/marquee";
 
 @import "../components/hotline-page/hotline-page-themes";
 @import "../components/hotline-page/hotline-page-requests";
 @import "../components/hotline-page/hotline-page-questions";
 @import "../components/hotline-page/hotline-page-feedback";
+@import "../components/hotline-page/hotline-page-marquee-block";
 
 .hotline-page {
     padding: 216px 0 100px 0;

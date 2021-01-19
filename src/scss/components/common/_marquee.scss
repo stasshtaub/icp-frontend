@@ -1,0 +1,49 @@
+.marquee {
+	position: absolute;
+    display: flex;
+    align-items: center;
+	width: 100vw;
+    
+    &__track {
+		$default-speed: 7s;
+
+		display: flex;
+		align-items: center;
+        position: absolute;
+        white-space: nowrap;
+		will-change: transform;
+
+		&--left {
+			animation: marquee-left $default-speed linear infinite;
+		}
+
+		&--right {
+			animation: marquee-right $default-speed linear infinite;
+		}
+
+		* {
+			// расстояние между элементами
+			padding-right: 1em;
+			// компенсация выравнивания
+			margin-top: -0.1em;
+		}
+    }
+}
+
+@keyframes marquee-left {
+	from {
+		transform: translateX(0);
+	}
+	to {
+		transform: translateX(-50%);
+	}
+}
+
+@keyframes marquee-right {
+	from {
+		transform: translateX(-50%);
+	}
+	to {
+		transform: translateX(0);
+	}
+}

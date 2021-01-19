@@ -1,0 +1,71 @@
+.hotline-page-marquee-block {
+	$p: &;
+	font-weight: 500;
+
+	&--1 {
+		height: 3.1em;
+		font-size: 6.94444444vw;
+
+		#{$p}__marquee {
+			&--1 {
+				transform: rotate(-5deg);
+			}
+		
+			&--2 {
+				transform: rotate(5deg);
+			}
+		}
+	}
+
+	&--2 {
+		height: 3.88em;
+		font-size: 5.01543209vw;
+		margin-top: -0.5em;
+
+		#{$p}__marquee {
+			&--1 {
+				transform: rotate(-10deg);
+			}
+		}
+	}
+
+	&--3 {
+		position: absolute;
+		top: 50%;
+		transform: translateY(-50%);
+		height: 1.95em;
+		font-size: 3.09vw;
+
+		@include tablet {
+			font-size: 40px;
+			height: 3em;
+		}
+
+		#{$p}__marquee {
+			&--1 {
+				transform: rotate(-5deg);
+
+				@include tablet {
+					transform: rotate(-15deg);					
+				}
+			}
+		
+			&--2 {
+				transform: rotate(5deg);
+
+				@include tablet {
+					transform: rotate(15deg)					
+				}
+			}
+		}
+	}
+
+	.marquee__track {
+		animation-duration: 35s;
+		
+		padding: 7px 0;
+		background-color: $color-white;
+		color: $color-blue;
+		height: 1.8em;
+	}
+}

@@ -16,7 +16,8 @@ module.exports = {
 		"forms-participation": "./src/js/forms/forms-participation",
 		reviews: "./src/js/reviews",
 		leading: "./src/js/leading",
-		programs: "./src/js/programs"
+		programs: "./src/js/programs",
+		"hotline-page": "./src/js/hotline-page",
 	},
 	module: {
 		rules: [

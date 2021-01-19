@@ -1,6 +1,7 @@
 .hotline-page-feedback {
-    $skew: 3.826deg;
-    
+	$skew: 3.826deg;
+	
+    position: relative;
 	display: flex;
     justify-content: center;
     // Компенсация skew-выступа
