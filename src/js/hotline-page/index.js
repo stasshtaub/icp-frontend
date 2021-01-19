@@ -1,9 +1,15 @@
-const tracks = document.querySelectorAll(".marquee__track");
+import { lazyAnimationObserve } from "../helpers/lazyAnimationObserve"
 
-tracks.forEach((track) => {
-    const { children } = track.cloneNode(true);
-    
+const contentContainers = document.querySelectorAll(".marquee__content");
+
+contentContainers.forEach((content) => {
+	const { children } = content.cloneNode(true);
+
 	if (children) {
-		track.append(...children);
+		content.append(...children);
 	}
 });
+
+const animTriggerClass = "marquee--active";
+const marquees = document.querySelectorAll(".marquee");
+lazyAnimationObserve(marquees, animTriggerClass);
