@@ -69,8 +69,12 @@
     }
 
     &__name {
-        font-size: 5.55555556vw;
+        font-size: 80px;
         line-height: 100%;
+
+        @include desktop {
+            font-size: vw(80px, 1440px);
+        }
     }
     
     &__img {
