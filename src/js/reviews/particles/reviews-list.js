@@ -5,14 +5,16 @@ const msnry = new Masonry(container, {
 });
 
 const updateLayout = () => {
-	imagesLoaded(container).on('progress', () => {
+	imagesLoaded(container).on("progress", () => {
 		msnry.layout();
 	});
 };
 
 updateLayout();
 
-const moreBtn = document.getElementById("reviews-more__btn");
+let isLoading = false;
+
+const loadTrigger = document.querySelector(".reviews-more");
 const listContainer = document.querySelector(".reviews-list");
 
 let currentPage = 1;
@@ -58,7 +60,7 @@ const fetchReviews = async () => {
 };
 
 const loadReviews = async () => {
-	moreBtn.disabled = true;
+	isLoading = true;
 
 	currentPage++;
 
@@ -86,7 +88,7 @@ const loadReviews = async () => {
 
 	container.appendChild(fragment);
 	msnry.appended(elems);
-	
+
 	updateLayout();
 
 	// if (totalPages !== total_page_count) {
@@ -97,7 +99,20 @@ const loadReviews = async () => {
 	// 	moreBtn.parentNode.removeChild(moreBtn);
 	// }
 
-	moreBtn.disabled = false;
+	isLoading = false;
 };
 
-moreBtn.addEventListener("click", loadReviews);
+const io = new IntersectionObserver(
+	([entry]) => {
+		if (entry.isIntersecting && !isLoading) {
+			loadReviews();
+		}
+	},
+	{
+		rootMargin: "30%"
+	}
+);
+
+io.observe(loadTrigger);
+
+// moreBtn.addEventListener("click", loadReviews);
