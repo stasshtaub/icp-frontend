@@ -5,19 +5,33 @@ const msnry = new Masonry(container, {
 });
 
 const updateLayout = () => {
-	imagesLoaded(container).on('progress', () => {
+	imagesLoaded(container).on("progress", () => {
 		msnry.layout();
 	});
 };
 
 updateLayout();
 
-const moreBtn = document.getElementById("reviews-more__btn");
+let isLoading = false;
+
 const listContainer = document.querySelector(".reviews-list");
+const loader = document.createElement("div");
+loader.className = "scroll-loader";
+listContainer.after(loader);
 
 let currentPage = 1;
 let limit = 10;
 let totalPages = 2;
+
+const startLoading = () => {
+	isLoading = true;
+	loader.classList.add("scroll-loader--active");
+};
+
+const endLoading = () => {
+	isLoading = false;
+	loader.classList.remove("scroll-loader--active");
+};
 
 const createReviewsItem = (text, avatar, name, programName, programLink) => {
 	const artictle = `
@@ -45,12 +59,13 @@ const createReviewsItem = (text, avatar, name, programName, programLink) => {
 	return tmpDiv.querySelector(".reviews-list__item");
 };
 
-const fetchReviews = async () => {
+const fetchReviews = async (n_page_size, i_num_page) => {
 	const response = await fetch(
-		"https://jsonplaceholder.typicode.com/posts?" +
+		"/local/templates/icpcenter/components/bitrix/news.list/about_reviews_list/ajax.php?" +
 			new URLSearchParams({
-				_start: currentPage * limit,
-				_limit: limit,
+				ajax: "y",
+				n_page_size,
+				i_num_page,
 			})
 	);
 
@@ -58,46 +73,61 @@ const fetchReviews = async () => {
 };
 
 const loadReviews = async () => {
-	moreBtn.disabled = true;
-
 	currentPage++;
 
-	const items = await fetchReviews();
+	const {
+		response: { items, total_page_count },
+	} = await fetchReviews(limit, currentPage);
+
+	if (total_page_count < currentPage) {
+		return true;
+	}
+
+	if (totalPages !== total_page_count) {
+		totalPages = total_page_count;
+	}
 
 	const elems = [];
 	const fragment = document.createDocumentFragment();
 
-	items.forEach(({ id, title, body }) => {
-		const avatar = `https://loremflickr.com/50/50?random=${id}`;
-		const name = title.split(" ").slice(0, 2).join(" ");
-		const programName = "Agile-коачинг";
-		const programLink = "#";
-
-		const elem = createReviewsItem(
-			body,
-			avatar,
-			name,
-			programName,
-			programLink
-		);
-		fragment.appendChild(elem);
-		elems.push(elem);
-	});
+	items.forEach(
+		({ description, thumb_url, author, program_name, program_url }) => {
+			const elem = createReviewsItem(
+				description,
+				thumb_url,
+				author,
+				program_name,
+				program_url
+			);
+			fragment.appendChild(elem);
+			elems.push(elem);
+		}
+	);
 
 	container.appendChild(fragment);
 	msnry.appended(elems);
-	
+
 	updateLayout();
 
-	// if (totalPages !== total_page_count) {
-	// 	totalPages = total_page_count;
-	// }
-
-	// if (currentPage === totalPages) {
-	// 	moreBtn.parentNode.removeChild(moreBtn);
-	// }
-
-	moreBtn.disabled = false;
+	return total_page_count === currentPage;
 };
 
-moreBtn.addEventListener("click", loadReviews);
+const io = new IntersectionObserver(
+	async ([entry], observer) => {
+		if (entry.isIntersecting && !isLoading) {
+			startLoading();
+
+			const isEnd = await loadReviews();
+			if (isEnd) {
+				observer.unobserve(entry.target);
+			}
+
+			endLoading();
+		}
+	},
+	{
+		rootMargin: "30%",
+	}
+);
+
+io.observe(loader);

@@ -1,0 +1,14 @@
+.scroll-loader {
+    width: 100%;
+    height: 80px;
+    background: url("../images/sprite.svg#loading") no-repeat center;
+    background-size: 400px;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.2s ease-in-out;
+
+    &--active {
+        opacity: 1;
+        pointer-events: unset;
+    }
+}
