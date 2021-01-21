@@ -1,0 +1,5 @@
+mixin breadcrumbs(items)
+    .breadcrumbs.text.text-xs&attributes(attributes)
+        each item, i in items
+            a(href="#").breadcrumbs__item= item
+            span.breadcrumbs__separator &nbsp;/&nbsp;

@@ -1,3 +1,12 @@
 .breadcrumbs {
     margin-left: 4px;
+
+    &__item {
+        color: unset;
+        text-decoration: none;
+
+        &:hover {
+            text-decoration: underline;
+        }
+    }
 }
