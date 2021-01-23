@@ -1,0 +1,35 @@
+mixin tariffs(title, items, withRefund = false)
+    .tariffs&attributes(attributes)
+        .container
+            .double-block
+                aside.tariffs__aside.double-block__aside
+                    h3.tariffs__title.double-block__title= title
+                .double-block__content.double-block__content--narrow.tariffs__content
+                    ul.tariffs__list
+                        each tariff, i in items
+                            li.tariffs__tariff
+                                .tariffs__col.tariffs__col--num
+                                    p.tariffs__num(class=`${tariff.isVip ? "tariffs__num--vip" : ""}`)= i+1
+                                .tariffs__col.tariffs__col--info
+                                    p.tariffs__name(class=`${tariff.isVip ? "tariffs__name--vip" : ""}`) !{tariff.name}
+                                    p.tariffs__description !{tariff.description}
+                                    if tariff.elements
+                                        ul.tariffs__elements
+                                            each element in tariff.elements
+                                                li.tariffs__element= element
+                                .tariffs__col.tariffs__col--pay
+                                    .tariffs__price= tariff.price
+                                    if tariff.payFormat
+                                        .tariffs__pay-format= tariff.payFormat
+                                    if tariff.modularPay
+                                        .tariffs__modular-wrp
+                                            span.tariffs__modular.underlined Возможна помодульная оплата
+                                    -
+                                        const dataHidden = { tariff: tariff.name, price: tariff.price }
+                                    +button(tariff.buttonText ? tariff.buttonText : "Оплатить", ["tariffs__btn"], "size-xl", "color-primary", "icon-ok")&attributes({ "data-modal": "modal-participation", "data-hidden": dataHidden })
+            if withRefund
+                .tariffs__refund
+                    .tariffs__refund-col.tariffs__refund-col--title
+                        p.tariffs__refund-title Мы настолько уверены в программе и спикерах, что гарантируем вам 100% возврат средств.
+                    .tariffs__refund-col.tariffs__refund-col--description
+                        p.tariffs__refund-description Если после первого занятия вы решите, что данный курс не для вас, то мы просто вернём всю сумму без лишних вопросов.
