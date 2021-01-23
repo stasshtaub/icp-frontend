@@ -53,6 +53,18 @@ gulp.task("images", () =>
 );
 
 gulp.task("svg-sprite", () => {
+	gulp.src("src/images/sprites/festival/*.svg")
+		.pipe(
+			svgSprite({
+				mode: {
+					stack: {
+						sprite: "../festival.svg",
+					},
+				},
+			})
+		)
+		.pipe(gulp.dest("dist/images/"));
+
 	gulp.src("src/images/sprites/leading/*.svg")
 		.pipe(
 			svgSprite({

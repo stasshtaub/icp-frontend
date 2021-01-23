@@ -1,0 +1,53 @@
+.festival-speakers {
+    padding: 40px 0;
+    background-color: $color-gray-light;
+
+    &__list {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 100px 30px;
+        margin-top: 90px;
+
+        @include tablet-s2 {
+            grid-template-columns: 100%;
+            gap: 50px;
+        }
+    }
+
+    &__avatar {
+        display: block;
+        width: 80px;
+        height: 80px;
+        border-radius: 50%;
+        object-fit: cover;
+        background: $color-blue;
+
+        @include tablet-s2 {
+            flex-shrink: 0;
+        }
+    }
+
+    &__info {
+        margin-top: 10px;
+        
+        @include tablet-s2{
+            margin-left: 20px;
+            margin-top: 0;
+        }
+    }
+
+    &__description {
+        margin-top: 10px;
+    }
+
+    &__flag {
+        width: 28px;
+        margin-top: 10px;
+    }
+    
+    &__card {
+        @include tablet-s2 {
+            display: flex;
+        }
+    }
+}

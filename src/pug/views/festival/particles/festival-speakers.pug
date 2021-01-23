@@ -1,0 +1,56 @@
+-
+    const speakers = [
+        {
+            name: "Ольга Рыбина",
+            description: "Организатор и ведущая Фестиваля — коуч MCC ICF, директор «ICP CENTRE», автор и ведущая международных программ тренинга коучингу, г. Анапа",
+            flag: "images/festival.svg#flag-ru"
+        },
+        {
+            name: "Галина Вдовиченко",
+            description: "Организатор и ведущая Фестиваля — коуч PCC ICF, член ICF",
+            flag: "images/festival.svg#flag-ru"
+        },
+        {
+            name: "Юта Гилиш",
+            description: "Дизайнер — системный коуч М.А. проводит семинары в которых люди усиливают свою творческую восприимчивость к собственной природе, и к окружающей природе. ",
+            flag: "images/festival.svg#flag-de"
+        },
+        {
+            name: "Андреа Урбан",
+            description: "Коуч. Сертифицированный бизнес-консультант. Сопровождение изменений и смены поколений руководства и сотрудников в фирмах. Карьера, развитие личности, менеджмент коммуникации и конфликтов.",
+            flag: "images/festival.svg#flag-de"
+        },
+        {
+            name: "Оксана Веверс",
+            description: "Коуч. Сертифицированный ментор-коуч. Сертифицированный Embodiment Facilitator. Супервизор. Специализация — работа с состояниями, embodiment подход, воплощение лидерства, практики телесной осознанности.",
+            flag: "images/festival.svg#flag-de"
+        },
+        {
+            name: "Наталья Гульчевская",
+            description: "Коуч. Кандидат психологических наук. Сертифицированный бизнес-тренер, программ подготовки профессиональных коучей «Наука и искусство трансформационного коучинга»; «Введение в коучинг для работников образования» и др.",
+            flag: "images/festival.svg#flag-ru"
+        },
+        {
+            name: "Наталья Точилкина",
+            description: "Коуч. Руководитель Мастерской Системного Коучинга, ректор IATCL, преподаватель ВШЭ, ментор курса Executive coaching Яна Ардуи в Москве, тренер духовных практик на Бали, Кипре, Италии.",
+            flag: "images/festival.svg#flag-ru"
+        },
+        {
+            name: "Юлия Чухно",
+            description: "Executive- и бизнес-коуч, ментор и супервизор. Основатель партнерства бизнес-коучей «Чухно и Партнеры», Партнер Nova Terra Coach Training & Corporate Development в России и СНГ",
+            flag: "images/festival.svg#flag-ru"
+        }
+    ]
+
+.festival-speakers
+    .container
+        h2.text.text--center.text--l Спикеры фестиваля
+        ul.festival-speakers__list
+            each speaker, i in speakers
+                li.festival-speakers__item
+                    .festival-speakers__card
+                        img(src=`https://loremflickr.com/80/${ 80 + i }` alt=speaker.name).festival-speakers__avatar
+                        .festival-speakers__info
+                            p.festival-speakers__name.text.text--s2.text--bold= speaker.name
+                            p.festival-speakers__description.text.text--xs3= speaker.description
+                            img(src=speaker.flag alt="language").festival-speakers__flag
