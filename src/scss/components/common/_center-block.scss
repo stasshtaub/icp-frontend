@@ -1,0 +1,12 @@
+.center-block {
+    display: flex;
+
+    &__content {
+        margin-left: auto;
+        margin-right: auto;
+        
+        &--930 {
+            max-width: 930px;
+        }
+    }
+}

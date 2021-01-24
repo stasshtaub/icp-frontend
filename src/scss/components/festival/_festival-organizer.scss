@@ -3,22 +3,12 @@
 	background-color: $color-blue;
 	color: $color-white;
 
-	&__header,
-	&__footer {
-		display: flex;
-	}
-
 	&__body {
 		margin-top: 90px;
 	}
 
 	&__footer {
 		margin-top: 60px;
-	}
-
-	&__center-block {
-		max-width: 930px;
-		margin: 0 auto;
 	}
 
 	&__description {
