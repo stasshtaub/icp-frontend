@@ -73,6 +73,12 @@
             }
         }
 
+        &--xs-12 {
+            @include tablet-xs {
+                flex: 0 0 100%;
+            }
+        }
+
         &--s1-12 {
             @include tablet-s1 {
                 flex: 0 0 100%;

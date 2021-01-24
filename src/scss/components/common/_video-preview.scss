@@ -1,0 +1,67 @@
+.video-preview {
+    $p: &;
+    
+    display: block;
+	font-size: 50px;
+    max-width: 22.4em;
+    cursor: pointer;
+
+	@media (max-width: 1120px) {
+		font-size: vw(50px, 1120px);
+	}
+
+	&:hover {
+		#{$p}__play {
+			transform: scale(1.05);
+		}
+	}
+
+	&__inner {
+		position: relative;
+		display: flex;
+		align-items: center;
+		padding-bottom: 60%;
+	}
+
+	&__img {
+		position: absolute;
+		width: 100%;
+		height: 100%;
+		left: 0;
+		top: 0;
+		object-fit: cover;
+	}
+
+	&__body {
+		position: absolute;
+		top: 0;
+		left: 2.3em;
+		height: 100%;
+		width: 14.8em;
+		display: flex;
+		align-items: center;
+	}
+
+	&__title {
+		font-weight: 900;
+		line-height: 110%;
+		text-transform: uppercase;
+		color: $color-white;
+	}
+
+	&__play {
+		$size: 1.86em;
+
+		width: $size;
+		height: $size;
+		border-radius: 50%;
+		flex-shrink: 0;
+        outline: none;
+		border: none;
+		font-size: inherit;
+		margin-left: auto;
+		background: $color-white url("../images/common.svg#icon-play") no-repeat
+			center;
+		transition: transform 0.1s ease-in-out;
+	}
+}

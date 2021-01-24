@@ -1,0 +1,7 @@
+mixin video-preview(img, title, videoSrc)
+    label.video-preview&attributes(attributes)
+        .video-preview__inner
+            img(src=img alt="video preview").video-preview__img
+            .video-preview__body
+                span.video-preview__title !{ title }
+                button(data-video=videoSrc).video-preview__play
