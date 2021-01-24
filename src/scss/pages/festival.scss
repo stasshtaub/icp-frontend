@@ -9,9 +9,11 @@
 @import "../components/common/button";
 @import "../components/common/double-block";
 @import "../components/common/tariffs";
+@import "../components/common/slider";
 
 @import "../components/festival/festival-speakers";
 @import "../components/festival/festival-organizer";
+@import "../components/festival/festival-story";
 
 .festival {
     @include mobile-l {

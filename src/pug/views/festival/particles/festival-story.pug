@@ -1,0 +1,22 @@
+-
+    const images = [
+        "images/jpg/festival.jpg",
+        "images/jpg/festival.jpg",
+        "images/jpg/festival.jpg",
+        "images/jpg/festival.jpg",
+        "images/jpg/festival.jpg"
+    ]
+
+.festival-story
+    headaer.festival-story__header
+        .container
+            h2.text.text--center.text--bold.text--l2 Как прошел фестиваль в 2018-2020
+    section.festival-story__body
+        .container.festival-story__slider-container
+            .festival-story__slider.swiper-container
+                ul.festival-story__slides.swiper-wrapper
+                    each img in images
+                        li.festival-story__slide.swiper-slide
+                            .festival-story__img-wrp
+                                img(src=img, alt="festival story img").festival-story__img
+                ul.festival-story__dots.slider__dots

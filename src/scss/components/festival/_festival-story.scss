@@ -1,0 +1,28 @@
+.festival-story {
+    padding: 38px 0;
+    
+    &__body {
+        margin-top: 48px;
+    }
+    
+	&__slider-container {
+        padding: 0 !important;
+	}
+
+	&__img-wrp {
+		position: relative;
+		padding-bottom: 56.25%;
+	}
+
+	&__img {
+		position: absolute;
+		width: 100%;
+		height: 100%;
+		object-fit: cover;
+	}
+
+	&__dots {
+		margin-top: 13px;
+		justify-content: center;
+	}
+}

@@ -3,10 +3,14 @@ extends ../../layouts/festival
 block styles
     link(rel="stylesheet" href!=`${baseDir}css/main.css?v=${Date.now()}`)
     link(rel="stylesheet" href!=`${baseDir}css/festival.css?v=${Date.now()}`)
+    link(rel="stylesheet" href!="https://unpkg.com/swiper@6.3.2/swiper-bundle.min.css")
 block content
     .festival
         include particles/festival-speakers
         include particles/festival-tariffs
         include particles/festival-organizer
+        include particles/festival-story
        
 block scripts
+    script(defer src!="https://unpkg.com/swiper/swiper-bundle.min.js")
+    script(defer src!=`${baseDir}js/festival.js?v=${Date.now()}`)
