@@ -1,0 +1,14 @@
+.festival-join {
+	&__btn {
+		display: block;
+		margin: 100px auto 0 auto;
+
+		@include tableе {
+			margin-top: 70px;
+		}
+
+		@include mobile-l {
+			margin-top: 50px;
+		}
+	}
+}

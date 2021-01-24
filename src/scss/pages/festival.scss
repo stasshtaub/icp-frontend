@@ -15,8 +15,11 @@
 @import "../components/festival/festival-speakers";
 @import "../components/festival/festival-organizer";
 @import "../components/festival/festival-story";
+@import "../components/festival/festival-join";
 
 .festival {
+    padding-bottom: 90px;
+    
     @include mobile-l {
         padding-top: 90px;
     }
