@@ -1,0 +1,122 @@
+.festival-contacts {
+	padding: 22px 0 25px 0;
+
+	&__logo {
+		width: 174px;
+
+		@include desktop {
+			width: vw(174px, 1440px);
+		}
+
+		@include tablet-s {
+			width: 120px;
+		}
+	}
+
+	&__row {
+		display: flex;
+
+		@include mobile-m {
+			flex-direction: column;
+		}
+	}
+
+	&__col {
+		display: flex;
+
+		@include tablet-s("min") {
+			align-items: center;
+		}
+
+		@include tablet-s("max") {
+			flex-direction: column;
+		}
+
+		&--right {
+			margin-left: auto;
+			padding-left: 20px;
+
+			@include tablet-s {
+				margin-top: auto;
+			}
+
+			@include mobile-m {
+				margin-left: unset;
+				padding-left: 0;
+				flex-direction: row;
+				flex-wrap: wrap;
+				margin: 0 -10px 0 0;
+			}
+
+			& > * {
+				@include mobile-m {
+					padding: 10px 10px 0 0;
+				}
+			}
+		}
+	}
+
+	&__link {
+		font-weight: 500;
+		font-size: 22px;
+		line-height: 122.727273%;
+		color: unset;
+		text-decoration: none;
+		white-space: nowrap;
+
+		@include laptop-m {
+			font-size: vw(22px, 1200px);
+		}
+
+		@include tablet-s {
+			font-size: 14px;
+		}
+
+		&--email {
+			margin-right: 2.63em;
+
+			@include laptop-m {
+				margin-right: 0.9em;
+			}
+
+			@include tablet-s {
+				margin-right: 0;
+			}
+		}
+
+		&--phone {
+			@include tablet-s {
+				margin-top: 10px;
+			}
+
+			@include mobile-m {
+				margin: 0;
+			}
+		}
+
+		&:hover {
+			text-decoration: underline;
+		}
+	}
+
+	&__description {
+		margin-left: 56px;
+		max-width: 430px;
+		font-size: 14px;
+		line-height: 150%;
+
+		@include desktop {
+			margin-left: vw(56px, 1440px);
+		}
+
+		@include laptop {
+			font-size: 12px;
+			margin-left: vw(20px, 1024px);
+		}
+
+		@include tablet-s {
+			margin-left: 0;
+			margin-top: 10px;
+		}
+	}
+}

@@ -59,8 +59,14 @@
 }
 
 @mixin tablet-s($dimension: "max") {
-	@media (#{$dimension}-width: 700px) {
-		@content;
+	@if $dimension == "max" {
+		@media (max-width: 700px) {
+			@content;
+		}
+	} @else {
+		@media (min-width: 701px) {
+			@content;
+		}
 	}
 }
 
@@ -85,6 +91,18 @@
 @mixin mobile-l($dimension: "max") {
 	@media (#{$dimension}-width: 425px) {
 		@content;
+	}
+}
+
+@mixin mobile-m($dimension: "max") {
+	@if $dimension == "max" {
+		@media (max-width: 375px) {
+			@content;
+		}
+	} @else {
+		@media (min-width: 376px) {
+			@content;
+		}
 	}
 }
 
