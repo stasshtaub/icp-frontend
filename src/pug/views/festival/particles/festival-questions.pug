@@ -1,0 +1,14 @@
+- 
+    const questions = [
+        "Что произойдёт, если несколько десятков коучей соберутся в одном месте?",
+        "А если они привезут свежие тренды со всех уголков земли?",
+        "И устроят великий нетворкинг?",
+        "А еще и поле безграничных возможностей вокруг себя создадут?"
+    ]
+
+.festival-questions
+    .container
+        ul.festival-questions__list
+            each question in questions
+                li.festival-questions__item
+                    span.festival-questions__text.text.text--s= question

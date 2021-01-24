@@ -1,0 +1,72 @@
+.festival-questions {
+	padding: 80px 0 60px 0;
+
+	@include tablet-xs {
+		padding: 50px 0 30px 0;
+	}
+
+	&__text {
+		text-align: center;
+
+		@include tablet-xs {
+			text-align: left;
+		}
+	}
+
+	&__list {
+		display: flex;
+		flex-wrap: wrap;
+		margin: -50px -30px 0 0;
+		justify-content: space-evenly;
+
+		@include tablet-xs {
+			flex-direction: column;
+			margin: 0;
+		}
+	}
+
+	&__item {
+		flex-basis: 250px;
+		flex-grow: 1;
+		padding: 50px 30px 0 0;
+		align-items: center;
+		display: flex;
+		flex-direction: column;
+		max-width: 315px;
+
+		@include tablet-xs {
+			max-width: 100%;
+			flex-direction: row;
+			padding: 0;
+			flex-basis: unset;
+		}
+
+		&:before {
+			$size: 80px;
+			content: "";
+			display: block;
+			width: $size;
+			height: $size;
+			background-color: $color-blue;
+			border-radius: 50%;
+			margin-bottom: 10px;
+
+			@include laptop {
+				width: vw($size, 1024px);
+				height: vw($size, 1024px);
+			}
+
+			@include tablet-xs {
+				flex-shrink: 0;
+				margin-bottom: 0;
+				margin-right: 20px;
+			}
+		}
+
+		& ~ & {
+			@include tablet-xs {
+				margin-top: 30px;
+			}
+		}
+	}
+}
