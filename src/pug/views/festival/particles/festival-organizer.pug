@@ -1,0 +1,36 @@
+-
+    const organizerItems = [
+        {
+            title: "Усиление навыков",
+            description: "Создаем доступные и понятные программы и тренинги для коучей, руководителей, менеджеров и всех, кто заинтересован в освоении инструментов коучинга."
+        },
+        {
+            title: "Развитие личности",
+            description: "Помогаем освоить коучинговый подход к образу мышления и решению проблем, развивать эмоциональный интеллект и осознанность личной уникальности."
+        },
+        {
+            title: "Расширение опыта",
+            description: "Организуем мероприятия, вебинары, коуч-туры, фестивали - для того, чтобы объединить передовой опыт мастеров-коучей разных городов и стран."
+        }
+    ]
+
+.festival-organizer
+    .container
+        header.festival-organizer__header
+            .festival-organizer__center-block
+                h2.text.text--center.text--bold.text--l2 Организатор Фестиваля — Международный
+                    br
+                    | Центр Профессионального Коучинга
+                    br
+                    | ICP Centre
+        section.festival-organizer__body
+            ul.festival-organizer__list
+                each item in organizerItems
+                    li.festival-organizer__item
+                        .festival-organizer__info
+                            p.festival-organizer__name.text.text--bold.text--s2= item.title
+                            p.festival-organizer__description.text.text--s= item.description
+        footer.festival-organizer__footer
+            .festival-organizer__center-block
+                p.text.text--m.text--bold.text--center Бархатный сезон, свежесть воздуха и энергия моря быстро восстановят ваши физические ресурсы и подарят мощный заряд энергии на несколько месяцев вперед.
+

@@ -1,0 +1,78 @@
+.festival-organizer {
+	padding: 80px 0 70px 0;
+	background-color: $color-blue;
+	color: $color-white;
+
+	&__header,
+	&__footer {
+		display: flex;
+	}
+
+	&__body {
+		margin-top: 90px;
+	}
+
+	&__footer {
+		margin-top: 60px;
+	}
+
+	&__center-block {
+		max-width: 930px;
+		margin: 0 auto;
+	}
+
+	&__description {
+		margin-top: 12px;
+	}
+
+	&__item {
+		padding: 60px 30px 0 0;
+		flex-basis: 300px;
+		max-width: 430px;
+		flex-grow: 1;
+
+		@include tablet-s {
+			flex-basis: unset;
+			max-width: unset;
+			padding: 0;
+			display: flex;
+		}
+
+		&:before {
+			content: "";
+			display: block;
+			width: 12.5vw;
+			height: 12.5vw;
+			background-color: $color-white;
+			border-radius: 50%;
+
+			@include tablet-s {
+				flex-shrink: 0;
+			}
+		}
+
+		& ~ & {
+			@include tablet-s {
+				margin-top: 50px;
+			}
+		}
+	}
+	&__info {
+		margin-top: 35px;
+
+		@include tablet-s {
+			margin-top: 0;
+			margin-left: 20px;
+		}
+	}
+
+	&__list {
+		margin: -60px -30px 0 0;
+		display: flex;
+		flex-wrap: wrap;
+
+		@include tablet-s {
+			margin: 0;
+		}
+	}
+}
