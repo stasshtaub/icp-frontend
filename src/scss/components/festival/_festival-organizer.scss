@@ -39,12 +39,19 @@
 		}
 
 		&:before {
+			$round-size: 80px;
+
 			content: "";
 			display: block;
-			width: 12.5vw;
-			height: 12.5vw;
+			width: $round-size;
+			height: $round-size;
 			background-color: $color-white;
 			border-radius: 50%;
+
+			@include desktop {
+				width: vw($round-size, 1440px);
+				height: vw($round-size, 1440px);
+			}
 
 			@include tablet-s {
 				flex-shrink: 0;
