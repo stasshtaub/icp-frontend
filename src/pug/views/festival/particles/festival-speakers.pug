@@ -49,8 +49,9 @@
             each speaker, i in speakers
                 li.festival-speakers__item
                     .festival-speakers__card
-                        img(src=`https://loremflickr.com/80/${ 80 + i }` alt=speaker.name).festival-speakers__avatar
-                        .festival-speakers__info
+                        header.festival-speakers__card-header
+                            img(src=`https://loremflickr.com/80/${ 80 + i }` alt=speaker.name).festival-speakers__avatar
                             p.festival-speakers__name.text.text--s2.text--bold= speaker.name
+                        .festival-speakers__info
                             p.festival-speakers__description.text.text--xs3= speaker.description
                             img(src=speaker.flag alt="language").festival-speakers__flag
