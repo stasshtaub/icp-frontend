@@ -1,0 +1,26 @@
+-
+    const items = [
+        {
+            img: "images/loyalty-program.svg#advantages-1",
+            text: "Помощь другим и их искренняя благодарность после обучения в ICP Centre. Вспомните, как вы тоже когда-то сомневались, нужен ли вам коучинг.<br><br>Вы все взвешивали и советовались со знакомыми."
+        },
+        {
+            img: "images/loyalty-program.svg#advantages-2",
+            text: "Вместе продвигаем культуру международного коучинга, чтобы больше людей отличало истинный коучинг от наставничества в инфобизнесе."
+        },
+        {
+            img: "images/loyalty-program.svg#advantages-3",
+            text: "Регистрация в программе позволит получать скидки не только вам, но и вашим коллегам (по рекомендации от вас) "
+        },
+    ]
+
+.loyalty-program-advantages
+    .container
+        h2.loyalty-program-advantages__title.text.text--xl2 Преимущества программы лояльности
+        ul.loyalty-program-advantages__list
+            each item in items
+                li.loyalty-program-advantages__item
+                    img(src=item.img alt="advantage").loyalty-program-advantages__img
+                    .loyalty-program-advantages__text
+                        p.text.text--s !{ item.text }
+                    

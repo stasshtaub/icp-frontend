@@ -1,0 +1,66 @@
+.loyalty-program-advantages {
+	padding: 50px 0 70px 0;
+	background-color: $color-blue;
+    color: $color-white;
+    
+    &__title {
+        max-width: 890px;
+    }
+
+	&__img {
+		width: 130px;
+		height: 130px;
+        object-fit: cover;
+        
+        @include laptop {
+            width: vw(130px);
+            height: vw(130px);
+        }
+        
+        @include tablet {
+            width: 80px;
+            height: 80px;
+        }
+        
+        @include mobile-l {
+            width: 60px;
+            height: 60px;
+        }
+    }
+    
+	&__list {
+		margin: 10px -30px 0 0;
+		display: flex;
+        flex-wrap: wrap;
+        
+        @include tablet {
+            flex-direction: column;
+        }
+    }
+    
+	&__item {
+		padding: 60px 30px 0 0;
+		flex-basis: 350px;
+		flex-grow: 1;
+		max-width: 430px;
+        
+        @include tablet {
+            max-width: 100%;
+            flex-basis: unset;
+            display: flex;
+        }
+	}
+
+	&__text {
+		margin-top: 30px;
+        
+        @include tablet {
+            margin-top: 0;
+            margin-left: 25px;
+        }
+        
+        @include mobile-l {
+            margin-left: 20px;
+        }
+	}
+}

@@ -53,6 +53,18 @@ gulp.task("images", () =>
 );
 
 gulp.task("svg-sprite", () => {
+	gulp.src("src/images/sprites/loyalty-program/*.svg")
+		.pipe(
+			svgSprite({
+				mode: {
+					stack: {
+						sprite: "../loyalty-program.svg",
+					},
+				},
+			})
+		)
+		.pipe(gulp.dest("dist/images/"));
+
 	gulp.src("src/images/sprites/common/*.svg")
 		.pipe(
 			svgSprite({

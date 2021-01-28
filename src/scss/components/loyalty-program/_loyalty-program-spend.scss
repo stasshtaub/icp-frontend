@@ -23,10 +23,18 @@
 		&--left {
 			flex-basis: 31.61%;
 			flex-grow: 1;
+        
+			@include tablet {
+				flex-basis: unset;
+			}
 		}
 
 		&--right {
 			flex-basis: 890px;
+        
+			@include tablet {
+				flex-basis: unset;
+			}
 		}
 	}
 
