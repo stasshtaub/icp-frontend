@@ -1,0 +1,52 @@
+.loyalty-program-rewards {
+    padding: 50px 0 70px 0;
+    border-bottom: 1px solid $color-gray-light2;
+
+	&__title {
+		font-weight: bold;
+		font-size: 90px;
+        line-height: 122.222222%;
+        
+        @include laptop {
+            font-size: 75px;
+        }
+        
+        @include tablet {
+            font-size: 55px;
+        }
+        
+        @include mobile-l {
+            font-size: 35px;
+        }
+
+		&--blue {
+			color: $color-blue;
+		}
+		&--blue2 {
+			color: $color-blue2;
+		}
+		&--blue11 {
+			color: $color-blue11;
+		}
+	}
+
+    &__description {
+        margin-top: 6px;
+    }
+
+    &__footnote {
+        margin-top: 9px;
+    }
+    
+    &__list {
+        display: flex;
+        flex-wrap: wrap;
+        margin: -60px -30px 0 0;
+    }
+    
+    &__item {
+        padding: 60px 30px 0 0;
+        flex-basis: 380px;
+        flex-grow: 1;
+    }
+}

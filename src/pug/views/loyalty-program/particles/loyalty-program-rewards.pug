@@ -1,0 +1,31 @@
+-
+    const rewards = [
+        {
+            title: "+5%",
+            description: "Вы получаете 5% от оплаты курса, в знак благодарности и дружбы, если человек запишется на наш курс по вашей рекомендации.*",
+            footnote: "* % начисляется после полной оплаты курса.",
+            color: "blue"
+        },
+        {
+            title: "+3000₽",
+            description: "Ваш протеже получает 3000 бонусных рублей, которыми сможет воспользоваться при оплате выбранного им курса.",
+            color: "blue2"
+        },
+        {
+            title: "-10%",
+            description: "Наши выпускники и члены ICF получают скидку 10% на все наши курсы!",
+            color: "blue11"
+        }
+    ]
+
+.loyalty-program-rewards
+    .container
+        ul.loyalty-program-rewards__list
+            each reward in rewards
+                li.loyalty-program-rewards__item
+                    p.loyalty-program-rewards__title(class=`loyalty-program-rewards__title--${ reward.color }`)= reward.title
+                    .loyalty-program-rewards__description
+                        span.text.text--s= reward.description
+                    if reward.footnote
+                        .loyalty-program-rewards__footnote
+                            span.text.text--xs= reward.footnote
