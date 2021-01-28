@@ -18,7 +18,8 @@ module.exports = {
 		leading: "./src/js/leading",
 		programs: "./src/js/programs",
 		"hotline-page": "./src/js/hotline-page",
-		festival: "./src/js/festival"
+		festival: "./src/js/festival",
+		"loyalty-program": "./src/js/loyalty-program"
 	},
 	module: {
 		rules: [

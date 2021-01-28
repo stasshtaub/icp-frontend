@@ -1,0 +1,14 @@
+extends ../../layouts/default
+
+block styles
+    link(rel="stylesheet" href!=`${baseDir}css/main.css?v=${Date.now()}`)
+    link(rel="stylesheet" href!=`${baseDir}css/loyalty-program.css?v=${Date.now()}`)
+    link(rel="stylesheet" href!="https://unpkg.com/swiper@6.3.2/swiper-bundle.min.css")
+block content
+    .loyalty-program
+        include particles/loyalty-program-header
+       
+block scripts
+    script(src!=`${baseDir}js/common.js?v=${Date.now()}`)
+    script(defer src!="https://unpkg.com/swiper/swiper-bundle.min.js")
+    script(defer src!=`${baseDir}js/loyalty-program.js?v=${Date.now()}`)
