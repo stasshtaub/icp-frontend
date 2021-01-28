@@ -1,6 +1,6 @@
 .festival-join {
 	&__btn {
-		display: block;
+		display: block !important;
 		margin: 100px auto 0 auto;
 
 		@include tablet {
