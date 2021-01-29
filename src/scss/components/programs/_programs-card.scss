@@ -11,9 +11,15 @@
     text-decoration: none;
     
     &:hover {
-        #{$p}__title {
+        #{$p}__title * {
             text-decoration: underline;
         }
+    }
+
+    &--disabled {
+        cursor: not-allowed;
+        opacity: 0.3;
+        pointer-events: none;
     }
 
     &__img {
@@ -26,8 +32,14 @@
 
     &__info {
         position: relative;
-        margin-top: auto;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
         padding: 15px;
+    }
+
+    &__content {
+        margin-top: auto;
     }
 
     &__title {

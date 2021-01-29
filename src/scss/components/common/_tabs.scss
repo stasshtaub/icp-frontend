@@ -1,0 +1,61 @@
+.tabs {
+	&__buttons {
+		display: flex;
+		flex-wrap: wrap;
+		margin: -20px -40px 0 0;
+
+		@include mobile-l {
+			margin: -20px -20px 0 0;
+		}
+  }
+  
+	&__buttons-item {
+		padding: 20px 40px 0 0;
+
+		@include mobile-l {
+			padding: 20px 20px 0 0;
+		}
+  }
+  
+	&__list {
+		margin-top: 50px;
+	}
+
+	&__button {
+		background-size: 10px 2px;
+		text-decoration: none;
+		transition: color 0.15s ease-in-out, background-image 0.15s ease-in-out;
+
+		&:not(.active) {
+			background-image: linear-gradient(
+				90deg,
+				$color-blue,
+				$color-blue 7px,
+				rgba($color-blue, 0),
+				rgba($color-blue, 0) 0
+			);
+		}
+
+		&.active {
+			color: unset;
+		}
+	}
+
+	&__item {
+		display: none;
+		animation: fade 0.5s ease-in-out;
+
+		&.active {
+			display: block;
+		}
+	}
+}
+
+@keyframes fade {
+	from {
+		opacity: 0;
+	}
+	to {
+		opacity: 1;
+	}
+}

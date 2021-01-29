@@ -1,8 +1,13 @@
 mixin programs-card(item)
-	a(href="#").programs-card
+	a(href="#" class=`${ item.disabled ? 'programs-card--disabled' : '' }`).programs-card
 		img(src=item.img alt="program image").programs-card__img
 		.programs-card__info
-			.programs-card__title
-				span.text.text--m= item.title
-			.programs-card__date
-				span.text.text--xs= item.date
+			if item.description
+				.programs-card__description
+					span.text.text--xs= item.description
+			.programs-card__content
+				.programs-card__title
+					span.text.text--m= item.title
+				if item.date
+					.programs-card__date
+						span.text.text--xs= item.date

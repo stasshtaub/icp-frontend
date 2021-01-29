@@ -1,0 +1,18 @@
+mixin tabs(items)
+    - const slots = {}
+    
+    mixin slot(key)
+        - slots[key] = block
+
+    block
+    
+    .tabs
+        ul.tabs__buttons
+            each item in items
+                li.tabs__buttons-item
+                    a(href="#" data-tab=item.name class=`${ item.active ? 'active' : '' }`).tabs__button.underlined= item.label
+        ul.tabs__list
+            each item in items
+                if slots[item.name]
+                    li(data-tab=item.name class=`${ item.active ? 'active' : '' }`).tabs__item
+                        - slots[item.name]()

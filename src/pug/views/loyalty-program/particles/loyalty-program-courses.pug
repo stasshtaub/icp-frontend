@@ -1,0 +1,145 @@
+include ../../../components/tabs
+include ../../programs/particles/programs-list
+
+- 
+    const tabsItems = [
+        {
+            name: "all",
+            label: "Все"
+        },
+        {
+            name: "beginner",
+            label: "Для начинающих"
+        },
+        {
+            name: "professional",
+            label: "Для профессионалов",
+            active: true
+        }
+    ]
+
+    const programs = {
+        all: [
+            {
+                description: "Как менять жизнь, внедряя принципы коучинга?",
+                title: "Концепт коучинга",
+                date: "Старт обучения — 19 октября 2020",
+                img: "images/jpg/program-img.jpg",
+                disabled: true
+            },
+            {
+                description: "Как выйти на новый уровень в карьере и бизнесе?",
+                title: "Полный курс коучинга",
+                date: "Старт обучения — 19 октября 2020",
+                img: "images/jpg/program-img.jpg",
+                disabled: true
+            },
+            {
+                description: "Как стать профессионалом в любимом деле?",
+                title: "Уникальный код коуча",
+                img: "images/jpg/loyalty-program-courses-3.jpg"
+            },
+            {
+                description: "Как открыть новые грани коучинга и работать с командами?",
+                title: "Agile",
+                img: "images/jpg/loyalty-program-courses-4.jpg"
+            },
+            {
+                description: "Как усиливать компетенции в коучинге?",
+                title: "Ментор для коучей",
+                img: "images/jpg/loyalty-program-courses-5.jpg"
+            },
+            {
+                description: "Международная программа подготовки супервизоров для коучей",
+                title: "Global Coach Supervision Training",
+                img: "images/jpg/loyalty-program-courses-6.jpg",
+                date: "Старт обучения — 19 октября 2021"
+            }
+        ],
+
+        beginner: [
+            {
+                description: "Как выйти на новый уровень в карьере и бизнесе?",
+                title: "Полный курс коучинга",
+                date: "Старт обучения — 19 октября 2020",
+                img: "images/jpg/program-img.jpg",
+                disabled: true
+            },
+            {
+                description: "Как стать профессионалом в любимом деле?",
+                title: "Уникальный код коуча",
+                img: "images/jpg/loyalty-program-courses-3.jpg"
+            },
+            {
+                description: "Как открыть новые грани коучинга и работать с командами?",
+                title: "Agile",
+                img: "images/jpg/loyalty-program-courses-4.jpg"
+            },
+            {
+                description: "Как менять жизнь, внедряя принципы коучинга?",
+                title: "Концепт коучинга",
+                date: "Старт обучения — 19 октября 2020",
+                img: "images/jpg/program-img.jpg",
+                disabled: true
+            },
+            {
+                description: "Международная программа подготовки супервизоров для коучей",
+                title: "Global Coach Supervision Training",
+                img: "images/jpg/loyalty-program-courses-6.jpg",
+                date: "Старт обучения — 19 октября 2021"
+            },
+            {
+                description: "Как усиливать компетенции в коучинге?",
+                title: "Ментор для коучей",
+                img: "images/jpg/loyalty-program-courses-5.jpg"
+            }
+        ],
+
+        professional: [
+            {
+                description: "Как открыть новые грани коучинга и работать с командами?",
+                title: "Agile",
+                img: "images/jpg/loyalty-program-courses-4.jpg"
+            },
+            {
+                description: "Как усиливать компетенции в коучинге?",
+                title: "Ментор для коучей",
+                img: "images/jpg/loyalty-program-courses-5.jpg"
+            },
+            {
+                description: "Как стать профессионалом в любимом деле?",
+                title: "Уникальный код коуча",
+                img: "images/jpg/loyalty-program-courses-3.jpg"
+            },
+            {
+                description: "Как менять жизнь, внедряя принципы коучинга?",
+                title: "Концепт коучинга",
+                date: "Старт обучения — 19 октября 2020",
+                img: "images/jpg/program-img.jpg",
+                disabled: true
+            },
+            {
+                description: "Как выйти на новый уровень в карьере и бизнесе?",
+                title: "Полный курс коучинга",
+                date: "Старт обучения — 19 октября 2020",
+                img: "images/jpg/program-img.jpg",
+                disabled: true
+            },
+            {
+                description: "Международная программа подготовки супервизоров для коучей",
+                title: "Global Coach Supervision Training",
+                img: "images/jpg/loyalty-program-courses-6.jpg",
+                date: "Старт обучения — 19 октября 2021"
+            }
+        ]
+    };
+
+.loyalty-program-courses
+    .container
+        +tabs(tabsItems)
+            +slot('all')
+                +programs-list(programs.all)
+            +slot('beginner')
+                +programs-list(programs.beginner)
+            +slot('professional')
+                +programs-list(programs.professional)

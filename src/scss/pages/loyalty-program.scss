@@ -8,11 +8,14 @@
 @import "../components/common/text";
 @import "../components/common/button";
 @import "../components/common/slider";
+@import "../components/common/underlined";
+@import "../components/common/tabs";
 
 @import "../components/loyalty-program/loyalty-program-header";
 @import "../components/loyalty-program/loyalty-program-rewards";
 @import "../components/loyalty-program/loyalty-program-spend";
 @import "../components/loyalty-program/loyalty-program-advantages";
+@import "../components/loyalty-program/loyalty-program-courses";
 
 .loyalty-program {
     padding: 158px 0 100px;
