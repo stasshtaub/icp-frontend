@@ -7,6 +7,9 @@
 				entry.target.classList.remove("hidden");
 			} else {
 				entry.target.classList.add("hidden");
+				
+				// Для пересчёта ширины swiper
+				window.dispatchEvent(new Event('resize'));
 			}
         });
         
