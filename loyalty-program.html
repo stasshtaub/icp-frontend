@@ -4,8 +4,8 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width">
-    <link rel="stylesheet" href="./css/main.css?v=1611879345619">
-    <link rel="stylesheet" href="./css/loyalty-program.css?v=1611879345619">
+    <link rel="stylesheet" href="./css/main.css?v=1611977886325">
+    <link rel="stylesheet" href="./css/loyalty-program.css?v=1611977886325">
     <link rel="stylesheet" href="https://unpkg.com/swiper@6.3.2/swiper-bundle.min.css">
   </head>
   <body>
@@ -125,254 +125,355 @@
             </ul>
           </div>
         </div>
+        <div class="loyalty-program-process">
+          <div class="container">
+            <h2 class="text text--m text--bold">Как работает наша программа лояльности?</h2>
+          </div>
+          <div class="loyalty-program-process__body">
+            <div class="swiper-container loyalty-program-process__slider">
+              <div class="slider__buttons loyalty-program-process__buttons">
+                <button class="slider__btn slider__btn--prev"></button>
+                <button class="slider__btn slider__btn--next"></button>
+              </div>
+              <ul class="swiper-wrapper">
+                <li class="swiper-slide">
+                  <div class="loyalty-program-process__card">
+                    <div class="loyalty-program-process__img-mask"><img class="loyalty-program-process__img" src="https://loremflickr.com/830/680" alt="slide image"></div>
+                    <div class="loyalty-program-process__text">
+                      <h3 class="loyalty-program-process__step text text--bold text--m3">1 шаг</h3><span class="loyalty-program-process__description text text--s">Перейдите в ваш партнёрский кабинет.<br><br>В него вы можете попасть сразу после регистрации в программе лояльности, либо через ссылку в письме.</span>
+                    </div>
+                  </div>
+                </li>
+                <li class="swiper-slide">
+                  <div class="loyalty-program-process__card">
+                    <div class="loyalty-program-process__img-mask"><img class="loyalty-program-process__img" src="https://loremflickr.com/830/681" alt="slide image"></div>
+                    <div class="loyalty-program-process__text">
+                      <h3 class="loyalty-program-process__step text text--bold text--m3">2 шаг</h3><span class="loyalty-program-process__description text text--s">Перейдите в ваш партнёрский кабинет.<br><br>В него вы можете попасть сразу после регистрации в программе лояльности, либо через ссылку в письме.</span>
+                    </div>
+                  </div>
+                </li>
+                <li class="swiper-slide">
+                  <div class="loyalty-program-process__card">
+                    <div class="loyalty-program-process__img-mask"><img class="loyalty-program-process__img" src="https://loremflickr.com/831/681" alt="slide image"></div>
+                    <div class="loyalty-program-process__text">
+                      <h3 class="loyalty-program-process__step text text--bold text--m3">3 шаг</h3><span class="loyalty-program-process__description text text--s">Перейдите в ваш партнёрский кабинет.<br><br>В него вы можете попасть сразу после регистрации в программе лояльности, либо через ссылку в письме.</span>
+                    </div>
+                  </div>
+                </li>
+                <li class="swiper-slide">
+                  <div class="loyalty-program-process__card">
+                    <div class="loyalty-program-process__img-mask"><img class="loyalty-program-process__img" src="https://loremflickr.com/831/680" alt="slide image"></div>
+                    <div class="loyalty-program-process__text">
+                      <h3 class="loyalty-program-process__step text text--bold text--m3">4 шаг</h3><span class="loyalty-program-process__description text text--s">Перейдите в ваш партнёрский кабинет.<br><br>В него вы можете попасть сразу после регистрации в программе лояльности, либо через ссылку в письме.</span>
+                    </div>
+                  </div>
+                </li>
+                <li class="swiper-slide">
+                  <div class="loyalty-program-process__card">
+                    <div class="loyalty-program-process__img-mask"><img class="loyalty-program-process__img" src="https://loremflickr.com/832/680" alt="slide image"></div>
+                    <div class="loyalty-program-process__text">
+                      <h3 class="loyalty-program-process__step text text--bold text--m3">5 шаг</h3><span class="loyalty-program-process__description text text--s">Перейдите в ваш партнёрский кабинет.<br><br>В него вы можете попасть сразу после регистрации в программе лояльности, либо через ссылку в письме.</span>
+                    </div>
+                  </div>
+                </li>
+              </ul>
+              <ul class="slider__dots loyalty-program-process__dots"></ul>
+            </div>
+          </div>
+        </div>
+        <div class="loyalty-program-registration">
+          <div class="container">
+            <div class="loyalty-program-registration__card">
+              <div class="loyalty-program-registration__col loyalty-program-registration__col--left">
+                <h2 class="text text--l2 text--bold">Зарегистрируйтесь как партнёр и получите бонус*</h2>
+                <div class="loyalty-program-registration__description">
+                  <p class="text text--s">Получите скидку 3000 рублей на оплату интересующего курса, а также возможность делиться скидками с вашими родными, друзьями, коллегамии подписчиками.</p>
+                </div>
+                <p class="loyalty-program-registration__footnote text text--xs3">Вам не нужно повторно проходить регистрацию, если вы уже в статусе нашего партнёра. При повторной регистрации полученная скидка в дальнейшем не учитывается.</p>
+              </div>
+              <div class="loyalty-program-registration__col loyalty-program-registration__col--right">
+                <form class="form loyalty-program-registration__form" action="https://jsonplaceholder.typicode.com/posts" method="POST" id="loyalty-program-registration__form">
+                          <div class="form-item">
+                            <div class="form-item__label">Как вас зовут?</div>
+                            <div class="form-item__content form-item__content--multiple">
+                              <input class="form__input" name="lname" placeholder="Фамилия" required>
+                              <input class="form__input" name="fname" placeholder="Имя" required>
+                            </div>
+                          </div>
+                          <div class="form-item">
+                            <div class="form-item__label">Эл. почта</div>
+                            <div class="form-item__content">
+                              <input class="form__input" name="email" placeholder="E-mail" type="email" required>
+                            </div>
+                          </div>
+                          <div class="form-item">
+                            <div class="form-item__label">Телефон</div>
+                            <div class="form-item__content">
+                              <input class="form__input" name="phone" placeholder="+7" type="tel" pattern="\+7-[0-9]{3}-\d{3}-\d{2}-?\d{2}" required>
+                            </div>
+                          </div>
+                          <label class="checkbox loyalty-program-registration__consent"><span class="text text--xs3">Я даю согласие на обработку персональных данных</span>
+                            <input class="checkbox__input" type="checkbox" name="consent"><span class="checkbox__mark"></span>
+                          </label>
+                  <button class="button button--color-white button--size-normal  loyalty-program-registration__submit-btn" type="submit" disabled="disabled">Стать партнером
+                  </button>
+                </form>
+              </div>
+                      <div class="loader"></div>
+            </div>
+          </div>
+        </div>
         <div class="loyalty-program-courses">
           <div class="container">
-                    <div class="tabs">
-                      <ul class="tabs__buttons">
-                        <li class="tabs__buttons-item"><a class="tabs__button underlined" href="#" data-tab="all">Все</a></li>
-                        <li class="tabs__buttons-item"><a class="tabs__button underlined" href="#" data-tab="beginner">Для начинающих</a></li>
-                        <li class="tabs__buttons-item"><a class="active tabs__button underlined" href="#" data-tab="professional">Для профессионалов</a></li>
-                      </ul>
-                      <ul class="tabs__list">
-                        <li class="tabs__item" data-tab="all">
-                    <ul class="programs-list">
-                      <li class="programs-list__item">
-                        <div class="programs-list__item-inner">
-                          <div class="programs-list__item-content"><a class="programs-card--disabled programs-card" href="#"><img class="programs-card__img" src="images/jpg/program-img.jpg" alt="program image">
-                                      <div class="programs-card__info">
-                                        <div class="programs-card__description"><span class="text text--xs">Как менять жизнь, внедряя принципы коучинга?</span></div>
-                                        <div class="programs-card__content">
-                                          <div class="programs-card__title"><span class="text text--m">Концепт коучинга</span></div>
-                                          <div class="programs-card__date"><span class="text text--xs">Старт обучения — 19 октября 2020</span></div>
-                                        </div>
-                                      </div></a>
+            <h2 class="text text--bold text--l2"></h2>
+            <div class="loyalty-program-courses__body">
+                      <div class="tabs">
+                        <ul class="tabs__buttons">
+                          <li class="tabs__buttons-item"><a class="tabs__button underlined" href="#" data-tab="all">Все</a></li>
+                          <li class="tabs__buttons-item"><a class="tabs__button underlined" href="#" data-tab="beginner">Для начинающих</a></li>
+                          <li class="tabs__buttons-item"><a class="active tabs__button underlined" href="#" data-tab="professional">Для профессионалов</a></li>
+                        </ul>
+                        <ul class="tabs__list">
+                          <li class="tabs__item" data-tab="all">
+                      <ul class="programs-list">
+                        <li class="programs-list__item">
+                          <div class="programs-list__item-inner">
+                            <div class="programs-list__item-content"><a class="programs-card--disabled programs-card" href="#"><img class="programs-card__img" src="images/jpg/program-img.jpg" alt="program image">
+                                        <div class="programs-card__info">
+                                          <div class="programs-card__description"><span class="text text--xs">Как менять жизнь, внедряя принципы коучинга?</span></div>
+                                          <div class="programs-card__content">
+                                            <div class="programs-card__title"><span class="text text--m">Концепт коучинга</span></div>
+                                            <div class="programs-card__date"><span class="text text--xs">Старт обучения — 19 октября 2020</span></div>
+                                          </div>
+                                        </div></a>
+                            </div>
                           </div>
-                        </div>
-                      </li>
-                      <li class="programs-list__item">
-                        <div class="programs-list__item-inner">
-                          <div class="programs-list__item-content"><a class="programs-card--disabled programs-card" href="#"><img class="programs-card__img" src="images/jpg/program-img.jpg" alt="program image">
-                                      <div class="programs-card__info">
-                                        <div class="programs-card__description"><span class="text text--xs">Как выйти на новый уровень в карьере и бизнесе?</span></div>
-                                        <div class="programs-card__content">
-                                          <div class="programs-card__title"><span class="text text--m">Полный курс коучинга</span></div>
-                                          <div class="programs-card__date"><span class="text text--xs">Старт обучения — 19 октября 2020</span></div>
-                                        </div>
-                                      </div></a>
-                          </div>
-                        </div>
-                      </li>
-                      <li class="programs-list__item">
-                        <div class="programs-list__item-inner">
-                          <div class="programs-list__item-content"><a class="programs-card" href="#"><img class="programs-card__img" src="images/jpg/loyalty-program-courses-3.jpg" alt="program image">
-                                      <div class="programs-card__info">
-                                        <div class="programs-card__description"><span class="text text--xs">Как стать профессионалом в любимом деле?</span></div>
-                                        <div class="programs-card__content">
-                                          <div class="programs-card__title"><span class="text text--m">Уникальный код коуча</span></div>
-                                        </div>
-                                      </div></a>
-                          </div>
-                        </div>
-                      </li>
-                      <li class="programs-list__item">
-                        <div class="programs-list__item-inner">
-                          <div class="programs-list__item-content"><a class="programs-card" href="#"><img class="programs-card__img" src="images/jpg/loyalty-program-courses-4.jpg" alt="program image">
-                                      <div class="programs-card__info">
-                                        <div class="programs-card__description"><span class="text text--xs">Как открыть новые грани коучинга и работать с командами?</span></div>
-                                        <div class="programs-card__content">
-                                          <div class="programs-card__title"><span class="text text--m">Agile</span></div>
-                                        </div>
-                                      </div></a>
-                          </div>
-                        </div>
-                      </li>
-                      <li class="programs-list__item">
-                        <div class="programs-list__item-inner">
-                          <div class="programs-list__item-content"><a class="programs-card" href="#"><img class="programs-card__img" src="images/jpg/loyalty-program-courses-5.jpg" alt="program image">
-                                      <div class="programs-card__info">
-                                        <div class="programs-card__description"><span class="text text--xs">Как усиливать компетенции в коучинге?</span></div>
-                                        <div class="programs-card__content">
-                                          <div class="programs-card__title"><span class="text text--m">Ментор для коучей</span></div>
-                                        </div>
-                                      </div></a>
-                          </div>
-                        </div>
-                      </li>
-                      <li class="programs-list__item">
-                        <div class="programs-list__item-inner">
-                          <div class="programs-list__item-content"><a class="programs-card" href="#"><img class="programs-card__img" src="images/jpg/loyalty-program-courses-6.jpg" alt="program image">
-                                      <div class="programs-card__info">
-                                        <div class="programs-card__description"><span class="text text--xs">Международная программа подготовки супервизоров для коучей</span></div>
-                                        <div class="programs-card__content">
-                                          <div class="programs-card__title"><span class="text text--m">Global Coach Supervision Training</span></div>
-                                          <div class="programs-card__date"><span class="text text--xs">Старт обучения — 19 октября 2021</span></div>
-                                        </div>
-                                      </div></a>
-                          </div>
-                        </div>
-                      </li>
-                    </ul>
                         </li>
-                        <li class="tabs__item" data-tab="beginner">
-                    <ul class="programs-list">
-                      <li class="programs-list__item">
-                        <div class="programs-list__item-inner">
-                          <div class="programs-list__item-content"><a class="programs-card--disabled programs-card" href="#"><img class="programs-card__img" src="images/jpg/program-img.jpg" alt="program image">
-                                      <div class="programs-card__info">
-                                        <div class="programs-card__description"><span class="text text--xs">Как выйти на новый уровень в карьере и бизнесе?</span></div>
-                                        <div class="programs-card__content">
-                                          <div class="programs-card__title"><span class="text text--m">Полный курс коучинга</span></div>
-                                          <div class="programs-card__date"><span class="text text--xs">Старт обучения — 19 октября 2020</span></div>
-                                        </div>
-                                      </div></a>
+                        <li class="programs-list__item">
+                          <div class="programs-list__item-inner">
+                            <div class="programs-list__item-content"><a class="programs-card--disabled programs-card" href="#"><img class="programs-card__img" src="images/jpg/program-img.jpg" alt="program image">
+                                        <div class="programs-card__info">
+                                          <div class="programs-card__description"><span class="text text--xs">Как выйти на новый уровень в карьере и бизнесе?</span></div>
+                                          <div class="programs-card__content">
+                                            <div class="programs-card__title"><span class="text text--m">Полный курс коучинга</span></div>
+                                            <div class="programs-card__date"><span class="text text--xs">Старт обучения — 19 октября 2020</span></div>
+                                          </div>
+                                        </div></a>
+                            </div>
                           </div>
-                        </div>
-                      </li>
-                      <li class="programs-list__item">
-                        <div class="programs-list__item-inner">
-                          <div class="programs-list__item-content"><a class="programs-card" href="#"><img class="programs-card__img" src="images/jpg/loyalty-program-courses-3.jpg" alt="program image">
-                                      <div class="programs-card__info">
-                                        <div class="programs-card__description"><span class="text text--xs">Как стать профессионалом в любимом деле?</span></div>
-                                        <div class="programs-card__content">
-                                          <div class="programs-card__title"><span class="text text--m">Уникальный код коуча</span></div>
-                                        </div>
-                                      </div></a>
-                          </div>
-                        </div>
-                      </li>
-                      <li class="programs-list__item">
-                        <div class="programs-list__item-inner">
-                          <div class="programs-list__item-content"><a class="programs-card" href="#"><img class="programs-card__img" src="images/jpg/loyalty-program-courses-4.jpg" alt="program image">
-                                      <div class="programs-card__info">
-                                        <div class="programs-card__description"><span class="text text--xs">Как открыть новые грани коучинга и работать с командами?</span></div>
-                                        <div class="programs-card__content">
-                                          <div class="programs-card__title"><span class="text text--m">Agile</span></div>
-                                        </div>
-                                      </div></a>
-                          </div>
-                        </div>
-                      </li>
-                      <li class="programs-list__item">
-                        <div class="programs-list__item-inner">
-                          <div class="programs-list__item-content"><a class="programs-card--disabled programs-card" href="#"><img class="programs-card__img" src="images/jpg/program-img.jpg" alt="program image">
-                                      <div class="programs-card__info">
-                                        <div class="programs-card__description"><span class="text text--xs">Как менять жизнь, внедряя принципы коучинга?</span></div>
-                                        <div class="programs-card__content">
-                                          <div class="programs-card__title"><span class="text text--m">Концепт коучинга</span></div>
-                                          <div class="programs-card__date"><span class="text text--xs">Старт обучения — 19 октября 2020</span></div>
-                                        </div>
-                                      </div></a>
-                          </div>
-                        </div>
-                      </li>
-                      <li class="programs-list__item">
-                        <div class="programs-list__item-inner">
-                          <div class="programs-list__item-content"><a class="programs-card" href="#"><img class="programs-card__img" src="images/jpg/loyalty-program-courses-6.jpg" alt="program image">
-                                      <div class="programs-card__info">
-                                        <div class="programs-card__description"><span class="text text--xs">Международная программа подготовки супервизоров для коучей</span></div>
-                                        <div class="programs-card__content">
-                                          <div class="programs-card__title"><span class="text text--m">Global Coach Supervision Training</span></div>
-                                          <div class="programs-card__date"><span class="text text--xs">Старт обучения — 19 октября 2021</span></div>
-                                        </div>
-                                      </div></a>
-                          </div>
-                        </div>
-                      </li>
-                      <li class="programs-list__item">
-                        <div class="programs-list__item-inner">
-                          <div class="programs-list__item-content"><a class="programs-card" href="#"><img class="programs-card__img" src="images/jpg/loyalty-program-courses-5.jpg" alt="program image">
-                                      <div class="programs-card__info">
-                                        <div class="programs-card__description"><span class="text text--xs">Как усиливать компетенции в коучинге?</span></div>
-                                        <div class="programs-card__content">
-                                          <div class="programs-card__title"><span class="text text--m">Ментор для коучей</span></div>
-                                        </div>
-                                      </div></a>
-                          </div>
-                        </div>
-                      </li>
-                    </ul>
                         </li>
-                        <li class="active tabs__item" data-tab="professional">
-                    <ul class="programs-list">
-                      <li class="programs-list__item">
-                        <div class="programs-list__item-inner">
-                          <div class="programs-list__item-content"><a class="programs-card" href="#"><img class="programs-card__img" src="images/jpg/loyalty-program-courses-4.jpg" alt="program image">
-                                      <div class="programs-card__info">
-                                        <div class="programs-card__description"><span class="text text--xs">Как открыть новые грани коучинга и работать с командами?</span></div>
-                                        <div class="programs-card__content">
-                                          <div class="programs-card__title"><span class="text text--m">Agile</span></div>
-                                        </div>
-                                      </div></a>
+                        <li class="programs-list__item">
+                          <div class="programs-list__item-inner">
+                            <div class="programs-list__item-content"><a class="programs-card" href="#"><img class="programs-card__img" src="images/jpg/loyalty-program-courses-3.jpg" alt="program image">
+                                        <div class="programs-card__info">
+                                          <div class="programs-card__description"><span class="text text--xs">Как стать профессионалом в любимом деле?</span></div>
+                                          <div class="programs-card__content">
+                                            <div class="programs-card__title"><span class="text text--m">Уникальный код коуча</span></div>
+                                          </div>
+                                        </div></a>
+                            </div>
                           </div>
-                        </div>
-                      </li>
-                      <li class="programs-list__item">
-                        <div class="programs-list__item-inner">
-                          <div class="programs-list__item-content"><a class="programs-card" href="#"><img class="programs-card__img" src="images/jpg/loyalty-program-courses-5.jpg" alt="program image">
-                                      <div class="programs-card__info">
-                                        <div class="programs-card__description"><span class="text text--xs">Как усиливать компетенции в коучинге?</span></div>
-                                        <div class="programs-card__content">
-                                          <div class="programs-card__title"><span class="text text--m">Ментор для коучей</span></div>
-                                        </div>
-                                      </div></a>
+                        </li>
+                        <li class="programs-list__item">
+                          <div class="programs-list__item-inner">
+                            <div class="programs-list__item-content"><a class="programs-card" href="#"><img class="programs-card__img" src="images/jpg/loyalty-program-courses-4.jpg" alt="program image">
+                                        <div class="programs-card__info">
+                                          <div class="programs-card__description"><span class="text text--xs">Как открыть новые грани коучинга и работать с командами?</span></div>
+                                          <div class="programs-card__content">
+                                            <div class="programs-card__title"><span class="text text--m">Agile</span></div>
+                                          </div>
+                                        </div></a>
+                            </div>
                           </div>
-                        </div>
-                      </li>
-                      <li class="programs-list__item">
-                        <div class="programs-list__item-inner">
-                          <div class="programs-list__item-content"><a class="programs-card" href="#"><img class="programs-card__img" src="images/jpg/loyalty-program-courses-3.jpg" alt="program image">
-                                      <div class="programs-card__info">
-                                        <div class="programs-card__description"><span class="text text--xs">Как стать профессионалом в любимом деле?</span></div>
-                                        <div class="programs-card__content">
-                                          <div class="programs-card__title"><span class="text text--m">Уникальный код коуча</span></div>
-                                        </div>
-                                      </div></a>
+                        </li>
+                        <li class="programs-list__item">
+                          <div class="programs-list__item-inner">
+                            <div class="programs-list__item-content"><a class="programs-card" href="#"><img class="programs-card__img" src="images/jpg/loyalty-program-courses-5.jpg" alt="program image">
+                                        <div class="programs-card__info">
+                                          <div class="programs-card__description"><span class="text text--xs">Как усиливать компетенции в коучинге?</span></div>
+                                          <div class="programs-card__content">
+                                            <div class="programs-card__title"><span class="text text--m">Ментор для коучей</span></div>
+                                          </div>
+                                        </div></a>
+                            </div>
                           </div>
-                        </div>
-                      </li>
-                      <li class="programs-list__item">
-                        <div class="programs-list__item-inner">
-                          <div class="programs-list__item-content"><a class="programs-card--disabled programs-card" href="#"><img class="programs-card__img" src="images/jpg/program-img.jpg" alt="program image">
-                                      <div class="programs-card__info">
-                                        <div class="programs-card__description"><span class="text text--xs">Как менять жизнь, внедряя принципы коучинга?</span></div>
-                                        <div class="programs-card__content">
-                                          <div class="programs-card__title"><span class="text text--m">Концепт коучинга</span></div>
-                                          <div class="programs-card__date"><span class="text text--xs">Старт обучения — 19 октября 2020</span></div>
-                                        </div>
-                                      </div></a>
+                        </li>
+                        <li class="programs-list__item">
+                          <div class="programs-list__item-inner">
+                            <div class="programs-list__item-content"><a class="programs-card" href="#"><img class="programs-card__img" src="images/jpg/loyalty-program-courses-6.jpg" alt="program image">
+                                        <div class="programs-card__info">
+                                          <div class="programs-card__description"><span class="text text--xs">Международная программа подготовки супервизоров для коучей</span></div>
+                                          <div class="programs-card__content">
+                                            <div class="programs-card__title"><span class="text text--m">Global Coach Supervision Training</span></div>
+                                            <div class="programs-card__date"><span class="text text--xs">Старт обучения — 19 октября 2021</span></div>
+                                          </div>
+                                        </div></a>
+                            </div>
                           </div>
-                        </div>
-                      </li>
-                      <li class="programs-list__item">
-                        <div class="programs-list__item-inner">
-                          <div class="programs-list__item-content"><a class="programs-card--disabled programs-card" href="#"><img class="programs-card__img" src="images/jpg/program-img.jpg" alt="program image">
-                                      <div class="programs-card__info">
-                                        <div class="programs-card__description"><span class="text text--xs">Как выйти на новый уровень в карьере и бизнесе?</span></div>
-                                        <div class="programs-card__content">
-                                          <div class="programs-card__title"><span class="text text--m">Полный курс коучинга</span></div>
-                                          <div class="programs-card__date"><span class="text text--xs">Старт обучения — 19 октября 2020</span></div>
-                                        </div>
-                                      </div></a>
-                          </div>
-                        </div>
-                      </li>
-                      <li class="programs-list__item">
-                        <div class="programs-list__item-inner">
-                          <div class="programs-list__item-content"><a class="programs-card" href="#"><img class="programs-card__img" src="images/jpg/loyalty-program-courses-6.jpg" alt="program image">
-                                      <div class="programs-card__info">
-                                        <div class="programs-card__description"><span class="text text--xs">Международная программа подготовки супервизоров для коучей</span></div>
-                                        <div class="programs-card__content">
-                                          <div class="programs-card__title"><span class="text text--m">Global Coach Supervision Training</span></div>
-                                          <div class="programs-card__date"><span class="text text--xs">Старт обучения — 19 октября 2021</span></div>
-                                        </div>
-                                      </div></a>
-                          </div>
-                        </div>
-                      </li>
-                    </ul>
                         </li>
                       </ul>
-                    </div>
+                          </li>
+                          <li class="tabs__item" data-tab="beginner">
+                      <ul class="programs-list">
+                        <li class="programs-list__item">
+                          <div class="programs-list__item-inner">
+                            <div class="programs-list__item-content"><a class="programs-card--disabled programs-card" href="#"><img class="programs-card__img" src="images/jpg/program-img.jpg" alt="program image">
+                                        <div class="programs-card__info">
+                                          <div class="programs-card__description"><span class="text text--xs">Как выйти на новый уровень в карьере и бизнесе?</span></div>
+                                          <div class="programs-card__content">
+                                            <div class="programs-card__title"><span class="text text--m">Полный курс коучинга</span></div>
+                                            <div class="programs-card__date"><span class="text text--xs">Старт обучения — 19 октября 2020</span></div>
+                                          </div>
+                                        </div></a>
+                            </div>
+                          </div>
+                        </li>
+                        <li class="programs-list__item">
+                          <div class="programs-list__item-inner">
+                            <div class="programs-list__item-content"><a class="programs-card" href="#"><img class="programs-card__img" src="images/jpg/loyalty-program-courses-3.jpg" alt="program image">
+                                        <div class="programs-card__info">
+                                          <div class="programs-card__description"><span class="text text--xs">Как стать профессионалом в любимом деле?</span></div>
+                                          <div class="programs-card__content">
+                                            <div class="programs-card__title"><span class="text text--m">Уникальный код коуча</span></div>
+                                          </div>
+                                        </div></a>
+                            </div>
+                          </div>
+                        </li>
+                        <li class="programs-list__item">
+                          <div class="programs-list__item-inner">
+                            <div class="programs-list__item-content"><a class="programs-card" href="#"><img class="programs-card__img" src="images/jpg/loyalty-program-courses-4.jpg" alt="program image">
+                                        <div class="programs-card__info">
+                                          <div class="programs-card__description"><span class="text text--xs">Как открыть новые грани коучинга и работать с командами?</span></div>
+                                          <div class="programs-card__content">
+                                            <div class="programs-card__title"><span class="text text--m">Agile</span></div>
+                                          </div>
+                                        </div></a>
+                            </div>
+                          </div>
+                        </li>
+                        <li class="programs-list__item">
+                          <div class="programs-list__item-inner">
+                            <div class="programs-list__item-content"><a class="programs-card--disabled programs-card" href="#"><img class="programs-card__img" src="images/jpg/program-img.jpg" alt="program image">
+                                        <div class="programs-card__info">
+                                          <div class="programs-card__description"><span class="text text--xs">Как менять жизнь, внедряя принципы коучинга?</span></div>
+                                          <div class="programs-card__content">
+                                            <div class="programs-card__title"><span class="text text--m">Концепт коучинга</span></div>
+                                            <div class="programs-card__date"><span class="text text--xs">Старт обучения — 19 октября 2020</span></div>
+                                          </div>
+                                        </div></a>
+                            </div>
+                          </div>
+                        </li>
+                        <li class="programs-list__item">
+                          <div class="programs-list__item-inner">
+                            <div class="programs-list__item-content"><a class="programs-card" href="#"><img class="programs-card__img" src="images/jpg/loyalty-program-courses-6.jpg" alt="program image">
+                                        <div class="programs-card__info">
+                                          <div class="programs-card__description"><span class="text text--xs">Международная программа подготовки супервизоров для коучей</span></div>
+                                          <div class="programs-card__content">
+                                            <div class="programs-card__title"><span class="text text--m">Global Coach Supervision Training</span></div>
+                                            <div class="programs-card__date"><span class="text text--xs">Старт обучения — 19 октября 2021</span></div>
+                                          </div>
+                                        </div></a>
+                            </div>
+                          </div>
+                        </li>
+                        <li class="programs-list__item">
+                          <div class="programs-list__item-inner">
+                            <div class="programs-list__item-content"><a class="programs-card" href="#"><img class="programs-card__img" src="images/jpg/loyalty-program-courses-5.jpg" alt="program image">
+                                        <div class="programs-card__info">
+                                          <div class="programs-card__description"><span class="text text--xs">Как усиливать компетенции в коучинге?</span></div>
+                                          <div class="programs-card__content">
+                                            <div class="programs-card__title"><span class="text text--m">Ментор для коучей</span></div>
+                                          </div>
+                                        </div></a>
+                            </div>
+                          </div>
+                        </li>
+                      </ul>
+                          </li>
+                          <li class="active tabs__item" data-tab="professional">
+                      <ul class="programs-list">
+                        <li class="programs-list__item">
+                          <div class="programs-list__item-inner">
+                            <div class="programs-list__item-content"><a class="programs-card" href="#"><img class="programs-card__img" src="images/jpg/loyalty-program-courses-4.jpg" alt="program image">
+                                        <div class="programs-card__info">
+                                          <div class="programs-card__description"><span class="text text--xs">Как открыть новые грани коучинга и работать с командами?</span></div>
+                                          <div class="programs-card__content">
+                                            <div class="programs-card__title"><span class="text text--m">Agile</span></div>
+                                          </div>
+                                        </div></a>
+                            </div>
+                          </div>
+                        </li>
+                        <li class="programs-list__item">
+                          <div class="programs-list__item-inner">
+                            <div class="programs-list__item-content"><a class="programs-card" href="#"><img class="programs-card__img" src="images/jpg/loyalty-program-courses-5.jpg" alt="program image">
+                                        <div class="programs-card__info">
+                                          <div class="programs-card__description"><span class="text text--xs">Как усиливать компетенции в коучинге?</span></div>
+                                          <div class="programs-card__content">
+                                            <div class="programs-card__title"><span class="text text--m">Ментор для коучей</span></div>
+                                          </div>
+                                        </div></a>
+                            </div>
+                          </div>
+                        </li>
+                        <li class="programs-list__item">
+                          <div class="programs-list__item-inner">
+                            <div class="programs-list__item-content"><a class="programs-card" href="#"><img class="programs-card__img" src="images/jpg/loyalty-program-courses-3.jpg" alt="program image">
+                                        <div class="programs-card__info">
+                                          <div class="programs-card__description"><span class="text text--xs">Как стать профессионалом в любимом деле?</span></div>
+                                          <div class="programs-card__content">
+                                            <div class="programs-card__title"><span class="text text--m">Уникальный код коуча</span></div>
+                                          </div>
+                                        </div></a>
+                            </div>
+                          </div>
+                        </li>
+                        <li class="programs-list__item">
+                          <div class="programs-list__item-inner">
+                            <div class="programs-list__item-content"><a class="programs-card--disabled programs-card" href="#"><img class="programs-card__img" src="images/jpg/program-img.jpg" alt="program image">
+                                        <div class="programs-card__info">
+                                          <div class="programs-card__description"><span class="text text--xs">Как менять жизнь, внедряя принципы коучинга?</span></div>
+                                          <div class="programs-card__content">
+                                            <div class="programs-card__title"><span class="text text--m">Концепт коучинга</span></div>
+                                            <div class="programs-card__date"><span class="text text--xs">Старт обучения — 19 октября 2020</span></div>
+                                          </div>
+                                        </div></a>
+                            </div>
+                          </div>
+                        </li>
+                        <li class="programs-list__item">
+                          <div class="programs-list__item-inner">
+                            <div class="programs-list__item-content"><a class="programs-card--disabled programs-card" href="#"><img class="programs-card__img" src="images/jpg/program-img.jpg" alt="program image">
+                                        <div class="programs-card__info">
+                                          <div class="programs-card__description"><span class="text text--xs">Как выйти на новый уровень в карьере и бизнесе?</span></div>
+                                          <div class="programs-card__content">
+                                            <div class="programs-card__title"><span class="text text--m">Полный курс коучинга</span></div>
+                                            <div class="programs-card__date"><span class="text text--xs">Старт обучения — 19 октября 2020</span></div>
+                                          </div>
+                                        </div></a>
+                            </div>
+                          </div>
+                        </li>
+                        <li class="programs-list__item">
+                          <div class="programs-list__item-inner">
+                            <div class="programs-list__item-content"><a class="programs-card" href="#"><img class="programs-card__img" src="images/jpg/loyalty-program-courses-6.jpg" alt="program image">
+                                        <div class="programs-card__info">
+                                          <div class="programs-card__description"><span class="text text--xs">Международная программа подготовки супервизоров для коучей</span></div>
+                                          <div class="programs-card__content">
+                                            <div class="programs-card__title"><span class="text text--m">Global Coach Supervision Training</span></div>
+                                            <div class="programs-card__date"><span class="text text--xs">Старт обучения — 19 октября 2021</span></div>
+                                          </div>
+                                        </div></a>
+                            </div>
+                          </div>
+                        </li>
+                      </ul>
+                          </li>
+                        </ul>
+                      </div>
+            </div>
           </div>
         </div>
       </div>
@@ -473,8 +574,8 @@
         </div>
       </div>
     </footer>
-    <script src="./js/common.js?v=1611879345621"></script>
+    <script src="./js/common.js?v=1611977886327"></script>
     <script defer src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
-    <script defer src="./js/loyalty-program.js?v=1611879345621"></script>
+    <script defer src="./js/loyalty-program.js?v=1611977886327"></script>
   </body>
 </html>
