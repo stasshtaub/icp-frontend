@@ -1,0 +1,25 @@
+.quote {
+	padding-top: 15px;
+
+	&__body {
+		padding: 28px 16px 24px 40px;
+		background-color: $color-white;
+        position: relative;
+        
+        @include tablet-xs {
+            padding: 20px 12px 18px 30px;
+        }
+
+		&:before {
+			content: "";
+			position: absolute;
+			width: 0px;
+			height: 0px;
+			border-left: 15px solid transparent;
+			border-right: 15px solid transparent;
+			border-bottom: 15px solid $color-white;
+			bottom: 100%;
+			left: 25px;
+		}
+	}
+}

@@ -1,3 +1,5 @@
+@import "../../components/common/quote";
+
 .news-detail2-card {
 	margin-top: 2em;
 
@@ -32,6 +34,10 @@
 		}
 	}
 
+	&__quote {
+		padding: 11px 0 17px 0;
+	}
+
 	img[align="left"] {
 		margin: 2em 2em 1em 0;
 	}
@@ -58,7 +64,7 @@
 		}
 	}
 
-	p ~ p {
+	p + p {
 		margin-top: 1em;
 	}
 }
