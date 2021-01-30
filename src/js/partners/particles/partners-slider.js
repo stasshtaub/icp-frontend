@@ -31,7 +31,7 @@
 			loop: true,
 			pagination: {
 				el: ".partners-partners__dots",
-				bulletClass: "slider__dots-item",
+				bulletClass: "slider__",
 				bulletActiveClass: "slider__dots-item--active partners-partners__dots-item--active",
 				renderBullet: (_, className) =>
 					`<li class="${className}"><div class="slider__dot partners-partners__dot"></div></li>`,

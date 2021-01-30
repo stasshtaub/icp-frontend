@@ -1,0 +1,45 @@
+- 
+    const slides = [
+        {
+            img: "https://loremflickr.com/830/680",
+            text: "Перейдите в ваш партнёрский кабинет.<br><br>В него вы можете попасть сразу после регистрации в программе лояльности, либо через ссылку в письме."
+        },
+        {
+            img: "https://loremflickr.com/830/681",
+            text: "Перейдите в ваш партнёрский кабинет.<br><br>В него вы можете попасть сразу после регистрации в программе лояльности, либо через ссылку в письме."
+        },
+        {
+            img: "https://loremflickr.com/831/681",
+            text: "Перейдите в ваш партнёрский кабинет.<br><br>В него вы можете попасть сразу после регистрации в программе лояльности, либо через ссылку в письме."
+        },
+        {
+            img: "https://loremflickr.com/831/680",
+            text: "Перейдите в ваш партнёрский кабинет.<br><br>В него вы можете попасть сразу после регистрации в программе лояльности, либо через ссылку в письме."
+        },
+        {
+            img: "https://loremflickr.com/832/680",
+            text: "Перейдите в ваш партнёрский кабинет.<br><br>В него вы можете попасть сразу после регистрации в программе лояльности, либо через ссылку в письме."
+        }
+    ]
+
+.loyalty-program-process
+    .container
+        h2.text.text--m.text--bold Как работает наша программа лояльности?
+    .loyalty-program-process__body
+        .swiper-container.loyalty-program-process__slider
+            .slider__buttons.loyalty-program-process__buttons
+                button.slider__btn.slider__btn--prev
+                button.slider__btn.slider__btn--next
+            ul.swiper-wrapper
+                each slide, i in slides
+                    li.swiper-slide
+                        .loyalty-program-process__card
+                            .loyalty-program-process__img-mask
+                                img(src=slide.img alt="slide image").loyalty-program-process__img
+                            .loyalty-program-process__text
+                                h3.loyalty-program-process__step.text.text--bold.text--m3= `${ i + 1 } шаг`
+                                span.loyalty-program-process__description.text.text--s !{slide.text}
+            ul.slider__dots.loyalty-program-process__dots
+
+
+            

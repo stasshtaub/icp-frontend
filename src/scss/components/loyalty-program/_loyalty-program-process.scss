@@ -1,0 +1,140 @@
+.loyalty-program-process {
+	padding-top: 50px;
+	background-color: $color-gray-light;
+
+	@include tablet-xs {
+		padding: 50px 0 30px 0;
+	}
+
+	&__body {
+		max-width: 1440px;
+		margin: 68px auto 0 auto;
+
+		@include tablet-xs {
+			margin-top: 30px;
+		}
+	}
+
+	&__card {
+		display: flex;
+		padding: 0 20px;
+
+		@include tablet {
+			flex-direction: column-reverse;
+		}
+
+		@include tablet-xs {
+			padding: 0 29px;
+		}
+	}
+
+	&__img-mask {
+		position: relative;
+		padding: 0 vw(70px, 1440px);
+		margin-left: vw(73px, 1440px);
+		display: flex;
+		pointer-events: none;
+
+		@include laptop {
+			margin-left: 0;
+		}
+
+		@include tablet-xs {
+			padding: 0;
+		}
+
+		&::after {
+			content: "";
+			position: absolute;
+			width: 100%;
+			height: vw(158px, 1440px);
+			left: 0;
+			bottom: -1px;
+			background: linear-gradient(
+				180deg,
+				rgba(245, 245, 245, 0) 0%,
+				$color-gray-light 100%
+			);
+
+			@include tablet-xs {
+				content: none;
+			}
+		}
+	}
+
+	&__img {
+		max-width: 100%;
+		min-width: 330px;
+		box-shadow: 0px 40px 40px 10px $color-black-opacity10;
+		border-radius: 20px 20px 0 0;
+		overflow: hidden;
+		object-fit: cover;
+
+		@include tablet-xs {
+			border-radius: 20px;
+			box-shadow: unset;
+		}
+	}
+
+	&__text {
+		margin-top: auto;
+		max-width: 315px;
+		margin-bottom: vw(100px, 1440px);
+		flex-shrink: 0;
+		padding-right: vw(50px, 1440px);
+
+		@include tablet {
+			padding: 0 30px;
+			margin-bottom: 30px;
+			max-width: 100%;
+		}
+
+		@include tablet-xs {
+			padding: 0;
+		}
+	}
+
+	&__step {
+		margin-bottom: 1em;
+	}
+
+	&__dots {
+		justify-content: center;
+		margin: 0;
+		position: absolute;
+		bottom: 25px !important;
+		z-index: 1;
+
+		@include tablet-xs {
+			position: unset;
+			margin-top: 20px;
+		}
+	}
+
+	&__buttons {
+		justify-content: space-between;
+		display: flex;
+		position: absolute;
+		width: 100%;
+		transform: translateY(-50%);
+		top: 50%;
+		z-index: 2;
+		filter: grayscale(1) contrast(10);
+
+		@include tablet-xs {
+			display: none;
+		}
+
+		& > * {
+			padding: 24px;
+		}
+	}
+
+	&__dots-item {
+		&.active {
+			.slider__dot {
+				background-color: $color-blue;
+			}
+		}
+	}
+}
