@@ -38,6 +38,6 @@
 	}
 
 	&:disabled {
-		background-color: $color-blue8;
+		opacity: 0.5;
 	}
 }
