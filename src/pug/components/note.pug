@@ -1,0 +1,6 @@
+mixin note(img, color = "gray3")
+    .note(class=`note--${ color }`)
+        if img
+            img(src=img alt="note").note__img
+        .note__body
+            block

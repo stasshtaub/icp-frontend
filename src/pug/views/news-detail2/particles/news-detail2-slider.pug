@@ -1,0 +1,30 @@
+-
+    const slides = [
+        {
+            img: "https://loremflickr.com/830/680"
+        },
+        {
+            img: "https://loremflickr.com/830/681"
+        },
+        {
+            img: "https://loremflickr.com/831/681"
+        },
+        {
+            img: "https://loremflickr.com/831/680"
+        },
+        {
+            img: "https://loremflickr.com/832/680"
+        }
+    ] 
+
+.news-detail2-slider
+    .swiper-container.news-detail2-slider__container
+        .slider__buttons.news-detail2-slider__buttons
+            button.slider__btn.slider__btn--prev
+            button.slider__btn.slider__btn--next
+        ul.swiper-wrapper
+            each slide, i in slides
+                li.swiper-slide
+                    .news-detail2-slider__card
+                        img(src=slide.img alt="slide image").news-detail2-slider__img
+        ul.slider__dots.news-detail2-slider__dots

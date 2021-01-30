@@ -1,0 +1,39 @@
+.note {
+    display: flex;
+    padding: 20px 35px;
+
+    @include tablet-xs {
+        flex-direction: column;
+        padding: 40px 29px 60px 29px;
+        width: 100vw;
+        margin-left: calc(50% - 50vw);  
+    }
+
+    @include mobile-l {
+        padding: 40px 20px 60px 20px;
+    }
+
+    &--gray3 {
+        background-color: $color-gray3;
+        color: $color-white;
+    }
+
+    &__img {
+        flex-shrink: 0;
+        width: 163px;
+        height: 163px;
+        border-radius: 50%;
+        overflow: hidden;
+        margin-right: 30px;
+        object-fit: cover;
+
+        @include beetween-tablet-and-tablet-xs {
+            width: 100px;
+            height: 100px;
+        }
+
+        @include tablet-xs {
+            margin: 0 auto 30px auto;
+        }
+    }
+}

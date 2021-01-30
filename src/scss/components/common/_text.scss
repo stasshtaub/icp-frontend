@@ -1,4 +1,6 @@
 .text {
+    $p: &;
+    
     &--xl {
         font-weight: 700;
         font-size: 70px;
@@ -119,20 +121,22 @@
         font-size: 20px;
         line-height: 150%;
 
-        @include tablet {
-            font-size: 18px;
-            line-height: 160%;
-        }
-
-        @include tablet-xs {
-            font-size: 16px;
-            line-height: 160%;
-        }
-
-        @include mobile-l {
-            font-size: 14px;
-            line-height: 160%;
-        }
+        &:not(#{$p}--constant) {
+            @include tablet {
+                font-size: 18px;
+                line-height: 160%;
+            }
+    
+            @include tablet-xs {
+                font-size: 16px;
+                line-height: 160%;
+            }
+    
+            @include mobile-l {
+                font-size: 14px;
+                line-height: 160%;
+            }
+        } 
 	}
     
 	&--s2 {
