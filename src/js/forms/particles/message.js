@@ -50,12 +50,12 @@ export class Modal {
 
     showModal() {
         this.el.classList.add("modal--active");
-        document.body.classList.add("noscroll");
+        document.documentElement.classList.add("noscroll");
     }
 
     hideModal() {
         this.el.classList.remove("modal--active");
-        document.body.classList.remove("noscroll");
+        document.documentElement.classList.remove("noscroll");
     }
 
     mount() {

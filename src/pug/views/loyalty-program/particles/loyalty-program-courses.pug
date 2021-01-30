@@ -136,10 +136,12 @@ include ../../programs/particles/programs-list
 
 .loyalty-program-courses
     .container
-        +tabs(tabsItems)
-            +slot('all')
-                +programs-list(programs.all)
-            +slot('beginner')
-                +programs-list(programs.beginner)
-            +slot('professional')
-                +programs-list(programs.professional)
+        h2.text.text--bold.text--l2
+        .loyalty-program-courses__body
+            +tabs(tabsItems)
+                +slot('all')
+                    +programs-list(programs.all)
+                +slot('beginner')
+                    +programs-list(programs.beginner)
+                +slot('professional')
+                    +programs-list(programs.professional)

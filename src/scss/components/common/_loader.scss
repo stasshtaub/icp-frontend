@@ -5,6 +5,7 @@
     left: 0;
     top: 0;
     background: rgba($color-white, 0.5) url("../../images/sprite.svg#loading") no-repeat center;
+    background-size: 300px;
     opacity: 0;
     pointer-events: none;
     transition: opacity 0.2s ease-in-out;

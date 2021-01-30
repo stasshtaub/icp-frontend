@@ -1,5 +1,6 @@
 include ../../../mixins/form-item
 include ../../../mixins/checkbox
+include ../../../mixins/loader
 
 .loyalty-program-registration
     .container
@@ -10,10 +11,10 @@ include ../../../mixins/checkbox
                     p.text.text--s Получите скидку 3000 рублей на оплату интересующего курса, а также возможность делиться скидками с вашими родными, друзьями, коллегамии подписчиками.
                 p.loyalty-program-registration__footnote.text.text--xs3 Вам не нужно повторно проходить регистрацию, если вы уже в статусе нашего партнёра. При повторной регистрации полученная скидка в дальнейшем не учитывается.
             .loyalty-program-registration__col.loyalty-program-registration__col--right
-                form.form.loyalty-program-registration__form
+                form(action="https://jsonplaceholder.typicode.com/posts" method="POST").form.loyalty-program-registration__form#loyalty-program-registration__form
                     +form-item("Как вас зовут?", true)
-                        input(name="fname" placeholder="Имя" required).form__input
                         input(name="lname" placeholder="Фамилия" required).form__input
+                        input(name="fname" placeholder="Имя" required).form__input
                     +form-item("Эл. почта")
                         input(name="email" placeholder="E-mail" type="email" required).form__input
                     +form-item("Телефон")
@@ -21,3 +22,4 @@ include ../../../mixins/checkbox
                     +checkbox("consent").loyalty-program-registration__consent
                         span.text.text--xs3 Я даю согласие на обработку персональных данных
                     +button("Стать партнером")(type="submit" disabled).loyalty-program-registration__submit-btn
+            +loader()

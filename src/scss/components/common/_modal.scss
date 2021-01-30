@@ -1,4 +1,5 @@
 .modal {
+    display: none;
     position: fixed;
     width: 100vw;
     height: 100vh;
@@ -6,16 +7,16 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    opacity: 0;
     pointer-events: none;
     z-index: 9999;
-    transition: opacity 0.1s ease-in-out;
+    animation: fade 0.2s ease-in-out;
 
     &__backdrop {
         position: absolute;
         width: 100%;
         height: 100%;
-        background-color: rgba($color-black, 0.7);
+        background-color: $color-black;
+        opacity: 0.7;
     }
 
     &__window {
@@ -53,7 +54,7 @@
     }
 
     &--active {
-        opacity: 1;
+        display: flex;
         pointer-events: unset;
     }
     
@@ -72,4 +73,13 @@
             filter: brightness(10);
         }
     }
+}
+
+@keyframes fade {
+	from {
+		opacity: 0;
+	}
+	to {
+		opacity: 1;
+	}
 }
