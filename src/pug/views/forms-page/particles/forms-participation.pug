@@ -9,11 +9,11 @@ include ../../../mixins/loader
         .forms-participation__col.forms-participation__col--right
             form(action="https://jsonplaceholder.typicode.com/posts" method="POST" data-possible-hidden=["tariff", "price"]).form.forms-participation__form#forms-participation
                 +form-item("Как вас зовут?")
-                    input(name="name" placeholder="Фамилия и имя" required).forms-participation__input
+                    input(name="name" placeholder="Фамилия и имя" required).form__input
                 +form-item("Эл. почта")
-                    input(name="email" placeholder="E-mail" type="email" required).forms-participation__input
+                    input(name="email" placeholder="E-mail" type="email" required).form__input
                 +form-item("Номер телефона")
-                    input(name="phone" placeholder="+7" type="tel" pattern="\\+7-[0-9]{3}-\\d{3}-\\d{2}-?\\d{2}" required).forms-participation__input
+                    input(name="phone" placeholder="+7" type="tel" pattern="\\+7-[0-9]{3}-\\d{3}-\\d{2}-?\\d{2}" required).form__input
                 +checkbox("consent").forms-participation__consent Даю согласие на обработку персональных данных
                 +button("Отправить")(type="submit" disabled).forms-participation__submit-btn
             +loader()

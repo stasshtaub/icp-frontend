@@ -1,6 +1,6 @@
-mixin form-item(label)
+mixin form-item(label, multiple = false)
     .form-item&attributes(attributes)
         if (label)
             .form-item__label= label
-        .form-item__content
+        .form-item__content(class=`${ multiple ? 'form-item__content--multiple' : '' }`)
             block

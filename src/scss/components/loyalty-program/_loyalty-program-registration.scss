@@ -1,0 +1,84 @@
+@import "../common/form";
+@import "../common/checkbox";
+
+.loyalty-program-registration {
+    padding: 125px 0 70px 0;
+    
+    &__description, &__footnote {
+        margin-top: 40px;
+    }
+
+    &__footnote {
+        position: relative;
+        display: flex;
+
+        &::before {
+            content: "*";
+            margin-right: 1em;            
+        }
+    }
+
+	&__card {
+		background: $color-blue;
+		border-radius: 20px;
+		padding: 60px 70px;
+		color: $color-white;
+		display: flex;
+		max-width: 1180px;
+        margin: 0 auto;
+        
+        @include laptop {
+            padding: 40px 50px;
+        }
+        
+        @include tablet {
+            padding: 30px 40px;
+            flex-direction: column;
+        }
+        
+        @include mobile-l {
+            padding: 20px 40px;
+        }
+
+		.form-item__label {
+			color: $color-white;
+		}
+    }
+
+	&__col {
+		&--right {
+			flex-basis: 430px;
+        
+            @include tablet {
+                flex-basis: unset;
+                margin-top: 50px;
+            }
+		}
+
+		&--left {
+			padding-right: 70px;
+			flex-basis: 610px;
+        
+            @include laptop {
+                padding-right: 50px;
+            }
+        
+            @include tablet {
+                flex-basis: unset;
+                padding: 0;
+            }
+		}
+	}
+
+	&__consent {
+		margin-top: 30px;
+	}
+
+	&__submit-btn {
+		margin-top: 30px;
+	}
+
+	.form__input {
+		width: 100%;
+	}
+}
