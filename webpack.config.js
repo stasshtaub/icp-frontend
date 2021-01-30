@@ -19,7 +19,8 @@ module.exports = {
 		programs: "./src/js/programs",
 		"hotline-page": "./src/js/hotline-page",
 		festival: "./src/js/festival",
-		"loyalty-program": "./src/js/loyalty-program"
+		"loyalty-program": "./src/js/loyalty-program",
+		"news-detail2": "./src/js/news-detail2"
 	},
 	module: {
 		rules: [

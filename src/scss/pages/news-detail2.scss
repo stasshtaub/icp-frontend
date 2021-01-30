@@ -1,0 +1,32 @@
+@import "../utils/variables";
+@import "../utils/breakpoints";
+@import "../utils/helpers";
+
+@import "../layout/spaces";
+
+@import "../components/common/row";
+@import "../components/common/text";
+@import "../components/common/slider";
+@import "../components/common/double-block";
+@import "../components/common/button";
+
+@import "../components/news-detail2/news-detail2-card";
+@import "../components/about/about-news";
+
+.news-detail2 {
+    padding-top: 155px;
+
+    @include tablet {
+        padding-top: 100px;
+    }
+    
+    &__content {
+        padding: 60px 0;
+        background-color: $color-gray-light7;
+    }
+
+    .about-news {
+        background-color: inherit;
+        margin-top: 60px;
+    }
+}
