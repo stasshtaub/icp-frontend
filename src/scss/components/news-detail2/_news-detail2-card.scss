@@ -1,6 +1,37 @@
 .news-detail2-card {
 	margin-top: 2em;
-	
+
+	&__row {
+		display: flex;
+		margin: -30px -30px 0 0;
+
+		@include tablet-s {
+			flex-direction: column-reverse;
+		}
+	}
+
+	&__col {
+		padding: 30px 30px 0 0;
+
+		&--aside {
+			@include tablet-s("min") {
+				transition: opacity 0.3s ease-in-out;
+				flex-basis: 314px;
+				min-width: 200px;
+				height: 200px;
+			}
+
+			&.hidden {
+				@include tablet-s("min") {
+					opacity: 0;
+					position: absolute;
+					right: 0;
+					pointer-events: none;
+				}
+			}
+		}
+	}
+
 	img[align="left"] {
 		margin: 2em 2em 1em 0;
 	}
@@ -14,16 +45,20 @@
 	}
 
 	img {
-        // Min, но не min - чтобы sass не путал это сво своей функцией
+		// Min, но не min - чтобы sass не путал это сво своей функцией
 		max-width: Min(630px, 60%);
 		height: auto;
-        object-fit: contain;
-        
-        @include tablet-s2{
-            max-width: unset;
-            width: 100vw;
-            margin: 2em 0 1em calc(50% - 50vw) !important;
-            float: none;
-        }
+		object-fit: contain;
+
+		@include tablet-s2 {
+			max-width: unset;
+			width: 100vw;
+			margin: 2em 0 1em calc(50% - 50vw) !important;
+			float: none;
+		}
+	}
+
+	p ~ p {
+		margin-top: 1em;
 	}
 }
