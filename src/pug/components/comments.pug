@@ -1,0 +1,12 @@
+include ./comments-list
+include ./comments-form
+
+mixin comments(items)
+    .comments&attributes(attributes)
+        .comments__count 3 комментария
+        
+        .comments__list
+            +comments-list(items)
+
+        .comments__form
+            +comments-form()#comments-form

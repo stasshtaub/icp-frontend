@@ -1,0 +1,7 @@
+include ./comment
+
+mixin comments-list(items)
+    ul.comments-list&attributes(attributes)
+        each item in items
+            li.comments-list__item
+                +comment(item)

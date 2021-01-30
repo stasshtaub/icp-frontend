@@ -1,0 +1,43 @@
+.comments-form {
+	padding: 10px 0;
+
+	&__remember {
+        margin-top: 35px;
+        
+        @include mobile-l {
+            margin-top: 25px;
+        }
+	}
+
+	&__submit-btn {
+        margin-top: 85px;
+        
+        @include tablet {
+            margin-top: 50px;
+        }
+        
+        @include mobile-l {
+            margin-top: 30px;
+        }
+	}
+
+	&__row {
+		margin-right: -30px;
+		display: flex;
+		flex-wrap: wrap;
+    }
+    
+	&__col {
+		padding: 18px 30px 0 0;
+		flex-basis: 300px;
+		flex-grow: 1;
+    }
+    
+    &__textarea {
+        resize: vertical;
+    }
+
+	.form__input {
+		width: 100%;
+	}
+}

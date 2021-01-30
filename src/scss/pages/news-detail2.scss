@@ -6,10 +6,13 @@
 
 @import "../components/common/row";
 @import "../components/common/text";
+@import "../components/common/link";
 @import "../components/common/button";
+@import "../components/common/double-block";
 
 @import "../components/news-detail2/news-detail2-card";
 @import "../components/news-detail2/news-detail2-slider";
+@import "../components/news-detail2/news-detail2-comments";
 @import "../components/about/about-news";
 
 .news-detail2 {

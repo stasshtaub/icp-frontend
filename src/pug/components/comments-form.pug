@@ -1,0 +1,24 @@
+include ../mixins/form-item
+include ../mixins/checkbox
+include ../mixins/loader
+
+mixin comments-form()
+    form(action="https://jsonplaceholder.typicode.com/posts" method="POST").form.comments-form&attributes(attributes)
+        +form-item("Комментрарий")
+            textarea(name="text" placeholder="Текст" required).form__input.comments-form__textarea
+        .comments-form__row
+            .comments-form__col
+                +form-item("Как вас зовут?")
+                    input(name="name" placeholder="Имя" required).form__input
+            .comments-form__col
+                +form-item("Эл. почта")
+                    input(name="email" placeholder="E-mail" type="email" required).form__input
+        +checkbox("remember").comments-form__remember
+            span.text.text--xs3 Сохранить мое имя и электронную почту для дальнейших комментариев.
+                br
+                | Я подтверждаю, что ознакомлен и согласен с 
+                a(href="#").link.link--embed условиями обработки персональных данных.
+        +button("Отправить комментарий")(type="submit").comments-form__submit-btn
+        
+        +loader()
+        

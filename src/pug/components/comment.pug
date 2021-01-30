@@ -1,0 +1,18 @@
+mixin comment(item)
+    .comment
+        article.comment__card
+            .comment__col.comment__col--left
+                img(src=item.author.avatar alt="author avatar").comment__avatar
+            .comment__col.comment__col--right
+                header.comment__header
+                    .comment__info
+                        span.comment__author= item.author.name
+                        span.comment__date= item.date
+                    .comment__reply
+                        button.comment__reply-btn Ответить
+                .comment__body
+                    .comment__content
+                        p.text.text--s= item.text
+                    if item.children
+                        .comment__children
+                            +comments-list(item.children)

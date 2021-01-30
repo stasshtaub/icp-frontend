@@ -1,0 +1,140 @@
+.comment {
+	$p: &;
+
+	padding: 30px 0 0 35px;
+	position: relative;
+
+	@include tablet {
+		padding: 25px 0 0 25px;
+	}
+
+	@include tablet-xs {
+		padding: 25px 0 0 15px;
+	}
+
+	@include mobile-l {
+		padding: 25px 0 0 0px;
+	}
+
+	&::before {
+		content: "";
+		position: absolute;
+		width: 775px;
+		height: 1px;
+		background-color: #e8e8e8;
+		right: 0;
+		top: 0;
+
+		@include laptop {
+			width: calc(min(100vw - 58px, 775px));
+		}
+
+		@include mobile-l {
+			width: calc(100vw - 40px);
+		}
+	}
+
+	&__card {
+		display: flex;
+        margin: -30px -30px 0 0;
+        
+        @include tablet-xs {
+            margin: -20px -20px 0 0;
+        }
+	}
+
+	&__col {
+        padding: 30px 30px 0 0;
+        
+        @include tablet-xs {
+            padding: 20px 20px 0 0;
+        }
+	}
+
+	&__avatar {
+		width: 48px;
+		height: 48px;
+		border-radius: 50%;
+		object-fit: cover;
+        
+        @include tablet-xs {
+            width: 45px;
+            height: 45px;
+        }
+        
+        @include mobile-l {
+            width: vw(40px, 425px);
+            height: vw(40px, 425px);
+        }
+	}
+
+	&__reply-btn {
+		font-weight: bold;
+		font-size: 10px;
+		line-height: 20px;
+		text-align: right;
+		letter-spacing: 1px;
+		text-transform: uppercase;
+		color: #b4b4b4;
+		outline: none;
+		border: none;
+		background: none;
+		display: inline-block;
+	}
+
+	&__header {
+		display: flex;
+		justify-content: space-between;
+	}
+
+	&__info {
+		display: flex;
+		flex-direction: column;
+		color: #222222;
+	}
+
+	&__author,
+	&__content {
+		font-size: 20px;
+		line-height: 150%;
+
+		@include tablet-xs {
+			font-size: 16px;
+		}
+
+		@include mobile-l {
+			font-size: vw(16px, 425px);
+		}
+	}
+
+	&__author {
+		font-weight: bold;
+	}
+
+	&__date {
+		font-weight: 500;
+		font-size: 14px;
+		line-height: 17px;
+		margin-top: 10px;
+	}
+
+	&__body {
+		margin-top: 10px;
+	}
+
+	&__content {
+		padding-bottom: 30px;
+
+		@include tablet {
+			padding-bottom: 25px;
+		}
+	}
+
+	&__children {
+		#{$p} {
+			@include tablet-s1 {
+				padding-left: 0;
+			}
+		}
+	}
+}
