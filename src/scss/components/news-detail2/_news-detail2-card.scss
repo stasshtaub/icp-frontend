@@ -1,5 +1,6 @@
 @import "../../components/common/quote";
 @import "../../components/common/note";
+@import "../../components/common/video-preview";
 
 .news-detail2-card {
 	margin-top: 2em;
@@ -46,6 +47,21 @@
 
 	&__note {
 		padding: 50px 0 40px 0;
+	}
+
+	&__video-wrp {
+		max-width: 708px;
+		margin: 0 auto;
+		padding: 50px 0 45px 0;
+
+		.video-preview__title {
+			font-size: 26px;
+			line-height: 122.307692%;
+
+			@include tablet-s {
+				font-size: vw(26px, 700px);
+			}
+		}
 	}
 
 	img[align="left"] {
