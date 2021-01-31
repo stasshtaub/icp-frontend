@@ -258,11 +258,12 @@
 			}
 
 			#{$p}__description {
-				margin-top: 40px;
+				margin-top: 100px;
 				margin-left: -130px;
 				width: calc(100% + 115px);
 
 				@include slide-breakpoint {
+					margin-top: 40px;
 					margin-left: unset;
 					width: unset;
 				}
@@ -294,6 +295,11 @@
 				top: 581px;
 				right: 0;
 				transform: translateX(50%);
+
+				@include tablet-s {
+					bottom: 100px;
+    				top: unset;
+				}
 			}
 		}
 
