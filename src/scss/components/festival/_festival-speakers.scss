@@ -62,4 +62,23 @@
         width: 28px;
         margin-top: 10px;
     }
+
+    &__btn-wrp {
+        margin-top: 75px;
+        display: flex;
+        justify-content: center;
+
+        @include tablet {
+            margin-top: 50px;
+        }
+
+        @include mobile-l {
+            margin-top: 30px;
+        }
+    }
+
+    &__btn {
+        width: 345px;
+        justify-content: center;
+    }
 }
