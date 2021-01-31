@@ -1,7 +1,7 @@
 {
 	new Swiper(".capabilities-program__slider", {
 		slidesPerView: 'auto',
-		freeMode: true,
+		autoHeight: true,
 		navigation: {
 			nextEl: ".capabilities-program__btn--next",
 			prevEl: ".capabilities-program__btn--prev",
@@ -14,5 +14,15 @@
 				`<li class="${className}"><div class="slider__dot capabilities-program__dot"></div></li>`,
 			clickable: true
 		},
+        mousewheel: {
+            forceToAxis: true,
+            invert: true,
+            sensitivity: 0.7
+		},
+		breakpoints: {
+			1075: {
+				autoHeight: false
+			}
+		}
 	});
 }
