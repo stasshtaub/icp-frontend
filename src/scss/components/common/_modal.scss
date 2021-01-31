@@ -4,9 +4,6 @@
     width: 100vw;
     height: 100vh;
     top: 0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
     pointer-events: none;
     z-index: 9999;
     animation: fade 0.2s ease-in-out;
@@ -55,6 +52,8 @@
 
     &--active {
         display: flex;
+        justify-content: center;
+        align-items: center;
         pointer-events: unset;
     }
     
