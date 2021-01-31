@@ -54,3 +54,6 @@
                             p.festival-speakers__name.text.text--s2.text--bold= speaker.name
                             p.festival-speakers__description.text.text--xs3= speaker.description
                             img(src=speaker.flag alt="language").festival-speakers__flag
+        
+        .festival-speakers__btn-wrp
+            +button("Стать участником фестиваля", ["festival-speakers__btn"], "size-xl", "color-primary", null, tag="a", "#festival-tariffs")
