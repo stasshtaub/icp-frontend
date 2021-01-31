@@ -1,3 +1,15 @@
+@mixin slide-breakpoint($dimension: "max") {
+	@if $dimension == "max" {
+		@media (max-width: 1075px) {
+			@content;
+		}
+	} @else {
+		@media (min-width: 1076px) {
+			@content;
+		}
+	}
+}
+
 .capabilities-program {
 	$p: &;
 
@@ -9,7 +21,7 @@
 		-webkit-transform: translateZ(0);
 		-webkit-backface-visibility: hidden;
 
-		@include laptop {
+		@include slide-breakpoint {
 			height: 950px;
 		}
 	}
@@ -21,22 +33,24 @@
 		padding-left: 158px;
 		box-sizing: border-box;
 
-		@include laptop {
-			padding-top: 100px;
-			width: 100% !important;
-		}
+		// &--1, &--2, &--3, &--4 {
+		// 	width: 1075px !important;
+			
+		// 	// @include slide-breakpoint("min") {
+		// 	// }
+		// }
+		max-width: 1075px;
 
-		&--1, &--2, &--3, &--4 {
-			@include laptop("min") {
-				width: 1075px !important;
-			}
+		@include slide-breakpoint {
+			padding-top: 100px;
+			// width: 100% !important;
 		}
 
 		&--1 {
 			padding-left: 148px;
 			background-color: $color-green;
 
-			@include laptop {
+			@include slide-breakpoint {
 				padding-left: unquote("max(92px, 11.0351562vw)");
 				padding-top: unquote("max(50px, 9.3vw)");
 			}
@@ -48,7 +62,7 @@
 			#{$p}__content {
 				padding: 43px 30px 30px 85px;
 
-				@include laptop {
+				@include slide-breakpoint {
 					padding: 43px 30px 5.2734375vw 85px;
 				}
 			}
@@ -62,7 +76,7 @@
 					clip-path: polygon(0 30px, 100% 0%, 100% 100%, 0% 100%);
 					transform: translate(-33px, -75px);
 
-					@include laptop {
+					@include slide-breakpoint {
 						height: 194px;
 						width: 764px;
 					}
@@ -72,7 +86,7 @@
 			#{$p}__description {
 				margin-top: 63px;
 
-				@include laptop {
+				@include slide-breakpoint {
 					margin-top: 44px;
 				}
 			}
@@ -85,7 +99,7 @@
 						max-height: 14em;
 					}
 
-					@include laptop {
+					@include slide-breakpoint {
 						margin-top: 95px;
 					}
 				}
@@ -221,9 +235,9 @@
 		&--5 {
 			background-color: $color-blue5;
 
-			@include laptop("min") {
-				width: 1080px !important;
-			}
+			// @include slide-breakpoint("min") {
+			// 	width: 1080px !important;
+			// }
 			
 			#{$p}__module {
 				&::before {
@@ -279,14 +293,14 @@
 		margin-left: 13px;
 		pointer-events: none;
 
-		@include laptop {
+		@include slide-breakpoint {
 			max-height: 296px;
 			display: flex;
 			overflow: hidden;
 		}
 
 		svg {
-			@include laptop {				
+			@include slide-breakpoint {				
 				align-self: flex-end;
 			}
 		}
@@ -322,12 +336,10 @@
 		line-height: 80px;
 		margin-top: 1px;
 		text-transform: uppercase;
+		white-space: pre-line;
 
-		@include laptop("min") {
-			white-space: pre-line;
-		}
-
-		@include laptop {
+		@include slide-breakpoint {
+			white-space: unset;
 			font-size: unquote("max(50px, 6.8359375vw)");
 		}
 	}
@@ -383,7 +395,7 @@
 		line-height: 24px;
 		padding: 10px 15px 10px 53px;
 
-		@include laptop {
+		@include slide-breakpoint {
 			font-size: unquote("max(16px, 1.953125vw)");
 			line-height: 120%;
 		}
@@ -460,13 +472,11 @@
 		margin-left: 30px;
 		border: 2px solid $color-white;
 		z-index: 2;
+		transform: rotate(90deg) translateY(-100%);
+		margin-top: 45px;
 
-		@include laptop("min") {
-			transform: rotate(90deg) translateY(-100%);
-			margin-top: 45px;
-		}
-
-		@include laptop {
+		@include slide-breakpoint {
+			transform: none;
 			margin-top: 30px;
 		}
 	}
@@ -509,14 +519,16 @@
 		&--prev {
 			transform: rotate(90deg);
 
-			@include laptop {
+			@include slide-breakpoint {
 				transform: rotate(180deg);
 			}
 		}
 
 		&--next {
-			@include laptop("min") {
-				transform: rotate(-90deg);
+			transform: rotate(-90deg);
+
+			@include slide-breakpoint {
+				transform: none;
 			}
 		}
 	}
@@ -524,7 +536,7 @@
 	&__dots {
 		display: none;
 
-		@include laptop {
+		@include slide-breakpoint {
 			position: absolute;
 			left: 20px !important;
 			bottom: 25px !important;
