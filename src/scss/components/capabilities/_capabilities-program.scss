@@ -1,3 +1,15 @@
+@mixin slide-breakpoint($dimension: "max") {
+	@if $dimension == "max" {
+		@media (max-width: 1075px) {
+			@content;
+		}
+	} @else {
+		@media (min-width: 1076px) {
+			@content;
+		}
+	}
+}
+
 .capabilities-program {
 	$p: &;
 
@@ -5,30 +17,38 @@
 
 	&__slider {
 		position: relative;
-		height: 850px;
 		-webkit-transform: translateZ(0);
 		-webkit-backface-visibility: hidden;
+	}
 
-		@include laptop {
-			height: 950px;
-		}
+	&__slides {
+		align-items: stretch;
 	}
 
 	&__slide {
 		position: relative;
 		display: flex;
-		height: 100%;
+		height: unset !important;
 		padding-left: 158px;
 		box-sizing: border-box;
+		max-width: 1075px;
 
-		@include laptop {
+		@include slide-breakpoint {
 			padding-top: 100px;
-			width: 100% !important;
+			flex-direction: column;
+			padding: 90px 50px 100px 90px !important;
 		}
 
-		&--1, &--2, &--3, &--4 {
-			@include laptop("min") {
-				width: 1075px !important;
+		@include mobile-l {
+			padding: 65px 20px 55px 20px !important;
+		}
+
+		&--1,
+		&--2,
+		&--3,
+		&--4 {
+			#{$p}__shape {
+				mix-blend-mode: screen;
 			}
 		}
 
@@ -36,21 +56,16 @@
 			padding-left: 148px;
 			background-color: $color-green;
 
-			@include laptop {
-				padding-left: unquote("max(92px, 11.0351562vw)");
-				padding-top: unquote("max(50px, 9.3vw)");
-			}
-
 			#{$p}__number {
 				margin-top: 59px;
+
+				@include slide-breakpoint {
+					margin-top: 0;
+				}
 			}
 
 			#{$p}__content {
 				padding: 43px 30px 30px 85px;
-
-				@include laptop {
-					padding: 43px 30px 5.2734375vw 85px;
-				}
 			}
 
 			#{$p}__module {
@@ -62,9 +77,15 @@
 					clip-path: polygon(0 30px, 100% 0%, 100% 100%, 0% 100%);
 					transform: translate(-33px, -75px);
 
-					@include laptop {
+					@include slide-breakpoint {
 						height: 194px;
 						width: 764px;
+						left: 33px;
+					}
+
+					@include mobile-l {
+						top: 124px;
+						height: 165px;
 					}
 				}
 			}
@@ -72,7 +93,7 @@
 			#{$p}__description {
 				margin-top: 63px;
 
-				@include laptop {
+				@include slide-breakpoint {
 					margin-top: 44px;
 				}
 			}
@@ -85,7 +106,7 @@
 						max-height: 14em;
 					}
 
-					@include laptop {
+					@include slide-breakpoint {
 						margin-top: 95px;
 					}
 				}
@@ -114,11 +135,20 @@
 					mix-blend-mode: lighten;
 					clip-path: polygon(0 0, 100% 0, 100% 100%, 60px 100%);
 					transform: translate(-165px, -29px);
+
+					@include slide-breakpoint {
+						top: 0;
+						left: 30px;
+						transform: translate(
+							vw(40px, 1075px),
+							vw(-74px, 1075px)
+						);
+					}
 				}
 			}
 
 			#{$p}__description {
-				margin-top: 77px;
+				margin-top: 47px;
 			}
 
 			#{$p}__description-title--link {
@@ -138,6 +168,10 @@
 			#{$p}__shape {
 				top: 182px;
 				right: -133px;
+
+				@include slide-breakpoint {
+					top: 388px;
+				}
 			}
 		}
 
@@ -152,6 +186,19 @@
 					mix-blend-mode: lighten;
 					clip-path: polygon(82px 0, 849px 30px, 100% 100%, 0 163px);
 					transform: translate(-165px, -29px);
+
+					@include slide-breakpoint {
+						top: 110px;
+						left: 120px;
+						transform: translate(
+							vw(40px, 1075px),
+							vw(-74px, 1075px)
+						);
+					}
+
+					@include mobile-l {
+						top: 50px;
+					}
 				}
 			}
 
@@ -184,17 +231,50 @@
 					mix-blend-mode: multiply;
 					clip-path: polygon(71px 0, 838px 30px, 100% 100%, 0 100%);
 					transform: translate(-185px, -29px);
+
+					@include slide-breakpoint {
+						top: 25px;
+						left: 100px;
+						width: 85%;
+						clip-path: polygon(
+							57px 4px,
+							90% 16px,
+							100% 100%,
+							0px 100%
+						);
+						transform: translate(
+							vw(-69px, 1075px),
+							vw(-68px, 1075px)
+						);
+					}
+
+					@include tablet {
+						left: 38px;
+						width: 90%;
+						clip-path: polygon(8% 0, 94% 0, 100% 100%, 0px 100%);
+						top: -28px;
+					}
 				}
 			}
 
 			#{$p}__description {
-				margin-top: 117px;
+				margin-top: 100px;
 				margin-left: -130px;
 				width: calc(100% + 115px);
+
+				@include slide-breakpoint {
+					margin-top: 40px;
+					margin-left: unset;
+					width: unset;
+				}
 			}
 
 			#{$p}__description-title--link {
 				margin-left: -115px;
+
+				@include slide-breakpoint {
+					margin-left: unset;
+				}
 			}
 
 			#{$p}__description-title--link {
@@ -215,16 +295,17 @@
 				top: 581px;
 				right: 0;
 				transform: translateX(50%);
+
+				@include tablet-s {
+					bottom: 100px;
+    				top: unset;
+				}
 			}
 		}
 
 		&--5 {
 			background-color: $color-blue5;
 
-			@include laptop("min") {
-				width: 1080px !important;
-			}
-			
 			#{$p}__module {
 				&::before {
 					width: 872px;
@@ -233,6 +314,26 @@
 					mix-blend-mode: lighten;
 					clip-path: polygon(71px 0, 838px 30px, 100% 100%, 0 100%);
 					transform: translate(-185px, -29px);
+
+					@include slide-breakpoint {
+						top: 70px;
+						left: 10px;
+						width: 85%;
+						clip-path: polygon(
+							10% 0px,
+							94% 10%,
+							97.55% 95.02%,
+							0 100%
+						);
+						transform: translate(
+							vw(-65px, 1075px),
+							vw(-51px, 1075px)
+						);
+					}
+
+					@include mobile-l {
+						width: 97%;
+					}
 				}
 			}
 
@@ -269,6 +370,20 @@
 					);
 				}
 			}
+
+			#{$p}__shape {
+				mix-blend-mode: lighten;
+			}
+		}
+
+		&:last-child {
+			overflow: hidden;
+
+			#{$p}__number {
+				&::after {
+					content: none;
+				}
+			}
 		}
 	}
 
@@ -279,16 +394,9 @@
 		margin-left: 13px;
 		pointer-events: none;
 
-		@include laptop {
-			max-height: 296px;
-			display: flex;
-			overflow: hidden;
-		}
-
-		svg {
-			@include laptop {				
-				align-self: flex-end;
-			}
+		@include slide-breakpoint {
+			// TODO: реализиовать сплошную линию (возможно не через этот элемент, а ::after у модулей)
+			display: none;
 		}
 	}
 
@@ -303,6 +411,30 @@
 		font-weight: 500;
 		font-size: 70px;
 		line-height: 86px;
+
+		@include slide-breakpoint {
+			margin: 0;
+			position: relative;
+			align-self: flex-start;
+		}
+
+		&:after {
+			@include slide-breakpoint {
+				content: "";
+				width: calc(100vw - 105px - 100%);
+				height: 10px;
+				background-color: $color-white;
+				display: block;
+				left: calc(100% + 15px);
+				position: absolute;
+				top: 50%;
+				transform: translateY(-50%);
+			}
+
+			@include mobile-l {
+				width: calc(100vw - 35px - 100%);
+			}
+		}
 	}
 
 	&__module-text {
@@ -319,16 +451,23 @@
 		position: relative;
 		font-weight: 500;
 		font-size: 70px;
-		line-height: 80px;
+		line-height: 114.285714286%;
 		margin-top: 1px;
 		text-transform: uppercase;
+		white-space: pre-line;
 
-		@include laptop("min") {
-			white-space: pre-line;
+		@include slide-breakpoint {
+			white-space: unset;
+			font-size: unquote("max(50px, 6.8359375vw)");
 		}
 
-		@include laptop {
-			font-size: unquote("max(50px, 6.8359375vw)");
+		@include tablet {
+			font-size: vw(50px, 768px);
+		}
+
+		@include mobile-l {
+			font-size: vw(30px, 425px);
+			line-height: 100%;
 		}
 	}
 
@@ -337,6 +476,10 @@
 		flex-direction: column;
 		flex-grow: 1;
 		padding: 53px 30px 30px 70px;
+
+		@include slide-breakpoint {
+			padding: 0 !important;
+		}
 	}
 
 	&__module {
@@ -356,6 +499,7 @@
 			text-decoration: none;
 			align-self: flex-start;
 			margin-top: auto;
+			padding-top: 2em;
 
 			&::after {
 				content: "";
@@ -380,12 +524,17 @@
 		display: inline-flex;
 		position: relative;
 		font-size: 20px;
-		line-height: 24px;
+		line-height: 120%;
 		padding: 10px 15px 10px 53px;
 
-		@include laptop {
-			font-size: unquote("max(16px, 1.953125vw)");
-			line-height: 120%;
+		@include tablet {
+			font-size: 16px;
+			width: unset !important;
+			max-width: unset !important;
+		}
+
+		@include mobile-l {
+			font-size: 14px;
 		}
 
 		&::before {
@@ -403,6 +552,10 @@
 		display: flex;
 		margin: 10px -15px -10px -15px;
 		flex-flow: column wrap;
+
+		@include tablet {
+			max-height: unset !important;
+		}
 	}
 
 	&__description {
@@ -413,15 +566,26 @@
 
 		&--row {
 			flex-direction: row;
-			margin-left: -15px;
-			margin-right: -15px;
+			margin: -30px -30px 0 0;
+
+			@include tablet {
+				flex-direction: column;
+			}
 		}
 	}
 
 	&__description-block {
+		@include tablet {
+			flex: unset !important;
+		}
+
 		&--results {
 			display: flex;
 			flex-direction: column;
+
+			@include tablet {
+				margin-top: 2em !important;
+			}
 		}
 
 		&--row {
@@ -432,7 +596,7 @@
 		}
 
 		&--col {
-			padding: 0 15px;
+			padding: 30px 30px 0 0;
 
 			#{$p}__description-title {
 				color: $color-white;
@@ -460,20 +624,27 @@
 		margin-left: 30px;
 		border: 2px solid $color-white;
 		z-index: 2;
+		transform: rotate(90deg) translateY(-100%);
+		margin-top: 45px;
 
-		@include laptop("min") {
-			transform: rotate(90deg) translateY(-100%);
-			margin-top: 45px;
+		@include slide-breakpoint {
+			transform: none;
+			margin-top: 30px;
 		}
 
-		@include laptop {
-			margin-top: 30px;
+		@include tablet {
+			margin-top: 14px;
+			margin-left: 14px;
 		}
 	}
 
 	&__nav-section {
 		display: flex;
 		height: 60px;
+
+		@include mobile-l {
+			height: 55px;
+		}
 
 		&--btn {
 			width: 60px;
@@ -497,6 +668,11 @@
 		font-size: 20px;
 		line-height: 24px;
 		color: $color-white;
+
+		@include tablet {
+			font-size: 16px;
+			line-height: 122.3125%;
+		}
 	}
 
 	&__btn {
@@ -509,14 +685,16 @@
 		&--prev {
 			transform: rotate(90deg);
 
-			@include laptop {
+			@include slide-breakpoint {
 				transform: rotate(180deg);
 			}
 		}
 
 		&--next {
-			@include laptop("min") {
-				transform: rotate(-90deg);
+			transform: rotate(-90deg);
+
+			@include slide-breakpoint {
+				transform: none;
 			}
 		}
 	}
@@ -524,12 +702,17 @@
 	&__dots {
 		display: none;
 
-		@include laptop {
+		@include slide-breakpoint {
 			position: absolute;
 			left: 20px !important;
 			bottom: 25px !important;
 			display: flex;
 			z-index: 2;
+		}
+
+		@include mobile-l {
+			bottom: 10px !important;
+    		left: 10px !important;
 		}
 	}
 
