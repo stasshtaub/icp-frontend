@@ -33,12 +33,12 @@
 		padding: 0 70px;
 		margin-left: 73px;
 		display: flex;
-        pointer-events: none;
-        
-        @include desktop {
-            padding: 0 vw(70px, 1440px);
-            margin-left: vw(73px, 1440px);
-        }
+		pointer-events: none;
+
+		@include desktop {
+			padding: 0 vw(70px, 1440px);
+			margin-left: vw(73px, 1440px);
+		}
 
 		@include laptop {
 			margin-left: 0;
@@ -62,7 +62,7 @@
 			);
 
 			@include desktop {
-                height: vw(158px, 1440px);
+				height: vw(158px, 1440px);
 			}
 
 			@include tablet-xs {
@@ -93,10 +93,10 @@
 		padding-right: 50px;
 
 		@include desktop {
-            margin-bottom: vw(100px, 1440px);    
-            padding-right: vw(50px, 1440px);
-        }
-        
+			margin-bottom: vw(100px, 1440px);
+			padding-right: vw(50px, 1440px);
+		}
+
 		@include tablet {
 			padding: 0 30px;
 			margin-bottom: 30px;
