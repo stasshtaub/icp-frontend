@@ -1,4 +1,6 @@
-swiper = new Swiper(".loyalty-program-process__slider", {
+import { centerOnTarget } from "../../helpers/centerOnTarget";
+
+const swiper = new Swiper(".loyalty-program-process__slider", {
     navigation: {
       nextEl: '.slider__btn--next',
       prevEl: '.slider__btn--prev',
@@ -17,3 +19,23 @@ swiper = new Swiper(".loyalty-program-process__slider", {
         sensitivity: 0.7
     }
 });
+
+const dots = document.querySelector(".loyalty-program-process__dots")
+const container = document.querySelector(".loyalty-program-process__body")
+
+const centerDots = () => {
+    const img = document.getElementsByClassName("loyalty-program-process__img")[swiper.activeIndex]
+    
+    if (dots && img) {
+        if (img.complete) {
+            centerOnTarget(dots, img, container)
+        } else {
+            img.addEventListener("load", () => {
+                centerOnTarget(dots, img, container)
+            })
+        }
+    }
+}
+
+centerDots();
+window.addEventListener("resize", centerDots)
