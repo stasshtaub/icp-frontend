@@ -20,7 +20,8 @@ module.exports = {
 		"hotline-page": "./src/js/hotline-page",
 		festival: "./src/js/festival",
 		"loyalty-program": "./src/js/loyalty-program",
-		"news-detail2": "./src/js/news-detail2"
+		"news-detail2": "./src/js/news-detail2",
+		"helpers/video-modals": "./src/js/helpers/video-modals"
 	},
 	module: {
 		rules: [

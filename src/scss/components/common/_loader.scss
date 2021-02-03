@@ -14,4 +14,8 @@
         opacity: 1;
         pointer-events: unset;
     }
+
+    &--transparent {
+        background-color: transparent;
+    }
 }

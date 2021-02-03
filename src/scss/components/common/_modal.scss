@@ -1,77 +1,113 @@
 .modal {
-    display: none;
-    position: fixed;
-    width: 100vw;
-    height: 100vh;
-    top: 0;
-    pointer-events: none;
-    z-index: 9999;
-    animation: fade 0.2s ease-in-out;
+	$p: &;
 
-    &__backdrop {
-        position: absolute;
+	display: none;
+	position: fixed;
+	width: 100vw;
+	height: 100vh;
+	top: 0;
+	pointer-events: none;
+	z-index: 9999;
+	animation: fade 0.2s ease-in-out;
+
+	&--active {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		pointer-events: unset;
+	}
+
+	&--video {
+		color: $color-white;
+
+		#{$p}__window {
+			background: $color-gray;
+			width: 950px;
+		}
+
+		#{$p}__header {
+			position: unset;
+			padding: 25px 30px;
+		}
+	}
+
+	&__backdrop {
+		position: absolute;
+		width: 100%;
+		height: 100%;
+		background-color: $color-black;
+		opacity: 0.7;
+	}
+
+	&__window {
+		position: relative;
+		background-color: $color-white;
+		box-shadow: 0px 40px 40px 10px rgba($color-black, 0.1);
+		border-radius: 10px;
+		z-index: 1;
+		overflow: hidden;
+		opacity: 0;
+		pointer-events: none;
+		transition: opacity 0.1s ease-in-out;
+
+		&--active {
+			opacity: 1;
+			pointer-events: unset;
+		}
+	}
+
+	&__header {
+		position: absolute;
+		display: flex;
+		justify-content: space-between;
+		width: 100%;
+		padding: 30px;
+		z-index: 1;
+
+		@include tablet-xs {
+			padding: 20px;
+		}
+	}
+
+	&__title {
+		color: $color-white;
+	}
+
+	&__close-btn {
+		width: 20px;
+		height: 20px;
+		background: url("../images/sprite.svg#icon-close") no-repeat center;
+		background-size: cover;
+		cursor: pointer;
+
+		@include tablet {
+			filter: brightness(10);
+		}
+
+		&--white {
+			filter: brightness(10);
+		}
+	}
+
+	&__description {
+		padding: 18px 22px;
+	}
+
+	&__iframe-wrp {
+		height: 535px;
+		max-height: 70vh;
+
+		@media (max-width: 950px) {
+			height: 56.3157895vw;
+        }
+    }
+
+	&__iframe {
+        position: relative;
+		display: block;
         width: 100%;
         height: 100%;
-        background-color: $color-black;
-        opacity: 0.7;
-    }
-
-    &__window {
-        position: relative;
-        background-color: $color-white;
-        box-shadow: 0px 40px 40px 10px rgba($color-black, 0.1);
-        border-radius: 10px;
-        z-index: 1;
-        overflow: hidden;
-        opacity: 0;
-        pointer-events: none;
-        transition: opacity 0.1s ease-in-out;
-
-        &--active {
-            opacity: 1;
-            pointer-events: unset;
-        }
-    }
-
-    &__header {
-        position: absolute;
-        display: flex;
-        justify-content: space-between;
-        width: 100%;
-        padding: 30px;
-        z-index: 1;
-
-        @include tablet-xs {
-            padding: 20px;
-        }
-    }
-
-    &__title {
-        color: $color-white;
-    }
-
-    &--active {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        pointer-events: unset;
-    }
-    
-    &__close-btn {
-        width: 20px;
-        height: 20px;
-        background: url("../images/sprite.svg#icon-close") no-repeat center;
-        background-size: cover;
-        cursor: pointer;
-
-        @include tablet {
-            filter: brightness(10);
-        }
-
-        &--white {
-            filter: brightness(10);
-        }
-    }
+	}
 }
 
 @keyframes fade {
