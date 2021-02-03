@@ -118,6 +118,7 @@
 		position: absolute;
 		bottom: 25px !important;
 		z-index: 1;
+		width: unset !important;
 
 		@include tablet-xs {
 			position: unset;
