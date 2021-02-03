@@ -4,9 +4,9 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width">
-    <link rel="stylesheet" href="./css/main.css?v=1612382389703">
-    <link rel="stylesheet" href="./css/home.css?v=1612382389703">
-    <link rel="stylesheet" href="./css/font-awesome.css?v=1612382389703">
+    <link rel="stylesheet" href="./css/main.css?v=1612390719783">
+    <link rel="stylesheet" href="./css/home.css?v=1612390719783">
+    <link rel="stylesheet" href="./css/font-awesome.css?v=1612390719783">
     <link rel="stylesheet" href="https://unpkg.com/swiper@6.3.2/swiper-bundle.min.css">
   </head>
   <body>
@@ -81,7 +81,13 @@
           <div class="home__group home__group--video">
             <section class="video-block">
               <div class="video-block__wrp">
-                <div class="video-block__poster"></div>
+                            <label class="video-preview">
+                              <div class="video-preview__inner"><img class="video-preview__img" src="images/svg/video-previews/default.svg" alt="video preview">
+                                <div class="video-preview__body"><span class="video-preview__title">101 секунда о том,<br>как и чему мы учим</span>
+                                  <button class="video-preview__play" data-video="https://www.youtube.com/embed/N70RhicEoXY" data-video-name="ICP CENTRE итоги года 2019" data-modal-title="101 секунда о том, как и чему мы учим"></button>
+                                </div>
+                              </div>
+                            </label>
               </div>
             </section>
           </div>
@@ -468,8 +474,9 @@ viewBox="0 0 856.859 377.057"
         </div>
       </div>
     </footer>
-    <script src="./js/common.js?v=1612382389704"></script>
+    <script src="./js/common.js?v=1612390719785"></script>
     <script defer src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
-    <script defer src="./js/home.js?v=1612382389704"></script>
+    <script defer src="./js/home.js?v=1612390719785"></script>
+    <script defer src="./js/helpers/video-modals.js?v=1612390719785"></script>
   </body>
 </html>
