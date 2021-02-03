@@ -18,10 +18,10 @@ const showVideoModal = (src, modalTitle, videoName) => {
 	const content = `
         <div class="modal__iframe-wrp">
             <div class="loader loader--active loader--transparent"></div>
-            <iframe class="modal__iframe" width="560" height="315" src="https://www.youtube.com/embed/UXcPk2AYctU" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            <iframe class="modal__iframe" width="560" height="315" src="${ src }" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
         </div>
         <div class="modal__description">
-            <p class="text text--s">${videoName}</p>
+            <p class="text text--s">${ videoName }</p>
         </div>
     `;
 
