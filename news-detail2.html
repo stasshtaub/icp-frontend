@@ -4,8 +4,8 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width">
-    <link rel="stylesheet" href="./css/main.css?v=1612438891199">
-    <link rel="stylesheet" href="./css/news-detail2.css?v=1612438891199">
+    <link rel="stylesheet" href="./css/main.css?v=1612455417383">
+    <link rel="stylesheet" href="./css/news-detail2.css?v=1612455417383">
     <link rel="stylesheet" href="https://unpkg.com/swiper@6.3.2/swiper-bundle.min.css">
   </head>
   <body>
@@ -150,7 +150,7 @@
                                                           <header class="comment__header">
                                                             <div class="comment__info"><span class="comment__author">Рыбаков Иван Владимирович</span><span class="comment__date">4 сентября 2020</span></div>
                                                             <div class="comment__reply">
-                                                              <button class="comment__reply-btn">Ответить</button>
+                                                              <button class="comment__reply-btn" data-comment-id="1" data-author-name="Рыбаков Иван Владимирович">Ответить</button>
                                                             </div>
                                                           </header>
                                                           <div class="comment__body">
@@ -167,7 +167,7 @@
                                                                                             <header class="comment__header">
                                                                                               <div class="comment__info"><span class="comment__author">Царева Милана Андреевна</span><span class="comment__date">4 сентября 2020</span></div>
                                                                                               <div class="comment__reply">
-                                                                                                <button class="comment__reply-btn">Ответить</button>
+                                                                                                <button class="comment__reply-btn" data-comment-id="2" data-author-name="Царева Милана Андреевна">Ответить</button>
                                                                                               </div>
                                                                                             </header>
                                                                                             <div class="comment__body">
@@ -194,7 +194,7 @@
                                                           <header class="comment__header">
                                                             <div class="comment__info"><span class="comment__author">Шилов Марк Георгиевич</span><span class="comment__date">4 сентября 2020</span></div>
                                                             <div class="comment__reply">
-                                                              <button class="comment__reply-btn">Ответить</button>
+                                                              <button class="comment__reply-btn" data-comment-id="3" data-author-name="Шилов Марк Георгиевич">Ответить</button>
                                                             </div>
                                                           </header>
                                                           <div class="comment__body">
@@ -208,8 +208,24 @@
                                         </li>
                                       </ul>
                           </div>
+                          <div class="comments__more">
+                            <button class="button button--color-primary button--size-normal  comments__more-btn">Показать ещё
+                            </button>
+                          </div>
                           <div class="comments__form">
                                       <form class="form comments-form" action="https://jsonplaceholder.typicode.com/posts" method="POST" id="comments-form">
+                                        <input name="reply" type="text" hidden>
+                                                  <div class="form-item">
+                                                    <div class="form-item__label">Аватар</div>
+                                                    <div class="form-item__content">
+                                                      <div class="comments-form__avatar">
+                                                        <div class="comments-form__avatar-img" aria-label="user avatar"></div>
+                                                        <label class="comments-form__avatar-label" role="button">
+                                                          <input class="comments-form__avatar-input" type="file" name="avatar" accept="image/*">
+                                                        </label>
+                                                      </div>
+                                                    </div>
+                                                  </div>
                                                   <div class="form-item">
                                                     <div class="form-item__label">Комментрарий</div>
                                                     <div class="form-item__content">
@@ -471,8 +487,9 @@
         </div>
       </div>
     </footer>
-    <script src="./js/common.js?v=1612438891202"></script>
+    <script src="./js/common.js?v=1612455417386"></script>
     <script defer src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
-    <script defer src="./js/news-detail2.js?v=1612438891202"></script>
+    <script defer src="https://www.google.com/recaptcha/api.js?render=6LeU5UkaAAAAALkmPBk8OgAGsiWiT4HeLcIdVw_v"></script>
+    <script defer src="./js/news-detail2.js?v=1612455417386"></script>
   </body>
 </html>
