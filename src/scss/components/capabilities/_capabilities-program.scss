@@ -112,6 +112,12 @@
 				}
 
 				&--topics {
+					min-height: 290px;
+
+					@include slide-breakpoint {
+						min-height: unset;
+					}
+
 					#{$p}__description-list {
 						max-height: 13em;
 					}
@@ -224,6 +230,12 @@
 			background-color: $color-green-light;
 
 			#{$p}__module {
+				min-height: 181px;
+
+				@include slide-breakpoint {
+					min-height: unset;
+				}
+
 				&::before {
 					width: 872px;
 					height: 241px;
