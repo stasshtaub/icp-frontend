@@ -1,4 +1,4 @@
-import { Modal } from "../../components/modal";
+import { Modal } from "./modal";
 
 const createMessage = (footer, body, type) => {
     return `

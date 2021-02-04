@@ -1,6 +1,7 @@
 import IMask from "imask";
 
-import { Modal, showMessage } from "./particles/message";
+import { Modal } from "../components/modal";
+import { showMessage } from "../components/message";
 
 const buttons = document.querySelectorAll("[data-modal='modal-participation']");
 const modal = new Modal("Заявка на участие", document.getElementById("modal-participation"));

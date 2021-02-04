@@ -37,6 +37,27 @@
         resize: vertical;
     }
 
+	&__reply-tag {
+		display: inline-flex;
+		padding: 5px 10px;
+		border-radius: 10px;
+		background-color: $color-blue11;
+		align-items: center;
+		color: $color-white;
+		margin-bottom: 10px;
+    }
+    
+	&__reply-tag-close {
+		margin-left: 1em;
+		width: 1em;
+		height: 1em;
+		background: url("../images/sprite.svg#icon-close") no-repeat 50%;
+		background-size: cover;
+		border: none;
+		outline: none;
+		filter: brightness(10);
+	}
+
 	.form__input {
 		width: 100%;
 	}

@@ -9,7 +9,7 @@ mixin comment(item)
                         span.comment__author= item.author.name
                         span.comment__date= item.date
                     .comment__reply
-                        button.comment__reply-btn Ответить
+                        button(data-comment-id=item.id data-author-name=item.author.name).comment__reply-btn Ответить
                 .comment__body
                     .comment__content
                         p.text.text--s= item.text
