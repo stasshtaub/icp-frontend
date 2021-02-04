@@ -21,7 +21,8 @@ module.exports = {
 		festival: "./src/js/festival",
 		"loyalty-program": "./src/js/loyalty-program",
 		"news-detail2": "./src/js/news-detail2",
-		"helpers/video-modals": "./src/js/helpers/video-modals"
+		"helpers/video-modals": "./src/js/helpers/video-modals",
+		library: "./src/js/library"
 	},
 	module: {
 		rules: [

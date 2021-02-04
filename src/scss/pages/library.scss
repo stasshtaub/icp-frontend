@@ -1,0 +1,22 @@
+@import "../utils/variables";
+@import "../utils/breakpoints";
+@import "../utils/helpers";
+
+@import "../layout/spaces";
+
+@import "../components/common/row";
+@import "../components/common/text";
+@import "../components/common/button";
+@import "../components/common/slider";
+
+.library {
+    padding: 216px 0 100px 0;
+
+    @include tablet {
+        padding-top: 100px;
+    }
+
+    @include mobile-l {
+        padding-top: 90px;
+    }
+}
