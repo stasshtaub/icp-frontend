@@ -12,7 +12,7 @@ if (form) {
 			loader && loader.classList.add("loader--active");
 			
 			const token = await grecaptcha.execute('6LeU5UkaAAAAALkmPBk8OgAGsiWiT4HeLcIdVw_v', { action: 'add_comment' })			
-			onSubmit(token);
+			await onSubmit(token);
 
 			loader && loader.classList.remove("loader--active");
 		});		
