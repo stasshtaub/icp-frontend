@@ -7,6 +7,9 @@ mixin comments(items)
         
         .comments__list
             +comments-list(items)
+        
+        .comments__more
+            +button("Показать ещё").comments__more-btn
 
         .comments__form
             +comments-form()#comments-form

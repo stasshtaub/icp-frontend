@@ -1,43 +1,116 @@
 .comments-form {
+	position: relative;
 	padding: 10px 0;
 
 	&__remember {
-        margin-top: 35px;
-        
-        @include mobile-l {
-            margin-top: 25px;
-        }
+		margin-top: 35px;
+
+		@include mobile-l {
+			margin-top: 25px;
+		}
 	}
 
 	&__submit-btn {
-        margin-top: 85px;
-        
-        @include tablet {
-            margin-top: 50px;
-        }
-        
-        @include mobile-l {
-            margin-top: 30px;
-        }
+		margin-top: 85px;
+
+		@include tablet {
+			margin-top: 50px;
+		}
+
+		@include mobile-l {
+			margin-top: 30px;
+		}
 	}
 
 	&__row {
 		margin-right: -30px;
 		display: flex;
 		flex-wrap: wrap;
-    }
-    
+	}
+
 	&__col {
 		padding: 18px 30px 0 0;
 		flex-basis: 300px;
 		flex-grow: 1;
-    }
-    
-    &__textarea {
-        resize: vertical;
-    }
+	}
+
+	&__textarea {
+		resize: vertical;
+	}
+
+	&__reply-tag {
+		display: inline-flex;
+		padding: 5px 10px;
+		border-radius: 10px;
+		background-color: $color-blue11;
+		align-items: center;
+		color: $color-white;
+		margin-bottom: 10px;
+	}
+
+	&__reply-tag-close {
+		margin-left: 1em;
+		width: 1em;
+		height: 1em;
+		background: url("../images/sprite.svg#icon-close") no-repeat 50%;
+		background-size: cover;
+		border: none;
+		outline: none;
+		filter: brightness(10);
+	}
+
+	&__avatar {
+		width: 80px;
+		height: 80px;
+		position: relative;
+	}
+
+	&__avatar-img {
+		height: inherit;
+		width: inherit;
+		border: 3px solid lightblue;
+		border-radius: 50%;
+		transition: ease-out 200ms;
+		background: url(../images/common.svg#noavatar) center center/cover
+	}
+
+	&__avatar-input {
+		display: none;
+	}
+
+	&__avatar-label {
+		position: absolute;
+		bottom: 0;
+		right: 0;
+		height: 30px;
+		width: 30px;
+		background: lightblue url(../images/common.svg#camera-solid) no-repeat center;
+		background-size: 50%;
+		border-radius: 50%;
+		box-shadow: 0px 3px 5px -1px rgba(0, 0, 0, 0.2),
+			0px 6px 10px 0px rgba(0, 0, 0, 0.14),
+			0px 1px 18px 0px rgba(0, 0, 0, 0.12);
+		transition: ease-out 200ms;
+		cursor: pointer;
+
+		&:hover,
+		&:focus {
+			box-shadow: 0px 5px 5px -3px rgba(0, 0, 0, 0.2),
+				0px 8px 10px 1px rgba(0, 0, 0, 0.14),
+				0px 3px 14px 2px rgba(0, 0, 0, 0.12);
+			background-color: #1e94bb;
+		}
+	}
 
 	.form__input {
 		width: 100%;
+	}
+
+	.loader {
+		width: calc(100% + 20px);
+		height: calc(100% + 20px);
+		border-radius: 4px;
+		left: -10px;
+		top: -10px;
 	}
 }

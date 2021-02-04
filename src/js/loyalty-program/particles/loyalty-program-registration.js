@@ -1,5 +1,5 @@
 import IMask from "imask";
-import { showMessage } from "../../forms/particles/message";
+import { showMessage } from "../../components/message";
 
 const form = document.getElementById("loyalty-program-registration__form");
 
