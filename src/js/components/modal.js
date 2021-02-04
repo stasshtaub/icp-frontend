@@ -9,7 +9,6 @@ export class Modal {
         } else {
             const div = document.createElement("div");
             
-            console.log("customClass", customClass);
             div.innerHTML = `
                 <div class="modal ${ customClass }">
                     <div class="modal__backdrop modal__close-trigger">

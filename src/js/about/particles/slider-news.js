@@ -33,7 +33,6 @@
 				if (activeIndex === 0 && !prevMask.classList.contains("about-news__nav-mask--visible")) {
 					prevMask.classList.add("about-news__nav-mask--visible");
 				} else if (!nextMask.classList.contains("about-news__nav-mask--visible")) {
-					console.log("from end", activeIndex);
 					nextMask.classList.add("about-news__nav-mask--visible");
 				}
 			}

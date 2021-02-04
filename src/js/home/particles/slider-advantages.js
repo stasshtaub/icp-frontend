@@ -11,11 +11,9 @@
 
 	const breakpointChecker = () => {
 		if (breakpointMobileL.matches) {
-			console.log('init');
 			initSwiper();
 		} else {
 			if (swiper) {
-				console.log('destroy');
 				destroySwiper();
 			}
 		}

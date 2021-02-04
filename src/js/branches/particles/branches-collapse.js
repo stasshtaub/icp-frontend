@@ -8,7 +8,6 @@ branches.forEach((branch) => {
 	const collapsedContent = branch.querySelector(".branches-map__collapsed-content");
 
 	cityName.addEventListener("click", () => {
-		console.log("click, branch:", branch);
 		if (branch.classList.contains(colapsedClassName)) {
             branches.forEach(({ classList }) => {
                 if (!classList.contains(colapsedClassName)) {
