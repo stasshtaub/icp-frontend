@@ -22,7 +22,8 @@ module.exports = {
 		"loyalty-program": "./src/js/loyalty-program",
 		"news-detail2": "./src/js/news-detail2",
 		"helpers/video-modals": "./src/js/helpers/video-modals",
-		library: "./src/js/library"
+		library: "./src/js/library",
+		education: "./src/js/education"
 	},
 	module: {
 		rules: [
