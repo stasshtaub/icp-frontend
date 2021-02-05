@@ -8,8 +8,10 @@ block content
     .library
         include particles/library-header
         include particles/library-main
+        include particles/library-videos
        
 block scripts
     script(src!=`${baseDir}js/common.js?v=${Date.now()}`)
     script(defer src!="https://unpkg.com/swiper/swiper-bundle.min.js")
     script(defer src!=`${baseDir}js/library.js?v=${Date.now()}`)
+    script(defer src!=`${baseDir}js/helpers/video-modals.js?v=${Date.now()}`)

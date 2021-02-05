@@ -7,13 +7,15 @@
 @import "../components/common/row";
 @import "../components/common/text";
 @import "../components/common/button";
-@import "../components/common/slider";
+@import "../components/common/inline-slider";
+@import "../components/common/media-card";
 
 @import "../components/library/library-header";
 @import "../components/library/library-main";
+@import "../components/library/library-videos";
 
 .library {
-    padding: 216px 0 100px 0;
+    padding-top: 216px;
     background-color: $color-black;
 
     @include tablet {

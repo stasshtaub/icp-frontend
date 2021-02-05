@@ -1,0 +1,21 @@
+.library-videos {
+	background-color: $color-white;
+	padding: 32px 0;
+
+	&__item {
+		width: 430px;
+        max-width: calc(100vw - 40px);
+	}
+
+    &__content {
+        margin-top: 20px;
+    }
+
+    &__card-description {
+        margin-top: 10px;
+    }
+
+    .inline-slider__nav-mask--right {
+        background: linear-gradient(270deg, $color-white 45%, rgba($color-white, 0));
+    }
+}

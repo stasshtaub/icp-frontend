@@ -1,0 +1,55 @@
+.media-card {
+	$p: &;
+
+    cursor: pointer;
+
+	&:hover {
+        #{$p}__title {
+            text-decoration: underline;
+        }
+	}
+
+	&__play-btn {
+		width: 93px;
+		height: 93px;
+		background: $color-white url("../images/common.svg#icon-play") no-repeat
+			center;
+        background-size: 50%;
+		border-radius: 50%;
+		border: none;
+		outline: none;
+		position: absolute;
+		transition: transform 0.1s ease-in-out;
+	}
+
+	&__poster {
+		position: relative;
+		background: $color-blue2;
+		box-shadow: 0px 5px 10px rgba($color-black, 0.25);
+
+		&--video {
+			#{$p}__play-btn {
+				left: 50%;
+				top: 50%;
+				transform: translate(-50%, -50%);
+
+                &:hover {
+                    transform: translate(-50%, -50%) scale(1.05);
+                }
+			}
+		}
+	}
+
+	&__img {
+		object-fit: cover;
+		display: block;
+	}
+
+	&__info {
+		margin-top: 20px;
+	}
+
+	&__description {
+		margin-top: 10px;
+	}
+}

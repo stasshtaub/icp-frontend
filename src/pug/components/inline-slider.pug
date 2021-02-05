@@ -1,0 +1,19 @@
+mixin inline-slider(items, className)
+    - const slots = []
+        
+    mixin slot(key)
+        - slots[key] = block
+
+    block
+
+    .inline-slider
+        .inline-slider__nav-mask.inline-slider__nav-mask--left
+            button.inline-slider__nav-btn.inline-slider__nav-btn--prev >
+        .inline-slider__slider.swiper-container(class=className)
+            ul.inline-slider__slides.swiper-wrapper
+                each item, i in items
+                    if slots[i]
+                        li.inline-slider__slide.swiper-slide
+                            - slots[i]()
+            .inline-slider__nav-mask.inline-slider__nav-mask--right.inline-slider__nav-mask--visible
+                button.inline-slider__nav-btn.inline-slider__nav-btn--next >

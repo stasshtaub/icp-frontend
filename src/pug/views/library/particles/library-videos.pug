@@ -1,0 +1,45 @@
+include ../../../components/inline-slider
+include ./mixins/media-card
+
+-
+    const videosItems = [
+        {
+            title: "Программа повышения мастерства 1",
+            description: "Подготовки к сертификации по международным стандартам ICF",
+            img: "images/svg/library-posters/videos/poster-1.svg"
+        },
+        {
+            title: "Программа повышения мастерства 2",
+            description: "Подготовки к сертификации по международным стандартам ICF",
+            img: "images/svg/library-posters/videos/poster-2.svg"
+        },
+        {
+            title: "Программа повышения мастерства 3",
+            description: "Подготовки к сертификации по международным стандартам ICF",
+            img: "images/svg/library-posters/videos/poster-3.svg"
+        },
+        {
+            title: "Программа повышения мастерства 4",
+            description: "Подготовки к сертификации по международным стандартам ICF",
+            img: "images/svg/library-posters/videos/poster-1.svg"
+        }
+    ]
+
+.library-videos
+    .container
+        h2.library-videos__title Все видео
+        .library-videos__content
+            +inline-slider(videosItems, "library-videos__slider")
+                +slot(0)
+                    .library-videos__item
+                        +media-card(videosItems[0].title, videosItems[0].description, videosItems[0].img, "video")
+                +slot(1)
+                    .library-videos__item
+                        +media-card(videosItems[1].title, videosItems[1].description, videosItems[1].img, "video")
+                +slot(2)
+                    .library-videos__item
+                        +media-card(videosItems[2].title, videosItems[2].description, videosItems[2].img, "video")
+                +slot(3)
+                    .library-videos__item
+                        +media-card(videosItems[3].title, videosItems[3].description, videosItems[3].img, "video")
+                            

@@ -1,0 +1,13 @@
+mixin media-card(title, description, img, type = "video")
+    label.media-card
+        .media-card__poster(class=`media-card__poster--${ type }`)
+            img(src=img alt="poster").media-card__img
+            case type
+                when "video"
+                    button(data-video="https://www.youtube.com/embed/N70RhicEoXY" data-video-name=description data-modal-title=title).media-card__play-btn
+                when "podcast"
+                    button.media-card__play-btn
+
+        .media-card__info
+            h3.text.text--s2.media-card__title= title
+            p.text.text--xs.media-card__description= description
