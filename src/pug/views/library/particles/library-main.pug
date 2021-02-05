@@ -1,0 +1,47 @@
+-
+    const mainItems = [
+        {
+            img: "https://loremflickr.com/490/270",
+            title: "Набор медиа материалов по программе«Коучинг. Возможности без границ»",
+            count: "12 материалов"
+        },
+        {
+            img: "https://loremflickr.com/490/271",
+            title: "Набор медиа материалов по программе«Cупер новое название»",
+            count: "12 материалов"
+        },
+        {
+            img: "https://loremflickr.com/490/272",
+            title: "Набор медиа материалов по программе«Коучинг. Возможности без границ»",
+            count: "12 материалов"
+        },
+        {
+            img: "https://loremflickr.com/490/273",
+            title: "Набор медиа материалов по программе«Cупер новое название»",
+            count: "12 материалов"
+        },
+        {
+            img: "https://loremflickr.com/490/274",
+            title: "Набор медиа материалов по программе«Коучинг. Возможности без границ»",
+            count: "12 материалов"
+        },
+        {
+            img: "https://loremflickr.com/490/275",
+            title: "Набор медиа материалов по программе«Cупер новое название»",
+            count: "12 материалов"
+        },
+    ]
+
+.library-main
+    .container
+        ul.library-main__list
+            each item in mainItems
+                li.library-main__item
+                    a(href="#").library-main__card
+                        img(src=item.img alt="library image").library-main__img
+                        .library-main__info
+                            h3.library-main__title.text.text--s2= item.title
+                            p.library-main__count= item.count
+        .library-main__more
+            +button("Загрузить ещё", [], "size-normal", "color-white")#library-main__more-btn.library-main__more-btn
+                            

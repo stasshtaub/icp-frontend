@@ -9,8 +9,12 @@
 @import "../components/common/button";
 @import "../components/common/slider";
 
+@import "../components/library/library-header";
+@import "../components/library/library-main";
+
 .library {
     padding: 216px 0 100px 0;
+    background-color: $color-black;
 
     @include tablet {
         padding-top: 100px;

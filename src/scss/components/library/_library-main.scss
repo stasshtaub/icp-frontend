@@ -1,0 +1,81 @@
+.library-main {
+    $p: &;
+    
+    margin-top: 28px;
+
+    &__list {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 50px 35px;
+
+        @include laptop {
+            column-gap: 25px;
+        }
+
+        @include tablet {
+            grid-template-columns: repeat(2, 1fr);
+        }
+
+        @include tablet-s {
+            column-gap: 15px;
+        }
+
+        @include tablet-xs {
+            grid-template-columns: 1fr;
+            column-gap: 15px;
+        }
+
+        @include mobile-l {
+            row-gap: 30px;
+        }
+    }
+    
+    &__img {
+        width: 100%;
+        object-fit: cover;
+    }
+    
+    &__info {
+        margin-top: 20px;
+        flex-grow: 1;
+        display: flex;
+        flex-direction: column;
+    }
+    
+    &__count {
+        font-size: 10px;
+        line-height: 200%;
+        letter-spacing: 1px;
+        text-transform: uppercase;
+        font-weight: bold;
+        margin-top: auto;
+    }
+    
+    &__card {
+        display: flex;
+        flex-direction: column;
+        height: 100%;
+        text-decoration: none;
+        color: unset;
+
+        &:hover {
+            #{$p}__title {
+                text-decoration: underline;
+            }
+        }
+    }
+    
+    &__title {
+        margin-bottom: 16px;
+    }
+
+    &__more {
+        margin-top: 70px;
+        justify-content: center;
+        display: flex;
+
+        @include tablet {
+            margin-top: 40px;
+        }
+    }
+}
