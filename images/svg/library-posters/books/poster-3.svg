@@ -1,0 +1,14 @@
+<svg width="166" height="214" viewBox="0 0 166 214" fill="none" xmlns="http://www.w3.org/2000/svg">
+<rect width="428" height="257" fill="black"/>
+<rect width="85.9821" height="85.6667" fill="#1488CC"/>
+<rect x="85.9824" width="42.8" height="85.6667" fill="white"/>
+<rect x="128.4" width="42.8" height="85.6667" fill="black"/>
+<rect y="85.6667" width="42.8" height="85.6667" fill="#283CB5"/>
+<rect y="171.333" width="42.8" height="85.6667" fill="#1488CC"/>
+<rect x="42.8008" y="171.333" width="171.2" height="85.6667" fill="#283CB5"/>
+<path fill-rule="evenodd" clip-rule="evenodd" d="M85.7919 171.333H128.783L85.7919 257H42.8008L85.7919 171.333Z" fill="#1488CC"/>
+<path fill-rule="evenodd" clip-rule="evenodd" d="M171.009 171.333H214L171.009 257H128.018L171.009 171.333Z" fill="#1488CC"/>
+<path fill-rule="evenodd" clip-rule="evenodd" d="M128.782 42.8334L85.9822 7.62939e-05V85.6667L128.782 42.8334Z" fill="#1488CC"/>
+<path fill-rule="evenodd" clip-rule="evenodd" d="M171.2 42.8334L128.4 7.62939e-05V85.6667L171.2 42.8334Z" fill="white"/>
+<path fill-rule="evenodd" clip-rule="evenodd" d="M85.2178 128.882L42.4178 86.0492L42.4178 171.716L85.2178 128.882Z" fill="#283CB5"/>
+</svg>
