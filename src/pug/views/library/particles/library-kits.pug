@@ -32,16 +32,16 @@
         },
     ]
 
-.library-main
+.library-kits
     .container
-        ul.library-main__list
+        ul.library-kits__list
             each item in mainItems
-                li.library-main__item
-                    a(href="#").library-main__card
-                        img(src=item.img alt="library image").library-main__img
-                        .library-main__info
-                            h3.library-main__title.text.text--s2= item.title
-                            p.library-main__count= item.count
-        .library-main__more
-            +button("Загрузить ещё", [], "size-normal", "color-white")#library-main__more-btn.library-main__more-btn
+                li.library-kits__item
+                    a(href="#").library-kits__card
+                        img(src=item.img alt="library image").library-kits__img
+                        .library-kits__info
+                            h3.library-kits__title.text.text--s2= item.title
+                            p.library-kits__count= item.count
+        .library-kits__more
+            +button("Загрузить ещё", [], "size-normal", "color-white")#library-kits__more-btn.library-kits__more-btn
                             
