@@ -1,4 +1,6 @@
 .inline-slider {
+	position: relative;
+
     &__slide {
         width: unset !important;
     }
@@ -10,12 +12,13 @@
 		top: -5%;
 		z-index: 999;
 		height: 110%;
-		width: 210px;
+		width: 80px;
 		opacity: 0;
-		transition: opacity 0.3s ease;	
+		transition: opacity 0.3s ease;
+		background: linear-gradient(270deg, $color-white 45%, rgba($color-white, 0));
 		
-		@include tablet-xs {
-			width: 100px;
+		@include tablet {
+			width: 60px;
 		}
 
 		@include mobile-l {
@@ -23,18 +26,13 @@
 		}
 
 		&--left {
-			width: 50px;
-			left: 2.77777778vw;
-			transform: rotate(180deg);
-			
-			@include tablet {
-				left: -30px;
-			}
+			left: 0;
+			transform: translateX(-50%) rotate(180deg);
 		}
 
 		&--right {
-			background: linear-gradient(270deg, $color-gray-light6 45%, rgba($color-gray-light6, 0));
-			right: -2px;
+			right: 0;
+			transform: translateX(50%);
 		}
 
 		&--visible {

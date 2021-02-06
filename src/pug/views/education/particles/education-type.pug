@@ -17,6 +17,10 @@ include ../../../components/inline-slider
         {
             top: "Единственный ли мы разум во Вселенной?",
             bottom: "Откуда в мире столько зла?"
+        },
+        {
+            top: "Единственный ли мы разум во Вселенной?",
+            bottom: "Откуда в мире столько зла?"
         }
     ]
 
@@ -46,3 +50,6 @@ mixin educationCard(item)
                     +slot(3)
                         .education-type__item
                             +educationCard(slides[3])
+                    +slot(4)
+                        .education-type__item
+                            +educationCard(slides[4])
