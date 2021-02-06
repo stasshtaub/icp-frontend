@@ -1,18 +1,18 @@
 .media-card {
 	$p: &;
 
-    cursor: pointer;
+	cursor: pointer;
 
 	&:hover {
-        #{$p}__title {
-            text-decoration: underline;
-        }
+		#{$p}__title {
+			text-decoration: underline;
+		}
 	}
 
 	&__play-btn {
 		background: $color-white url("../images/common.svg#icon-play") no-repeat
 			center;
-        background-size: 50%;
+		background-size: 50%;
 		border-radius: 50%;
 		border: none;
 		outline: none;
@@ -21,12 +21,10 @@
 	}
 
 	&__poster {
-		position: relative;
-		background: $color-blue2;
-		box-shadow: 0px 5px 10px rgba($color-black, 0.25);
-
 		&--video {
-			padding-bottom: 60%;
+			#{$p}__inner {
+				padding-bottom: 60%;
+			}
 
 			#{$p}__play-btn {
 				width: 93px;
@@ -35,14 +33,16 @@
 				top: 50%;
 				transform: translate(-50%, -50%);
 
-                &:hover {
-                    transform: translate(-50%, -50%) scale(1.05);
-                }
+				&:hover {
+					transform: translate(-50%, -50%) scale(1.05);
+				}
 			}
 		}
 
 		&--podcast {
-			padding-bottom: 100%;
+			#{$p}__inner {
+				padding-bottom: 100%;
+			}
 
 			#{$p}__play-btn {
 				width: 30px;
@@ -50,15 +50,26 @@
 				right: 20px;
 				bottom: 20px;
 
-                &:hover {
-                    transform: scale(1.2);
-                }
+				&:hover {
+					transform: scale(1.2);
+				}
 			}
 		}
 
 		&--book {
-			padding-bottom: 128.915663%;
+			max-width: 165px;
+			margin: 0 auto;
+
+			#{$p}__inner {
+				padding-bottom: 128.915663%;
+			}
 		}
+	}
+
+	&__inner {
+		position: relative;
+		background-color: $color-blue2;
+		box-shadow: 0px 5px 10px rgba($color-black, 0.25);
 	}
 
 	&__img {

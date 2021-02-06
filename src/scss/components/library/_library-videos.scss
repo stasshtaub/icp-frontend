@@ -1,5 +1,4 @@
 .library-videos {
-	background-color: $color-white;
 	padding: 32px 0;
 
 	&__item {
@@ -9,9 +8,5 @@
 
     &__content {
         margin-top: 20px;
-    }
-
-    &__card-description {
-        margin-top: 10px;
     }
 }

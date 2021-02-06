@@ -8,8 +8,10 @@ block content
     .library
         include particles/library-header
         include particles/library-main
-        include particles/library-videos
-        include particles/library-podcasts
+        .library__substrate.library__substrate--white
+            include particles/library-videos
+            include particles/library-podcasts
+            include particles/library-books
        
 block scripts
     script(src!=`${baseDir}js/common.js?v=${Date.now()}`)

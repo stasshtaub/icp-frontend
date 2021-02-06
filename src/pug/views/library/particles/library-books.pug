@@ -1,0 +1,72 @@
+include ../../../components/inline-slider
+include ./mixins/media-card
+
+-
+    const booksItems = [
+        {
+            title: "22:10",
+            description: "Подготовки к сертификации по международным стандартам ICF",
+            img: "images/svg/library-posters/books/poster-1.svg"
+        },
+        {
+            title: "22:10",
+            description: "Подготовки к сертификации по международным стандартам ICF",
+            img: "images/svg/library-posters/books/poster-2.svg"
+        },
+        {
+            title: "22:10",
+            description: "Подготовки к сертификации по международным стандартам ICF",
+            img: "images/svg/library-posters/books/poster-3.svg"
+        },
+        {
+            title: "22:10",
+            description: "Подготовки к сертификации по международным стандартам ICF",
+            img: "images/svg/library-posters/books/poster-4.svg"
+        },
+        {
+            title: "22:10",
+            description: "Подготовки к сертификации по международным стандартам ICF",
+            img: "images/svg/library-posters/books/poster-2.svg"
+        },
+        {
+            title: "22:10",
+            description: "Подготовки к сертификации по международным стандартам ICF",
+            img: "images/svg/library-posters/books/poster-3.svg"
+        },
+        {
+            title: "22:10",
+            description: "Подготовки к сертификации по международным стандартам ICF",
+            img: "images/svg/library-posters/books/poster-4.svg"
+        }
+    ]
+
+.library-books
+    .container
+        h2.text.text--m.text--bold.library-books__title Книги
+        .library-books__content
+            +inline-slider(booksItems, "library-books__slider")
+                +slot(0)
+                    .library-books__item
+                        +media-card(booksItems[0].title, booksItems[0].description, booksItems[0].img, "book")
+                +slot(1)
+                    .library-books__item
+                        +media-card(booksItems[1].title, booksItems[1].description, booksItems[1].img, "book")
+                +slot(2)
+                    .library-books__item
+                        +media-card(booksItems[2].title, booksItems[2].description, booksItems[2].img, "book")
+                +slot(3)
+                    .library-books__item
+                        +media-card(booksItems[3].title, booksItems[3].description, booksItems[3].img, "book")
+                +slot(4)
+                    .library-books__item
+                        +media-card(booksItems[4].title, booksItems[4].description, booksItems[4].img, "book")
+                +slot(5)
+                    .library-books__item
+                        +media-card(booksItems[5].title, booksItems[5].description, booksItems[5].img, "book")
+                +slot(6)
+                    .library-books__item
+                        +media-card(booksItems[6].title, booksItems[6].description, booksItems[6].img, "book")
+                +slot(7)
+                    .library-books__item
+                        +media-card(booksItems[7].title, booksItems[7].description, booksItems[7].img, "book")
+                            

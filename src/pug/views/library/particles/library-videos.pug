@@ -27,7 +27,7 @@ include ./mixins/media-card
 
 .library-videos
     .container
-        h2.library-videos__title Все видео
+        h2.text.text--m.text--bold.library-videos__title Все видео
         .library-videos__content
             +inline-slider(videosItems, "library-videos__slider")
                 +slot(0)
