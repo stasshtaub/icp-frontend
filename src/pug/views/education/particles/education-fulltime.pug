@@ -1,0 +1,68 @@
+include ../../../components/quote
+
+-
+    const user = { img: "https://loremflickr.com/45/45", name: "Марина Жигулина" };
+
+    const fulltimeSteps = {
+        normal: [
+            {
+                img: "https://loremflickr.com/315/335",
+                text: "Да, вы не ошиблись: темный кинозал «Ножа»"
+            },
+            {
+                img: "https://loremflickr.com/315/275",
+                text: "Вновь распахивает свои скрипучие двери, "
+            },
+            {
+                img: "https://loremflickr.com/315/340",
+                text: "Да, вы не ошиблись: темный кинозал «Ножа»"
+            }
+        ],
+        revert: [
+            {
+                img: "https://loremflickr.com/315/305",
+                text: "Да, вы не ошиблись: темный кинозал «Ножа»"
+            },
+            {
+                img: "https://loremflickr.com/315/277",
+                text: "Да, вы не ошиблись: темный кинозал «Ножа»"
+            },
+            {
+                img: "https://loremflickr.com/315/341",
+                text: "Вновь распахивает свои скрипучие двери"
+            }
+        ]
+    };
+
+mixin fulltimeStepsCol(items, isRevert = false)
+    .education-fulltime__steps-col
+        ul.education-fulltime__steps-list
+            each step in items
+                li.education-fulltime__step(class=`${ isRevert ? "education-fulltime__step--revert" : "" }`)
+                    img(src=step.img alt="full-time education step").education-fulltime__step-img
+                    .education-fulltime__step-description
+                        span.text.text--s= step.text
+
+
+.education-fulltime
+    .container
+        .education-fulltime__row
+            .education-fulltime__col.education-fulltime__col--left
+                h2.text.text--xl2.text--bold700 Как проходит очное обучение
+                .mt-70
+                    p.text.text--m Саламандра ползает по стволу дерева и заражает ядом его плоды. Американец, возглавляющий агентурную сеть, во время роковой встречи с парикмахером по кличке Католик не отражается в зеркале. 
+                .mt-70
+                    +quote(user)
+                        p.text.text--m «Я шел, спускаясь в темные коридоры и потом опять поднимаясь наверх»
+                .mt-70
+                    p.text.text--s Да, вы не ошиблись: темный кинозал «Ножа» вновь распахивает свои скрипучие двери, по заросшим паутиной углам жмутся демоны-фамилиары, а наш легендарный киномеханик Гарик Осипов зловеще хохочет, заправляя в аппарат видавшую виды пленку со старым шпионским фильмом.
+                        br
+                        br
+                        | Наберитесь мужества: от зловещих тайн, к раскрытию которых мы приступаем, вам на протяжении всего сеанса будет немного не по себе.
+                .mt-65
+                    +button("Все очные программы", [], "size-normal", "color-white", null, "a")
+
+            .education-fulltime__col.education-fulltime__col--right
+                .education-fulltime__steps
+                    +fulltimeStepsCol(fulltimeSteps.normal)
+                    +fulltimeStepsCol(fulltimeSteps.revert, true)

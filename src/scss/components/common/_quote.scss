@@ -1,10 +1,31 @@
 .quote {
-	padding-top: 15px;
+	&__user {
+		display: flex;
+		align-items: center;
+		margin-left: 20px;
+		margin-bottom: 12px;
+	}
+
+	&__user-img {
+		$size: 43px;
+
+		width: $size;
+		height: $size;
+		object-fit: cover;
+		flex-shrink: 0;
+		border-radius: 50%;
+		margin-right: 20px;
+	}
+
+	&__inner {
+		padding-top: 15px;
+	}
 
 	&__body {
 		padding: 28px 16px 24px 40px;
 		background-color: $color-white;
         position: relative;
+		color: $color-gray;
         
         @include tablet-xs {
             padding: 20px 12px 18px 30px;

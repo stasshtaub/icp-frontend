@@ -18,6 +18,18 @@
     margin-top: 65px;
 }
 
+.mt-70 {
+    margin-top: 70px;
+
+    @include tablet {
+        margin-top: 50px;
+    }
+
+    @include mobile-l {
+        margin-top: 30px;
+    }
+}
+
 .mt-80 {
     margin-top: 80px;
 }
