@@ -1,6 +1,6 @@
-export const init = (wrapper = document) => {
+export const init = (wrapper = document, listeners = {}) => {
     {
-        const container = wrapper.querySelector(".inline-slider__slider");
+        const container = wrapper.querySelector(".swiper-container");
         const prevMask = wrapper.querySelector(".inline-slider__nav-mask--left");
         const nextMask = wrapper.querySelector(".inline-slider__nav-mask--right");
         const prevEl = wrapper.querySelector(".inline-slider__nav-btn--prev");
@@ -33,7 +33,8 @@ export const init = (wrapper = document) => {
                     } else if (!nextMask.classList.contains("inline-slider__nav-mask--visible")) {
                         nextMask.classList.add("inline-slider__nav-mask--visible");
                     }
-                }
+                },
+                ...listeners
             }
         });
     }    

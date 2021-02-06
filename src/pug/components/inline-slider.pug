@@ -6,7 +6,7 @@ mixin inline-slider(items, className)
 
     block
 
-    .inline-slider
+    .inline-slider&attributes(attributes)
         .inline-slider__nav-mask.inline-slider__nav-mask--left
             button.inline-slider__nav-btn.inline-slider__nav-btn--prev >
         .inline-slider__slider.swiper-container(class=className)

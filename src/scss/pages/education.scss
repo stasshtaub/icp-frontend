@@ -7,7 +7,11 @@
 @import "../components/common/row";
 @import "../components/common/text";
 @import "../components/common/button";
-@import "../components/common/slider";
+@import "../components/common/double-block";
+@import "../components/common/inline-slider";
+
+@import "../components/education/education-header";
+@import "../components/education/education-type";
 
 .education {
     padding: 216px 0 100px 0;
