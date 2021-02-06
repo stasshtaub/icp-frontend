@@ -30,9 +30,16 @@
             row-gap: 30px;
         }
     }
+
+    &__img-wrp {
+        position: relative;
+        padding-bottom: 60%;
+    }
     
     &__img {
+        position: absolute;
         width: 100%;
+        height: 100%;
         object-fit: cover;
     }
     

@@ -38,7 +38,8 @@
             each item in mainItems
                 li.library-kits__item
                     a(href="#").library-kits__card
-                        img(src=item.img alt="library image").library-kits__img
+                        .library-kits__img-wrp
+                            img(src=item.img alt="library image").library-kits__img
                         .library-kits__info
                             h3.library-kits__title.text.text--s2= item.title
                             p.library-kits__count= item.count
