@@ -13,6 +13,7 @@
 @import "../components/library/library-header";
 @import "../components/library/library-main";
 @import "../components/library/library-videos";
+@import "../components/library/library-podcasts";
 
 .library {
     padding-top: 216px;
@@ -24,5 +25,9 @@
 
     @include mobile-l {
         padding-top: 90px;
+    }
+
+    .inline-slider__nav-mask--right {
+        background: linear-gradient(270deg, $color-white 45%, rgba($color-white, 0));
     }
 }

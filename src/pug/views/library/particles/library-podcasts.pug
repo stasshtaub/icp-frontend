@@ -1,0 +1,72 @@
+include ../../../components/inline-slider
+include ./mixins/media-card
+
+-
+    const podcastsItems = [
+        {
+            title: "22:10",
+            description: "Подготовки к сертификации по международным стандартам ICF",
+            img: "images/svg/library-posters/podcasts/poster-1.svg"
+        },
+        {
+            title: "22:10",
+            description: "Подготовки к сертификации по международным стандартам ICF",
+            img: "images/svg/library-posters/podcasts/poster-2.svg"
+        },
+        {
+            title: "22:10",
+            description: "Подготовки к сертификации по международным стандартам ICF",
+            img: "images/svg/library-posters/podcasts/poster-3.svg"
+        },
+        {
+            title: "22:10",
+            description: "Подготовки к сертификации по международным стандартам ICF",
+            img: "images/svg/library-posters/podcasts/poster-4.svg"
+        },
+        {
+            title: "22:10",
+            description: "Подготовки к сертификации по международным стандартам ICF",
+            img: "images/svg/library-posters/podcasts/poster-2.svg"
+        },
+        {
+            title: "22:10",
+            description: "Подготовки к сертификации по международным стандартам ICF",
+            img: "images/svg/library-posters/podcasts/poster-3.svg"
+        },
+        {
+            title: "22:10",
+            description: "Подготовки к сертификации по международным стандартам ICF",
+            img: "images/svg/library-posters/podcasts/poster-4.svg"
+        }
+    ]
+
+.library-podcasts
+    .container
+        h2.library-podcasts__title Подкасты
+        .library-podcasts__content
+            +inline-slider(podcastsItems, "library-podcasts__slider")
+                +slot(0)
+                    .library-podcasts__item
+                        +media-card(podcastsItems[0].title, podcastsItems[0].description, podcastsItems[0].img, "podcast")
+                +slot(1)
+                    .library-podcasts__item
+                        +media-card(podcastsItems[1].title, podcastsItems[1].description, podcastsItems[1].img, "podcast")
+                +slot(2)
+                    .library-podcasts__item
+                        +media-card(podcastsItems[2].title, podcastsItems[2].description, podcastsItems[2].img, "podcast")
+                +slot(3)
+                    .library-podcasts__item
+                        +media-card(podcastsItems[3].title, podcastsItems[3].description, podcastsItems[3].img, "podcast")
+                +slot(4)
+                    .library-podcasts__item
+                        +media-card(podcastsItems[4].title, podcastsItems[4].description, podcastsItems[4].img, "podcast")
+                +slot(5)
+                    .library-podcasts__item
+                        +media-card(podcastsItems[5].title, podcastsItems[5].description, podcastsItems[5].img, "podcast")
+                +slot(6)
+                    .library-podcasts__item
+                        +media-card(podcastsItems[6].title, podcastsItems[6].description, podcastsItems[6].img, "podcast")
+                +slot(7)
+                    .library-podcasts__item
+                        +media-card(podcastsItems[7].title, podcastsItems[7].description, podcastsItems[7].img, "podcast")
+                            
