@@ -8,6 +8,8 @@
 	&__content {
 		flex-grow: 1;
 		margin-left: 110px;
+		// fix for swiper in flex container
+		min-width: 0;
 
 		@include laptop {
 			margin-left: 113px;

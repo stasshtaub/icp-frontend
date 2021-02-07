@@ -1,0 +1,29 @@
+@import "../utils/variables";
+@import "../utils/breakpoints";
+@import "../utils/helpers";
+
+@import "../layout/spaces";
+
+@import "../components/common/row";
+@import "../components/common/text";
+@import "../components/common/button";
+@import "../components/common/double-block";
+@import "../components/common/inline-slider";
+@import "../components/common/quote";
+
+@import "../components/education/education-header";
+@import "../components/education/education-type";
+@import "../components/education/education-fulltime";
+@import "../components/education/education-online";
+
+.education {
+    padding-top: 216px;
+
+    @include tablet {
+        padding-top: 100px;
+    }
+
+    @include mobile-l {
+        padding-top: 90px;
+    }
+}

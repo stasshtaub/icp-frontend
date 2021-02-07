@@ -1,0 +1,55 @@
+include ../../../components/inline-slider
+
+- 
+    const slides = [
+        {
+            top: "Онлайн обучение?",
+            bottom: "Очное обучение?"
+        },
+        {
+            top: "Почему есть богатые и бедные?",
+            bottom: "Когда кончатся войны?"
+        },
+        {
+            top: "Куда уходит радость жизни?",
+            bottom: "Почему люди так жестоки?"
+        },
+        {
+            top: "Единственный ли мы разум во Вселенной?",
+            bottom: "Откуда в мире столько зла?"
+        },
+        {
+            top: "Единственный ли мы разум во Вселенной?",
+            bottom: "Откуда в мире столько зла?"
+        }
+    ]
+
+mixin educationCard(item)
+    .education-type__card
+        .education-type__card-top
+            span.education-type__card-text= item.top
+        .education-type__card-bottom
+            span.education-type__card-text= item.bottom
+
+.education-type
+    .container
+        .education-type__double-block.double-block
+            aside.double-block__aside
+                h3.double-block__title Какой тип обучения тебе подходит?
+            .double-block__content.double-block__content--narrow
+                +inline-slider(slides, "education-type__slider").education-type__inline-slider
+                    +slot(0)
+                        .education-type__item
+                            +educationCard(slides[0])
+                    +slot(1)
+                        .education-type__item
+                            +educationCard(slides[1])
+                    +slot(2)
+                        .education-type__item
+                            +educationCard(slides[2])
+                    +slot(3)
+                        .education-type__item
+                            +educationCard(slides[3])
+                    +slot(4)
+                        .education-type__item
+                            +educationCard(slides[4])

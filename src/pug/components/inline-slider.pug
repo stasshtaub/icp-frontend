@@ -6,7 +6,7 @@ mixin inline-slider(items, className)
 
     block
 
-    .inline-slider
+    .inline-slider&attributes(attributes)
         .inline-slider__nav-mask.inline-slider__nav-mask--left
             button.inline-slider__nav-btn.inline-slider__nav-btn--prev >
         .inline-slider__slider.swiper-container(class=className)
@@ -15,5 +15,5 @@ mixin inline-slider(items, className)
                     if slots[i]
                         li.inline-slider__slide.swiper-slide
                             - slots[i]()
-            .inline-slider__nav-mask.inline-slider__nav-mask--right.inline-slider__nav-mask--visible
-                button.inline-slider__nav-btn.inline-slider__nav-btn--next >
+        .inline-slider__nav-mask.inline-slider__nav-mask--right.inline-slider__nav-mask--visible
+            button.inline-slider__nav-btn.inline-slider__nav-btn--next >

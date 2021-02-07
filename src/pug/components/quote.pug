@@ -1,4 +1,9 @@
-mixin quote()
+mixin quote(user)
     .quote
-        .quote__body
-            block
+        if user
+            .quote__user
+                img(src=user.img alt="user avatar").quote__user-img
+                span.quote__user-name.text.text--s2.text--bold700= user.name
+        .quote__inner
+            .quote__body
+                block

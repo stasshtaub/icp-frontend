@@ -1,0 +1,57 @@
+include ../../../components/quote
+
+-
+    const educationOnlineUser = { img: "https://loremflickr.com/45/45", name: "Марина Жигулина" };
+
+    const educationOnlineSlides = [
+        {
+            img: "https://loremflickr.com/800/765",
+            thumb: "Перейдите в ваш партнёрский кабинет.<br>В него вы можете попасть сразу после регистрации в программе лояльности, либо через ссылку в письме."
+        },
+        {
+            img: "https://loremflickr.com/800/766",
+            thumb: "Перейдите в ваш партнёрский кабинет.<br>В него вы можете попасть сразу после регистрации в программе лояльности, либо через ссылку в письме."
+        },
+        {
+            img: "https://loremflickr.com/800/767",
+            thumb: "Перейдите в ваш партнёрский кабинет.<br>В него вы можете попасть сразу после регистрации в программе лояльности, либо через ссылку в письме."
+        }
+    ]
+
+.education-online
+    .container
+        .education-online__row
+            .education-online__col.education-online__col--left
+                .education-online__steps
+                    .education-online__slider-wrp
+                        .education-online__slider
+                            .swiper-container
+                                .swiper-wrapper
+                                    each slide, i in educationOnlineSlides
+                                        .swiper-slide
+                                            .education-online__slide
+                                                img(src=slide.img alt="education online step").education-online__slide-img
+                    .education-online__thumbs
+                        .swiper-container
+                            .swiper-wrapper
+                                each slide, i in educationOnlineSlides
+                                    .swiper-slide
+                                        .education-online__thumbs-card
+                                            p.education-online__thumbs-step= `${ i + 1 } шаг`
+                                            .education-online__thumbs-description
+                                                p.text.text--s !{ slide.thumb }
+
+            .education-online__col.education-online__col--right
+                h2.education-online__title.text.text--xl2.text--bold700 Как проходит онлайн обучение
+                .mt-70
+                    p.text.text--m Саламандра ползает по стволу дерева и заражает ядом его плоды. Американец, возглавляющий агентурную сеть, во время роковой встречи с парикмахером по кличке Католик не отражается в зеркале. 
+                .mt-70
+                    p.text.text--s Да, вы не ошиблись: темный кинозал «Ножа» вновь распахивает свои скрипучие двери, по заросшим паутиной углам жмутся демоны-фамилиары, а наш легендарный киномеханик Гарик Осипов зловеще хохочет, заправляя в аппарат видавшую виды пленку со старым шпионским фильмом.
+                        br
+                        br
+                        | Наберитесь мужества: от зловещих тайн, к раскрытию которых мы приступаем, вам на протяжении всего сеанса будет немного не по себе.
+                .mt-70
+                    +quote(educationOnlineUser)
+                        p.text.text--m «Я шел, спускаясь в темные коридоры и потом опять поднимаясь наверх»
+                .mt-65
+                    +button("Все онлайн программы", [], "size-normal", "color-white", null, "a")
