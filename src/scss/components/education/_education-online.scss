@@ -1,0 +1,41 @@
+.education-online {
+	$p: &;
+
+	padding: 175px 0 60px 0;
+	background-color: $color-blue12;
+	color: $color-white;
+
+	&__row {
+		display: flex;
+
+		@include laptop {
+			flex-direction: column;
+		}
+	}
+
+	&__col {
+		&--left {
+			flex-basis: 640px;
+			margin-right: 50px;
+			min-width: 0;
+
+			@include laptop {
+				flex-basis: unset;
+				flex-shrink: unset;
+				margin-right: 0;
+			}
+		}
+
+		&--right {
+			margin-left: auto;
+			flex-basis: 660px;
+			flex-shrink: 4;
+
+			@include laptop {
+				flex-basis: unset;
+				flex-shrink: unset;
+				margin: 50px 0 0 0;
+			}
+		}
+	}
+}

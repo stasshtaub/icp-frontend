@@ -14,9 +14,10 @@
 @import "../components/education/education-header";
 @import "../components/education/education-type";
 @import "../components/education/education-fulltime";
+@import "../components/education/education-online";
 
 .education {
-    padding: 216px 0 100px 0;
+    padding-top: 216px;
 
     @include tablet {
         padding-top: 100px;
