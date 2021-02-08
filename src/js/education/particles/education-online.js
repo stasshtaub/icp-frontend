@@ -7,6 +7,8 @@ import { shuffleElement } from "../../helpers/shuffleElement";
 	const thumbsContainer = document.querySelector(
 		".education-online__thumbs .swiper-container"
 	);
+	const prevEl = document.querySelector(".education-online__btn--prev");
+	const nextEl = document.querySelector(".education-online__btn--next");
 
 	const commonOptions = {
 		spaceBetween: 30,
@@ -19,10 +21,10 @@ import { shuffleElement } from "../../helpers/shuffleElement";
 	});
 	const swiper = new Swiper(container, {
 		...commonOptions,
-		// navigation: {
-		//     prevEl,
-		//     nextEl
-		// },
+		navigation: {
+		    prevEl,
+		    nextEl
+		},
 		mousewheel: {
 			forceToAxis: true,
 			invert: true,

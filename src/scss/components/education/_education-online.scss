@@ -87,4 +87,40 @@
 			margin-bottom: 50px;
 		}
 	}
+
+	&__buttons {
+		position: absolute;
+		width: 100%;
+		top: 50%;
+		transform: translateY(-50%);
+		display: flex;
+		justify-content: space-between;
+	}
+
+	&__btn {
+		width: 12px;
+		height: 24px;
+		display: block;
+		border: none;
+		outline: none;
+		background: transparent url(../images/common.svg#icon-prev-arrow-gray)
+			no-repeat center;
+		background-size: 12px;
+		padding: 20px;
+		box-sizing: content-box;
+
+		&--prev {
+			@include desktop {
+				margin-left: 20px;
+			}
+
+			@include laptop {
+				margin-left: 0;
+			}
+		}
+
+		&--next {
+			transform: rotate(180deg);
+		}
+	}
 }
