@@ -25,6 +25,14 @@
 		align-items: stretch;
 	}
 
+	
+.capabilities-program__slide--1 .capabilities-program__module::before {
+	/*! padding: 7% 0; */
+  }
+  .capabilities-program__slide--1 .capabilities-program__module {
+	position: relative;
+  }
+
 	&__slide {
 		position: relative;
 		display: flex;
@@ -69,18 +77,25 @@
 			}
 
 			#{$p}__module {
+				position: relative;
+				
+				@include slide-breakpoint {
+					position: unset;
+				}
+
 				&::before {
 					width: 615px;
-					height: 294px;
+					height: 162%;
 					background: $color-green-light2;
 					mix-blend-mode: lighten;
 					clip-path: polygon(0 30px, 100% 0%, 100% 100%, 0% 100%);
-					transform: translate(-33px, -75px);
+					transform: translate(-6%,-27%);
 
 					@include slide-breakpoint {
 						height: 194px;
 						width: 764px;
 						left: 33px;
+						transform: translate(-33px, -75px);
 					}
 
 					@include mobile-l {
