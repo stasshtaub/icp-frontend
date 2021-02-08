@@ -5,15 +5,15 @@ include ../mixins/loader
 mixin comments-form()
     form(action="https://jsonplaceholder.typicode.com/posts" method="POST").form.comments-form&attributes(attributes)
         input(name="reply" type="text" hidden)
-        +form-item("Аватар")
-            .comments-form__avatar
-                .comments-form__avatar-img(aria-label="user avatar")
-                label(role="button").comments-form__avatar-label
-                    input(type="file" name="avatar" accept="image/*").comments-form__avatar-input
-
         +form-item("Комментрарий")
             textarea(name="text" placeholder="Текст" required).form__input.comments-form__textarea
         .comments-form__row
+            .comments-form__col.comments-form__col--fit
+                +form-item()
+                    .comments-form__avatar
+                        .comments-form__avatar-img(aria-label="user avatar")
+                        label(role="button").comments-form__avatar-label
+                            input(type="file" name="avatar" accept="image/*").comments-form__avatar-input
             .comments-form__col
                 +form-item("Как вас зовут?")
                     input(name="name" placeholder="Имя" required).form__input

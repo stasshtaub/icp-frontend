@@ -30,8 +30,13 @@
 
 	&__col {
 		padding: 18px 30px 0 0;
-		flex-basis: 300px;
+		flex-basis: 200px;
 		flex-grow: 1;
+
+		&--fit {
+			flex-basis: unset;
+			flex-grow: 0;
+		}
 	}
 
 	&__textarea {
