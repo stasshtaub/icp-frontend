@@ -1,0 +1,45 @@
+-
+    const competence = [
+        {
+            name: 'Основы',
+            description: 'Опирается в работе на этику'
+        },
+        {
+            name: 'Основы',
+            description: 'Воплощает коучинговый образ мышления'
+        },
+        {
+            name: 'Совместное создание отношений',
+            description: 'Создает и поддерживает соглашения'
+        },
+        {
+            name: 'Совместное создание отношений',
+            description: 'Постоянно развивает доверие и ощущение безопасности'
+        },
+        {
+            name: 'Совместное создание отношений',
+            description: 'Сохраняет присутствие'
+        },
+        {
+            name: 'Эффективная коммуникация',
+            description: 'Активно слушает'
+        },
+        {
+            name: 'Эффективная коммуникация',
+            description: 'Пробуждает осознанность'
+        },
+        {
+            name: 'Содействие обучению и развитию',
+            description: 'Способствует развитию клиента'
+        }
+    ]
+
+.membership-competence
+    .container
+        h2.text.text--l2 8 Коучинговых компетенций
+        ul.membership-competence__list
+            each item in competence
+                li.membership-competence__item
+                    .membership-competence__info
+                        p.membership-competence__name.text.text--xs3= item.name
+                        p.membership-competence__description.text.text--s= item.description

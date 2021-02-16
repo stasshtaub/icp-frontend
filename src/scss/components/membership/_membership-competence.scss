@@ -1,0 +1,50 @@
+.membership-competence {
+    padding: 64px 0 120px 0;
+
+    &__list {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 100px 30px;
+        margin-top: 64px;
+
+        @include laptop {
+            grid-template-columns: repeat(3, 1fr);
+            row-gap: 50px;
+        }
+
+        @include tablet {
+            grid-template-columns: repeat(2, 1fr);
+        }
+
+        @include mobile-l {
+            grid-template-columns: 1fr;
+            row-gap: 30px;
+            margin-top: 40px;
+        }
+    }
+
+    &__item {
+        @include mobile-l {
+            display: flex;
+            align-items: center;
+        }
+
+        &::before {
+            content: "";
+            display: block;
+            width: 72px;
+            height: 72px;
+            margin-bottom: 10px;
+            border-radius: 41.6666667%;
+            background: linear-gradient(42.34deg, #1888CA 18.09%, #45C0BA 82.63%);
+
+            @include mobile-l {
+                width: 45px;
+                height: 45px;
+                flex-shrink: 0;
+                margin-bottom: 0;
+                margin-right: 10px;
+            }
+        }
+    }
+}
