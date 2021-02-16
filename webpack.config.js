@@ -23,7 +23,8 @@ module.exports = {
 		"news-detail2": "./src/js/news-detail2",
 		"helpers/video-modals": "./src/js/helpers/video-modals",
 		library: "./src/js/library",
-		education: "./src/js/education"
+		education: "./src/js/education",
+		membership: "./src/js/membership"
 	},
 	module: {
 		rules: [

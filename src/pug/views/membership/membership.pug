@@ -1,0 +1,12 @@
+extends ../../layouts/default
+
+block styles
+    link(rel="stylesheet" href!=`${baseDir}css/main.css?v=${Date.now()}`)
+    link(rel="stylesheet" href!=`${baseDir}css/membership.css?v=${Date.now()}`)
+block content
+    .membership
+        include particles/membership-wave
+       
+block scripts
+    script(src!=`${baseDir}js/common.js?v=${Date.now()}`)
+    script(defer src!=`${baseDir}js/membership.js?v=${Date.now()}`)

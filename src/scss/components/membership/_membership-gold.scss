@@ -1,0 +1,7 @@
+.membership-gold {
+    padding: 65px 0 85px 0;
+
+    @include tablet-s {
+        padding-top: 100px;
+    }
+}

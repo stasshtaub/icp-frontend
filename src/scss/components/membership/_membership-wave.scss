@@ -1,0 +1,59 @@
+.membership-wave {
+	&__block {
+		&--top {
+			background-color: $color-membership;
+			padding: 216px 0 180px 0;
+
+			@include tablet {
+				padding-top: 100px;
+			}
+
+            @include tablet-s {
+                padding-bottom: 300px;
+            }
+
+			@include mobile-l {
+				padding-top: 90px;
+			}
+
+			background-color: #131947;
+
+			* {
+				color: $color-white;
+			}
+		}
+
+		&--bottom {
+            margin-top: -90px;
+			background: linear-gradient(
+				90deg,
+				#febf3b -0.67%,
+				#fdc23d 7.79%,
+				#f6ed4e 104.16%
+			);
+            clip-path: url(#wave);
+
+            @include tablet-s {
+                margin-top: -240px;
+                clip-path: unset;
+                border-radius: 175px 75% 0 0 / 85px 140px 0 0;
+                animation: bubble 5s ease-in-out infinite;
+            }
+
+            * {
+                color: $color-membership;
+            }
+		}          
+	}
+
+    &__svg {
+        position: absolute;
+        left: -10000px;
+    }
+}
+          
+@keyframes bubble {
+  50% {
+    border-radius: 150px 75% 0 0 / 40px 240px 0 0;
+  }
+}

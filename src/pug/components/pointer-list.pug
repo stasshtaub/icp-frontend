@@ -1,0 +1,5 @@
+mixin pointer-list(items)
+    ul.pointer-list&attributes(attributes)
+        each item in items
+            li.pointer-list__item
+                span.text.text--s= item
