@@ -1,0 +1,18 @@
+-
+    const levels = [
+        'Скиннер выдвинул концепцию "оперантного", подкрепляемого научения, в которой предсознательное семантически отталкивает экспериментальный тест.',
+        'В которой предсознательное семантически отталкивает экспериментальный тест. Как отмечает Д.Майерс, у нас есть некоторое чувство конфликта, которое возникает.',
+        'Cитуации несоответствия желаемого и действительного, поэтому сознание аннигилирует закон.центризм.'
+    ]
+
+.membership-levels
+    ul.membership-levels__list
+        each level, i in levels
+            li.membership-levels__item
+                .membership-levels__content
+                    if (i === 0)
+                        h2.membership-levels__title Три уровня сертификации ICF
+                    .membership-levels__info
+                        p.membership-levels__num= i + 1
+                        p.membership-levels__description= level
+
