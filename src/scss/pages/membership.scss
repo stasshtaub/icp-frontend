@@ -8,9 +8,20 @@
 @import "../components/common/text";
 @import "../components/common/button";
 @import "../components/common/pointer-list";
+@import "../components/common/center-block";
+@import "../components/common/gradient-text";
 
 @import "../components/membership/membership-wave";
 @import "../components/membership/membership-first";
 @import "../components/membership/membership-gold";
 @import "../components/membership/membership-competence";
 @import "../components/membership/membership-levels";
+@import "../components/membership/membership-epilog";
+
+.membership {
+    padding-bottom: 150px;
+
+    @include tablet {
+        padding-bottom: 100px;
+    }
+}
