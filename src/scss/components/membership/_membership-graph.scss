@@ -1,0 +1,88 @@
+.membership-graph {
+    $p: &;
+
+	display: flex;
+
+	&__prepend {
+		display: flex;
+	}
+
+    &__item {
+        & + & {
+            margin-left: 45px;
+        }
+    }
+
+	&__line {
+		padding-bottom: 80px;
+		width: 27px;
+		position: relative;
+        flex-shrink: 0;
+
+		&:before {
+			content: "";
+			display: block;
+			position: absolute;
+			width: 1px;
+			height: 100%;
+			left: 50%;
+			background-color: $color-gray-light2;
+		}
+
+		&--point {
+			margin-bottom: 14px;
+
+			&:after {
+				content: "";
+				display: block;
+				position: absolute;
+				width: 27px;
+				height: 27px;
+				border-radius: 50%;
+				background-color: $color-blue;
+				bottom: 0;
+			}
+
+			&:before {
+				height: calc(100% - 38px);
+			}
+		}
+	}
+
+	&__children {
+		padding-bottom: 80px;
+		margin-left: 28px;
+	}
+
+	&__content {
+        max-width: 365px;
+		display: inline-block;
+
+		&--fill {
+			padding: 14px 20px 20px 20px;
+			background: $color-blue;
+			border-radius: 10px;
+			margin-left: -1.5em;
+
+            #{$p}__title {
+                font-weight: 700;
+                line-height: 122.3% !important;
+            }
+
+			* {
+				color: $color-white;
+			}
+		}
+	}
+
+	&__date {
+		font-size: 10px;
+		line-height: 20px;
+		letter-spacing: 1px;
+		text-transform: uppercase;
+	}
+
+    &__additional {
+        margin-top: 14px;
+    }
+}

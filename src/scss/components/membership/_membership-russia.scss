@@ -1,0 +1,51 @@
+.membership-russia {
+    &__container {
+        padding-right: 0 !important;
+    }
+
+	&__content {
+        position: relative;
+		display: flex;
+        margin-top: 40px;
+
+        @include laptop-m {
+            flex-direction: column;
+        }
+
+        &:after {
+            content: "";
+            position: absolute;
+            display: block;
+            width: 128px;
+            height: 100%;
+            right: calc(50% - 50vw);
+            top: 0;
+            background: linear-gradient(270deg, $color-white, rgba($color-white, 0));
+          }
+
+        & > * {
+            @include laptop-m("min") {
+                border-top: 3px solid #70c28b;
+            }            
+        }
+	}
+
+	&__text {
+        flex-shrink: 0;
+
+        @include laptop-m("min") {
+            flex-basis: 430px;
+            padding: 50px 50px 0 0;
+        }
+	}
+
+    
+    &__graph {
+        flex-shrink: 0;
+
+        @include laptop-m {
+            margin-top: 50px;
+            border-top: 3px solid #70c28b;
+        }            
+    }
+}

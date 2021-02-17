@@ -1,0 +1,20 @@
+mixin membership-graph(items)
+    ul.membership-graph
+        each item in items
+            li.membership-graph__item
+                .membership-graph__prepend
+                    .membership-graph__line(class= item.point ? "membership-graph__line--point" : "")
+                    .membership-graph__children
+                        if item.children
+                            +membership-graph(item.children)
+                .membership-graph__content(class= item.fill ? "membership-graph__content--fill" : "")
+                    h6.membership-graph__date= item.date
+                    h3.membership-graph__title.text.text--s.text--normalzed= item.title
+                    if item.additional
+                        .membership-graph__additional
+                            if item.additional.link
+                                a(href="#").text.text--link= item.additional.link
+                            if item.additional.description
+                                p.text.text--xs= item.additional.description
+                            if item.additional.img
+                                //- TODO: реализовать картинку с описанием
