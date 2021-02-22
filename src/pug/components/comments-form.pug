@@ -3,8 +3,15 @@ include ../mixins/checkbox
 include ../mixins/loader
 
 mixin comments-form()
-    form(action="https://jsonplaceholder.typicode.com/posts" method="POST").form.comments-form&attributes(attributes)
-        input(name="reply" type="text" hidden)
+    form(action="https://dev.icpcentre.org/local/templates/icpcenter/components/bitrix/news/news/bitrix/news.detail/.default/ajax.php" method="POST").form.comments-form&attributes(attributes)
+        input(name="ajax" value="Y" hidden)
+        // news id
+        input(name="nid" value="fake-id" hidden)
+        // parent comment id
+        input(name="pcid" hidden)
+        // depth level
+        input(name="dl" hidden)
+
         +form-item("Комментрарий")
             textarea(name="text" placeholder="Текст" required).form__input.comments-form__textarea
         .comments-form__row

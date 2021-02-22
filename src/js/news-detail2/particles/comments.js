@@ -19,22 +19,23 @@ if (form) {
 	})
 
 	const replyButtons = document.querySelectorAll(".comment__reply-btn");
-	const replyInput = form.querySelector("[name='reply']");
+	const pcidInput = form.querySelector("[name='pcid']");
+	const dlInput = form.querySelector("[name='dl']");
 	const textarea = form.querySelector("[name='text']");
 
 	replyButtons.forEach((btn) => {
 		btn.addEventListener("click", (e) => {
-			const { commentId, authorName } = e.target.dataset;
-
-			if (commentId && authorName) {
-				reply(commentId, authorName);
-			}
+			const { pcid, dl, authorName } = e.target.dataset;
+			console.log("pcid", pcid, "dl:", dl);
+			reply(pcid, dl, authorName);
 		});
 	});
 
-	const reply = (commentId, authorName) => {
-		if (replyInput) {
-			replyInput.value = commentId;
+	const reply = (pcid, dl, authorName) => {
+		removeReplyTag();
+
+		if (pcidInput) {
+			pcidInput.value = pcid;
 
 			const tmpDiv = document.createElement("div");
 			tmpDiv.innerHTML = `
@@ -52,7 +53,10 @@ if (form) {
 
 			tagCLoseBtn.addEventListener("click", () => {
 				replyTag.parentElement.removeChild(replyTag);
-				replyInput.value = "";
+				pcidInput.value = "";
+				if (dlInput) {
+					dlInput.value = "";
+				}
 			});
 
 			textarea.before(replyTag);
@@ -60,14 +64,25 @@ if (form) {
 				behavior: "smooth",
 			});
 		}
+
+		if (dlInput) {
+			dlInput.value = dl;
+		}
 	};
+
+	const removeReplyTag = () => {
+		const tag = document.querySelector(".comments-form__reply-tag");
+		if (tag) {
+			tag.parentElement.removeChild(tag);
+		}
+	}
 }
 
 const onSubmit = async (token) => {
 	const { action, method } = form;
 
 	if (action) {
-		const body = new prepareFormData(form);
+		const body = new FormData(form);
 		body.append("g-recaptcha", token);
 
 		let title, messageBody, type;
@@ -77,9 +92,8 @@ const onSubmit = async (token) => {
 				method,
 				body,
 			});
-			await response.json();
-
-			title = "Комментарий успешно отправлен";
+			const { success_message } = await response.json();
+			title = success_message | "Комментарий успешно отправлен";
 		} catch (error) {
 			title = "Не удалось отправить комментарий";
 			messageBody =
@@ -89,25 +103,6 @@ const onSubmit = async (token) => {
 			showMessage(title, null, messageBody, type);
 		}
 	}
-};
-
-/**
- * Подготовить FormData, включая div с contenteditable
- * @param {HTMLFormElement} form - Форма.
- */
-const prepareFormData = (form) => {
-	const fd = new FormData(form);
-
-	const editableDivs = form.querySelectorAll("[contenteditable='true']");
-	editableDivs.forEach((div) => {
-		const { name } = div.dataset;
-
-		if (name) {
-			fd.append(name, div.textContent);
-		}
-	});
-
-	return fd;
 };
 
 const avatarImg = document.querySelector(".comments-form__avatar-img");

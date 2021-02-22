@@ -4,6 +4,7 @@ include ../../../components/comments
     const items = [
         {
             id: 1,
+            depth: 1,
             author: {
                 avatar: "https://loremflickr.com/50/50",
                 name: "Рыбаков Иван Владимирович"
@@ -11,7 +12,8 @@ include ../../../components/comments
             date: "4 сентября 2020",
             text: "Космогоническая гипотеза Шмидта позволяет достаточно просто объяснить эту нестыковку, однако тропический год вращает популяционный индекс, учитывая, что в одном парсеке 3,26 световых года. ",
             children: [
-                {    
+                {
+                    depth: 2,
                     id: 2,    
                     author: {
                         avatar: "https://loremflickr.com/51/50",
@@ -25,6 +27,7 @@ include ../../../components/comments
         },
         {
             id: 3,
+            depth: 1,
             author: {
                 avatar: "https://loremflickr.com/50/51",
                 name: "Шилов Марк Георгиевич"
