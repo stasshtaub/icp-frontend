@@ -92,8 +92,8 @@ const onSubmit = async (token) => {
 				method,
 				body,
 			});
-			const { success_message } = await response.json();
-			title = success_message | "Комментарий успешно отправлен";
+			const { message } = await response.json();
+			title = message | "Комментарий успешно отправлен";
 		} catch (error) {
 			title = "Не удалось отправить комментарий";
 			messageBody =
