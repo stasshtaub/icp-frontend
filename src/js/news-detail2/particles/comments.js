@@ -1,4 +1,5 @@
 import { showMessage } from "../../components/message";
+import { _fetch } from "../../helpers/_fetch";
 
 const form = document.getElementById("comments-form");
 
@@ -10,13 +11,16 @@ if (form) {
 
 		grecaptcha.ready(async () => {
 			loader && loader.classList.add("loader--active");
-			
-			const token = await grecaptcha.execute('6LeU5UkaAAAAALkmPBk8OgAGsiWiT4HeLcIdVw_v', { action: 'add_comment' })			
+
+			const token = await grecaptcha.execute(
+				"6LeU5UkaAAAAALkmPBk8OgAGsiWiT4HeLcIdVw_v",
+				{ action: "add_comment" }
+			);
 			await onSubmit(token);
 
 			loader && loader.classList.remove("loader--active");
-		});		
-	})
+		});
+	});
 
 	const replyButtons = document.querySelectorAll(".comment__reply-btn");
 	const pcidInput = form.querySelector("[name='pcid']");
@@ -75,7 +79,7 @@ if (form) {
 		if (tag) {
 			tag.parentElement.removeChild(tag);
 		}
-	}
+	};
 }
 
 const onSubmit = async (token) => {
@@ -88,16 +92,20 @@ const onSubmit = async (token) => {
 		let title, messageBody, type;
 
 		try {
-			const response = await fetch(action, {
+			const { message } = await _fetch(action, {
 				method,
 				body,
 			});
-			const { message } = await response.json();
-			title = message | "Комментарий успешно отправлен";
+
+			title = message || "Комментарий успешно отправлен";
 		} catch (error) {
-			title = "Не удалось отправить комментарий";
-			messageBody =
-				"Произошла какая-то внутренная ошибка сайта и ваш комментарий не отправлен.";
+			if (error.message) {
+				title = error.message;
+			} else {
+				title = "Не удалось отправить комментарий";
+				messageBody =
+					"Произошла какая-то внутренная ошибка сайта и ваш комментарий не отправлен.";
+			}
 			type = "danger";
 		} finally {
 			showMessage(title, null, messageBody, type);
