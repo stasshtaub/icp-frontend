@@ -26,6 +26,13 @@ if (form) {
 	const pcidInput = form.querySelector("[name='pcid']");
 	const dlInput = form.querySelector("[name='dl']");
 	const textarea = form.querySelector("[name='text']");
+	const checkbox = form.querySelector("[name='remember']");
+	const submitBtn = form.querySelector(".comments-form__submit-btn");
+
+	checkbox.addEventListener("change", () => {
+		console.log(checkbox, submitBtn.disabled);
+		submitBtn.disabled = !checkbox.checked
+	})
 
 	replyButtons.forEach((btn) => {
 		btn.addEventListener("click", (e) => {

@@ -27,12 +27,12 @@ mixin comments-form()
             .comments-form__col
                 +form-item("Эл. почта")
                     input(name="email" placeholder="E-mail" type="email" required).form__input
-        +checkbox("remember").comments-form__remember
+        +checkbox("remember")(required).comments-form__remember
             span.text.text--xs3 Сохранить мое имя и электронную почту для дальнейших комментариев.
                 br
                 | Я подтверждаю, что ознакомлен и согласен с 
                 a(href="#").link.link--embed условиями обработки персональных данных.
-        +button("Отправить комментарий")(type="submit").comments-form__submit-btn
+        +button("Отправить комментарий")(type="submit" disabled).comments-form__submit-btn
         
         +loader()
         
