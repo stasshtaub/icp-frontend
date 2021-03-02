@@ -1,3 +1,5 @@
+import { createElementFromHTML } from "../../helpers/createElementFromHTML"
+
 const tabletXsBreakpoint = 530;
 
 const checkbox = document.getElementById("header__checkbox-dropdown");
@@ -36,29 +38,23 @@ const initDropdown = ({ target }) => {
 	const elements = JSON.parse(target.dataset.elements);
 
 	elements.forEach(({ text, href, level3 }) => {
-		let li;
+		const li = createElementFromHTML('<li class="header__dropdown-item"></li>');
+		li.addEventListener("mouseenter", closeLevel3);
 
 		if (level3) {
-			li = document.createElement("li");
-			li.className = "header__dropdown-item header__dropdown-item--level2";
+			li.classList.add("header__dropdown-item--level2");
 			li.dataset.elements = JSON.stringify(level3);
 
-			const span = document.createElement("span");
-			span.className = "header__dropdown-item-text";
-			span.textContent = text;
-
+			const span = createElementFromHTML(`<span class="header__dropdown-item-text">${ text }</span>`);
 			li.append(span);
+
 			li.addEventListener("mouseenter", initLevel3);
 			li.addEventListener("touchend", initLevel3);
-			dropdownList.append(li);
 		} else {
-			li = `
-				<li class="header__dropdown-item">
-					<a href="${href}" class="header__dropdown-link">${text}</a>
-				</li>
-			`;
-			dropdownList.insertAdjacentHTML("beforeend", li);
+			const link = createElementFromHTML(`<a href="${href}" class="header__dropdown-link">${text}</a>`);
+			li.append(link);
 		}
+		dropdownList.append(li);
 	});
 };
 
@@ -113,12 +109,12 @@ const initLevel3 = ({ target }) => {
 	const elements = JSON.parse(target.dataset.elements);
 
 	elements.forEach(({ text, href }) => {
-		const li = `
+		const li = createElementFromHTML(`
 			<li class="header__dropdown-item">
 				<a href="${href}" class="header__dropdown-link">${text}</a>
 			</li>
-		`;
-		level3List.insertAdjacentHTML("beforeend", li);
+		`);
+		level3List.append(li);
 	});
 };
 
