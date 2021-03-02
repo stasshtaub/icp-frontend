@@ -12,7 +12,9 @@
 			const artictle = `
 			<article class="news-card">
 				<a class="news-card__link" href="${url}">
-					<img src="${img}" alt="news image" class="news-card__img" />
+					<div class="news-card__img-wrp">
+						<img src="${img}" alt="news image" class="news-card__img" />
+					</div>
 					<div class="news-card__info">
 						<p class="news-card__title text text--s">${title}</p>
 						<p class="news-card__description text text--s3">${description}</p>
