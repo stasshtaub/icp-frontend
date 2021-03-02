@@ -314,6 +314,7 @@
 		display: inline-block;
 		width: 80px;
 		margin-right: 35px;
+		white-space: nowrap;
 
 		@include beetween-laptop-and-tablet {
 			width: vw(80px);
