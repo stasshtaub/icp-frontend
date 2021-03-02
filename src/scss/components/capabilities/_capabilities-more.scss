@@ -37,10 +37,89 @@
 		}
 
 		&--animated {
-			#{$p}__shape-wrp {
+			#{$p}__img-outer {
 				animation: bounce-top 1.4s both;
 				// animation: wobble-hor-bottom 1.4s both;
 			}
+		}
+	}
+
+	&__img-outer {
+		height: 81px;
+		display: flex;
+		align-items: center;
+
+		@include mobile-l {
+			height: unset;
+		}
+	}
+
+	&__img-inner {
+		&[data-badge] {
+			position: relative;
+
+			&::after {
+				content: attr(data-badge);
+				position: absolute;
+				padding: 1px 4px 0 6px;
+				top: 9px;
+				right: 0;
+				line-height: 17px;
+				font-size: 10px;
+				color: rgba($color-white, 0.9);
+				background: $color-blue;
+				border-radius: 3px;
+				font-weight: bold;
+				text-align: center;
+				letter-spacing: 1px;
+				text-transform: uppercase;
+				transform: translateX(30%);
+			}
+		}
+	}
+
+	&__img {
+		display: inline-block;
+		width: 58px;
+		height: 58px;
+		object-fit: contain;
+	}
+
+	&__item {
+		max-width: 205px;
+		display: flex;
+		align-items: center;
+		flex-direction: column;
+		flex-basis: 205px;
+		padding: 15px 0;
+
+		@include tablet {
+			padding: 15px;
+			box-sizing: content-box;
+		}
+
+		@include tablet-xs {
+			flex-basis: 153px;
+			padding: 20px 0;
+		}
+
+		&:nth-child(even) {
+			#{$p}__img-outer {
+				animation-delay: 0.05s !important;
+			}
+		}
+	}
+
+	&__item-name {
+		margin-top: 20px;
+		font-size: 14px;
+		line-height: 18px;
+		text-align: center;
+
+		@include mobile-l {
+			margin-top: 12px;
+			font-size: 12px;
+			line-height: 18px;
 		}
 	}
 
@@ -82,133 +161,26 @@
 		}
 	}
 
-	@keyframes wobble-hor-bottom {
-		0%,
-		100% {
-			transform: translateX(0%);
-			transform-origin: 50% 50%;
-		}
-		15% {
-			transform: translateX(-30px) rotate(-6deg);
-		}
-		30% {
-			transform: translateX(15px) rotate(6deg);
-		}
-		45% {
-			transform: translateX(-15px) rotate(-3.6deg);
-		}
-		60% {
-			transform: translateX(9px) rotate(2.4deg);
-		}
-		75% {
-			transform: translateX(-6px) rotate(-1.2deg);
-		}
-	}
-
-	&__shape-wrp {
-		height: 81px;
-		display: flex;
-		align-items: center;
-
-		@include mobile-l {
-			height: unset;
-		}
-
-		&--2, &--4 {
-			animation-delay: 0.05s !important;
-		}
-	}
-
-	&__shape {
-		display: inline-block;
-
-		&--2 {
-			width: 58px;
-			height: 58px;
-			background: $color-green-light;
-			border-radius: 15px;
-			transform: rotate(45deg);
-		}
-
-		&--3 {
-			width: 58px;
-			height: 58px;
-			background: $color-blue3;
-			border-radius: 50%;
-		}
-
-		&--4 {
-			width: 58px;
-			height: 58px;
-			background: $color-blue4;
-			border-radius: 13px;
-
-			&::after {
-				top: 11px;
-				right: -18px;
-			}
-		}
-
-		&--5 {
-			&::after {
-				top: 9px;
-				right: -7px;
-			}
-		}
-
-		&--vip {
-			position: relative;
-
-			&::after {
-				content: "vip";
-				position: absolute;
-				height: 17px;
-				width: 30px;
-				line-height: 17px;
-				font-size: 10px;
-				color: rgba($color-white, 0.9);
-				background: $color-blue;
-				border-radius: 3px;
-				font-weight: bold;
-				text-align: center;
-				letter-spacing: 1px;
-				text-transform: uppercase;
-			}
-		}
-	}
-
-	&__item {
-		max-width: 205px;
-		display: flex;
-		align-items: center;
-		flex-direction: column;
-		flex-basis: 205px;
-		padding: 15px 0;
-
-		@include tablet {
-			padding: 15px;
-			box-sizing: content-box;
-		}
-
-		@include tablet-xs {
-			flex-basis: 153px;
-			padding: 20px 0;
-		}
-
-		@include mobile-l {
-		}
-	}
-
-	&__item-name {
-		margin-top: 20px;
-		font-size: 14px;
-		line-height: 18px;
-		text-align: center;
-
-		@include mobile-l {
-			margin-top: 12px;
-			font-size: 12px;
-			line-height: 18px;
-		}
-	}
+	// @keyframes wobble-hor-bottom {
+	// 	0%,
+	// 	100% {
+	// 		transform: translateX(0%);
+	// 		transform-origin: 50% 50%;
+	// 	}
+	// 	15% {
+	// 		transform: translateX(-30px) rotate(-6deg);
+	// 	}
+	// 	30% {
+	// 		transform: translateX(15px) rotate(6deg);
+	// 	}
+	// 	45% {
+	// 		transform: translateX(-15px) rotate(-3.6deg);
+	// 	}
+	// 	60% {
+	// 		transform: translateX(9px) rotate(2.4deg);
+	// 	}
+	// 	75% {
+	// 		transform: translateX(-6px) rotate(-1.2deg);
+	// 	}
+	// }
 }
