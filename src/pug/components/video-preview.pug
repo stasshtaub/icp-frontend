@@ -1,7 +1,8 @@
-mixin video-preview(img, title, videoSrc, name, modalTitle)
+mixin video-preview(img, title, videoSrc, name, modalTitle, isBblack)
     label.video-preview&attributes(attributes)
         .video-preview__inner
             img(src=img alt="video preview").video-preview__img
             .video-preview__body
-                span.video-preview__title !{title}
-                button(data-video=videoSrc data-video-name=name data-modal-title=modalTitle).video-preview__play
+                .video-preview__panel(class= isBblack ? "video-preview__panel--black" : "")
+                    span.video-preview__title !{title}
+                    button(data-video=videoSrc data-video-name=name data-modal-title=modalTitle).video-preview__play
