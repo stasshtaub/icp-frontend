@@ -49,7 +49,6 @@ const initDropdown = ({ target }) => {
 			li.append(span);
 
 			li.addEventListener("mouseenter", initLevel3);
-			li.addEventListener("touchend", initLevel3);
 		} else {
 			const link = createElementFromHTML(`<a href="${href}" class="header__dropdown-link">${text}</a>`);
 			li.append(link);
@@ -63,22 +62,15 @@ const closeDropdown = () => {
 	deactivateAllNavEl();
 };
 
-checkbox.addEventListener("change", () => {
-	deactivateAllNavEl();
-});
+checkbox.addEventListener("change", deactivateAllNavEl);
 
 backdropDropdown.addEventListener("mouseenter", () => {
-	closeDropdown();
-	closeLevel3();
-});
-backdropDropdown.addEventListener("touchend", (e) => {
 	closeDropdown();
 	closeLevel3();
 });
 
 itemsWithDropdown.forEach((item) => {
 	item.addEventListener("mouseenter", initDropdown);
-	item.addEventListener("touchend", initDropdown);
 });
 
 const level3List = document.querySelector(".header__level3-list");
@@ -119,17 +111,9 @@ const initLevel3 = ({ target }) => {
 };
 
 const closeLevel3 = () => {
-	if (backdropLevel3.classList.contains("header__backdrop--show")) {
-		backdropLevel3.classList.remove("header__backdrop--show");
-	}
-	level3List.innerHTML = "";
+	backdropLevel3.classList.remove("header__backdrop--show");
 	level3List.classList.remove("header__level3-list--show");
+	level3List.innerHTML = "";
 }
 
-backdropLevel3.addEventListener("mouseenter", () => {
-	closeLevel3();
-});
-
-backdropLevel3.addEventListener("touchend", (e) => {
-	closeLevel3();
-});
+backdropLevel3.addEventListener("mouseenter", closeLevel3);
