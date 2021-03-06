@@ -53,7 +53,7 @@
         line-height: 121.666667%;
 
         @include laptop-xs {
-            font-size: vw(60px, 768px);
+            font-size: vw(60px, 900px);
         }
 
         @include tablet-xs {
@@ -94,13 +94,19 @@
         margin-top: 0.625em;
 
         @include laptop-xs {
-            font-size: vw(40px, 768px);
+            font-size: vw(40px, 900px);
         }
 
         @include tablet-xs {
             font-size: 20px;
             line-height: 130%;
             margin-top: 50px;
+        }
+
+        br {
+            @include tablet-xs {
+                display: none;
+            }
         }
     }
 

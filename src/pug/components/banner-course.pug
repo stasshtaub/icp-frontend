@@ -6,7 +6,7 @@ mixin banner-course(course, rounded = false)
                 p.banner-course__type= course.type
             .banner-course__body
                 h4.banner-course__title= course.title 
-                p.banner-course__description= course.description 
+                p.banner-course__description !{course.description} 
             footer.banner-course__footer
                 .banner-course__col
                     p.banner-course__place.text.text--xs3= course.place
