@@ -1,7 +1,19 @@
 .festival-contacts {
-	padding: 22px 0 25px 0;
 	border-bottom: 1px solid $color-black-opacity05;
-	background: $color-white;
+
+	&__content {
+		padding: 22px 0 25px 0;
+		background: $color-white;
+		transition: box-shadow 0.3s ease;
+
+		&--sticky {
+			position: fixed;
+			z-index: 9999;
+			top: 0;
+			width: 100%;
+			box-shadow: 0px 40px 40px 10px $color-black-opacity10;
+		}
+	}
 
 	&__logo {
 		width: 174px;
