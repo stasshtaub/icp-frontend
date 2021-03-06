@@ -1,56 +1,16 @@
 .festival-header {
-	height: 100vh;
-	width: 100vw;
-	color: blue;
+    z-index: 99999;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    background-color: $color-white;
+    box-shadow: 0px 40px 40px 10px $color-black-opacity10;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.3s ease;
 
-	&__body {
-		display: flex;
-		flex-direction: column;
-	}
-
-	&__top {
-		display: flex;
-		justify-content: space-between;
-		align-items: center;
-		padding: 20px 0;
-	}
-
-	&__logo {
-	}
-
-	&__content {
-		padding: 35px 0;
-		margin-top: auto;
-	}
-
-	&__title {
-		line-height: 75px;
-		letter-spacing: -1px;
-
-		&--s {
-			font-weight: 500;
-			font-size: 40px;
-		}
-
-		&--m,
-		&--l {
-			font-size: 80px;
-		}
-
-		&--m {
-			font-weight: 700;
-		}
-
-		&--l {
-			font-weight: 900;
-		}
-	}
-
-	&__subtitle {
-		margin-top: 1.666667em;
-	}
-
-	* {
-		color: $color-white;
-	}
+    &.active {
+        opacity: 1;
+    }
 }
