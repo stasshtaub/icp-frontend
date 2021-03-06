@@ -4,7 +4,7 @@
 	&__content {
 		padding: 22px 0 25px 0;
 		background: $color-white;
-		transition: box-shadow 0.3s ease;
+		transition: opacity 0.3s ease, box-shadow 0.3s ease;
 
 		&--sticky {
 			position: fixed;
@@ -12,6 +12,11 @@
 			top: 0;
 			width: 100%;
 			box-shadow: 0px 40px 40px 10px $color-black-opacity10;
+			opacity: 0;
+		}
+
+		&--active {
+			opacity: 1 !important;
 		}
 	}
 
