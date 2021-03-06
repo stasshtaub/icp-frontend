@@ -1,0 +1,15 @@
+mixin banner-course(course, rounded = false)
+    .banner-course(class= rounded ? "banner-course--rounded" : "")
+        img(src= course.img alt= course.title).banner-course__bcg
+        .banner-course__container
+            header.banner-course__header
+                p.banner-course__type= course.type
+            .banner-course__body
+                h4.banner-course__title= course.title 
+                p.banner-course__description= course.description 
+            footer.banner-course__footer
+                .banner-course__col
+                    p.banner-course__place.text.text--xs3= course.place
+                    +button("Принять участие", [], "size-large", "color-primary", "icon-ok")
+                .banner-course__col
+                    p.text.text--xs3= course.regulations

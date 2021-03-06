@@ -148,6 +148,16 @@ gulp.task("scss", () => {
 		.pipe(gulp.dest(`${settings.dist}/css`));
 });
 
+gulp.task("scss:components", () => {
+	const plugins = [autoprefixer(), cssnano()];
+
+	return gulp
+		.src("./src/scss/dist-components/*.scss")
+		.pipe(sass().on("error", sass.logError))
+		.pipe(postcss(plugins))
+		.pipe(gulp.dest(`${settings.dist}/css/components`));
+});
+
 gulp.task("scss:forms", () => {
 	const plugins = [autoprefixer(), cssnano()];
 
@@ -187,7 +197,7 @@ gulp.task("watch", () => {
 		global.emittyPugChangedFile = event === "unlink" ? undefined : file;
 	});
 
-	gulp.watch("src/scss/**/*.scss", gulp.series("scss", "scss:forms"));
+	gulp.watch("src/scss/**/*.scss", gulp.series("scss", "scss:forms", "scss:components"));
 
 	gulp.watch("src/js/**/*.js", gulp.series("js"));
 });
@@ -209,7 +219,7 @@ gulp.task(
 	gulp.series(
 		"copy",
 		"pug",
-		gulp.parallel("images", "scss", "scss:forms", "js", "svg-sprite")
+		gulp.parallel("images", "scss", "scss:forms", "scss:components", "js", "svg-sprite")
 	)
 );
 

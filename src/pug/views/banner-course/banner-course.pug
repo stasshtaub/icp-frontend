@@ -1,0 +1,21 @@
+extends ../../base
+
+include ../../components/banner-course
+
+block styles
+    link(rel="stylesheet" href!=`${baseDir}css/main.css?v=${Date.now()}`)
+    link(rel="stylesheet" href!=`${baseDir}css/components/banner-course.css?v=${Date.now()}`)
+
+block layout
+    main
+        - 
+            const course = {
+                img: "images/jpg/funnel.jpg",
+                type: "Бесплатный онлайн-курс",
+                title: "Не проспи жизнь",
+                description: "Честный разговор о том, как страх перемен заставляет нас отступатьот своих целей.",
+                place: "Курс проходит на площадке GetCourse.",
+                regulations: "Сразу после того, как вы зарегистрируетесь, вам придет доступ в личный кабинет. Доступ к урокам будет открыт1 месяц с момента регистрации."
+            }
+
+        +banner-course(course, true)
