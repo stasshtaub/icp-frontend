@@ -4,7 +4,8 @@
 	"description": "ICP Center frontend",
 	"scripts": {
 		"build": "webpack -p",
-		"gulp": "gulp"
+		"gulp": "gulp",
+		"deploy": "gulp deploy"
 	},
 	"author": "Stas Shtaub <shtaubstas@gmail.com>",
 	"license": "ISC",
