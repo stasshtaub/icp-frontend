@@ -30,14 +30,16 @@ if (form) {
 	const submitBtn = form.querySelector(".comments-form__submit-btn");
 
 	checkbox.addEventListener("change", () => {
-		console.log(checkbox, submitBtn.disabled);
 		submitBtn.disabled = !checkbox.checked
+	})
+
+	form.addEventListener("reset", () => {
+		submitBtn.disabled = true
 	})
 
 	replyButtons.forEach((btn) => {
 		btn.addEventListener("click", (e) => {
 			const { pcid, dl, authorName } = e.target.dataset;
-			console.log("pcid", pcid, "dl:", dl);
 			reply(pcid, dl, authorName);
 		});
 	});
@@ -105,6 +107,7 @@ const onSubmit = async (token) => {
 			});
 
 			title = message || "Комментарий успешно отправлен";
+			form.reset();
 		} catch (error) {
 			if (error.message) {
 				title = error.message;
