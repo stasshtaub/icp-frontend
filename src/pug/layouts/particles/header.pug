@@ -131,15 +131,19 @@
                 { text: 'Горячая линия', href: '#' }
             ]
         }, 
+        //- {
+        //-     title: 'База знаний', 
+        //-     level2: [
+        //-         { text: 'Коучинг в HR: инструкция по применению', href: '#' }, 
+        //-         { text: 'Спецпроект. История коучинга в России: 1990 − 2020. Команды, люди, события.', href: '#' }, 
+        //-         { text: 'О коучинге понятным языком: 15 статей', href: '#' }, 
+        //-         { text: 'Онлайн-библиотека', href: '#' }, 
+        //-         { text: 'Подкаст: «Хроники одного коуча»', href: '#' }
+        //-     ]
+        //- },
         {
-            title: 'База знаний', 
-            level2: [
-                { text: 'Коучинг в HR: инструкция по применению', href: '#' }, 
-                { text: 'Спецпроект. История коучинга в России: 1990 − 2020. Команды, люди, события.', href: '#' }, 
-                { text: 'О коучинге понятным языком: 15 статей', href: '#' }, 
-                { text: 'Онлайн-библиотека', href: '#' }, 
-                { text: 'Подкаст: «Хроники одного коуча»', href: '#' }
-            ]
+            title: 'Горячая линия',
+            href: '#'
         }
     ]
 
@@ -169,8 +173,12 @@ header.header
             nav.header__row.header__row--navbar
                 ul.header__navbar-list
                     each menuItem in menuItems 
-                        li(data-elements=menuItem.level2).header__navbar-item.header__navbar-item--has-dropdown= menuItem.title
-                            span.header__dropdown-icon
+                        if menuItem.level2
+                            li(data-elements=menuItem.level2).header__navbar-item.header__navbar-item--has-dropdown= menuItem.title
+                                span.header__dropdown-icon
+                        else
+                            li.header__navbar-item
+                                a(href= menuItem.href).header__link= menuItem.title
                 label(for="header__checkbox-dropdown").header__dropdown-backdrop
                 .header__row.header__row--dropdown
                     ul.header__dropdown-list

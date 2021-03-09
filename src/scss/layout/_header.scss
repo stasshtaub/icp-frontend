@@ -222,6 +222,10 @@
 		align-items: center;
 		color: $color-white;
 		text-decoration: none;
+
+		&:hover {
+			text-decoration: underline;
+		}
 	}
 
 	&__mail-icon {
