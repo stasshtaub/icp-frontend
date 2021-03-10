@@ -8,6 +8,10 @@
 		height: 400px;
 
 		// transition: width 0.3s ease-in-out;
+
+		&--large {
+			width: 430px;
+		}
 	}
 
 	&__card {
@@ -26,42 +30,48 @@
 		margin-left: auto;
 	}
 
-	&__card-text {
-		font-weight: bold;
-		font-size: 20px;
-		line-height: 125%;
-		text-transform: uppercase;
+	&__super-text {
+		font-size: 50px;
+		line-height: 110%;
+
+		&--bold {
+			font-weight: 500;
+		}
+
+		&--italic {
+			font-style: italic;
+		}
 	}
 
 	.inline-slider {
 		&__slide {
-			&:nth-child(3n + 1) {
+			&:nth-child(5n + 1) {
 				#{$p}__card {
-					background: linear-gradient(
-						148.23deg,
-						$color-blue12 49.48%,
-						$color-blue 49.49%
-					);
+					background: linear-gradient(168.87deg, $color-blue12 41.7%, $color-blue 41.71%);
 				}
 			}
 
-			&:nth-child(3n + 2) {
+			&:nth-child(5n + 2) {
 				#{$p}__card {
-					background: linear-gradient(
-						180deg,
-						$color-blue12 49.48%,
-						$color-blue 49.49%
-					);
+					background: linear-gradient(180deg, $color-blue12 49.48%, $color-blue 49.49%);
 				}
 			}
 
-			&:nth-child(3n + 3) {
+			&:nth-child(5n + 3) {
 				#{$p}__card {
-					background: linear-gradient(
-						211.77deg,
-						$color-blue12 49.48%,
-						$color-blue 49.49%
-					);
+					background: linear-gradient(172.16deg, $color-blue12 49.85%, $color-blue 49.86%);
+				}
+			}
+
+			&:nth-child(5n + 4) {
+				#{$p}__card {
+					background: linear-gradient(80.28deg, $color-blue12 49.15%, $color-blue 49.16%);
+				}
+			}
+
+			&:nth-child(5n + 5) {
+				#{$p}__card {
+					background: linear-gradient(147.73deg, $color-blue12 48.33%, $color-blue 48.34%);
 				}
 			}
 
@@ -73,11 +83,7 @@
 		}
 
 		&__nav-mask--right {
-			background: linear-gradient(
-				270deg,
-				$color-white 45%,
-				rgba($color-white, 0)
-			);
+			background: linear-gradient(270deg, $color-white 45%, rgba($color-white, 0));
 		}
 	}
 }

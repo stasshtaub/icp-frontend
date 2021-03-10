@@ -3,33 +3,42 @@ include ../../../components/inline-slider
 - 
     const slides = [
         {
-            top: "Онлайн обучение?",
-            bottom: "Очное обучение?"
+            bottom: "Студенты ICP Centre живут в 42 странах. И онлайн — закономерный выбор, если от нашего учебного центра в Санкт-Петербурге вас отделяют сотни или тысячи километров. Эти четыре карточки — для тех, кто совсем рядом, но не может определиться с форматом обучения. И да, мы всегда рядом. Просто дайте знать, если вам нужен наш совет.",
         },
         {
-            top: "Почему есть богатые и бедные?",
-            bottom: "Когда кончатся войны?"
+            top: "Самодисциплина — это моя сильная сторона. Не люблю, когда сроки и скорость выстраивания процессов задает кто-то другой.",
+            bottom: "Идеальная для меня система обучения — это та, при которой мне объяснили правила, дали инструкцию и четкую ситему дедлайнов."
         },
         {
-            top: "Куда уходит радость жизни?",
-            bottom: "Почему люди так жестоки?"
+            top: "Мне нравится организовывать коммуникации онлайн. Я использую самые разные инструменты для самых разных задач. И не чувствую никакой разницы между общением онлайн и офлайн.",
+            bottom: "Я всегда предпочту реальную встречу, если есть возможность выбора. Для меня важно физическое ощущение момента и присутствия в нем. Онлайн сужает спектр моих эмоций."
         },
         {
-            top: "Единственный ли мы разум во Вселенной?",
-            bottom: "Откуда в мире столько зла?"
+            top: "Мне близка атмосфера онлайн-конференций. Высокая концентрация и возможность быстро включиться в работу,не теряя фокус за время дороги.",
+            bottom: "Мне нравится именно попадатьв среду обучения как в отдельную локацию — в любом зале для тренингов уровень моей концентрации будет гораздо выше, чем дома."
         },
         {
-            top: "Единственный ли мы разум во Вселенной?",
-            bottom: "Откуда в мире столько зла?"
+            top: "У меня богатый опыт онлайн-обучения и удаленной работы.",
+            bottom: "У меня нет опыта онлайн-обучения и удаленной работы."
         }
     ]
 
 mixin educationCard(item)
+    - const slots = {}
+        
+    mixin slot(key)
+        - slots[key] = block
+
+    block
+
     .education-type__card
         .education-type__card-top
-            span.education-type__card-text= item.top
+            if slots.top
+                - slots.top()
+            else
+                span.text.text--xs4= item.top
         .education-type__card-bottom
-            span.education-type__card-text= item.bottom
+            span.text.text--xs4= item.bottom
 
 .education-type
     .container
@@ -39,8 +48,12 @@ mixin educationCard(item)
             .double-block__content.double-block__content--narrow
                 +inline-slider(slides, "education-type__slider").education-type__inline-slider
                     +slot(0)
-                        .education-type__item
+                        .education-type__item.education-type__item--large
                             +educationCard(slides[0])
+                                +slot("top")
+                                    span.education-type__super-text.education-type__super-text--bold Онлайн
+                                    span.education-type__super-text.education-type__super-text--italic &#32;vs&#32; 
+                                    span.education-type__super-text.education-type__super-text--bold оффлайн?
                     +slot(1)
                         .education-type__item
                             +educationCard(slides[1])
