@@ -149,6 +149,12 @@
 					background-color: $color-blue;
 				}
 			}
+
+			#{$p}__dot {
+				&--white {
+					background-color: $color-white;
+				}
+			}
 		}
 	}
 }

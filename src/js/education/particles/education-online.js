@@ -18,6 +18,14 @@ import { shuffleElement } from "../../helpers/shuffleElement";
 	const thumbsSwiper = new Swiper(thumbsContainer, {
 		...commonOptions,
 		watchSlidesProgress: true,
+		pagination: {
+			el: ".education-online__dots",
+			bulletClass: "slider__dots-item",
+			bulletActiveClass: "slider__dots-item--active",
+			renderBullet: (_, className) =>
+				`<li class="${ className }"><div class="slider__dot slider__dot--white"></div></li>`,
+			clickable: true
+		}
 	});
 	const swiper = new Swiper(container, {
 		...commonOptions,
