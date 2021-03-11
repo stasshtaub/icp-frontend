@@ -20,6 +20,9 @@ include ../../../components/quote
         ],
         revert: [
             {
+                text: "Да, вы не ошиблись: темный кинозал «Ножа»"
+            },
+            {
                 img: "https://loremflickr.com/315/305",
                 text: "Да, вы не ошиблись: темный кинозал «Ножа»"
             },
@@ -39,7 +42,8 @@ mixin fulltimeStepsCol(items, isRevert = false)
         ul.education-fulltime__steps-list
             each step in items
                 li.education-fulltime__step(class=`${ isRevert ? "education-fulltime__step--revert" : "" }`)
-                    img(src=step.img alt="full-time education step").education-fulltime__step-img
+                    if step.img
+                        img(src=step.img alt="full-time education step").education-fulltime__step-img
                     .education-fulltime__step-description
                         span.text.text--s= step.text
 
