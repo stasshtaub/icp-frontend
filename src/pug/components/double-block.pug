@@ -1,0 +1,6 @@
+mixin double-block(title, narrow, asideClass, contentClass)
+    .double-block
+        aside.double-block__aside(class= asideClass)
+            h3.double-block__title= title
+        .double-block__content(class= contentClass class= narrow ? "double-block__content--narrow" : "")
+            block

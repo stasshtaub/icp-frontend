@@ -1,0 +1,103 @@
+extends ../../layouts/default
+
+include ../../modules/members
+include ../../modules/authors
+include ../../modules/mentor
+
+block styles
+    link(rel="stylesheet" href!=`${baseDir}css/main.css?v=${Date.now()}`)
+    link(rel="stylesheet" href!=`${baseDir}css/practice-pro.css?v=${Date.now()}`)
+block content
+    -
+        const authorsItems = [
+            {
+                name: 'Станислав<br>Голубов',
+                description: "Профессиональный коуч (100+)",
+                img: "images/jpg/persons/person-7.png",
+                color: "#BCB2A2",
+                size: "small",
+                blend: "overlay"
+            },
+            {
+                name: 'Кристина<br>Королева',
+                description: "Профессиональный коуч (100+)",
+                img: "images/jpg/persons/person-8.png",
+                color: "#C4C4C4",
+                size: "small",
+                blend: "overlay"
+            }
+        ]
+
+        const membersItems = [
+            {
+                name: "Евгения Потапова",
+                description: "Профессиональный коуч (100+)",
+                img: "images/jpg/persons/person-1.png",
+                color: "#FB9E55",
+                size: "small",
+                blend: "overlay"
+            },
+            {
+                name: "Александр Балашов",
+                description: "Профессиональный коуч (100+)",
+                img: "images/jpg/persons/person-2.png",
+                color: "#91BFB7",
+                size: "small",
+                blend: "overlay"
+            },
+            {
+                name: "Александр Ильинский",
+                description: "Профессиональный коуч (100+)",
+                img: "images/jpg/persons/person-3.png",
+                color: "#FDE497",
+                size: "small",
+                blend: "darken"
+            },
+            {
+                name: "Юлия Ким",
+                description: "Профессиональный коуч (100+)",
+                img: "images/jpg/persons/person-4.png",
+                color: "#FDEED2",
+                size: "small",
+                blend: "multiply"
+            },
+            {
+                name: "Ирина Анянова",
+                description: "Профессиональный коуч (100+)",
+                img: "images/jpg/persons/person-5.png",
+                color: "#58828A",
+                size: "small",
+                blend: "overlay"
+            },
+            {
+                name: "Юлианна Вохмякова",
+                description: "Профессиональный коуч (100+)",
+                img: "images/jpg/persons/person-6.png",
+                color: "#4D91A0",
+                size: "small",
+                blend: "overlay"
+            },
+        ]
+
+        const mentorItems = [
+            {
+                name: "Евгения Потапова",
+                description: `Профессиональный коуч (500+)<br><br>Ведёт курсы «Коучинг:возможности без границ» и «Профессиональный ментор-коуч».<br><br>Cпециализации: «Коучинг состояний» и «Развивающий менторинг».`,
+                img: "images/jpg/persons/person-9.png",
+                color: "#15A6C6",
+                size: "large",
+                blend: "overlay"
+            }
+        ]
+
+    .practice-pro
+        .container
+            .mt-70
+                +authors(authorsItems)
+            .mt-70
+                +members(membersItems)
+            .mt-70
+                +mentor(mentorItems)
+
+block scripts
+    script(src!=`${baseDir}js/common.js?v=${Date.now()}`)

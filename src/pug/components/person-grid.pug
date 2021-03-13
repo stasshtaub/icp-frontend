@@ -1,0 +1,14 @@
+mixin person-grid(items = [])
+    ul.person-grid
+        each item in items
+            li.person-grid__item(class=`person-grid__item--size--${ item.size }` )
+                article.person-grid__card(style=`background-color: ${ item.color }`)
+                    .person-grid__img-wrp
+                        img(src=item.img alt=item.name style=`mix-blend-mode: ${ item.blend }`).person-grid__img
+                        .person-grid__img-mask
+                    .person-grid__content
+                        .person-grid__body
+                            h4.person-grid__name !{item.name}
+                            p.person-grid__description !{item.description}
+                        .person-grid__footer
+                            +button("Подробнее", [], "size-normal", "color-white", null, "a").person-grid__btn
