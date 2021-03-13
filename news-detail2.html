@@ -4,8 +4,8 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width">
-    <link rel="stylesheet" href="./css/main.css?v=1615622707968">
-    <link rel="stylesheet" href="./css/news-detail2.css?v=1615622707968">
+    <link rel="stylesheet" href="./css/main.css?v=1615633004053">
+    <link rel="stylesheet" href="./css/news-detail2.css?v=1615633004053">
     <link rel="stylesheet" href="https://unpkg.com/swiper@6.3.2/swiper-bundle.min.css">
   </head>
   <body>
@@ -261,11 +261,16 @@
                                                       </div>
                                           </div>
                                         </div>
-                                                  <label class="checkbox comments-form__remember" required><span class="text text--xs3">Сохранить мое имя и электронную почту для дальнейших комментариев.<br>Я подтверждаю, что ознакомлен и согласен с <a class="link link--embed" href="#">условиями обработки персональных данных.</a></span>
-                                                    <input class="checkbox__input" type="checkbox" name="remember"><span class="checkbox__mark"></span>
-                                                  </label>
-                                        <button class="button button--color-primary button--size-normal  comments-form__submit-btn" type="submit" disabled="disabled">Отправить комментарий
-                                        </button>
+                                        <div class="comments-form__footer">
+                                                    <label class="checkbox comments-form__checkbox" checked><span class="text text--xs3">Сохранить мое имя и электронную почту для дальнейших комментариев.</span>
+                                                      <input class="checkbox__input" type="checkbox" name="remember"><span class="checkbox__mark"></span>
+                                                    </label>
+                                                    <label class="checkbox comments-form__checkbox" required><span class="text text--xs3">Я подтверждаю, что ознакомлен и согласен с <a class="link link--embed" href="#">условиями обработки персональных данных.</a></span>
+                                                      <input class="checkbox__input" type="checkbox" name="consent"><span class="checkbox__mark"></span>
+                                                    </label>
+                                          <button class="button button--color-primary button--size-normal  comments-form__submit-btn" type="submit" disabled="disabled">Отправить комментарий
+                                          </button>
+                                        </div>
                                                   <div class="loader"></div>
                                       </form>
                           </div>
@@ -498,9 +503,9 @@
         </div>
       </div>
     </footer>
-    <script src="./js/common.js?v=1615622707970"></script>
+    <script src="./js/common.js?v=1615633004057"></script>
     <script defer src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
     <script defer src="https://www.google.com/recaptcha/api.js?render=6LeU5UkaAAAAALkmPBk8OgAGsiWiT4HeLcIdVw_v"></script>
-    <script defer src="./js/news-detail2.js?v=1615622707970"></script>
+    <script defer src="./js/news-detail2.js?v=1615633004057"></script>
   </body>
 </html>
