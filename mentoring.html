@@ -1,0 +1,536 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width">
+    <link rel="stylesheet" href="./css/main.css?v=1615730516635">
+    <link rel="stylesheet" href="./css/capabilities.css?v=1615730516635">
+    <link rel="stylesheet" href="./css/mentoring.css?v=1615730516635">
+  </head>
+  <body>
+    <input class="header__checkbox-dropdown" type="checkbox" id="header__checkbox-dropdown">
+    <input class="header__checkbox-hamburger" type="checkbox" id="header__checkbox-hamburger">
+    <header class="header">
+      <div class="container header__container">
+        <div class="header__content">
+          <label class="header__backdrop header__backdrop--hamburger" for="header__checkbox-hamburger"></label>
+          <label class="header__backdrop header__backdrop--dropdown" for="header__checkbox-dropdown"></label>
+          <div class="header__row header__row--panel">
+            <div class="header__wrapper header__wrapper--hamburger">
+              <div class="header__hamburger">
+                <label class="header__hamburger-icon" for="header__checkbox-hamburger"></label>
+              </div>
+            </div>
+            <div class="header__wrapper header__wrapper--general"><a href="/"><img class="header__logo" src="images/svg/logo.svg"></a>
+              <p class="header__title">Один из крупнейших в Европе международных<br> центров обуения с сертификацией ICF</p>
+            </div>
+            <div class="header__wrapper header__wrapper--contacts"><a class="header__link header__link--mail" href="mailto:info@icpcentre.org"><span class="header__mail-text">info@icpcentre.org</span>
+                <div class="header__mail-icon"></div></a><a class="header__link header__link--phone" href="tel:+78005513531">8&nbsp;800&nbsp;551&#8209;35&#8209;31</a></div>
+          </div>
+          <nav class="header__row header__row--navbar">
+            <ul class="header__navbar-list">
+              <li class="header__navbar-item header__navbar-item--has-dropdown" data-elements="[{&quot;text&quot;:&quot;Миссия+ценности&quot;,&quot;href&quot;:&quot;#&quot;},{&quot;text&quot;:&quot;История компании&quot;,&quot;href&quot;:&quot;#&quot;},{&quot;text&quot;:&quot;Команда&quot;,&quot;href&quot;:&quot;#&quot;},{&quot;text&quot;:&quot;Коучинговые компетенции&quot;,&quot;href&quot;:&quot;#&quot;},{&quot;text&quot;:&quot;Членство в ICF&quot;,&quot;href&quot;:&quot;#&quot;},{&quot;text&quot;:&quot;Ведущие&quot;,&quot;href&quot;:&quot;#&quot;},{&quot;text&quot;:&quot;Партнеры&quot;,&quot;href&quot;:&quot;#&quot;},{&quot;text&quot;:&quot;Представительства&quot;,&quot;href&quot;:&quot;#&quot;},{&quot;text&quot;:&quot;Лаборатория научных исследований коучинга&quot;,&quot;href&quot;:&quot;#&quot;},{&quot;text&quot;:&quot;Новости&quot;,&quot;href&quot;:&quot;#&quot;},{&quot;text&quot;:&quot;Отзывы слушателей&quot;,&quot;href&quot;:&quot;#&quot;}]">О центре<span class="header__dropdown-icon"></span></li>
+              <li class="header__navbar-item header__navbar-item--has-dropdown" data-elements="[{&quot;text&quot;:&quot;Программы развития коучинговых компетенций&quot;,&quot;href&quot;:&quot;#&quot;,&quot;level3&quot;:[{&quot;text&quot;:&quot;Концепт коучинга&quot;,&quot;href&quot;:&quot;#&quot;},{&quot;text&quot;:&quot;Полный курс коучинга&quot;,&quot;href&quot;:&quot;#&quot;},{&quot;text&quot;:&quot;Уникальный код коуча&quot;,&quot;href&quot;:&quot;#&quot;}]},{&quot;text&quot;:&quot;Развитие профессиональных коучей&quot;,&quot;href&quot;:&quot;#&quot;,&quot;level3&quot;:[{&quot;text&quot;:&quot;Международная программа подготовки супервизоров для коучей&quot;,&quot;href&quot;:&quot;#&quot;},{&quot;text&quot;:&quot;Ментор для коучей ICF&quot;,&quot;href&quot;:&quot;#&quot;},{&quot;text&quot;:&quot;Школа института обратной связи&quot;,&quot;href&quot;:&quot;#&quot;}]},{&quot;text&quot;:&quot;Agile-коучинг&quot;,&quot;href&quot;:&quot;#&quot;,&quot;level3&quot;:[{&quot;text&quot;:&quot;Agile-коучинг&quot;,&quot;href&quot;:&quot;#&quot;}]},{&quot;text&quot;:&quot;Коучинг для организаций&quot;,&quot;href&quot;:&quot;#&quot;,&quot;level3&quot;:[{&quot;text&quot;:&quot;Менторинг в бизнесе&quot;,&quot;href&quot;:&quot;#&quot;},{&quot;text&quot;:&quot;Поддержка внутренних институтов коучинга&quot;,&quot;href&quot;:&quot;#&quot;},{&quot;text&quot;:&quot;Фидбек-коучинг&quot;,&quot;href&quot;:&quot;#&quot;},{&quot;text&quot;:&quot;Тренинг по переговорам&quot;,&quot;href&quot;:&quot;#&quot;},{&quot;text&quot;:&quot;Коучинг в HR&quot;,&quot;href&quot;:&quot;#&quot;},{&quot;text&quot;:&quot;Коучинг для лидеров&quot;,&quot;href&quot;:&quot;#&quot;},{&quot;text&quot;:&quot;Мастерство командного коучинга&quot;,&quot;href&quot;:&quot;#&quot;}]},{&quot;text&quot;:&quot;Современные подходы в воспитании и образовании&quot;,&quot;href&quot;:&quot;#&quot;,&quot;level3&quot;:[{&quot;text&quot;:&quot;Осознанное родительство&quot;,&quot;href&quot;:&quot;#&quot;},{&quot;text&quot;:&quot;Коучинг для специалиство в сфере образованя&quot;,&quot;href&quot;:&quot;#&quot;}]}]">Направления<span class="header__dropdown-icon"></span></li>
+              <li class="header__navbar-item header__navbar-item--has-dropdown" data-elements="[{&quot;text&quot;:&quot;Расписание&quot;,&quot;href&quot;:&quot;#&quot;},{&quot;text&quot;:&quot;Очное обучение&quot;,&quot;href&quot;:&quot;#&quot;},{&quot;text&quot;:&quot;Онлайн-обучение&quot;,&quot;href&quot;:&quot;#&quot;},{&quot;text&quot;:&quot;Песочница&quot;,&quot;href&quot;:&quot;#&quot;},{&quot;text&quot;:&quot;Практика+стажировки&quot;,&quot;href&quot;:&quot;#&quot;},{&quot;text&quot;:&quot;Программа лояльности&quot;,&quot;href&quot;:&quot;#&quot;},{&quot;text&quot;:&quot;Институт обратной связи&quot;,&quot;href&quot;:&quot;#&quot;},{&quot;text&quot;:&quot;Фестиваль коучинга&quot;,&quot;href&quot;:&quot;#&quot;},{&quot;text&quot;:&quot;Коуч-туры&quot;,&quot;href&quot;:&quot;#&quot;},{&quot;text&quot;:&quot;Бесплатные мастер-классы, вебинары и лекции&quot;,&quot;href&quot;:&quot;#&quot;},{&quot;text&quot;:&quot;Горячая линия&quot;,&quot;href&quot;:&quot;#&quot;}]">Процесс обучения<span class="header__dropdown-icon"></span></li>
+              <li class="header__navbar-item"><a class="header__link" href="#">Горячая линия</a></li>
+            </ul>
+            <label class="header__dropdown-backdrop" for="header__checkbox-dropdown"></label>
+            <div class="header__row header__row--dropdown">
+              <ul class="header__dropdown-list"></ul>
+              <div class="header__backdrop header__backdrop--level3"></div>
+              <ul class="header__level3-list"></ul>
+              <div class="header__dropdown-search-container">
+                <input class="header__dropdown-search-input" type="search" placeholder="Поиск">
+              </div>
+            </div>
+          </nav>
+        </div>
+      </div>
+    </header>
+    <main>
+      <div class="container"><a href="/"><img class="logo-duplicate" src="images/svg/logo.svg"></a></div>
+      <div class="mentoring">
+        <div class="capabilities__group capabilities__group--first">
+          <div class="capabilities__background-wrp">
+            <video class="video-background" autoplay muted loop id="video-background">
+              <source src="video/capabilities-background.mp4" type="video/mp4">
+            </video>
+          </div>
+          <div class="container container--relative">
+            <section class="capabilities-start-screen page__start-screen">
+              <div class="capabilities-start-screen__content">
+                <div class="capabilities-start-screen__text">
+                  <h1 class="title capabilities-start-screen__title"><span class="title__partial title__partial--black">Менторинг для коучей</span></h1>
+                </div>
+              </div>
+            </section>
+          </div>
+        </div>
+        <div class="page__content">
+          <div class="capabilities__group">
+            <div class="container">
+              <section class="capabilities-advantages">
+                <div class="capabilities-advantages__events">
+                  <div class="capabilities-advantages__event-group">
+                    <div class="capabilities-advantages__event capabilities-advantages__event--offset-large">
+                      <div class="capabilities-advantages__place capabilities-advantages__place--marked"><span class="capabilities-advantages__text capabilities-advantages__text--bold">Онлайн</span>
+                      </div>
+                      <p class="capabilities-advantages__date-text capabilities-advantages__date-text--defined">Старт онлайн обучения 24 октября 2020</p>
+                    </div>
+                  </div>
+                  <div class="capabilities-advantages__event-group">
+                    <div class="capabilities-advantages__event capabilities-advantages__event--offset-short">
+                      <div class="capabilities-advantages__place"><span class="capabilities-advantages__text capabilities-advantages__text--regular">Очное в </span><span class="capabilities-advantages__text capabilities-advantages__text--bold">Санкт-Петербурге</span>
+                      </div>
+                      <p class="capabilities-advantages__date-text capabilities-advantages__date-text--undefined">Даты уточняются</p>
+                    </div>
+                    <div class="capabilities-advantages__event capabilities-advantages__event--offset-short">
+                      <div class="capabilities-advantages__place"><span class="capabilities-advantages__text capabilities-advantages__text--regular">Очное в </span><span class="capabilities-advantages__text capabilities-advantages__text--bold">Москве</span>
+                      </div>
+                      <p class="capabilities-advantages__date-text capabilities-advantages__date-text--undefined">Даты уточняются</p>
+                    </div>
+                  </div>
+                </div><a class="button button--link button--color-primary button--size-xl capabilities-advantages__btn" href="#">Записаться
+                                              <svg class="button__icon">
+                                                <use xlink:href="images/sprite.svg#icon-ok"></use>
+                                              </svg></a>
+              </section>
+              <section class="capabilities-about programs-about double-block">
+                <aside class="double-block__aside">
+                  <h3 class="double-block__title">О программе</h3>
+                </aside>
+                <div class="double-block__content programs-about__content">
+                  <p class="programs-about__text">Менторинг для коучей — это один из методов обучения и эффективного профессионального роста коуча. В этом процессе более опытный коуч (ментор) делится имеющимися знаниями согласно компетенциям ICF с коучем, обратившимся за поддержкой в виде проведения ментор-сессии для него.</p>
+                  <p class="programs-about__secondary-text">Программа была разработана в 2015 году известным коучем, вторым в России MCC ICF Ольгой Рыбиной. Выпускниками стали более 1000 студентов из 38 стран.</p>
+                </div>
+              </section>
+            </div>
+          </div>
+          <div class="capabilities__group capabilities__group--target">
+            <div class="container">
+              <section class="capabilities-target mentoring-target">
+                <div class="double-block">
+                  <aside class="double-block__aside capabilities-target__content">
+                    <h3 class="double-block__title"></h3>
+                  </aside>
+                  <div class="double-block__content double-block__content--narrow">
+                    <p class="text text--l2">Цель менторинга для коучей</p>
+                    <h4 class="composite-title mt-25"><span class="composite-title__part">Развить,&#32;</span><span class="composite-title__part composite-title__part--bold">обучить&#32;</span><br/><span class="composite-title__part composite-title__part--bold composite-title__part--italic">помочь&#32;</span>
+                    </h4>
+                    <p class="mentoring-target__subtitle mt-15 text text--m">коучу более эффективно проводить<br>коуч-сессии и расти в карьере</p>
+                  </div>
+                </div>
+                <div class="mt-70">
+                  <div class="double-block">
+                    <aside class="double-block__aside capabilities-target__content">
+                      <h3 class="double-block__title">Для кого этот курс:</h3>
+                    </aside>
+                    <div class="double-block__content double-block__content--narrow">
+                      <p class="capabilities-target__text">Для коучей, решивших пройти ICF сертификацию на уровень АСС, РСС, МСС; кто хочет понять, как проявляются 8 ключевых компетенций ICF в его личной работе, и обозначить, что и как можно делать по-другому</p>
+                      <div class="capabilities-target__acquirement">
+                        <p class="capabilities-target__acquirement-title">Зачем нужен менторинг</p>
+                        <ul class="capabilities-target__acquirement-list">
+                          <li class="capabilities-target__acquirement-item">Для ICF сертификации на уровень АСС, РСС, МСС ICF</li>
+                          <li class="capabilities-target__acquirement-item">Для профессионального роста в коучинге</li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </section>
+            </div>
+          </div>
+          <div class="capabilities__group py-50">
+            <div class="container">
+              <div class="double-block">
+                <aside class="double-block__aside">
+                  <h3 class="double-block__title">Как пройти менторинг</h3>
+                </aside>
+                <div class="double-block__content double-block__content--narrow">
+                  <ul class="numbered-list">
+                    <li class="numbered-list__item">
+                      <p class="text text--s">Определите для себя, в каком формате вы хотите пройти менторинг: индивидуально или в группе </p>
+                    </li>
+                    <li class="numbered-list__item">
+                      <p class="text text--s">В заявке укажите формат и фамилию ментора, с которым вы хотите работать</p>
+                    </li>
+                    <li class="numbered-list__item">
+                      <p class="text text--s">Представитель ICP Centre свяжется с вами для согласования даты менторинга и сообщит ближайшие даты Менторинга</p>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="capabilities__group capabilities__group--gray py-50">
+            <div class="container">
+              <div class="double-block">
+                <aside class="double-block__aside">
+                  <h3 class="double-block__title">Как выбрать ментора</h3>
+                </aside>
+                <div class="double-block__content double-block__content--narrow">
+                  <h4 class="text text--m3">Определите, на какой уровень вы планируете пройти ICF-сертификацию</h4>
+                  <div class="mt-50">
+                    <ul class="numbered-list">
+                      <li class="numbered-list__item">
+                        <p class="text text--s">На уровень АСС — вашим ментором может быть коуч уровня АСС, РСС, МСС ICF</p>
+                      </li>
+                      <li class="numbered-list__item">
+                        <p class="text text--s">На уровень РСС — коуч уровня РСС или MCC ICF</p>
+                      </li>
+                      <li class="numbered-list__item">
+                        <p class="text text--s">На уровень МСС — только коуч уровня МСС ICF</p>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="capabilities__group py-50">
+            <div class="container">
+              <div class="double-block">
+                <aside class="double-block__aside">
+                  <h3 class="double-block__title">Менторы ICP Centre</h3>
+                </aside>
+                <div class="double-block__content double-block__content--narrow">
+                  <ul class="person-grid">
+                    <li class="person-grid__item person-grid__item--size--small">
+                      <article class="person-grid__card" style="background-color: #FB9E55">
+                        <div class="person-grid__img-wrp"><img class="person-grid__img" src="images/jpg/persons/person-1.png" alt="Евгения Потапова" style="mix-blend-mode: overlay"/>
+                          <div class="person-grid__img-mask"></div>
+                        </div>
+                        <div class="person-grid__content">
+                          <div class="person-grid__body">
+                            <h4 class="person-grid__name">Евгения Потапова</h4>
+                            <p class="person-grid__description">Профессиональный коуч (100+)</p>
+                          </div>
+                          <div class="person-grid__footer"><a class="button button--link button--color-white button--size-normal  person-grid__btn" href="#">Подробнее</a>
+                          </div>
+                        </div>
+                      </article>
+                    </li>
+                    <li class="person-grid__item person-grid__item--size--small">
+                      <article class="person-grid__card" style="background-color: #91BFB7">
+                        <div class="person-grid__img-wrp"><img class="person-grid__img" src="images/jpg/persons/person-2.png" alt="Александр Балашов" style="mix-blend-mode: overlay"/>
+                          <div class="person-grid__img-mask"></div>
+                        </div>
+                        <div class="person-grid__content">
+                          <div class="person-grid__body">
+                            <h4 class="person-grid__name">Александр Балашов</h4>
+                            <p class="person-grid__description">Профессиональный коуч (100+)</p>
+                          </div>
+                          <div class="person-grid__footer"><a class="button button--link button--color-white button--size-normal  person-grid__btn" href="#">Подробнее</a>
+                          </div>
+                        </div>
+                      </article>
+                    </li>
+                    <li class="person-grid__item person-grid__item--size--small">
+                      <article class="person-grid__card" style="background-color: #FDE497">
+                        <div class="person-grid__img-wrp"><img class="person-grid__img" src="images/jpg/persons/person-3.png" alt="Александр Ильинский" style="mix-blend-mode: darken"/>
+                          <div class="person-grid__img-mask"></div>
+                        </div>
+                        <div class="person-grid__content">
+                          <div class="person-grid__body">
+                            <h4 class="person-grid__name">Александр Ильинский</h4>
+                            <p class="person-grid__description">Профессиональный коуч (100+)</p>
+                          </div>
+                          <div class="person-grid__footer"><a class="button button--link button--color-white button--size-normal  person-grid__btn" href="#">Подробнее</a>
+                          </div>
+                        </div>
+                      </article>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+              <div class="mt-70">
+                <div class="double-block">
+                  <aside class="double-block__aside">
+                    <h3 class="double-block__title">Как будет проходить обучение:</h3>
+                  </aside>
+                  <div class="double-block__content double-block__content--narrow">
+                    <div class="tabs">
+                      <ul class="tabs__buttons">
+                        <li class="tabs__buttons-item"><a class="active tabs__button underlined" href="#" data-tab="individual">Индивидуальный менторинг</a></li>
+                        <li class="tabs__buttons-item"><a class="tabs__button underlined" href="#" data-tab="exam">Ментор-сессия</a></li>
+                      </ul>
+                      <ul class="tabs__list">
+                        <li class="active tabs__item" data-tab="individual">
+                    <ul class="numbered-list">
+                      <li class="numbered-list__item">
+                        <p class="text text--s">Проходит по расписанию, согласованному между ментором и коучем-менти</p>
+                      </li>
+                      <li class="numbered-list__item">
+                        <p class="text text--s">Индивидуальный менторинг проводится в формате онлайн (Skype)</p>
+                      </li>
+                      <li class="numbered-list__item">
+                        <p class="text text--s">В начале встречи ментор заключает контракт с коучем-менти:<br>— на какие вопросы коуч-менти хочет получить ответы;<br>— по каким 2-3 компетенциям коуч-менти хочет получить обратную связь от ментор</p>
+                      </li>
+                      <li class="numbered-list__item">
+                        <p class="text text--s">Ментор дает обратную связь коучу-менти по заявленным компетенциям</p>
+                      </li>
+                      <li class="numbered-list__item">
+                        <p class="text text--s">Подведение итогов индивидуального менторинга<br>— Рабочие материалы для индивидуального менторинга необходимо отправлять на: info@icpcentre.org<br>— Длительность индивидуальной ментор-сессии 1 час</p>
+                      </li>
+                    </ul>
+                        </li>
+                        <li class="tabs__item" data-tab="exam">
+                    <ul class="numbered-list">
+                      <li class="numbered-list__item">
+                        <p class="text text--s">Проходит по расписанию, согласованному между ментором и коучем-менти</p>
+                      </li>
+                      <li class="numbered-list__item">
+                        <p class="text text--s">Индивидуальный менторинг проводится в формате онлайн (Skype)</p>
+                      </li>
+                      <li class="numbered-list__item">
+                        <p class="text text--s">В начале встречи ментор заключает контракт с коучем-менти:<br>— на какие вопросы коуч-менти хочет получить ответы;<br>— по каким 2-3 компетенциям коуч-менти хочет получить обратную связь от ментор</p>
+                      </li>
+                      <li class="numbered-list__item">
+                        <p class="text text--s">Ментор дает обратную связь коучу-менти по заявленным компетенциям</p>
+                      </li>
+                      <li class="numbered-list__item">
+                        <p class="text text--s">Подведение итогов индивидуального менторинга<br>— Рабочие материалы для индивидуального менторинга необходимо отправлять на: info@icpcentre.org<br>— Длительность индивидуальной ментор-сессии 1 час</p>
+                      </li>
+                    </ul>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="mt-80 py-50 border-all">
+              <div class="container">
+                <div class="double-block">
+                  <aside class="double-block__aside">
+                    <h3 class="double-block__title">Как будет проходить обучение:</h3>
+                  </aside>
+                  <div class="double-block__content double-block__content--narrow">
+                    <div class="tabs">
+                      <ul class="tabs__buttons">
+                        <li class="tabs__buttons-item"><a class="active tabs__button underlined" href="#" data-tab="group1">Групповом менторинге в роли коуча-менти</a></li>
+                        <li class="tabs__buttons-item"><a class="tabs__button underlined" href="#" data-tab="group2">Групповом менторинге роли наблюдателя</a></li>
+                        <li class="tabs__buttons-item"><a class="tabs__button underlined" href="#" data-tab="individual">Индивидуальном менторинге</a></li>
+                      </ul>
+                      <ul class="tabs__list">
+                        <li class="active tabs__item" data-tab="group1">
+                    <p class="text text--m">Не позже, чем за 3 дня (72 часа) до согласованной даты мероприятия необходимо отправить на адрес&#32;<a href="mailto:info@icpcentre.com">info@icpcentre.com</a></p>
+                    <div class="mt-50">
+                      <ul class="numbered-list">
+                        <li class="numbered-list__item">
+                          <p class="text text--s">Аудиозапись сессии в формате mp3 продолжительностью до 30 минут, с наличием фразы в начале "запись сделана с согласия клиента и в учебных  целях";</p>
+                        </li>
+                        <li class="numbered-list__item">
+                          <p class="text text--s">Транскрипцию — пронумерованную по ролям (коуч/клиент) стенограмму сессии;</p>
+                        </li>
+                        <li class="numbered-list__item">
+                          <p class="text text--s">В сопроводительном письме необходимо указать компетенции (не более 3-х за один менторинг), по которым коуч-менти хочет получить обратную связь от ментора.</p>
+                        </li>
+                      </ul>
+                    </div>
+                        </li>
+                        <li class="tabs__item" data-tab="group2">
+                    <p class="text text--m">Не позже, чем за 3 дня (72 часа) до согласованной даты мероприятия необходимо отправить на адрес&#32;<a href="mailto:info@icpcentre.com">info@icpcentre.com</a></p>
+                    <div class="mt-50">
+                      <ul class="numbered-list">
+                        <li class="numbered-list__item">
+                          <p class="text text--s">Аудиозапись сессии в формате mp3 продолжительностью до 30 минут, с наличием фразы в начале "запись сделана с согласия клиента и в учебных  целях";</p>
+                        </li>
+                        <li class="numbered-list__item">
+                          <p class="text text--s">Транскрипцию — пронумерованную по ролям (коуч/клиент) стенограмму сессии;</p>
+                        </li>
+                        <li class="numbered-list__item">
+                          <p class="text text--s">В сопроводительном письме необходимо указать компетенции (не более 3-х за один менторинг), по которым коуч-менти хочет получить обратную связь от ментора.</p>
+                        </li>
+                      </ul>
+                    </div>
+                        </li>
+                        <li class="tabs__item" data-tab="individual">
+                    <p class="text text--m">Не позже, чем за 3 дня (72 часа) до согласованной даты мероприятия необходимо отправить на адрес&#32;<a href="mailto:info@icpcentre.com">info@icpcentre.com</a></p>
+                    <div class="mt-50">
+                      <ul class="numbered-list">
+                        <li class="numbered-list__item">
+                          <p class="text text--s">Аудиозапись сессии в формате mp3 продолжительностью до 30 минут, с наличием фразы в начале "запись сделана с согласия клиента и в учебных  целях";</p>
+                        </li>
+                        <li class="numbered-list__item">
+                          <p class="text text--s">Транскрипцию — пронумерованную по ролям (коуч/клиент) стенограмму сессии;</p>
+                        </li>
+                        <li class="numbered-list__item">
+                          <p class="text text--s">В сопроводительном письме необходимо указать компетенции (не более 3-х за один менторинг), по которым коуч-менти хочет получить обратную связь от ментора.</p>
+                        </li>
+                      </ul>
+                    </div>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="mt-70">
+              <div class="sale">
+                <svg class="sale__pattern">
+                  <use xlink:href="images/common.svg#sale-pattern"></use>
+                </svg>
+                <div class="container">
+                  <div class="double-block">
+                    <aside class="double-block__aside">
+                      <h3 class="double-block__title">Скидка</h3>
+                    </aside>
+                    <div class="double-block__content double-block__content--narrow">
+                      <div class="sale__content">
+                        <p class="sale__subtitle text text--m">Специальное предложение для всех, кто готовиться к сертификации ICF</p>
+                        <h3 class="sale__title">СКИДКА 10% НА ПАКЕТЫ МЕНТОРИНГОВ</h3>
+                        <p class="sale__description text text--m">Для получения сертификации в ICF на уровень ACC и PCC помимо образования в коучинге (сертификата ACSTH и ACTP) и часов практики, необходимо пройти минимум 10,5 часов индивидуального и группового менторинга.<br><br>Поэтому, мы сформировали пакеты, в которые уже включены нужные вам часы менторингов. Приобретая один из этих пакетов, вы сможете с легкостью подготовиться к предстоящей сертификации!</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+            <div class="modal" id="modal-participation">
+              <div class="modal__backdrop modal__close-trigger"></div>
+              <div class="modal__window modal__window--active">
+                <div class="modal__header">
+                  <p class="modal__title">Заявка на участие</p>
+                  <div class="modal__close-btn modal__close-trigger"></div>
+                </div>
+                <div class="modal__content">
+                  <div class="forms-participation">
+                    <div class="forms-participation__col forms-participation__col--left"></div>
+                    <div class="forms-participation__col forms-participation__col--right">
+                      <form class="form forms-participation__form" action="https://jsonplaceholder.typicode.com/posts" method="POST" data-possible-hidden="[&quot;tariff&quot;,&quot;price&quot;]" id="forms-participation">
+                              <div class="form-item">
+                                <div class="form-item__label">Как вас зовут?</div>
+                                <div class="form-item__content">
+                                  <input class="form__input" name="name" placeholder="Фамилия и имя" required>
+                                </div>
+                              </div>
+                              <div class="form-item">
+                                <div class="form-item__label">Эл. почта</div>
+                                <div class="form-item__content">
+                                  <input class="form__input" name="email" placeholder="E-mail" type="email" required>
+                                </div>
+                              </div>
+                              <div class="form-item">
+                                <div class="form-item__label">Номер телефона</div>
+                                <div class="form-item__content">
+                                  <input class="form__input" name="phone" placeholder="+7" type="tel" pattern="\+7-[0-9]{3}-\d{3}-\d{2}-?\d{2}" required>
+                                </div>
+                              </div>
+                              <label class="checkbox forms-participation__consent">Даю согласие на обработку персональных данных
+                                <input class="checkbox__input" type="checkbox" name="consent"><span class="checkbox__mark"></span>
+                              </label>
+                                      <button class="button button--color-primary button--size-normal  forms-participation__submit-btn" type="submit" disabled>Отправить
+                                      </button>
+                      </form>
+                            <div class="loader"></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+    </main>
+    <footer class="footer">
+      <div class="hotline">
+        <div class="container hotline__container">
+          <h3 class="hotline__title">Горячая<br> линия</h3>
+          <div class="hotline__group">
+            <p class="hotline__description">Волонтерский проект Международного Центра<br> Профессионального Коучинга ICP Centre.</p><a class="button button--link button--color-white button--size-normal hotline__btn" href="#">Подробнее</a>
+          </div>
+        </div>
+      </div>
+      <div class="footer__row footer__row--contacts">
+        <div class="container footer__row-container footer__row-container--fill">
+          <div class="footer__col footer__col--align-center"><a class="footer__primary-link footer__primary-link--email" href="mailto:info@icpcentre.org"><span class="footer__email-text">info@icpcentre.org</span>
+              <div class="footer__email-icon"></div></a></div>
+          <div class="footer__col footer__col--align-center footer__col--phone"><a class="footer__primary-link" href="tel:88005513531">8 800 551-35-31</a></div>
+          <div class="footer__col footer__col--align-center footer__col--social">
+            <ul class="footer__social-list">
+              <li class="footer__social-item"><a href="#"><i class="fa fa-facebook-f footer__social-icon"></i></a></li>
+              <li class="footer__social-item"><a href="#"><i class="fa fa-vk footer__social-icon"></i></a></li>
+              <li class="footer__social-item"><a href="#"><i class="fa fa-instagram footer__social-icon"></i></a></li>
+              <li class="footer__social-item"><a href="#"><i class="fa fa-youtube-play footer__social-icon"></i></a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="footer__row footer__row--categories">
+        <div class="container footer__row-container footer__row-container--fill">
+          <div class="footer__col">
+            <p class="footer__col-title">О центре</p>
+            <ul class="footer__col-list">
+              <li class="footer__col-item"><a class="footer__col-link" href="#">Миссия+ценности</a></li>
+              <li class="footer__col-item"><a class="footer__col-link" href="#">История компании</a></li>
+              <li class="footer__col-item"><a class="footer__col-link" href="#">Команда</a></li>
+              <li class="footer__col-item"><a class="footer__col-link" href="#">Коучинговые компетенции</a></li>
+              <li class="footer__col-item"><a class="footer__col-link" href="#">Членство в ICF</a></li>
+              <li class="footer__col-item"><a class="footer__col-link" href="#">Ведущие</a></li>
+              <li class="footer__col-item"><a class="footer__col-link" href="#">Партнеры</a></li>
+              <li class="footer__col-item"><a class="footer__col-link" href="#">Представительства</a></li>
+              <li class="footer__col-item"><a class="footer__col-link" href="#">Лаборатория научных исследований коучинга</a></li>
+              <li class="footer__col-item"><a class="footer__col-link" href="#">Новости</a></li>
+              <li class="footer__col-item"><a class="footer__col-link" href="#">Отзывы</a></li>
+            </ul>
+          </div>
+          <div class="footer__col">
+            <p class="footer__col-title">Направления</p>
+            <ul class="footer__col-list">
+              <li class="footer__col-item"><a class="footer__col-link" href="#">Программы развития коучинговых компетенций</a></li>
+              <li class="footer__col-item"><a class="footer__col-link" href="#">Развитие профессиональных коучей</a></li>
+              <li class="footer__col-item"><a class="footer__col-link" href="#">GV: Коучинг для организаций</a></li>
+              <li class="footer__col-item"><a class="footer__col-link" href="#">Agile-коучинг</a></li>
+              <li class="footer__col-item"><a class="footer__col-link" href="#">Современные подходы в образовании и воспитании</a></li>
+              <li class="footer__col-item"><a class="footer__col-link" href="#">Индивидуальный коучинг</a></li>
+            </ul>
+          </div>
+          <div class="footer__col">
+            <p class="footer__col-title">Процесс обучения</p>
+            <ul class="footer__col-list">
+              <li class="footer__col-item"><a class="footer__col-link" href="#">Расписание</a></li>
+              <li class="footer__col-item"><a class="footer__col-link" href="#">Очное обучение</a></li>
+              <li class="footer__col-item"><a class="footer__col-link" href="#">Онлайн-обучение</a></li>
+              <li class="footer__col-item"><a class="footer__col-link" href="#">Песочница</a></li>
+              <li class="footer__col-item"><a class="footer__col-link" href="#">Практика+стажировки</a></li>
+              <li class="footer__col-item"><a class="footer__col-link" href="#">Программа лояльности</a></li>
+              <li class="footer__col-item"><a class="footer__col-link" href="#">Институт обратной связи</a></li>
+              <li class="footer__col-item"><a class="footer__col-link" href="#">Фестиваль коучинга</a></li>
+              <li class="footer__col-item"><a class="footer__col-link" href="#">Коуч-туры</a></li>
+              <li class="footer__col-item"><a class="footer__col-link" href="#">Бесплатные мастер-классы, вебинары и лекции</a></li>
+              <li class="footer__col-item"><a class="footer__col-link" href="#">Горячая линия</a></li>
+            </ul>
+          </div>
+          <div class="footer__col">
+            <p class="footer__col-title">База знаний</p>
+            <ul class="footer__col-list">
+              <li class="footer__col-item"><a class="footer__col-link" href="#">Коучинг в HR: инструкция по применению</a></li>
+              <li class="footer__col-item"><a class="footer__col-link" href="#">Спецпроект. История коучинга в России: 1990 − 2020. Команды, люди, события.</a></li>
+              <li class="footer__col-item"><a class="footer__col-link" href="#">О коучинге понятным языком: 15 статей</a></li>
+              <li class="footer__col-item"><a class="footer__col-link" href="#">Онлайн-библиотека</a></li>
+              <li class="footer__col-item"><a class="footer__col-link" href="#">Подкаст: «Хроники одного коуча»</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="footer__row">
+        <div class="container footer__row-container footer__row-container--fit">
+          <div class="footer__col footer__col--flex footer__col--align-center footer__col--copyright">
+            <p class="footer__bottom-text footer__copyright"> <span class="footer__copyright-item footer__copyright-item--bold">© 2019-2020 ICP Centre.&nbsp;</span><br><span class="footer__copyright-item">Все права защищены.</span></p>
+          </div>
+          <div class="footer__col footer__col--flex footer__col--align-center footer__col--bottom-info">
+            <div class="footer__bottom-info-item"><a class="footer__bottom-text footer__bottom-text--link" href="">Договор-оферта</a></div>
+            <div class="footer__bottom-info-item"><a class="footer__bottom-text footer__bottom-text--link" href="">Политика конфиденциальности</a></div>
+            <div class="footer__bottom-info-item footer__bottom-info-item--chat"><a class="footer__chat-icon" href=""></a></div>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <script src="./js/common.js?v=1615730516641"></script>
+    <script defer src="./js/capabilities.js?v=1615730516641"></script>
+    <script defer src="./js/mentoring.js?v=1615730516641"></script>
+  </body>
+</html>
