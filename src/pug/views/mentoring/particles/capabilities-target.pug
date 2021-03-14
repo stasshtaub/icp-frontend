@@ -1,0 +1,20 @@
+section.capabilities-target
+    +double-block("", true, "capabilities-target__content")
+        p.text.text--l2 Цель менторинга для коучей
+        h2 РАЗВИТЬ, ОБУЧИТЬ ПОМОЧЬ
+        p.text.text--m ... коучу более эффективно проводить
+            br
+            | коуч-сессии и расти в карьере
+    .mt-70
+        +double-block("Для кого этот курс:", true, "capabilities-target__content")
+            p.capabilities-target__text Для коучей, решивших пройти ICF сертификацию на уровень АСС, РСС, МСС; кто хочет понять, как проявляются 8 ключевых компетенций ICF в его личной работе, и обозначить, что и как можно делать по-другому
+            .capabilities-target__acquirement
+                p.capabilities-target__acquirement-title Зачем нужен менторинг
+                - 
+                    var acquirementList = [
+                        "Для ICF сертификации на уровень АСС, РСС, МСС ICF",
+                        "Для профессионального роста в коучинге"
+                    ]
+                ul.capabilities-target__acquirement-list
+                    each acquirementItem in acquirementList
+                        li.capabilities-target__acquirement-item !{acquirementItem}

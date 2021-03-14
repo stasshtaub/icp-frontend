@@ -1,0 +1,73 @@
+section.capabilities-changes
+    .container
+        h3.capabilities-changes__title Что изменится после прохождения курса:
+    - 
+        const lines = [
+            [
+                {
+                    text: "Устали искать клиентов на коучинг;&nbsp;", 
+                    color: "white",
+                    bound: "right",
+                    num: 1
+                },
+                {
+                    text: "Не можете", 
+                    color: "white",
+                    bound: "left",
+                    num: 2
+                }
+            ],
+            [
+                {
+                    text: "практиковать коучинг на основной работе;&nbsp;",
+                    color: "white",
+                    bound: "infinity",
+                    num: 3
+                },
+            ],
+            [
+                {
+                    text: "Думаете, что Agile доступен только айтишникам;",
+                    color: "orange",
+                    bound: "infinity",
+                    num: 4
+                }
+            ],
+            [         
+                {
+                    text: "Не можете найти работу коучем в компании,&nbsp;",
+                    color: "white",
+                    bound: "infinity",
+                    num: 5
+                }
+            ],
+            [       
+                {
+                    text: "а быть одиночкой не хотите",
+                    color: "white",
+                    bound: "right",
+                    num: 6,
+                    last: true
+                }
+            ]
+        ]
+    .capabilities-changes__strikethrough
+        each line in lines
+            p.capabilities-changes__strikethrough-line
+                each lineItem in line
+                    span.capabilities-changes__strikethrough-item(class=`capabilities-changes__strikethrough-item--${lineItem.num} capabilities-changes__strikethrough-item--${lineItem.color} capabilities-changes__strikethrough-item--${lineItem.bound} ${lineItem.last ? 'capabilities-changes__strikethrough-item--last' : ''}`) !{lineItem.text}
+    
+    .container
+        -
+            const list = [
+                "Приобретете свободу от&nbsp;офисного графика и&nbsp;возможность работать в&nbsp;любой точке мира, в&nbsp;том числе — дистанционно",
+                "Освоите инструменты, подходящие для решения как профессиональных, так&nbsp;и&nbsp;любых других жизненных задач",
+                "Поймете, куда двигаться дальше в профессии",
+                "Сможете систематизировать тот опыт, который уже&nbsp;есть",
+                "Начнете больше зарабатывать\nи&nbsp;осознаете свою ценность как профессионала",
+                "Вы станете более спокойны\nи&nbsp;удовлетворены жизнью"
+            ]
+        ul.capabilities-changes__list
+            each item, i in list
+                li.capabilities-changes__list-item(class=`capabilities-changes__list-item--${i+1}`)
+                    span !{item}

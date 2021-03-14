@@ -1,0 +1,9 @@
+@import "../utils/variables";
+@import "../utils/breakpoints";
+@import "../utils/helpers";
+
+@import "../components/common/tabs";
+
+.tabs__buttons-item {
+    min-width: Min(305px, 100%);
+}

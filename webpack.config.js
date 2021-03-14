@@ -24,7 +24,8 @@ module.exports = {
 		"helpers/video-modals": "./src/js/helpers/video-modals",
 		library: "./src/js/library",
 		education: "./src/js/education",
-		membership: "./src/js/membership"
+		membership: "./src/js/membership",
+		mentoring: "./src/js/mentoring"
 	},
 	module: {
 		rules: [

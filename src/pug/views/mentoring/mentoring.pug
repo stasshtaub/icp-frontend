@@ -1,0 +1,42 @@
+extends ../../layouts/default
+
+block styles
+    link(rel="stylesheet" href!=`${baseDir}css/main.css?v=${Date.now()}`)
+    link(rel="stylesheet" href!=`${baseDir}css/capabilities.css?v=${Date.now()}`)
+    link(rel="stylesheet" href!=`${baseDir}css/mentoring.css?v=${Date.now()}`)
+block content
+    .mentoring
+        .capabilities__group.capabilities__group--first
+            .capabilities__background-wrp
+                video(autoplay muted loop id="video-background" class="video-background")
+                    source(src="video/capabilities-background.mp4" type="video/mp4")
+            .container.container--relative
+                include particles/capabilities-start-screen
+        .page__content
+            .capabilities__group
+                .container
+                    include particles/capabilities-advantages
+                    +programAbout('Менторинг для коучей — это один из методов обучения и эффективного профессионального роста коуча. В этом процессе более опытный коуч (ментор) делится имеющимися знаниями согласно компетенциям ICF с коучем, обратившимся за поддержкой в виде проведения ментор-сессии для него.', 'Программа была разработана в 2015 году известным коучем, вторым в России MCC ICF Ольгой Рыбиной. Выпускниками стали более 1000 студентов из 38 стран.', 'capabilities-about')
+            .capabilities__group.capabilities__group--target
+                .container
+                    include particles/capabilities-target
+            .capabilities__group.py-50
+                .container
+                    include particles/mentoring-how
+            .capabilities__group.capabilities__group--gray.py-50
+                .container
+                    include particles/mentoring-choice
+            .capabilities__group.py-50
+                .container
+                    include particles/mentoring-mentors
+                    .mt-70
+                        include particles/mentoring-education
+                .mt-80.py-50.border-all
+                    .container
+                        include particles/mentoring-training
+    include ../forms-page/particles/forms-participation
+
+block scripts
+    script(src!=`${baseDir}js/common.js?v=${Date.now()}`)
+    script(defer src!=`${baseDir}js/capabilities.js?v=${Date.now()}`)
+    script(defer src!=`${baseDir}js/mentoring.js?v=${Date.now()}`)

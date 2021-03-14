@@ -1,0 +1,46 @@
+section.capabilities-stages.double-block
+    aside.double-block__aside
+        h3.capabilities-stages__title.double-block__title Как будет проходить обучение:
+    .double-block__content.double-block__content--narrow.capabilities-stages__content
+        - 
+            const stages = [
+                {
+                    title: "ОНЛАЙН-ФОРМАТ",
+                    description: "Вам не придется куда-то ехать. Для участия в вебинарах понадобится только компьютер, гарнитура и интернет."
+                },
+                {
+                    title: "Длительность",
+                    description: "Программа рассчитана&nbsp;на 6 месяцев — 2 встречи&nbsp;в неделю, каждая встреча&nbsp;по 2 часа."
+                },
+                {
+                    title: "Личный кабинет",
+                    description: "Вам будет предоставлен доступ в&nbsp;личный кабинет, где будет все необходимое — ссылки, материалы, полезная информация. Записи вебинаров, демо-сессий и&nbsp;презентаций будут доступны только в&nbsp;режиме «просмотр». Остальные материалы в&nbsp;режиме «скачать»."
+                },
+                {
+                    title: "Вебинары",
+                    description: "Теоретическая часть один раз в&nbsp;неделю будет проходить в&nbsp;формате вебинара."
+                },
+                {
+                    title: "Менторинг",
+                    description: "Каждый участник получит конструктивную обратную связь по&nbsp;ключевым компетенциям профессии."
+                },
+                {
+                    title: "Практика в малых группах",
+                    description: "На&nbsp;каждой практике весь поток участников будет объединен в&nbsp;мини-группы («тройки») для отработки полученных инструментов и&nbsp;техник. «Тройки» будут курироваться ассистентами — профессиональными, сертифицированными коучами ICP Centre."
+                },
+                {
+                    title: "Связь в Facebook",
+                    description: "Вы будете добавлены в&nbsp;закрытую группу, где сможете общаться с&nbsp;другими учениками, делиться успехами и&nbsp;консультироваться по&nbsp;любым вопросам обучения с&nbsp;кураторами."
+                },
+                {
+                    title: "Завершение курса",
+                    description: "Для&nbsp;получения международного сертификата ACSTH ICF, после окончания курса, Вам необходимо будет пройти тест и&nbsp;провести завершающую курс коуч-сессию."
+                }
+            ]
+        ul.capabilities-stages__list
+            each stage, i in stages
+                li.capabilities-stages__stage
+                    p.capabilities-stages__item-num= i+1
+                    p.capabilities-stages__item-title= stage.title
+                    p.capabilities-stages__item-description !{stage.description}
+        

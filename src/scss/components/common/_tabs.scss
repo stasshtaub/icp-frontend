@@ -7,24 +7,31 @@
 		@include mobile-l {
 			margin: -20px -20px 0 0;
 		}
-  }
-  
+	}
+
 	&__buttons-item {
-		padding: 20px 40px 0 0;
+		margin: 20px 40px 0 0;
 
 		@include mobile-l {
-			padding: 20px 20px 0 0;
+			margin: 20px 20px 0 0;
 		}
-  }
-  
+	}
+
 	&__list {
 		margin-top: 50px;
 	}
 
 	&__button {
 		background-size: 10px 2px;
+		font-weight: 500;
+		font-size: 20px;
+		line-height: 130%;
 		text-decoration: none;
 		transition: color 0.15s ease-in-out, background-image 0.15s ease-in-out;
+
+		@include mobile-l {
+			font-size: 16px;
+		}
 
 		&:not(.active) {
 			background-image: linear-gradient(

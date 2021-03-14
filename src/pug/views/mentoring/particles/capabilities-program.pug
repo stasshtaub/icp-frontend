@@ -1,0 +1,177 @@
+section.capabilities-program
+    .capabilities-program__slider.swiper-container
+        - 
+            const slides = [
+                {
+                    title: "Создай \n будущее",
+                    description: {
+                        layout: "col",
+                        topics: {
+                            layout: "row",
+                            items: [
+                                "Формирование навыка осознанного выбора желаемого будущего",
+                                "Знакомство с технологиями исследования ресурсов настоящего",
+                                "Активирование интереса к личностным изменениям"
+                            ]
+                        },
+                        results: {
+                            layout: "row",
+                            items: [
+                                "Освоите навык фактичного мышления",
+                                "Научитесь вести развивающий разговор с применением коучинговых технологий",
+                                "Поймете, что такое коучинг по стандартам ICF и в чем его сила",
+                                "Научитесь создавать желаемое будущее и план по его достижению"
+                            ]
+                        }
+                    }
+                },
+                {
+                    title: "Мысли \n результатами",
+                    description: {
+                        layout: "row",
+                        topics: {
+                            layout: "col",
+                            size: "long",
+                            items: [
+                                "Формирование навыка проведения коуч-сессий в соответствии с 8 ключевыми компетенциями ICF.",
+                                "Заключение контракта на сессию.",
+                                "Создание доверительных отношений.",
+                                "Коучинговое присутствие.",
+                                "Активное слушание клиента.",
+                                "Сильные вопросы.",
+                                "Безоценочность, недирективность, сфокусированное. слушание себя и других."
+                            ]
+                        },
+                        results: {
+                            layout: "col",
+                            size: "short",
+                            items: [
+                                "Научитесь быть коучем.",
+                                "Сможете самостоятельно проводить коуч-сессии.",
+                                "Начнете управлять слушанием и пониманием других людей.",
+                                "Узнаете собственный стиль общения с людьми.",
+                                "Сможете фокусировать свое внимание осознанно и управлять качеством вашего внимания."
+                            ]
+                        }
+                    }
+                },
+                {
+                    title: "Прямая \n коммуникация",
+                    description: {
+                        layout: "col",
+                        topics: {
+                            layout: "row",
+                            items: [
+                                "Прямая коммуникация.",
+                                "Осознанность клиента.",
+                                "Проектирование действий.",
+                                "Планирование и постановка целей.",
+                                "Управление прогрессом и ответственностью."
+                            ]
+                        },
+                        results: {
+                            layout: "row",
+                            items: [
+                                "Научитесь выбирать сильные действия для решения своих задач.",
+                                "Сможете поддержать клиента в поиске самостоятельных решений.",
+                                "Научитесь быть в долгосрочных отношениях с клиентом.",
+                                "Научитесь разделять и распределять ответственность за результат с другими людьми, сотрудниками, клиентами."
+                            ]
+                        }
+                    }
+                },
+                {
+                    title: "Эмоциональная \n компетентность",
+                    description: {
+                        layout: "row",
+                        topics: {
+                            layout: "col",
+                            size: "normal",
+                            items: [
+                                "Ценностный уровень в работе коуча.",
+                                "Эмоциональная компетентность и личный ресурс коуча как личности.",
+                                "Интегральный подход во взрослении взрослых людей.",
+                                "Базовые психологические модели и способы работы с ними в коучинге."
+                            ]
+                        },
+                        results: {
+                            layout: "col",
+                            size: "normal",
+                            items: [
+                                "Научитесь  работать с ценностями, убеждениями и метафорами клиента.",
+                                "Научитесь поддержать клиента в периоды жизненных изменений и кризисов.",
+                                "Научитесь видеть целостность клиента за счет понимания психологических закономерностей.",
+                                "Углубите знание собственных ценностей, что помогает жить в соответствии с ними, а значит, в гармонии с собой."
+                            ]
+                        }
+                    }
+                },
+                {
+                    title: "Прямая \n коммуникация",
+                    description: {
+                        layout: "col",
+                        topics: {
+                            layout: "row",
+                            items: [
+                                "Бизнес-инструменты в работе коуча.",
+                                "Специализации в коучинге.",
+                                "Трехсторонние соглашения.",
+                                "Частная практика коуча как бизнес."
+                            ]
+                        },
+                        results: {
+                            layout: "row",
+                            items: [
+                                "Построите план своего профессионального развития.",
+                                "Откроете карьерные перспективы в коучинге для себя.",
+                                "Подготовите себя к международной сертификации в коучинге.",
+                                "Откроете возможности работы в разных коучинговых профессиональных направлениях (life-, бизнес-коучинг, agile)."
+                            ]
+                        }
+                    }
+                }
+            ]
+        ul.capabilities-program__slides.swiper-wrapper
+            each slide, i in slides
+                li(class=`capabilities-program__slide--${i+1}`).capabilities-program__slide.swiper-slide
+                    case i
+                        when 0
+                            .capabilities-program__path
+                                include ../../../../images/svg/capabilities-program-path.svg
+                            .capabilities-program__shape
+                                include ../../../../images/svg/capabilities-program-shape-1.svg
+                        when 1
+                            .capabilities-program__shape
+                                include ../../../../images/svg/capabilities-program-shape-2.svg
+                        when 2
+                            .capabilities-program__shape
+                                include ../../../../images/svg/capabilities-program-shape-3.svg
+                        when 3
+                            .capabilities-program__shape
+                                include ../../../../images/svg/capabilities-program-shape-4.svg
+                    p.capabilities-program__number= i+1
+                    .capabilities-program__content
+                        .capabilities-program__module
+                            p.capabilities-program__module-text Модуль
+                            h4.capabilities-program__module-title= slide.title
+                        .capabilities-program__description(class=`capabilities-program__description--${slide.description.layout}`)
+                            .capabilities-program__description-block.capabilities-program__description-block--topics(class=`capabilities-program__description-block--${slide.description.topics.layout} ${slide.description.topics.size ? 'capabilities-program__description-block--'+slide.description.topics.size : ''}`)
+                                p.capabilities-program__description-title Что будет
+                                ul.capabilities-program__description-list
+                                    each topic in slide.description.topics.items
+                                        li.capabilities-program__description-item= topic
+                            .capabilities-program__description-block.capabilities-program__description-block--results(class=`capabilities-program__description-block--${slide.description.results.layout} ${slide.description.results.size ? 'capabilities-program__description-block--'+slide.description.results.size : ''}`)
+                                p.capabilities-program__description-title Результат после прохождения модуля
+                                ul.capabilities-program__description-list
+                                    each result in slide.description.results.items
+                                        li.capabilities-program__description-item= result
+                        a(href="#").capabilities-program__description-title.capabilities-program__description-title--link Расписание
+        .capabilities-program__nav
+            .capabilities-program__nav-section.capabilities-program__nav-section--title
+                h3.capabilities-program__title Программа курса
+            .capabilities-program__nav-section.capabilities-program__nav-section--btn
+                button.capabilities-program__btn.capabilities-program__btn--prev
+            .capabilities-program__nav-section.capabilities-program__nav-section--btn
+                button.capabilities-program__btn.capabilities-program__btn--next
+        ul.capabilities-program__dots
+

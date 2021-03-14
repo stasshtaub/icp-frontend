@@ -1,0 +1,41 @@
++double-block("Как будет проходить обучение:", true)
+    -
+        const tabsItems = [
+            {
+                name: "group1",
+                label: "Групповом менторинге в роли коуча-менти",
+                active: true
+            },
+            {
+                name: "group2",
+                label: "Групповом менторинге роли наблюдателя"
+            },
+            {
+                name: "individual",
+                label: "Индивидуальном менторинге"
+            }
+        ]
+
+        const trainingItems = [
+            'Аудиозапись сессии в формате mp3 продолжительностью до 30 минут, с наличием фразы в начале "запись сделана с согласия клиента и в учебных  целях";',
+            'Транскрипцию — пронумерованную по ролям (коуч/клиент) стенограмму сессии;',
+            'В сопроводительном письме необходимо указать компетенции (не более 3-х за один менторинг), по которым коуч-менти хочет получить обратную связь от ментора.'
+        ]
+        
+    +tabs(tabsItems)
+        +slot('group1')
+            p.text.text--m Не позже, чем за 3 дня (72 часа) до согласованной даты мероприятия необходимо отправить на адрес&#32;
+                a(href="mailto:info@icpcentre.com") info@icpcentre.com
+            .mt-50
+                +numbered-list(trainingItems)
+        +slot('group2')
+            p.text.text--m Не позже, чем за 3 дня (72 часа) до согласованной даты мероприятия необходимо отправить на адрес&#32;
+                a(href="mailto:info@icpcentre.com") info@icpcentre.com
+            .mt-50
+                +numbered-list(trainingItems)
+        +slot('individual')
+            p.text.text--m Не позже, чем за 3 дня (72 часа) до согласованной даты мероприятия необходимо отправить на адрес&#32;
+                a(href="mailto:info@icpcentre.com") info@icpcentre.com
+            .mt-50
+                +numbered-list(trainingItems)
+    

@@ -1,0 +1,35 @@
+.numbered-list {
+    display: flex;
+    flex-wrap: wrap;
+    margin: -45px -30px 0 0;
+    counter-reset: item-number;
+    max-width: 1180px;
+
+    &__item {
+        flex-basis: 315px;
+        margin: 45px 30px 0 0;
+
+        &:nth-child(3n + 3),
+        &:last-child {
+            flex-grow: 1;
+        }
+
+        &::before {
+            counter-increment: item-number;
+            content: counter(item-number);
+            display: block;
+            margin-bottom: 40px;
+            font-size: 25px;
+            line-height: 124%;
+
+            @include tablet {
+                font-style: 22px;
+                margin-bottom: 20px;
+            }
+
+            @include mobile-l {
+                font-style: 20px;
+            }
+        }
+    }
+}

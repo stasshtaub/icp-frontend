@@ -1,19 +1,19 @@
-{
-	const triggers = document.querySelectorAll(".tabs__button[data-tab]");
-	const tabContents = document.querySelectorAll(".tabs__item[data-tab]");
+const init = (el) => {
+	const triggers = el.querySelectorAll(".tabs__button[data-tab]");
+	const tabContents = el.querySelectorAll(".tabs__item[data-tab]");
 
 	triggers.forEach((trigger) => {
 		trigger.addEventListener("click", (e) => {
 			e.preventDefault();
-            openTab(e);
-        });
+			openTab(e);
+		});
 	});
 
 	const openTab = (evt) => {
 		const { tab } = evt.currentTarget.dataset;
 
 		if (tab) {
-			const currTab = document.querySelector(
+			const currTab = el.querySelector(
 				`.tabs__item[data-tab='${tab}']`
 			);
 
@@ -32,3 +32,6 @@
 		}
 	}
 }
+
+const tabs = document.querySelectorAll(".tabs");
+tabs.forEach(init);
