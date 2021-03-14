@@ -1,0 +1,16 @@
+.mentoring-target {
+	&__subtitle {
+		position: relative;
+
+		&::before {
+			content: "... ";
+			transform: translateX(-100%);
+			white-space: pre;
+
+			@include tablet("min") {
+				position: absolute;
+				left: 0;
+			}
+		}
+	}
+}

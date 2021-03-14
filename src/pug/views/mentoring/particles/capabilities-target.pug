@@ -1,8 +1,24 @@
-section.capabilities-target
+section.capabilities-target.mentoring-target
+    -
+        const titleParts = [
+            {
+                text: "Развить,"
+            },
+            {
+                text: "обучить",
+                type: ["bold"],
+                break: true
+            },
+            {
+                text: "помочь",
+                type: ["bold", "italic"]
+            }
+        ]
+
     +double-block("", true, "capabilities-target__content")
         p.text.text--l2 Цель менторинга для коучей
-        h2 РАЗВИТЬ, ОБУЧИТЬ ПОМОЧЬ
-        p.text.text--m ... коучу более эффективно проводить
+        +composite-title("h4", titleParts).mt-25
+        p.mentoring-target__subtitle.mt-15.text.text--m коучу более эффективно проводить
             br
             | коуч-сессии и расти в карьере
     .mt-70

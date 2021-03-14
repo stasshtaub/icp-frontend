@@ -19,7 +19,6 @@
 	&__acquirement-title,
 	&__acquirement-item {
 		font-size: 20px;
-		line-height: 24px;
 	}
 
 	&__acquirement {
@@ -52,6 +51,7 @@
 
 	&__acquirement-item {
 		position: relative;
+		line-height: 150%;
 
 		@include laptop {
 			display: flex;

@@ -1,0 +1,44 @@
+.sale {
+    position: relative;
+	padding: 55px 0 65px 0;
+	background: $color-blue;
+    
+    &__content {
+        max-width: calc(100% - 70px);
+    }
+
+	&__subtitle {
+        max-width: 795px;
+        margin-bottom: 90px;
+	}
+
+	&__title {
+		font-size: 80px;
+        line-height: 99.8%;
+
+        @include laptop {
+            font-size: 60px;
+        }
+
+        @include tablet {
+            font-size: vw(60px, 768px);
+        }
+	}
+
+	&__description {
+		margin-top: 120px;
+	}
+
+	* {
+		color: $color-white;
+    }
+
+    &__pattern {
+        position: absolute;
+        right: 0;
+        width: 57px;
+        height: 100%;
+        top: 0;
+        object-fit: cover;
+    }
+}

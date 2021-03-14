@@ -1,0 +1,24 @@
+.composite-title {
+	font-size: 80px;
+    line-height: 99.8%;
+    font-weight: unset;
+    text-transform: capitalize;
+
+    @include laptop {
+        font-size: 68px;
+    }
+
+    @include tablet {
+        font-size: vw(68px, 768px)
+    }
+    
+    &__part {
+        &--bold {
+            font-weight: 700;
+        }
+
+        &--italic {
+            font-style: italic;
+        }
+    }
+}

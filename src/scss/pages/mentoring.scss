@@ -3,6 +3,9 @@
 @import "../utils/helpers";
 
 @import "../components/common/tabs";
+@import "../components/common/sale";
+
+@import "../components/mentoring/mentoring-target";
 
 .tabs__buttons-item {
     min-width: Min(305px, 100%);

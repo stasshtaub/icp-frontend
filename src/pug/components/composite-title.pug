@@ -1,0 +1,12 @@
+mixin composite-title(tag = "h4", parts)
+    #{tag}.composite-title&attributes(attributes)
+        each part in parts
+            -
+                const type = part.type ? part.type.map((t) => `composite-title__part--${ t }`).join(" ") : null
+
+            span.composite-title__part(class= type ? type: "")= part.text
+                | &#32;
+            if part.break
+                br
+
+    

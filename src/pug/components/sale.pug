@@ -1,0 +1,10 @@
+mixin sale(title, subtitle, description)
+    .sale
+        svg.sale__pattern
+            use(xlink:href="images/common.svg#sale-pattern")
+        .container
+            +double-block("Скидка", true)
+                .sale__content
+                    p.sale__subtitle.text.text--m !{subtitle}
+                    h3.sale__title !{title}
+                    p.sale__description.text.text--m !{description}
