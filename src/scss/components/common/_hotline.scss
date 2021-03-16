@@ -72,6 +72,10 @@
 			margin-left: auto;
 		}
 
+		@include tablet-xs {
+			display: block;
+		}
+
 		& > * {
 			@include tablet-xs {
 				margin-top: 15px;
