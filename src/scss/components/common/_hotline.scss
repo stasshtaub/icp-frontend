@@ -72,8 +72,10 @@
 			margin-left: auto;
 		}
 
-		@include tablet-xs {
-			display: block;
+		& > * {
+			@include tablet-xs {
+				margin-top: 15px;
+			}
 		}
 	}
 
@@ -87,7 +89,6 @@
 
 		@include tablet-xs {
 			padding: 0;
-			margin-top: 15px;
 		}
 
 		br {
